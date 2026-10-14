@@ -1,0 +1,9 @@
+name: rgcbm-offline
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+# Use setup_windows.ps1 for the fully offline installation: it uses bundled exact
+# conda package URLs and hash-locked local wheels, including PyTorch + CUDA 12.8.
+# Running conda env create on this reference YAML alone may contact the Internet.

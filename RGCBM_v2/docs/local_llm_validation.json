@@ -1,0 +1,7 @@
+{
+  "local_model_loaded_offline": true,
+  "requested_backend": "local_qwen",
+  "used_backend": "local_qwen",
+  "fallback_reason": null,
+  "semantic_prose_validated": false
+}

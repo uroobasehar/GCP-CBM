@@ -1,0 +1,8 @@
+{
+  "offline_cells_executed": 31,
+  "real_dataset": "CUB",
+  "cpu_smoke_only": true,
+  "journal_blocks": "cards, reliability, redundancy, exact intervention, matched deletion, attribute audit and profiling executed",
+  "ablation_sweep": "separately tested no_finetune and K32 on real Pet images",
+  "colab_kaggle": "all cells compile and schemas validate; live credentials/runtimes untested"
+}

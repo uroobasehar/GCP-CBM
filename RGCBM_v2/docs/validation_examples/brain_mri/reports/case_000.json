@@ -1,0 +1,23 @@
+{
+  "backend_requested": "template",
+  "backend_used": "template",
+  "fallback_reason": null,
+  "structured_checks": "passed",
+  "semantic_validation": "human review required; JSON checks do not guarantee hallucination-free prose",
+  "result": {
+    "predicted_class": "pituitary",
+    "confidence": 0.2827954051113711,
+    "supporting_concept_indices": [
+      7,
+      13,
+      14
+    ],
+    "opposing_concept_indices": [
+      3,
+      8,
+      9
+    ],
+    "explanation": "The model predicted pituitary with an uncalibrated probability of 0.283; the runner-up was glioma. Supporting model patterns: C08: weakly grounded visual pattern (margin contribution +0.2283); C14: weakly grounded visual pattern (margin contribution +0.1848); C15: weakly grounded visual pattern (margin contribution +0.1490)",
+    "limitations": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated."
+  }
+}

@@ -1,0 +1,11 @@
+conda-env/
+.venv/
+runtime/
+__pycache__/
+.ipynb_checkpoints/
+_notebook_code/
+results/
+private_*.json
+*oauth*client*.json
+offline/conda_explicit_local.txt
+offline/machine_validation.json

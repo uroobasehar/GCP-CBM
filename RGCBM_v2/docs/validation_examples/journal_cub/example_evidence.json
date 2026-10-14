@@ -1,0 +1,722 @@
+[
+  {
+    "prediction": {
+      "class": "125.Lincoln_Sparrow",
+      "probability": 0.009663546039934938,
+      "runner_up": "184.Louisiana_Waterthrush",
+      "runner_up_probability": 0.00946896573784914
+    },
+    "exact_decomposition": {
+      "bias": 0.12413135915994644,
+      "logit": 0.7226117253303528,
+      "reconstructed_logit": 0.7226116965024176,
+      "margin_bias": 0.144740492105484,
+      "margin": 0.02034097909927368,
+      "reconstructed_margin": 0.020340970825659554
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "C01: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.2560825049877167,
+        "activation": 0.4332374930381775,
+        "predicted_class_contribution": 0.04582326788879243,
+        "margin_contribution": 0.1437761853449473
+      },
+      {
+        "concept_index": 1,
+        "name": "C02: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.24479340016841888,
+        "activation": 0.5699613094329834,
+        "predicted_class_contribution": 0.012551338440323967,
+        "margin_contribution": -0.08688839922334424
+      },
+      {
+        "concept_index": 2,
+        "name": "C03: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.4095952808856964,
+        "activation": 0.6085370182991028,
+        "predicted_class_contribution": 0.05852082919727186,
+        "margin_contribution": -0.09078715335093612
+      },
+      {
+        "concept_index": 3,
+        "name": "C04: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.18101297318935394,
+        "activation": 0.4616491198539734,
+        "predicted_class_contribution": 0.055703889624066694,
+        "margin_contribution": 0.06309021140092774
+      },
+      {
+        "concept_index": 4,
+        "name": "C05: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.42933356761932373,
+        "activation": 0.5952348709106445,
+        "predicted_class_contribution": 0.09533188863882458,
+        "margin_contribution": -0.0301793622913209
+      },
+      {
+        "concept_index": 5,
+        "name": "C06: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.1703794300556183,
+        "activation": 0.48342958092689514,
+        "predicted_class_contribution": -0.0676487408547688,
+        "margin_contribution": -0.14847999607793927
+      },
+      {
+        "concept_index": 6,
+        "name": "C07: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.335200697183609,
+        "activation": 0.4046236276626587,
+        "predicted_class_contribution": -0.04823206138903302,
+        "margin_contribution": -0.028588373191133165
+      },
+      {
+        "concept_index": 7,
+        "name": "C08: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.379791796207428,
+        "activation": 0.3322616517543793,
+        "predicted_class_contribution": 0.08263920378640854,
+        "margin_contribution": 0.013433435762691293
+      },
+      {
+        "concept_index": 8,
+        "name": "C09: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3656892776489258,
+        "activation": 0.4200270175933838,
+        "predicted_class_contribution": 0.09318369185455211,
+        "margin_contribution": 0.11152800485665892
+      },
+      {
+        "concept_index": 9,
+        "name": "C10: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3809545040130615,
+        "activation": 0.45153141021728516,
+        "predicted_class_contribution": 0.03308878655868597,
+        "margin_contribution": 0.006390529080313456
+      },
+      {
+        "concept_index": 10,
+        "name": "C11: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "intensity",
+        "grounding_correlation": 0.23192280530929565,
+        "activation": 0.5519881248474121,
+        "predicted_class_contribution": 0.029893264172416778,
+        "margin_contribution": -0.10175039009406106
+      },
+      {
+        "concept_index": 11,
+        "name": "C12: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3374924659729004,
+        "activation": 0.42453354597091675,
+        "predicted_class_contribution": 0.09146731027506494,
+        "margin_contribution": 0.05044487745969661
+      },
+      {
+        "concept_index": 12,
+        "name": "C13: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.12002820521593094,
+        "activation": 0.455199271440506,
+        "predicted_class_contribution": 0.02674986900397547,
+        "margin_contribution": 0.002757798993375027
+      },
+      {
+        "concept_index": 13,
+        "name": "C14: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.21123775839805603,
+        "activation": 0.49475347995758057,
+        "predicted_class_contribution": 0.00032418038436660135,
+        "margin_contribution": -0.013149280512352757
+      },
+      {
+        "concept_index": 14,
+        "name": "C15: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.3865724802017212,
+        "activation": 0.6271992921829224,
+        "predicted_class_contribution": 0.09420799381104672,
+        "margin_contribution": 0.007059013411211623
+      },
+      {
+        "concept_index": 15,
+        "name": "C16: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.42172005772590637,
+        "activation": 0.40157055854797363,
+        "predicted_class_contribution": -0.0051243740495237056,
+        "margin_contribution": -0.023056622848558916
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0046_18.jpg"
+  },
+  {
+    "prediction": {
+      "class": "125.Lincoln_Sparrow",
+      "probability": 0.009604364279146405,
+      "runner_up": "184.Louisiana_Waterthrush",
+      "runner_up_probability": 0.009421738886792196
+    },
+    "exact_decomposition": {
+      "bias": 0.12413135915994644,
+      "logit": 0.7165257334709167,
+      "reconstructed_logit": 0.7165257360852192,
+      "margin_bias": 0.144740492105484,
+      "margin": 0.019197940826416016,
+      "reconstructed_margin": 0.019197969762551503
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "C01: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.2560825049877167,
+        "activation": 0.4297761023044586,
+        "predicted_class_contribution": 0.04545715868216149,
+        "margin_contribution": 0.14262747230953465
+      },
+      {
+        "concept_index": 1,
+        "name": "C02: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.24479340016841888,
+        "activation": 0.5919693112373352,
+        "predicted_class_contribution": 0.013035985160145147,
+        "margin_contribution": -0.09024343405682611
+      },
+      {
+        "concept_index": 2,
+        "name": "C03: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.4095952808856964,
+        "activation": 0.5897616147994995,
+        "predicted_class_contribution": 0.05671526577504782,
+        "margin_contribution": -0.08798606584847235
+      },
+      {
+        "concept_index": 3,
+        "name": "C04: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.18101297318935394,
+        "activation": 0.45829492807388306,
+        "predicted_class_contribution": 0.055299163348935476,
+        "margin_contribution": 0.06263181852334121
+      },
+      {
+        "concept_index": 4,
+        "name": "C05: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.42933356761932373,
+        "activation": 0.5920262336730957,
+        "predicted_class_contribution": 0.09481799830282256,
+        "margin_contribution": -0.030016679238990207
+      },
+      {
+        "concept_index": 5,
+        "name": "C06: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.1703794300556183,
+        "activation": 0.4745677709579468,
+        "predicted_class_contribution": -0.06640866306527116,
+        "margin_contribution": -0.14575819012864244
+      },
+      {
+        "concept_index": 6,
+        "name": "C07: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.335200697183609,
+        "activation": 0.42202189564704895,
+        "predicted_class_contribution": -0.050305974705300294,
+        "margin_contribution": -0.02981763451947006
+      },
+      {
+        "concept_index": 7,
+        "name": "C08: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.379791796207428,
+        "activation": 0.3210581839084625,
+        "predicted_class_contribution": 0.07985270809078848,
+        "margin_contribution": 0.01298047628081056
+      },
+      {
+        "concept_index": 8,
+        "name": "C09: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3656892776489258,
+        "activation": 0.4101271331310272,
+        "predicted_class_contribution": 0.09098738603493706,
+        "margin_contribution": 0.10889933023300191
+      },
+      {
+        "concept_index": 9,
+        "name": "C10: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3809545040130615,
+        "activation": 0.47393572330474854,
+        "predicted_class_contribution": 0.03473060264715766,
+        "margin_contribution": 0.006707617573096236
+      },
+      {
+        "concept_index": 10,
+        "name": "C11: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "intensity",
+        "grounding_correlation": 0.23192280530929565,
+        "activation": 0.5360697507858276,
+        "predicted_class_contribution": 0.02903119461041337,
+        "margin_contribution": -0.09881608644237083
+      },
+      {
+        "concept_index": 11,
+        "name": "C12: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3374924659729004,
+        "activation": 0.41678863763809204,
+        "predicted_class_contribution": 0.08979864135536797,
+        "margin_contribution": 0.04952459458571923
+      },
+      {
+        "concept_index": 12,
+        "name": "C13: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.12002820521593094,
+        "activation": 0.45593875646591187,
+        "predicted_class_contribution": 0.026793324977657962,
+        "margin_contribution": 0.0027622791215005105
+      },
+      {
+        "concept_index": 13,
+        "name": "C14: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.21123775839805603,
+        "activation": 0.5139063596725464,
+        "predicted_class_contribution": 0.00033673004426643116,
+        "margin_contribution": -0.013658315007699873
+      },
+      {
+        "concept_index": 14,
+        "name": "C15: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.3865724802017212,
+        "activation": 0.6477263569831848,
+        "predicted_class_contribution": 0.09729124600498906,
+        "margin_contribution": 0.0072900417741639245
+      },
+      {
+        "concept_index": 15,
+        "name": "C16: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.42172005772590637,
+        "activation": 0.39483246207237244,
+        "predicted_class_contribution": -0.005038390338846288,
+        "margin_contribution": -0.022669747501628867
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0002_55.jpg"
+  },
+  {
+    "prediction": {
+      "class": "125.Lincoln_Sparrow",
+      "probability": 0.009682771990701862,
+      "runner_up": "184.Louisiana_Waterthrush",
+      "runner_up_probability": 0.00937590851821108
+    },
+    "exact_decomposition": {
+      "bias": 0.12413135915994644,
+      "logit": 0.7257608771324158,
+      "reconstructed_logit": 0.7257608844965191,
+      "margin_bias": 0.144740492105484,
+      "margin": 0.03220474720001221,
+      "reconstructed_margin": 0.03220474601082257
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "C01: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.2560825049877167,
+        "activation": 0.4435248076915741,
+        "predicted_class_contribution": 0.04691135094437726,
+        "margin_contribution": 0.14719018086028512
+      },
+      {
+        "concept_index": 1,
+        "name": "C02: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.24479340016841888,
+        "activation": 0.5783435106277466,
+        "predicted_class_contribution": 0.012735926134837872,
+        "margin_contribution": -0.08816623340564256
+      },
+      {
+        "concept_index": 2,
+        "name": "C03: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.4095952808856964,
+        "activation": 0.5713502764701843,
+        "predicted_class_contribution": 0.05494471319851835,
+        "margin_contribution": -0.08523929293895982
+      },
+      {
+        "concept_index": 3,
+        "name": "C04: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.18101297318935394,
+        "activation": 0.438487708568573,
+        "predicted_class_contribution": 0.052909168173741694,
+        "margin_contribution": 0.05992491058804639
+      },
+      {
+        "concept_index": 4,
+        "name": "C05: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.42933356761932373,
+        "activation": 0.590760350227356,
+        "predicted_class_contribution": 0.09461525638433521,
+        "margin_contribution": -0.029952496918708604
+      },
+      {
+        "concept_index": 5,
+        "name": "C06: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.1703794300556183,
+        "activation": 0.4626307487487793,
+        "predicted_class_contribution": -0.06473825530814281,
+        "margin_contribution": -0.14209186708858113
+      },
+      {
+        "concept_index": 6,
+        "name": "C07: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.335200697183609,
+        "activation": 0.43531644344329834,
+        "predicted_class_contribution": -0.051890715194016224,
+        "margin_contribution": -0.030756950634057922
+      },
+      {
+        "concept_index": 7,
+        "name": "C08: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.379791796207428,
+        "activation": 0.3601296544075012,
+        "predicted_class_contribution": 0.08957045672580577,
+        "margin_contribution": 0.014560147260989531
+      },
+      {
+        "concept_index": 8,
+        "name": "C09: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3656892776489258,
+        "activation": 0.41390174627304077,
+        "predicted_class_contribution": 0.09182479023314993,
+        "margin_contribution": 0.1099015873621898
+      },
+      {
+        "concept_index": 9,
+        "name": "C10: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3809545040130615,
+        "activation": 0.4627545475959778,
+        "predicted_class_contribution": 0.03391123210475255,
+        "margin_contribution": 0.006549370268695842
+      },
+      {
+        "concept_index": 10,
+        "name": "C11: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "intensity",
+        "grounding_correlation": 0.23192280530929565,
+        "activation": 0.5245010852813721,
+        "predicted_class_contribution": 0.028404686251845668,
+        "margin_contribution": -0.09668358363124341
+      },
+      {
+        "concept_index": 11,
+        "name": "C12: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3374924659729004,
+        "activation": 0.40955081582069397,
+        "predicted_class_contribution": 0.08823922608613755,
+        "margin_contribution": 0.04866456588334955
+      },
+      {
+        "concept_index": 12,
+        "name": "C13: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.12002820521593094,
+        "activation": 0.47295624017715454,
+        "predicted_class_contribution": 0.02779336054145065,
+        "margin_contribution": 0.002865378582314948
+      },
+      {
+        "concept_index": 13,
+        "name": "C14: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.21123775839805603,
+        "activation": 0.5052687525749207,
+        "predicted_class_contribution": 0.0003310703715155572,
+        "margin_contribution": -0.01342874953058204
+      },
+      {
+        "concept_index": 14,
+        "name": "C15: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.3865724802017212,
+        "activation": 0.674293041229248,
+        "predicted_class_contribution": 0.1012816746553824,
+        "margin_contribution": 0.007589044950222501
+      },
+      {
+        "concept_index": 15,
+        "name": "C16: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.42172005772590637,
+        "activation": 0.4086266756057739,
+        "predicted_class_contribution": -0.005214415967118802,
+        "margin_contribution": -0.023461757702979646
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0085_92.jpg"
+  },
+  {
+    "prediction": {
+      "class": "125.Lincoln_Sparrow",
+      "probability": 0.009603096946061386,
+      "runner_up": "184.Louisiana_Waterthrush",
+      "runner_up_probability": 0.009312789928632298
+    },
+    "exact_decomposition": {
+      "bias": 0.12413135915994644,
+      "logit": 0.7152819037437439,
+      "reconstructed_logit": 0.715281871489059,
+      "margin_bias": 0.144740492105484,
+      "margin": 0.03069692850112915,
+      "reconstructed_margin": 0.03069686294369922
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "C01: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.2560825049877167,
+        "activation": 0.441339373588562,
+        "predicted_class_contribution": 0.046680198899679226,
+        "margin_contribution": 0.1464649126558868
+      },
+      {
+        "concept_index": 1,
+        "name": "C02: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.24479340016841888,
+        "activation": 0.556480884552002,
+        "predicted_class_contribution": 0.012254480790163669,
+        "margin_contribution": -0.08483336054023738
+      },
+      {
+        "concept_index": 2,
+        "name": "C03: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.4095952808856964,
+        "activation": 0.6030560731887817,
+        "predicted_class_contribution": 0.057993746303387717,
+        "margin_contribution": -0.08996945551288249
+      },
+      {
+        "concept_index": 3,
+        "name": "C04: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.18101297318935394,
+        "activation": 0.4700579047203064,
+        "predicted_class_contribution": 0.0567185174093745,
+        "margin_contribution": 0.06423937857579354
+      },
+      {
+        "concept_index": 4,
+        "name": "C05: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.42933356761932373,
+        "activation": 0.5670433640480042,
+        "predicted_class_contribution": 0.09081678086518519,
+        "margin_contribution": -0.02875000769412761
+      },
+      {
+        "concept_index": 5,
+        "name": "C06: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.1703794300556183,
+        "activation": 0.4636273682117462,
+        "predicted_class_contribution": -0.06487771729897052,
+        "margin_contribution": -0.14239796762481394
+      },
+      {
+        "concept_index": 6,
+        "name": "C07: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.335200697183609,
+        "activation": 0.4339938163757324,
+        "predicted_class_contribution": -0.05173305502403025,
+        "margin_contribution": -0.030663501429376794
+      },
+      {
+        "concept_index": 7,
+        "name": "C08: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.379791796207428,
+        "activation": 0.32338976860046387,
+        "predicted_class_contribution": 0.08043261341988739,
+        "margin_contribution": 0.013074742931866723
+      },
+      {
+        "concept_index": 8,
+        "name": "C09: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3656892776489258,
+        "activation": 0.41239893436431885,
+        "predicted_class_contribution": 0.09149138891382513,
+        "margin_contribution": 0.10950255204580728
+      },
+      {
+        "concept_index": 9,
+        "name": "C10: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3809545040130615,
+        "activation": 0.48225224018096924,
+        "predicted_class_contribution": 0.035340047406928754,
+        "margin_contribution": 0.0068253213291180614
+      },
+      {
+        "concept_index": 10,
+        "name": "C11: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "intensity",
+        "grounding_correlation": 0.23192280530929565,
+        "activation": 0.55158531665802,
+        "predicted_class_contribution": 0.02987144984150225,
+        "margin_contribution": -0.10167613869523784
+      },
+      {
+        "concept_index": 11,
+        "name": "C12: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.3374924659729004,
+        "activation": 0.4180793762207031,
+        "predicted_class_contribution": 0.09007673571926489,
+        "margin_contribution": 0.04967796562141302
+      },
+      {
+        "concept_index": 12,
+        "name": "C13: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.12002820521593094,
+        "activation": 0.47356700897216797,
+        "predicted_class_contribution": 0.027829252482153066,
+        "margin_contribution": 0.0028690788904519593
+      },
+      {
+        "concept_index": 13,
+        "name": "C14: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.21123775839805603,
+        "activation": 0.4905478358268738,
+        "predicted_class_contribution": 0.00032142469413695696,
+        "margin_contribution": -0.01303750526134384
+      },
+      {
+        "concept_index": 14,
+        "name": "C15: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.3865724802017212,
+        "activation": 0.6184754371643066,
+        "predicted_class_contribution": 0.09289763378697558,
+        "margin_contribution": 0.006960828017284371
+      },
+      {
+        "concept_index": 15,
+        "name": "C16: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.42172005772590637,
+        "activation": 0.38892340660095215,
+        "predicted_class_contribution": -0.004962985880351045,
+        "margin_contribution": -0.022330472471386642
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0025_796057.jpg"
+  }
+]

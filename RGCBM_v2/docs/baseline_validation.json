@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "baseline": "EfficientNet-B1 pooled-feature linear classifier",
+  "head_and_finetune_updates": "completed on CPU",
+  "metrics": {
+    "accuracy": 0.0,
+    "macro_f1": 0.0,
+    "weighted_f1": 0.0,
+    "balanced_accuracy": 0.0,
+    "ece_15_bins": 0.031338274478912354,
+    "multiclass_brier_sum": 0.9766107514231439,
+    "n_test_evaluated": 2,
+    "complete_test": false,
+    "note": "Matched backbone/pretraining/data/training schedule; CE-only baseline has no concept explanations."
+  },
+  "scope": "software smoke check, not a scientific performance estimate"
+}

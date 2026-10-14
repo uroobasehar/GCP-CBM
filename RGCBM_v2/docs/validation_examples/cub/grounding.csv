@@ -1,0 +1,17 @@
+concept_index,concept_name,training_group,descriptor,direction,weak_grounding,grounding_strength,mean,ci_low,ci_high,valid_n
+0,C01: weakly grounded visual pattern,boundary-guided,morphology,inverse,True,0.22067086398601532,-0.22067086398601532,-0.5381544232368469,0.09681269526481628,2
+1,C02: weakly grounded visual pattern,boundary-guided,texture,inverse,True,0.458577036857605,-0.458577036857605,-0.5599920153617859,-0.3571620285511017,2
+2,C03: weakly grounded visual pattern,boundary-guided,texture,inverse,True,0.5400921106338501,-0.5400921106338501,-0.6183333396911621,-0.4618508815765381,2
+3,C04: weakly grounded visual pattern,boundary-guided,morphology,inverse,True,0.26100602746009827,-0.26100602746009827,-0.31211182475090027,-0.20990024507045746,2
+4,C05: weakly grounded visual pattern,texture-guided,texture,inverse,True,0.4091998338699341,-0.4091998338699341,-0.46251586079597473,-0.35588377714157104,2
+5,C06: weakly grounded visual pattern,texture-guided,texture,positive,True,0.27417486906051636,0.27417486906051636,0.25000402331352234,0.29834574460983276,2
+6,C07: weakly grounded visual pattern,texture-guided,intensity,inverse,True,0.3071860671043396,-0.3071860671043396,-0.4209553599357605,-0.1934167891740799,2
+7,C08: weakly grounded visual pattern,texture-guided,texture,positive,True,0.4921974539756775,0.4921974539756775,0.45663008093833923,0.5277648568153381,2
+8,C09: weakly grounded visual pattern,region-prior-guided,texture,positive,True,0.49567094445228577,0.49567094445228577,0.45257794857025146,0.5387639403343201,2
+9,C10: weakly grounded visual pattern,region-prior-guided,texture,positive,True,0.4923532009124756,0.4923532009124756,0.4385538399219513,0.5461525917053223,2
+10,C11: weakly grounded visual pattern,region-prior-guided,intensity,positive,True,0.4864512085914612,0.4864512085914612,0.35452553629875183,0.6183769106864929,2
+11,C12: weakly grounded visual pattern,region-prior-guided,texture,positive,True,0.4628777503967285,0.4628777503967285,0.4195869266986847,0.5061686038970947,2
+12,C13: weakly grounded visual pattern,unguided,texture,inverse,True,0.4457938075065613,-0.4457938075065613,-0.48701372742652893,-0.40457388758659363,2
+13,C14: weakly grounded visual pattern,unguided,edge,inverse,True,0.26515790820121765,-0.26515790820121765,-0.3037852942943573,-0.2265305370092392,2
+14,C15: weakly grounded visual pattern,unguided,texture,inverse,True,0.4539463520050049,-0.4539463520050049,-0.4942113161087036,-0.41368141770362854,2
+15,C16: weakly grounded visual pattern,unguided,texture,positive,True,0.5446891784667969,0.5446891784667969,0.5180115103721619,0.5713669061660767,2

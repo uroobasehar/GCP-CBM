@@ -1,0 +1,26 @@
+[
+  {
+    "stage": "head",
+    "epoch": 1,
+    "train_loss": 3.697786569595337,
+    "train_n": 2,
+    "validation_accuracy": 0.0,
+    "validation_loss": 3.6814301013946533,
+    "validation_n": 2,
+    "auxiliary_scale": 0.0,
+    "lr": 0.0004,
+    "classifier_l2_update": 0.009732458740472794
+  },
+  {
+    "stage": "finetune",
+    "epoch": 1,
+    "train_loss": 3.8073551654815674,
+    "train_n": 2,
+    "validation_accuracy": 0.0,
+    "validation_loss": 3.680509567260742,
+    "validation_n": 2,
+    "auxiliary_scale": 1.0,
+    "lr": 8e-06,
+    "classifier_l2_update": 0.00019467691890895367
+  }
+]

@@ -1,0 +1,10 @@
+```json
+{
+  "predicted_class": "Sphynx",
+  "confidence": 0.0578,
+  "supporting_concept_indices": [10],
+  "opposing_concept_indices": [6, 8, 12],
+  "explanation": "The Sphynx concept was supported by high activation (0.578) in the texture descriptor, contributing positively to the overall prediction bias of 0.173. This indicates that the Sphynx's lack of fur matches the observed weakly grounded visual patterns.",
+  "limitations": "The model's probability is uncalibrated, meaning it does not provide an accurate measure of uncertainty."
+}
+```

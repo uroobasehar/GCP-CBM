@@ -1,0 +1,5 @@
+path,has_positive_margin_support,concept_index,positive_margin_probability_drop,random_probability_drop,legacy_absolute_probability_drop
+data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0046_18.jpg,True,0,0.0003973953425884247,8.747261017560959e-05,0.0007915142923593521
+data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0002_55.jpg,True,0,0.0003919815644621849,0.00022463221102952957,0.000776464119553566
+data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0085_92.jpg,True,0,0.00040682870894670486,0.00026729702949523926,0.0008119158446788788
+data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0025_796057.jpg,True,0,0.0004016803577542305,0.0007253503426909447,0.0007437299937009811

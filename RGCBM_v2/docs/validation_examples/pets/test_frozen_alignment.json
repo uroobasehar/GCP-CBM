@@ -1,0 +1,130 @@
+[
+  {
+    "concept_index": 0,
+    "frozen_validation_descriptor": "texture",
+    "mean": -0.12564875185489655,
+    "ci_low": -0.13257434964179993,
+    "ci_high": -0.11872314661741257,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 1,
+    "frozen_validation_descriptor": "texture",
+    "mean": -0.07369466871023178,
+    "ci_low": -0.1071472018957138,
+    "ci_high": -0.040242139250040054,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 2,
+    "frozen_validation_descriptor": "texture",
+    "mean": -0.10280117392539978,
+    "ci_low": -0.13003604114055634,
+    "ci_high": -0.07556629925966263,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 3,
+    "frozen_validation_descriptor": "texture",
+    "mean": 0.24044641852378845,
+    "ci_low": 0.22287733852863312,
+    "ci_high": 0.2580154836177826,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 4,
+    "frozen_validation_descriptor": "intensity",
+    "mean": 0.17074798047542572,
+    "ci_low": -0.05895303934812546,
+    "ci_high": 0.4004490077495575,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 5,
+    "frozen_validation_descriptor": "texture",
+    "mean": 0.12738217413425446,
+    "ci_low": 0.09822722524404526,
+    "ci_high": 0.15653713047504425,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 6,
+    "frozen_validation_descriptor": "edge",
+    "mean": -0.15282191336154938,
+    "ci_low": -0.18630976974964142,
+    "ci_high": -0.11933405697345734,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 7,
+    "frozen_validation_descriptor": "texture",
+    "mean": -0.16657020151615143,
+    "ci_low": -0.2821141183376312,
+    "ci_high": -0.05102629214525223,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 8,
+    "frozen_validation_descriptor": "texture",
+    "mean": -0.03977277874946594,
+    "ci_low": -0.20765312016010284,
+    "ci_high": 0.12810756266117096,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 9,
+    "frozen_validation_descriptor": "intensity",
+    "mean": -0.2610307037830353,
+    "ci_low": -0.5389379858970642,
+    "ci_high": 0.016876569017767906,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 10,
+    "frozen_validation_descriptor": "texture",
+    "mean": -0.23659978806972504,
+    "ci_low": -0.40317830443382263,
+    "ci_high": -0.07002127170562744,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 11,
+    "frozen_validation_descriptor": "intensity",
+    "mean": 0.12220434844493866,
+    "ci_low": 0.03566024452447891,
+    "ci_high": 0.2087484449148178,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 12,
+    "frozen_validation_descriptor": "texture",
+    "mean": -0.213504821062088,
+    "ci_low": -0.2231472134590149,
+    "ci_high": -0.20386241376399994,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 13,
+    "frozen_validation_descriptor": "texture",
+    "mean": 0.0164814293384552,
+    "ci_low": -0.2569323480129242,
+    "ci_high": 0.2898952066898346,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 14,
+    "frozen_validation_descriptor": "morphology",
+    "mean": -0.2518644332885742,
+    "ci_low": -0.32222723960876465,
+    "ci_high": -0.18150165677070618,
+    "valid_n": 2
+  },
+  {
+    "concept_index": 15,
+    "frozen_validation_descriptor": "texture",
+    "mean": 0.11706745624542236,
+    "ci_low": -0.04425662383437157,
+    "ci_high": 0.2783915400505066,
+    "valid_n": 2
+  }
+]

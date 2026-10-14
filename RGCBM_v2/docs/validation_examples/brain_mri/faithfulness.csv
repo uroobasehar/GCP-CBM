@@ -1,0 +1,3 @@
+path,has_positive_margin_support,concept_index,positive_margin_probability_drop,random_probability_drop,legacy_absolute_probability_drop
+data/brain_mri/Testing/glioma/Te-gl_1.jpg,True,7,0.03339427709579468,0.027600467205047607,0.016636133193969727
+data/brain_mri/Testing/glioma/Te-gl_10.jpg,True,1,0.02922549843788147,0.003597468137741089,0.036183446645736694

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "variants_executed": [
+    "no_finetune",
+    "K32"
+  ],
+  "variants_configured": [
+    "full",
+    "unguided",
+    "no_edge",
+    "no_texture",
+    "no_region",
+    "no_diversity",
+    "no_decorrelation",
+    "no_stability",
+    "no_sparsity",
+    "no_finetune",
+    "K32",
+    "K64"
+  ],
+  "summary_csvs": "written",
+  "scope": "real-image CPU smoke runs; not research estimates"
+}

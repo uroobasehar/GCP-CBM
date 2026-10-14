@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "hardware": "CPU only; Windows/CUDA runtime not available here",
+  "datasets": [
+    {
+      "dataset": "cub",
+      "official_manifest_counts": {
+        "train": 5394,
+        "validation": 600,
+        "test": 5794
+      },
+      "training_updates": 2,
+      "test_examples": 2,
+      "checks": [
+        "head training",
+        "fine-tuning",
+        "radiomics priors",
+        "validation grounding",
+        "test scoring",
+        "independent foreground annotations",
+        "checkpoint reload",
+        "reports",
+        "figures"
+      ]
+    },
+    {
+      "dataset": "pets",
+      "official_manifest_counts": {
+        "train": 3312,
+        "validation": 368,
+        "test": 3669
+      },
+      "training_updates": 2,
+      "test_examples": 2,
+      "checks": [
+        "head training",
+        "fine-tuning",
+        "radiomics priors",
+        "validation grounding",
+        "test scoring",
+        "independent foreground annotations",
+        "checkpoint reload",
+        "reports",
+        "figures"
+      ]
+    },
+    {
+      "dataset": "brain_mri",
+      "official_manifest_counts": {
+        "train": 5040,
+        "validation": 560,
+        "test": 1600
+      },
+      "training_updates": 2,
+      "test_examples": 2,
+      "checks": [
+        "head training",
+        "fine-tuning",
+        "radiomics priors",
+        "validation grounding",
+        "test scoring",
+        "MRI evidence export",
+        "checkpoint reload",
+        "reports",
+        "figures"
+      ]
+    }
+  ],
+  "deterministic_resume": "bitwise identical CPU model weights after one interrupted batch",
+  "incompatible_resume": "correctly rejected",
+  "scope": "Functional validation on actual images; tiny runs do not estimate research accuracy."
+}

@@ -1,0 +1,7 @@
+{
+  "seed": 42,
+  "original_train_validation_exact_duplicate_pairs": 29,
+  "original_training_testing_exact_overlap": 0,
+  "corrected_cross_split_exact_duplicates": 0,
+  "patient_independence": "not established"
+}

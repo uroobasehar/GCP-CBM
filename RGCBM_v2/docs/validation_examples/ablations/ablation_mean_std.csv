@@ -1,0 +1,5 @@
+,accuracy,accuracy,accuracy,macro_f1,macro_f1,macro_f1,balanced_accuracy,balanced_accuracy,balanced_accuracy,ece_15_bins,ece_15_bins,ece_15_bins,positive_margin_probability_drop_mean,positive_margin_probability_drop_mean,positive_margin_probability_drop_mean,random_probability_drop_mean,random_probability_drop_mean,random_probability_drop_mean,stability_mae,stability_mae,stability_mae,stability_cosine,stability_cosine,stability_cosine
+,mean,std,count,mean,std,count,mean,std,count,mean,std,count,mean,std,count,mean,std,count,mean,std,count,mean,std,count
+variant,,,,,,,,,,,,,,,,,,,,,,,,
+K32,0.0,,1,0.0,,1,0.0,,1,0.051027603447437286,,1,0.0034683626145124435,,1,0.0020320098847150803,,1,0.000806356780230999,,1,0.9999980330467224,,1
+no_finetune,0.0,,1,0.0,,1,0.0,,1,0.0575636588037014,,1,0.006954144686460495,,1,0.00040854327380657196,,1,0.0008614175021648407,,1,0.9999978542327881,,1
