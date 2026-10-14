@@ -14,8 +14,15 @@
     "sys_platform": "win32",
     "extra": ""
   },
-  "selected_packages": 143,
+  "selected_packages": 188,
   "packages": [
+    {
+      "name": "absl-py",
+      "version": "2.5.1",
+      "wheel": "absl_py-2.5.1-py3-none-any.whl",
+      "sha256": "721200f2f0e9960f2ca9dc3a2a706b201f5f75d812c158f059cbbe29eeafbdb8",
+      "extras_required": []
+    },
     {
       "name": "accelerate",
       "version": "1.6.0",
@@ -63,6 +70,13 @@
       "version": "3.0.2",
       "wheel": "asttokens-3.0.2-py3-none-any.whl",
       "sha256": "9da13157f5b28becde0bd374fc677dcd3c290614264eff096f167c469cd9f933",
+      "extras_required": []
+    },
+    {
+      "name": "astunparse",
+      "version": "1.6.3",
+      "wheel": "astunparse-1.6.3-py2.py3-none-any.whl",
+      "sha256": "c2652417f2c8b5bb325c885ae329bdf3f86424075c4fd1a128674bc6fba4b8e8",
       "extras_required": []
     },
     {
@@ -180,6 +194,42 @@
       "extras_required": []
     },
     {
+      "name": "dm-tree",
+      "version": "0.1.10",
+      "wheel": "dm_tree-0.1.10-cp311-cp311-win_amd64.whl",
+      "sha256": "a1c82dd4726a16ac6b6f7a77a5fb097ee396fd349ae301407eb5736f15b8fa16",
+      "extras_required": []
+    },
+    {
+      "name": "docstring-parser",
+      "version": "0.18.0",
+      "wheel": "docstring_parser-0.18.0-py3-none-any.whl",
+      "sha256": "b3fcbed555c47d8479be0796ef7e19c2670d428d72e96da63f3a40122860374b",
+      "extras_required": []
+    },
+    {
+      "name": "einops",
+      "version": "0.8.2",
+      "wheel": "einops-0.8.2-py3-none-any.whl",
+      "sha256": "54058201ac7087911181bfec4af6091bb59380360f069276601256a76af08193",
+      "extras_required": []
+    },
+    {
+      "name": "etils",
+      "version": "1.14.0",
+      "wheel": "etils-1.14.0-py3-none-any.whl",
+      "sha256": "b5df7341f54dbe1405a4450b2741207b4a8c279780402b45f87202b94dfc52b4",
+      "extras_required": [
+        "array-types",
+        "edc",
+        "enp",
+        "epath",
+        "epy",
+        "etqdm",
+        "etree"
+      ]
+    },
+    {
       "name": "executing",
       "version": "2.3.0",
       "wheel": "executing-2.3.0-py3-none-any.whl",
@@ -198,6 +248,20 @@
       "version": "4.1.2",
       "wheel": "filelock-4.1.2-py3-none-any.whl",
       "sha256": "4d5dc2a1d64d6b48a5f0540814000986fd62ebd3ac9ccbb1d07d669e075db9bb",
+      "extras_required": []
+    },
+    {
+      "name": "fire",
+      "version": "0.7.1",
+      "wheel": "fire-0.7.1-py3-none-any.whl",
+      "sha256": "e43fd8a5033a9001e7e2973bab96070694b9f12f2e0ecf96d4683971b5ab1882",
+      "extras_required": []
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "wheel": "flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
       "extras_required": []
     },
     {
@@ -222,10 +286,17 @@
       "extras_required": []
     },
     {
+      "name": "gast",
+      "version": "0.7.0",
+      "wheel": "gast-0.7.0-py3-none-any.whl",
+      "sha256": "99cbf1365633a74099f69c59bd650476b96baa5ef196fec88032b00b31ba36f7",
+      "extras_required": []
+    },
+    {
       "name": "google-api-core",
-      "version": "2.42.0",
-      "wheel": "google_api_core-2.42.0-py3-none-any.whl",
-      "sha256": "b1bdf4f72dc4f910736ce4ba49038352effbbc309579215107649b22973a1317",
+      "version": "2.24.2",
+      "wheel": "google_api_core-2.24.2-py3-none-any.whl",
+      "sha256": "810a63ac95f3c441b7c0e43d344e372887f62ce9071ba972eacf32672e072de9",
       "extras_required": []
     },
     {
@@ -264,10 +335,24 @@
       "extras_required": []
     },
     {
+      "name": "google-pasta",
+      "version": "0.2.0",
+      "wheel": "google_pasta-0.2.0-py3-none-any.whl",
+      "sha256": "b32482794a366b5366a32c92a9a9201b107821889935a02b3e51f6b432ea84ed",
+      "extras_required": []
+    },
+    {
       "name": "googleapis-common-protos",
-      "version": "1.75.5",
-      "wheel": "googleapis_common_protos-1.75.5-py3-none-any.whl",
-      "sha256": "d7285525c23039db98f2463e6d5a4f9b958b94d497f03a844ece3259c4e72d5d",
+      "version": "1.69.2",
+      "wheel": "googleapis_common_protos-1.69.2-py3-none-any.whl",
+      "sha256": "0b30452ff9c7a27d80bfc5718954063e8ab53dd3697093d3bc99581f5fd24212",
+      "extras_required": []
+    },
+    {
+      "name": "grpcio",
+      "version": "1.84.0",
+      "wheel": "grpcio-1.84.0-cp311-cp311-win_amd64.whl",
+      "sha256": "f9a456bdbed52a01c9ab8423bdebab04a5363c78676edc55ab9b58bd13bdf9e1",
       "extras_required": []
     },
     {
@@ -275,6 +360,13 @@
       "version": "0.16.0",
       "wheel": "h11-0.16.0-py3-none-any.whl",
       "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "extras_required": []
+    },
+    {
+      "name": "h5py",
+      "version": "3.16.0",
+      "wheel": "h5py-3.16.0-cp311-cp311-win_amd64.whl",
+      "sha256": "17d1f1630f92ad74494a9a7392ab25982ce2b469fc62da6074c0ce48366a2999",
       "extras_required": []
     },
     {
@@ -310,6 +402,20 @@
       "version": "3.20",
       "wheel": "idna-3.20-py3-none-any.whl",
       "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+      "extras_required": []
+    },
+    {
+      "name": "imageio",
+      "version": "2.38.1",
+      "wheel": "imageio-2.38.1-py3-none-any.whl",
+      "sha256": "36d23eb7423d2fb63f637098758edb3d2df3687f7125e0a5ce8596572022dcf9",
+      "extras_required": []
+    },
+    {
+      "name": "immutabledict",
+      "version": "4.3.1",
+      "wheel": "immutabledict-4.3.1-py3-none-any.whl",
+      "sha256": "c9facdc0ff30fdb8e35bd16532026cac472a549e182c94fa201b51b25e4bf7bf",
       "extras_required": []
     },
     {
@@ -455,6 +561,27 @@
       "extras_required": []
     },
     {
+      "name": "kagglehub",
+      "version": "0.4.3",
+      "wheel": "kagglehub-0.4.3-py3-none-any.whl",
+      "sha256": "ff17b4b5c873898995ef1e02c90083f7f60dd82080aca20e98b47ac5362c7128",
+      "extras_required": []
+    },
+    {
+      "name": "kagglesdk",
+      "version": "0.1.37",
+      "wheel": "kagglesdk-0.1.37-py3-none-any.whl",
+      "sha256": "766e7d1e59379941b373957e7d80f612942e63ab4a638d99ae4ee3e9e92f050e",
+      "extras_required": []
+    },
+    {
+      "name": "keras",
+      "version": "3.15.1",
+      "wheel": "keras-3.15.1-py3-none-any.whl",
+      "sha256": "836460e480930acbd19bb7a17e62f9ecad40e8a9af9a651fc8d0586a96d27e20",
+      "extras_required": []
+    },
+    {
       "name": "kiwisolver",
       "version": "1.5.1",
       "wheel": "kiwisolver-1.5.1-cp311-cp311-win_amd64.whl",
@@ -466,6 +593,34 @@
       "version": "1.3.1",
       "wheel": "lark-1.3.1-py3-none-any.whl",
       "sha256": "c629b661023a014c37da873b4ff58a817398d12635d3bbb2c5a03be7fe5d1e12",
+      "extras_required": []
+    },
+    {
+      "name": "lazy-loader",
+      "version": "0.6",
+      "wheel": "lazy_loader-0.6-py3-none-any.whl",
+      "sha256": "77253be3391b06124a0e16105bd663b6c54470af1a9ca8e1cf026f38d58ed056",
+      "extras_required": []
+    },
+    {
+      "name": "libclang",
+      "version": "18.1.1",
+      "wheel": "libclang-18.1.1-py2.py3-none-win_amd64.whl",
+      "sha256": "4dd2d3b82fab35e2bf9ca717d7b63ac990a3519c7e312f19fa8e86dcc712f7fb",
+      "extras_required": []
+    },
+    {
+      "name": "markdown",
+      "version": "3.11.1",
+      "wheel": "markdown-3.11.1-py3-none-any.whl",
+      "sha256": "f1fa378ba5d682900c9ecb55ccceacca936016dda7c3b27097e8ae03ff78feb5",
+      "extras_required": []
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "wheel": "markdown_it_py-4.2.0-py3-none-any.whl",
+      "sha256": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a",
       "extras_required": []
     },
     {
@@ -490,6 +645,20 @@
       "extras_required": []
     },
     {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "wheel": "mdurl-0.1.2-py3-none-any.whl",
+      "sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8",
+      "extras_required": []
+    },
+    {
+      "name": "medmnist",
+      "version": "3.0.2",
+      "wheel": "medmnist-3.0.2-py3-none-any.whl",
+      "sha256": "8c2e5c5b2a19886181d8600418cc70a48617406be950dff4938e1925cbdde922",
+      "extras_required": []
+    },
+    {
       "name": "mistune",
       "version": "3.3.4",
       "wheel": "mistune-3.3.4-py3-none-any.whl",
@@ -497,10 +666,24 @@
       "extras_required": []
     },
     {
+      "name": "ml-dtypes",
+      "version": "0.5.4",
+      "wheel": "ml_dtypes-0.5.4-cp311-cp311-win_amd64.whl",
+      "sha256": "7c23c54a00ae43edf48d44066a7ec31e05fdc2eee0be2b8b50dd1903a1db94bb",
+      "extras_required": []
+    },
+    {
       "name": "mpmath",
       "version": "1.3.0",
       "wheel": "mpmath-1.3.0-py3-none-any.whl",
       "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c",
+      "extras_required": []
+    },
+    {
+      "name": "namex",
+      "version": "0.1.0",
+      "wheel": "namex-0.1.0-py3-none-any.whl",
+      "sha256": "e2012a474502f1e2251267062aae3114611f07df4224b6e06334c57b0f2ce87c",
       "extras_required": []
     },
     {
@@ -567,10 +750,24 @@
       "extras_required": []
     },
     {
-      "name": "opentelemetry-api",
-      "version": "1.45.1",
-      "wheel": "opentelemetry_api-1.45.1-py3-none-any.whl",
-      "sha256": "b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb",
+      "name": "opencv-python-headless",
+      "version": "4.10.0.84",
+      "wheel": "opencv_python_headless-4.10.0.84-cp37-abi3-win_amd64.whl",
+      "sha256": "afcf28bd1209dd58810d33defb622b325d3cbe49dcd7a43a902982c33e5fad05",
+      "extras_required": []
+    },
+    {
+      "name": "opt-einsum",
+      "version": "3.4.0",
+      "wheel": "opt_einsum-3.4.0-py3-none-any.whl",
+      "sha256": "69bb92469f86a1565195ece4ac0323943e83477171b91d24c35afe028a90d7cd",
+      "extras_required": []
+    },
+    {
+      "name": "optree",
+      "version": "0.20.0",
+      "wheel": "optree-0.20.0-cp311-cp311-win_amd64.whl",
+      "sha256": "4a9fcfd7cc61d4b8f39a483ef920e3573928cc3ca6b33c757be6079a6f5ceb41",
       "extras_required": []
     },
     {
@@ -630,6 +827,13 @@
       "extras_required": []
     },
     {
+      "name": "promise",
+      "version": "2.3",
+      "wheel": "promise-2.3-py3-none-any.whl",
+      "sha256": "a2639da27659d27b8553b769554aaff5e6bff1c3d1ed073c3fa8dbfa1f889726",
+      "extras_required": []
+    },
+    {
       "name": "prompt-toolkit",
       "version": "3.0.53",
       "wheel": "prompt_toolkit-3.0.53-py3-none-any.whl",
@@ -638,16 +842,16 @@
     },
     {
       "name": "proto-plus",
-      "version": "1.29.0",
-      "wheel": "proto_plus-1.29.0-py3-none-any.whl",
-      "sha256": "8acd070469a7aaf43f440b022ef9757c8cac1a9f866e933f59ae98669ddc6c8b",
+      "version": "1.26.1",
+      "wheel": "proto_plus-1.26.1-py3-none-any.whl",
+      "sha256": "13285478c2dcf2abb829db158e1047e2f1e8d63a077d94263c2b88b043c75a66",
       "extras_required": []
     },
     {
       "name": "protobuf",
-      "version": "7.36.2",
-      "wheel": "protobuf-7.36.2-cp310-abi3-win_amd64.whl",
-      "sha256": "a300819d441e078a5608c0d3c709796bb548136058fda017ae51d425b44fd353",
+      "version": "5.29.6",
+      "wheel": "protobuf-5.29.6-cp310-abi3-win_amd64.whl",
+      "sha256": "7e6ad413275be172f67fdee0f43484b6de5a904cc1c3ea9804cb6fe2ff366eda",
       "extras_required": []
     },
     {
@@ -662,6 +866,13 @@
       "version": "0.2.4",
       "wheel": "pure_eval-0.2.4-py3-none-any.whl",
       "sha256": "96cae060a313cfaad51bb761278bfb0e62dc0248d9315a81173752dc546cd37a",
+      "extras_required": []
+    },
+    {
+      "name": "pyarrow",
+      "version": "26.0.0",
+      "wheel": "pyarrow-26.0.0-cp311-cp311-win_amd64.whl",
+      "sha256": "13b0972a3dc71b642050d1bc72664a3916e14f59c943d8c1368154d6e4b0c2d5",
       "extras_required": []
     },
     {
@@ -805,6 +1016,13 @@
       "extras_required": []
     },
     {
+      "name": "rich",
+      "version": "15.0.0",
+      "wheel": "rich-15.0.0-py3-none-any.whl",
+      "sha256": "33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb",
+      "extras_required": []
+    },
+    {
       "name": "rpds-py",
       "version": "2026.9.1",
       "wheel": "rpds_py-2026.9.1-cp311-cp311-win_amd64.whl",
@@ -816,6 +1034,13 @@
       "version": "0.5.3",
       "wheel": "safetensors-0.5.3-cp38-abi3-win_amd64.whl",
       "sha256": "836cbbc320b47e80acd40e44c8682db0e8ad7123209f69b093def21ec7cafd11",
+      "extras_required": []
+    },
+    {
+      "name": "scikit-image",
+      "version": "0.26.0",
+      "wheel": "scikit_image-0.26.0-cp311-cp311-win_amd64.whl",
+      "sha256": "9490360c8d3f9a7e85c8de87daf7c0c66507960cf4947bb9610d1751928721c7",
       "extras_required": []
     },
     {
@@ -847,6 +1072,13 @@
       "extras_required": []
     },
     {
+      "name": "simple-parsing",
+      "version": "0.1.9",
+      "wheel": "simple_parsing-0.1.9-py3-none-any.whl",
+      "sha256": "398c6b2c3d6ee3b865a6b8d7413999ee7b373de3c5a047f0b12b03b705d52e16",
+      "extras_required": []
+    },
+    {
       "name": "six",
       "version": "1.17.0",
       "wheel": "six-1.17.0-py2.py3-none-any.whl",
@@ -875,6 +1107,55 @@
       "extras_required": []
     },
     {
+      "name": "tensorboard",
+      "version": "2.19.0",
+      "wheel": "tensorboard-2.19.0-py3-none-any.whl",
+      "sha256": "5e71b98663a641a7ce8a6e70b0be8e1a4c0c45d48760b076383ac4755c35b9a0",
+      "extras_required": []
+    },
+    {
+      "name": "tensorboard-data-server",
+      "version": "0.7.2",
+      "wheel": "tensorboard_data_server-0.7.2-py3-none-any.whl",
+      "sha256": "7e0610d205889588983836ec05dc098e80f97b7e7bbff7e994ebb78f578d0ddb",
+      "extras_required": []
+    },
+    {
+      "name": "tensorflow",
+      "version": "2.19.1",
+      "wheel": "tensorflow-2.19.1-cp311-cp311-win_amd64.whl",
+      "sha256": "1729bc2ae90a100a87d5a462b5e9b85a088261a03f0a7179eebb8735938bed57",
+      "extras_required": []
+    },
+    {
+      "name": "tensorflow-datasets",
+      "version": "4.9.9",
+      "wheel": "tensorflow_datasets-4.9.9-py3-none-any.whl",
+      "sha256": "b94902d414cdc12a1014cda9ee5815c502c3d44215b780e06dacbd7949abd14e",
+      "extras_required": []
+    },
+    {
+      "name": "tensorflow-io-gcs-filesystem",
+      "version": "0.31.0",
+      "wheel": "tensorflow_io_gcs_filesystem-0.31.0-cp311-cp311-win_amd64.whl",
+      "sha256": "4bb37d23f21c434687b11059cb7ffd094d52a7813368915ba1b7057e3c16e414",
+      "extras_required": []
+    },
+    {
+      "name": "tensorflow-metadata",
+      "version": "1.16.1",
+      "wheel": "tensorflow_metadata-1.16.1-py3-none-any.whl",
+      "sha256": "2ce72ea31d78a00c0c74c6d465482335aa5cb2a3b2a104dedba0b258bc7bb18a",
+      "extras_required": []
+    },
+    {
+      "name": "termcolor",
+      "version": "3.3.0",
+      "wheel": "termcolor-3.3.0-py3-none-any.whl",
+      "sha256": "cf642efadaf0a8ebbbf4bc7a31cec2f9b5f21a9f726f4ccbb08192c9c26f43a5",
+      "extras_required": []
+    },
+    {
       "name": "terminado",
       "version": "0.18.1",
       "wheel": "terminado-0.18.1-py3-none-any.whl",
@@ -889,6 +1170,13 @@
       "extras_required": []
     },
     {
+      "name": "tifffile",
+      "version": "2026.3.3",
+      "wheel": "tifffile-2026.3.3-py3-none-any.whl",
+      "sha256": "e8be15c94273113d31ecb7aa3a39822189dd11c4967e3cc88c178f1ad2fd1170",
+      "extras_required": []
+    },
+    {
       "name": "tinycss2",
       "version": "1.5.1",
       "wheel": "tinycss2-1.5.1-py3-none-any.whl",
@@ -900,6 +1188,13 @@
       "version": "0.21.4",
       "wheel": "tokenizers-0.21.4-cp39-abi3-win_amd64.whl",
       "sha256": "475d807a5c3eb72c59ad9b5fcdb254f6e17f53dfcbb9903233b0dfa9c943b597",
+      "extras_required": []
+    },
+    {
+      "name": "toml",
+      "version": "0.10.2",
+      "wheel": "toml-0.10.2-py2.py3-none-any.whl",
+      "sha256": "806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b",
       "extras_required": []
     },
     {
@@ -1019,6 +1314,34 @@
       "version": "15.0.1",
       "wheel": "websockets-15.0.1-cp311-cp311-win_amd64.whl",
       "sha256": "27ccee0071a0e75d22cb35849b1db43f2ecd3e161041ac1ee9d2352ddf72f065",
+      "extras_required": []
+    },
+    {
+      "name": "werkzeug",
+      "version": "3.1.9",
+      "wheel": "werkzeug-3.1.9-py3-none-any.whl",
+      "sha256": "6392e50c78460ba618e5b21f08a71f59c99ce99cdc6cf6e3dd7e6ccca8754fab",
+      "extras_required": []
+    },
+    {
+      "name": "wheel",
+      "version": "0.48.0",
+      "wheel": "wheel-0.48.0-py3-none-any.whl",
+      "sha256": "3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab",
+      "extras_required": []
+    },
+    {
+      "name": "wrapt",
+      "version": "2.5.1",
+      "wheel": "wrapt-2.5.1-cp311-cp311-win_amd64.whl",
+      "sha256": "ce3889e3815f97d46414eb574bffdd9bdb41ff70f503097e2707615a87d4e92c",
+      "extras_required": []
+    },
+    {
+      "name": "zipp",
+      "version": "4.1.1",
+      "wheel": "zipp-4.1.1-py3-none-any.whl",
+      "sha256": "8979f52d874162f485ff2981e3891f3a3317b7a3dd43ff1e1775b9304f307a9c",
       "extras_required": []
     }
   ],

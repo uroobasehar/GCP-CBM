@@ -34,7 +34,9 @@ would enable the extension-specific comparison. None of its unseen numerical res
 
 CUB/Pet validation is a seeded stratified 10% subset of the official training pool: 5394/600 and
 3312/368. MRI validation uses exact-image-hash groups to prevent identical images entering both
-training and validation. Seed 42 gives 5040/560. Official test membership is preserved in every case.
+training and validation. Seed 42 with the pinned scikit-learn 1.5.2 environment gives 5038/562. Earlier smoke tests
+used a newer scikit-learn release and produced 5040/560; those historical outputs remain labeled
+as validation evidence. The saved dataset manifest is authoritative for each run. Official test membership is preserved in every case.
 Archive mirrors are explicitly recorded in `rgcbm/data.py`; original publisher metadata determines
 membership and class labels. CUB's additional CVPR-2016 text embeddings are unused and not extracted.
 Do not interpret a mirror's CC0 label as replacing the original dataset's terms; retain its README.

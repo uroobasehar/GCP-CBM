@@ -53,6 +53,14 @@ For the matched feature-classifier baseline, from this folder run
 `python experiments.py --dataset cub --variant backbone --batch-size 24`.
 The same script supports individual ablations, seeds and `--smoke` checks.
 
+## Additional requested libraries
+
+The environment includes TensorFlow **2.19.1**, NumPy, pandas, Matplotlib, Pillow, scikit-learn,
+MedMNIST, KaggleHub (<1), and TensorFlow Datasets (4.9.x), satisfying your requested ranges.
+Compatible Protobuf/metadata/API-core versions are pinned and tested. Windows TensorFlow is CPU-only;
+PyTorch + CUDA 12.8 still performs Blackwell GPU training. Each notebook checks these versions without
+initializing TensorFlow or reserving GPU memory.
+
 ## Progress, explanations and outputs
 
 Checkpoints include stage, epoch, batch, model, optimizer, scheduler, mixed-precision scaler and RNG.

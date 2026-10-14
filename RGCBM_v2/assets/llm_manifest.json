@@ -1,0 +1,15 @@
+{
+  "repo": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "weights": [
+    {
+      "name": "model.safetensors",
+      "size": 3087467144,
+      "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+    }
+  ],
+  "distribution_route": "Publisher metadata/tokenizer + public Kaggle mirror xatri007/qwen2-5-1-5b-instruct for weights",
+  "integrity": "Weights SHA-256 matches authoritative Qwen Hugging Face metadata",
+  "license": "Apache-2.0; bundled LICENSE",
+  "offline_test": "Model/tokenizer loaded with local_files_only=True; generated report passed prediction/index/sign validation"
+}

@@ -3,5 +3,6 @@
   "requested_backend": "local_qwen",
   "used_backend": "local_qwen",
   "fallback_reason": null,
-  "semantic_prose_validated": false
+  "semantic_prose_validated": false,
+  "tested_with": "TensorFlow 2.19.1 / numpy 1.26.4 dependency set"
 }

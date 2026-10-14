@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "checks": [
+    "all nine requested version ranges",
+    "TensorFlow 2.19.1 CPU matrix computation",
+    "MedMNIST registry import",
+    "KaggleHub import",
+    "TensorFlow Datasets offline builder registry",
+    "Google protobuf message imports"
+  ],
+  "libraries": [
+    {
+      "module": "tensorflow",
+      "requirement": "tensorflow==2.19.1",
+      "installed": "2.19.1",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "numpy",
+      "requirement": "numpy>=1.26,<3",
+      "installed": "1.26.4",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "pandas",
+      "requirement": "pandas>=2.0,<3",
+      "installed": "2.2.3",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "matplotlib",
+      "requirement": "matplotlib>=3.8,<4",
+      "installed": "3.9.2",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "PIL",
+      "requirement": "pillow>=10",
+      "installed": "11.0.0",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "sklearn",
+      "requirement": "scikit-learn>=1.4,<2",
+      "installed": "1.5.2",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "medmnist",
+      "requirement": "medmnist>=3,<4",
+      "installed": "3.0.2",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "kagglehub",
+      "requirement": "kagglehub>=0.3,<1",
+      "installed": "0.4.3",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "tensorflow_datasets",
+      "requirement": "tensorflow-datasets>=4.9,<5",
+      "installed": "4.9.9",
+      "module_found": true,
+      "passes": true
+    }
+  ],
+  "tensorflow_gpu": "native Windows TensorFlow 2.19.1 CPU-only; Blackwell GPU training uses PyTorch CUDA 12.8",
+  "hardware_validation": "CPU Linux here; native Windows must run setup checks"
+}

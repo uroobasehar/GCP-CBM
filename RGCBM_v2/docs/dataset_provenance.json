@@ -302,10 +302,10 @@
       "notumor",
       "pituitary"
     ],
-    "manifest_hash": "c99cf8dd24da76e92c5e18a2ddac1829db293351738b1a9f6f5fe0b6d8d39360",
+    "manifest_hash": "5237d55c1f4324b0af213f0794e5a4d2812b99445a65649867a04c7a2ebdb55f",
     "counts": {
-      "train": 5040,
-      "validation": 560,
+      "train": 5038,
+      "validation": 562,
       "test": 1600
     }
   }

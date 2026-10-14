@@ -8,10 +8,12 @@ import torch
 root = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(root))
 from rgcbm.core import Config, RGCBM
+from rgcbm.environment import check_requested_libraries
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--require-gpu', action='store_true')
 args = parser.parse_args()
+print(check_requested_libraries().to_string(index=False))
 info = {'python': platform.python_version(), 'platform': platform.platform(), 'torch': torch.__version__, 'cuda_runtime': torch.version.cuda, 'cuda_available': torch.cuda.is_available()}
 if torch.cuda.is_available():
     info.update(gpu=torch.cuda.get_device_name(0), compute_capability=torch.cuda.get_device_capability(0), compiled_architectures=torch.cuda.get_arch_list(), memory_bytes=torch.cuda.get_device_properties(0).total_memory)

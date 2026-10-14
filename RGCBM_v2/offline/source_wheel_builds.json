@@ -1,0 +1,12 @@
+[
+  {
+    "wheel": "promise-2.3-py3-none-any.whl",
+    "build": "pure-Python wheel from official PyPI distribution via pip wheel; universal py3-none-any",
+    "verification": "included in SHA-256 locked package list"
+  },
+  {
+    "wheel": "fire-0.7.1-py3-none-any.whl",
+    "build": "pure-Python wheel from official PyPI distribution via pip wheel; universal py3-none-any",
+    "verification": "included in SHA-256 locked package list"
+  }
+]

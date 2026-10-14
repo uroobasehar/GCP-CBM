@@ -5,7 +5,7 @@ import nbformat
 ROOT = Path(__file__).resolve().parent
 payload = {p.relative_to(ROOT).as_posix(): p.read_text(encoding='utf-8') for p in sorted((ROOT / 'rgcbm').glob('*.py'))}
 payload['prepare_assets.py'] = (ROOT / 'prepare_assets.py').read_text()
-requirements = '''numpy==1.26.4 pandas==2.2.3 scikit-learn==1.5.2 matplotlib==3.9.2 Pillow==11.0.0 tqdm==4.67.1 PyYAML==6.0.2 transformers==4.51.3 accelerate==1.6.0 huggingface-hub==0.30.2 safetensors==0.5.3 google-api-python-client==2.166.0 google-auth-oauthlib==1.2.2 google-genai==1.11.0'''
+requirements = '''tensorflow==2.19.1 numpy==1.26.4 pandas==2.2.3 scikit-learn==1.5.2 matplotlib==3.9.2 Pillow==11.0.0 medmnist==3.0.2 kagglehub==0.3.14 tensorflow-datasets==4.9.9 tensorflow-metadata==1.16.1 protobuf==5.29.6 googleapis-common-protos==1.69.2 proto-plus==1.26.1 google-api-core==2.24.2 opencv-python-headless==4.10.0.84 tqdm==4.67.1 PyYAML==6.0.2 transformers==4.51.3 accelerate==1.6.0 huggingface-hub==0.30.2 safetensors==0.5.3 google-api-python-client==2.166.0 google-auth-oauthlib==1.2.2 google-genai==1.11.0'''
 
 def markdown(text): return nbformat.v4.new_markdown_cell(text)
 def code(text): return nbformat.v4.new_code_cell(text)
@@ -69,6 +69,13 @@ if CODE_ROOT != ROOT:
         target.write_text(content, encoding='utf-8')
 if str(CODE_ROOT) not in sys.path:
     sys.path.insert(0, str(CODE_ROOT))
+'''), markdown('''## Requested environment compatibility checks
+
+The requested TensorFlow/scientific/MedMNIST/KaggleHub/TFDS libraries are included. This check reads
+package metadata without initializing TensorFlow or reserving GPU memory. Native Windows TensorFlow
+2.19.1 is CPU-only; the revised model uses PyTorch CUDA 12.8 for Blackwell GPU training.
+'''), code('''from rgcbm.environment import check_requested_libraries
+display(check_requested_libraries())
 ''')]
     if mode == 'Colab':
         cells += [markdown('Google Drive stores source archives, backbone assets, run manifests, progress, checkpoints and figures. Training images are extracted to local runtime storage for speed. Google Drive authentication is interactive and cannot be pretested here.'), code('''from google.colab import drive

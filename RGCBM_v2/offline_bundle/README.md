@@ -14,7 +14,7 @@ powershell -ExecutionPolicy Bypass -File .\RGCBM_v2\offline_bundle\Join-OfflineB
 ```
 
 Transfer the resulting `RGCBM_Offline.zip` to the offline system and extract it. It includes the
-Windows conda runtime package set, 143 hash-locked GPU/Jupyter/LLM dependencies, all three dataset
+Windows conda runtime package set, 188 hash-locked GPU/Jupyter/LLM dependencies, all three dataset
 archives, pretrained backbone, offline Qwen weights, three notebooks, code, figures and documents.
 Run `offline/setup_windows.ps1` from an initialized Anaconda PowerShell Prompt, then
 `offline/launch_jupyter.cmd`. These commands perform no package downloads. A current NVIDIA

@@ -1,7 +1,8 @@
 {
-  "offline_cells_executed": 31,
+  "offline_cells_executed": 33,
   "real_dataset": "CUB",
   "cpu_smoke_only": true,
+  "requested_dependencies": "all nine requested ranges pass; TensorFlow 2.19.1",
   "journal_blocks": "cards, reliability, redundancy, exact intervention, matched deletion, attribute audit and profiling executed",
   "ablation_sweep": "separately tested no_finetune and K32 on real Pet images",
   "colab_kaggle": "all cells compile and schemas validate; live credentials/runtimes untested"
