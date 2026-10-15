@@ -6,6 +6,10 @@ three dataset archives, backbone and local Qwen files. No CUDA toolkit, Visual S
 Git, Graphviz, LaTeX, paid LLM API, Intel NPU SDK or extra concept annotation downloads are needed
 to run the notebooks. Matplotlib fonts and Jupyter JavaScript are included in their wheels.
 
+The dependency conflict review pinned PyArrow to 19.0.1 for NumPy 1.26.4 compatibility and added
+installed-lock and native-library checks. Use the latest complete bundle; see
+[the dependency review](OFFLINE_DEPENDENCY_REVIEW.md) for the confirmed failure and replacement tests.
+
 The GPU is an **RTX PRO 4500 Blackwell with 32 GB dedicated VRAM**. Windows shared memory is
 system RAM, not additional equivalent CUDA VRAM. The Intel NPU is not used by this implementation.
 Choose batch size using dedicated VRAM; the notebook starts at 24 and the acceptance test uses 2.
@@ -45,7 +49,9 @@ separately; the NVIDIA collector intentionally accepts only NVIDIA-signed packag
    `.\conda-env\python.exe .\offline\validate_runtime.py --require-gpu --dataset cub`.
    Repeat for `pets` and `brain_mri`. This checks the requested libraries, TensorFlow CPU math,
    real GPU training in both stages, explanation figures, reports, checkpoint reload and the
-   registered Jupyter kernel. Results are in `runtime/offline_validation.json` and `results/`.
+   registered Jupyter kernel. It also verifies installed versions/locations against the Windows
+   lock and probes compiled libraries in both TensorFlow/PyTorch import orders. Results are in
+   `runtime/offline_validation.json`, `runtime/native_library_validation.json` and `results/`.
    Optionally add `--llm`; a rejected Qwen response and deterministic fallback are recorded explicitly.
 4. Run `offline\launch_jupyter.cmd`, open `notebooks/RGCBM_Offline.ipynb`, select the RG-CBM kernel,
    and execute once with `SMOKE_TEST=True`. Stop/restart a training smoke run and verify resume.

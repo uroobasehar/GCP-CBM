@@ -18,6 +18,12 @@ with patch.dict(sys.modules,{'numpy':types.SimpleNamespace(__version__='0.0')}):
         except RuntimeError as exc:assert 'Restart the runtime' in str(exc)
         else:raise AssertionError('Loaded obsolete NumPy was not rejected')
 
+with patch.dict(sys.modules,{'pyarrow':types.SimpleNamespace(__version__='26.0.0')}):
+    with patch.object(bootstrap.subprocess,'check_call'):
+        try:bootstrap.prepare_cloud_runtime([])
+        except RuntimeError as exc:assert 'Restart the runtime' in str(exc)
+        else:raise AssertionError('Loaded incompatible PyArrow was not rejected')
+
 with patch.object(torch,'__version__','2.6.0'),patch.object(bootstrap.subprocess,'check_call') as install:
     try:bootstrap.prepare_cloud_runtime([])
     except RuntimeError as exc:assert 'Repaired' in str(exc)

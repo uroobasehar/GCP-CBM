@@ -1,0 +1,10 @@
+OFFLINE GUARD: IPv4/IPv6/packet sockets blocked by inherited kernel seccomp rules; Unix IPC allowed.
+Python compatibility profile: TensorFlow 2.20.0 (Python 3.13)
+Cloud stack checked: 2.7.1+cpu 0.22.1+cpu CUDA None
+Python compatibility profile: TensorFlow 2.20.0 (Python 3.13)
+Python compatibility profile: TensorFlow 2.20.0 (Python 3.13)
+Python compatibility profile: TensorFlow 2.20.0 (Python 3.13)
+Python compatibility profile: TensorFlow 2.20.0 (Python 3.13)
+Python compatibility profile: TensorFlow 2.20.0 (Python 3.13)
+Cloud stack checked: 2.7.1+cpu 0.22.1+cpu CUDA None
+Passed: compatible stack, restart after loaded-library changes, paired legacy-GPU repair, Blackwell CUDA 12.8 repair, Python 3.13 acceptance, and unsupported Python rejection.

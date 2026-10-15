@@ -3,7 +3,9 @@
   "added_system_tools": [
     "preflight_windows.ps1",
     "collect_driver.ps1",
-    "validate_runtime.py"
+    "validate_runtime.py",
+    "audit_dependencies.py",
+    "native_checks.py"
   ],
   "hardware": {
     "target": "Dell Windows 11; RTX PRO 4500 Blackwell",
@@ -23,5 +25,7 @@
   "driver_fallback": "collect_driver.ps1 validates an NVIDIA-signed standalone installer on an online Windows preparation computer",
   "cloud_tests": "19/19 code cells executed for each 36-cell notebook; real-CUB CPU; NumPy 2.1.3; root requirements checked; pip and managed host/Drive integrations simulated",
   "live_cloud_and_windows_gpu": "unverified; no authenticated platform session or native Windows GPU host available",
-  "llm": "default template tested; raw Qwen sign failure was rejected in prior offline revalidation"
+  "llm": "default template tested; raw Qwen sign failure was rejected in prior offline revalidation",
+  "confirmed_dependency_fix": "PyArrow 26/NumPy 1.26 native import conflict: pinned PyArrow 19.0.1 in offline/cloud requirements",
+  "additional_validation": "188 Windows wheels, 387 active requirements, 20 conda packages/56 constraints and DLL basename hashes audited; native probes pass for both import orders on Linux CPU"
 }

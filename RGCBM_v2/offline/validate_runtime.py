@@ -21,6 +21,13 @@ os.environ.update(HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',HF_DATASETS_OFFLIN
 report={'python':sys.version,'platform':platform.platform(),'checks':{},'research_accuracy':'not measured; two training batches only'}
 output=runtime/f'offline_validation_{args.dataset}.json'
 try:
+    if os.name=='nt':
+        from audit_dependencies import audit
+        report['installed_dependency_audit']=audit(PACKAGE/'offline',installed=True)
+    else:
+        report['installed_dependency_audit']='not run: Windows lock cannot be installed or executed on this host'
+    from native_checks import run_checks
+    report['native_library_checks']=run_checks(runtime/'native_library_validation.json')
     from rgcbm.environment import check_requested_libraries,runtime_manifest
     report['requested_libraries']=check_requested_libraries().to_dict(orient='records')
     import tensorflow as tf

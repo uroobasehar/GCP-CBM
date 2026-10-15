@@ -9,12 +9,14 @@ from packaging.requirements import Requirement
 from packaging.utils import canonicalize_name, parse_wheel_filename
 from packaging.specifiers import SpecifierSet
 from packaging.version import Version
+from audit_dependencies import windows_tags
 
 root = Path(__file__).resolve().parent
 environment = {'implementation_name': 'cpython', 'implementation_version': '3.11.15', 'os_name': 'nt', 'platform_machine': 'AMD64', 'platform_release': '11', 'platform_system': 'Windows', 'platform_version': '10.0.26100', 'python_full_version': '3.11.15', 'platform_python_implementation': 'CPython', 'python_version': '3.11', 'sys_platform': 'win32', 'extra': ''}
 runtime = json.loads((root / 'conda_manifest.json').read_text())
 python_version = next(p['version'] for p in runtime['packages'] if p['name'] == 'python')
 environment.update(implementation_version=python_version, python_full_version=python_version)
+target_tags = windows_tags()
 inventory = defaultdict(list)
 for path in sorted((root / 'wheelhouse').glob('*.whl')):
     name, version, _, tags = parse_wheel_filename(path.name)
@@ -23,7 +25,7 @@ for path in sorted((root / 'wheelhouse').glob('*.whl')):
         if archive.testzip() is not None: raise RuntimeError('Corrupt wheel: ' + path.name)
     if metadata['Requires-Python'] and not SpecifierSet(metadata['Requires-Python']).contains(python_version):
         continue
-    if not any(t.platform in ['win_amd64', 'any'] and (t.interpreter.startswith('py3') or t.interpreter in ['cp311', 'cp310', 'cp39', 'cp38', 'cp37']) for t in tags):
+    if not target_tags.intersection(tags):
         continue
     inventory[canonicalize_name(name)].append({'version': version, 'path': path, 'requirements': metadata.get_all('Requires-Dist') or []})
 roots = [Requirement(line.strip()) for line in (root / 'requirements-win-py311.txt').read_text().splitlines() if line.strip() and not line.startswith('#')]
@@ -32,6 +34,8 @@ for _ in range(100):
     constraints = defaultdict(list)
     new_extras = defaultdict(set)
     for requirement in roots:
+        if requirement.marker and not requirement.marker.evaluate(environment):
+            continue
         name = canonicalize_name(requirement.name)
         constraints[name].append(requirement.specifier)
         new_extras[name].update(requirement.extras)

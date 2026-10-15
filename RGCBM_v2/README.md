@@ -13,6 +13,8 @@ For the GitHub distribution, first follow [offline ZIP assembly instructions](ht
 
 Read [offline system prerequisites](docs/OFFLINE_PREREQUISITES.md) before permanent disconnection.
 It includes the driver, browser, filesystem and certificate checks, plus a native acceptance test.
+The [dependency review](docs/OFFLINE_DEPENDENCY_REVIEW.md) records the corrected PyArrow/NumPy
+conflict, regenerated lock, package isolation and additional native-library validation.
 The Intel NPU is optional; this pipeline uses the NVIDIA GPU and CPU. Shared graphics memory is not
 additional dedicated VRAM.
 

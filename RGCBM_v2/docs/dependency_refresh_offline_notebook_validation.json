@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "cells": 33,
+  "code_cells_completed": 17,
+  "code_cell_indices": [
+    1,
+    3,
+    5,
+    7,
+    8,
+    10,
+    12,
+    14,
+    15,
+    17,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32
+  ],
+  "elapsed_seconds": 19.009890319997794,
+  "dataset": "real CUB images",
+  "runtime": "existing Linux CPU virtual environment; NOT fresh Windows installation",
+  "network": "Internet socket creation denied by inherited kernel seccomp; Jupyter channels use Unix IPC",
+  "test_parameters": {
+    "batch_size": 2,
+    "head_epochs": 1,
+    "finetune_epochs": 1,
+    "max_train_batches_per_stage": 2,
+    "max_validation_batches": 2,
+    "ablation_variants": [
+      "no_finetune",
+      "K32"
+    ],
+    "ablation_seeds": [
+      42
+    ],
+    "cub_attribute_audit": true,
+    "llm_in_notebook": "template"
+  },
+  "error": null,
+  "scientific_scope": "software smoke checks; not research accuracy"
+}

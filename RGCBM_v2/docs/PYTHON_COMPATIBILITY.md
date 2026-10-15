@@ -39,3 +39,10 @@ mount/authentication/Drive transport were substituted after actual dependency in
 Live Colab GPU and Google Drive authorization are not claimed as tested here.
 
 See `python313_functional_validation.json` and `python313_cloud_notebook_validation.json` for evidence.
+
+The subsequent [offline dependency review](OFFLINE_DEPENDENCY_REVIEW.md) pins PyArrow 19.0.1 in
+both offline and cloud requirements. It loads with NumPy 1.26.4 and 2.1.3; the unpinned PyArrow 26
+requires NumPy >=2 at import time despite omitting that dependency from its metadata.
+Both cloud notebooks and native CPU probes were rerun after this pin. Updated run evidence is
+in `dependency_refresh_cloud_notebook_validation.json` and `python313_native_library_validation.json`;
+the earlier Python 3.13 report remains a record of the original compatibility fix.

@@ -14,7 +14,8 @@ def prepare_cloud_runtime(requirements):
                'accelerate': 'accelerate', 'huggingface_hub': 'huggingface-hub',
                'tokenizers': 'tokenizers', 'safetensors': 'safetensors',
                'tensorflow_datasets': 'tensorflow-datasets', 'medmnist': 'medmnist',
-               'kagglehub': 'kagglehub', 'google.genai': 'google-genai'}
+               'kagglehub': 'kagglehub', 'google.genai': 'google-genai',
+               'pyarrow': 'pyarrow'}
     loaded = {}
     for module, distribution in modules.items():
         if module in sys.modules:

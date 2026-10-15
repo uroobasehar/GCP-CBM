@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "scope": "Windows artifacts checked statically; native DLL loading/GPU execution require target acceptance.",
+  "target": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.11.17",
+    "os_name": "nt",
+    "platform_machine": "AMD64",
+    "platform_release": "11",
+    "platform_system": "Windows",
+    "platform_version": "10.0.26100",
+    "python_full_version": "3.11.17",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.11",
+    "sys_platform": "win32",
+    "extra": ""
+  },
+  "wheels": 188,
+  "active_wheel_dependencies": 387,
+  "conda_packages": 20,
+  "conda_dependency_constraints": 56,
+  "checks": [
+    "wheel/conda SHA-256",
+    "wheel CRC",
+    "CPython ABI/platform tags",
+    "Requires-Python",
+    "root/transitive requirements and extras",
+    "conda dependencies/builds",
+    "installed destination collisions"
+  ],
+  "duplicate_installed_files": [],
+  "duplicate_dll_basenames": [
+    {
+      "name": "asmjit.dll",
+      "identical": true,
+      "files": [
+        {
+          "wheel": "torch-2.7.1+cu128-cp311-cp311-win_amd64.whl",
+          "member": "torch/bin/asmjit.dll",
+          "sha256": "55c2b210efdc8d9c4f3854fc8aee438717176bc52f9849d99fa9ec33f9703bcd"
+        },
+        {
+          "wheel": "torch-2.7.1+cu128-cp311-cp311-win_amd64.whl",
+          "member": "torch/lib/asmjit.dll",
+          "sha256": "55c2b210efdc8d9c4f3854fc8aee438717176bc52f9849d99fa9ec33f9703bcd"
+        }
+      ]
+    },
+    {
+      "name": "fbgemm.dll",
+      "identical": true,
+      "files": [
+        {
+          "wheel": "torch-2.7.1+cu128-cp311-cp311-win_amd64.whl",
+          "member": "torch/bin/fbgemm.dll",
+          "sha256": "ebe786f7066e3fe265eb5673ad3d66344b1803b5ef31aa954bc4346c25947a18"
+        },
+        {
+          "wheel": "torch-2.7.1+cu128-cp311-cp311-win_amd64.whl",
+          "member": "torch/lib/fbgemm.dll",
+          "sha256": "ebe786f7066e3fe265eb5673ad3d66344b1803b5ef31aa954bc4346c25947a18"
+        }
+      ]
+    },
+    {
+      "name": "cudart64_12.dll",
+      "identical": true,
+      "files": [
+        {
+          "wheel": "torch-2.7.1+cu128-cp311-cp311-win_amd64.whl",
+          "member": "torch/lib/cudart64_12.dll",
+          "sha256": "9d9b868955149875ac4ef43442aaaa8913d4a7b3e4d6dd60ee871626aa045768"
+        },
+        {
+          "wheel": "torchvision-0.22.1+cu128-cp311-cp311-win_amd64.whl",
+          "member": "torchvision/cudart64_12.dll",
+          "sha256": "9d9b868955149875ac4ef43442aaaa8913d4a7b3e4d6dd60ee871626aa045768"
+        }
+      ]
+    }
+  ],
+  "dll_count": 75
+}

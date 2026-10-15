@@ -49,6 +49,11 @@ if (!(Test-Path (Join-Path $Environment 'python.exe'))) {
 }
 $Python = Join-Path $Environment 'python.exe'
 $env:PATH = "$Environment;$Environment\Library\bin;$Environment\Scripts;$env:PATH"
+# Keep Anaconda base/user-site packages and pip user configuration out of this prefix.
+$env:PYTHONNOUSERSITE = '1'
+Remove-Item Env:PYTHONHOME, Env:PYTHONPATH, Env:PIP_TARGET, Env:PIP_PREFIX -ErrorAction SilentlyContinue
+$env:PIP_USER = '0'
+$env:PIP_CONFIG_FILE = 'NUL'
 $version = & $Python -c "import sys; print('%d.%d' % sys.version_info[:2])"
 if ($version -ne '3.11') { throw 'This wheelhouse requires 64-bit CPython 3.11.' }
 $VenvPython = $Python
@@ -56,6 +61,8 @@ $VenvPython = $Python
 if ($LASTEXITCODE -ne 0) { throw 'Offline package installation failed.' }
 & $VenvPython -m pip check
 if ($LASTEXITCODE -ne 0) { throw 'Installed package requirements are inconsistent.' }
+& $VenvPython (Join-Path $PSScriptRoot 'audit_dependencies.py') --installed
+if ($LASTEXITCODE -ne 0) { throw 'The installed environment does not match the verified Windows lock.' }
 & $VenvPython -m ipykernel install --prefix $Environment --name rgcbm-offline --display-name 'RG-CBM Anaconda offline GPU (Python 3.11)'
 if ($LASTEXITCODE -ne 0) { throw 'Jupyter kernel registration failed.' }
 if (!$SkipGpuCheck) {

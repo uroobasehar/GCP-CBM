@@ -870,9 +870,9 @@
     },
     {
       "name": "pyarrow",
-      "version": "26.0.0",
-      "wheel": "pyarrow-26.0.0-cp311-cp311-win_amd64.whl",
-      "sha256": "13b0972a3dc71b642050d1bc72664a3916e14f59c943d8c1368154d6e4b0c2d5",
+      "version": "19.0.1",
+      "wheel": "pyarrow-19.0.1-cp311-cp311-win_amd64.whl",
+      "sha256": "008a4009efdb4ea3d2e18f05cd31f9d43c388aad29c636112c2966605ba33466",
       "extras_required": []
     },
     {
