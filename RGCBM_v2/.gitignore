@@ -9,3 +9,12 @@ private_*.json
 *oauth*client*.json
 offline/conda_explicit_local.txt
 offline/machine_validation.json
+offline/preflight_report.json
+offline/driver_manifest.json
+offline/conda-cache/
+offline/wheelhouse/
+offline/conda-packages/
+offline/installers/*.exe
+data/
+assets/*.pth
+assets/qwen2.5-1.5b-instruct/

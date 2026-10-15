@@ -31,3 +31,19 @@ def check_requested_libraries(strict=True):
     if strict and not frame.passes.all():
         raise RuntimeError('Requested dependency check failed: '+', '.join(frame.loc[~frame.passes,'requirement']))
     return frame
+
+
+def runtime_manifest():
+    import platform
+    import sys
+    import torch
+    packages = {}
+    for name in ['torch', 'torchvision', 'numpy', 'pandas', 'scikit-learn', 'matplotlib',
+                 'tensorflow', 'transformers', 'protobuf', 'tensorflow-datasets']:
+        try: packages[name] = metadata.version(name)
+        except metadata.PackageNotFoundError: packages[name] = None
+    result = {'python': sys.version, 'platform': platform.platform(), 'packages': packages,
+              'cuda_runtime': torch.version.cuda, 'cuda_available': torch.cuda.is_available()}
+    if torch.cuda.is_available():
+        result.update(gpu=torch.cuda.get_device_name(0), capability=torch.cuda.get_device_capability(0))
+    return result

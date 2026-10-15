@@ -1,0 +1,27 @@
+{
+  "python_dependency_audit": "188 Windows packages closed; no new pip package needed for the requested workflows",
+  "added_system_tools": [
+    "preflight_windows.ps1",
+    "collect_driver.ps1",
+    "validate_runtime.py"
+  ],
+  "hardware": {
+    "target": "Dell Windows 11; RTX PRO 4500 Blackwell",
+    "dedicated_vram_gb": 32,
+    "shared_graphics_memory": "not equivalent dedicated CUDA VRAM",
+    "intel_npu": "not required or used"
+  },
+  "system_prerequisites": [
+    "working NVIDIA system driver",
+    "Windows certificate trust",
+    "Anaconda3",
+    "local web browser",
+    "writable NTFS/exFAT storage"
+  ],
+  "driver_binary_included": false,
+  "driver_download_blocker": "NVIDIA standalone driver hosts returned HTTP 403 from the running cloud egress policy; saved allowlist edits did not change the active instance",
+  "driver_fallback": "collect_driver.ps1 validates an NVIDIA-signed standalone installer on an online Windows preparation computer",
+  "cloud_tests": "19/19 code cells executed for each 36-cell notebook; real-CUB CPU; NumPy 2.1.3; root requirements checked; pip and managed host/Drive integrations simulated",
+  "live_cloud_and_windows_gpu": "unverified; no authenticated platform session or native Windows GPU host available",
+  "llm": "default template tested; raw Qwen sign failure was rejected in prior offline revalidation"
+}

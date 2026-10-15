@@ -2,6 +2,13 @@ param([switch]$SkipGpuCheck)
 $ErrorActionPreference = 'Stop'
 $Root = Split-Path -Parent $PSScriptRoot
 Set-Location $Root
+$env:CONDA_OFFLINE = 'true'
+$env:CONDA_NO_PLUGINS = 'true'
+$env:CONDA_SOLVER = 'classic'
+$env:PIP_NO_INDEX = '1'
+$env:PIP_DISABLE_PIP_VERSION_CHECK = '1'
+$env:HF_HUB_OFFLINE = '1'
+$env:TRANSFORMERS_OFFLINE = '1'
 
 # Verify the complete distribution before executing bundled installers/packages.
 foreach ($line in Get-Content (Join-Path $Root 'SHA256SUMS.txt')) {
@@ -56,3 +63,4 @@ if (!$SkipGpuCheck) {
     if ($LASTEXITCODE -ne 0) { throw 'GPU validation failed; check the NVIDIA driver before training.' }
 }
 Write-Host 'Offline dependencies are installed. Run offline\launch_jupyter.cmd and open notebooks\RGCBM_Offline.ipynb.'
+Write-Host 'Before permanently disconnecting, test again with the network disconnected: conda-env\python.exe offline\validate_runtime.py --require-gpu --dataset cub'

@@ -5,7 +5,8 @@ import nbformat
 ROOT = Path(__file__).resolve().parent
 payload = {p.relative_to(ROOT).as_posix(): p.read_text(encoding='utf-8') for p in sorted((ROOT / 'rgcbm').glob('*.py'))}
 payload['prepare_assets.py'] = (ROOT / 'prepare_assets.py').read_text()
-requirements = '''tensorflow==2.19.1 numpy==1.26.4 pandas==2.2.3 scikit-learn==1.5.2 matplotlib==3.9.2 Pillow==11.0.0 medmnist==3.0.2 kagglehub==0.3.14 tensorflow-datasets==4.9.9 tensorflow-metadata==1.16.1 protobuf==5.29.6 googleapis-common-protos==1.69.2 proto-plus==1.26.1 google-api-core==2.24.2 opencv-python-headless==4.10.0.84 tqdm==4.67.1 PyYAML==6.0.2 transformers==4.51.3 accelerate==1.6.0 huggingface-hub==0.30.2 safetensors==0.5.3 google-api-python-client==2.166.0 google-auth-oauthlib==1.2.2 google-genai==1.11.0'''
+requirements = [line.strip() for line in (ROOT / 'cloud_requirements.txt').read_text().splitlines() if line.strip() and not line.startswith('#')]
+bootstrap = (ROOT / 'cloud_bootstrap.py').read_text()
 
 def markdown(text): return nbformat.v4.new_markdown_cell(text)
 def code(text): return nbformat.v4.new_code_cell(text)
@@ -45,16 +46,11 @@ ONLINE = False
 SYNC_CALLBACK = None
 ''')]
     else:
-        cells += [markdown('Internet access is required for initial preparation. Enable a GPU in runtime settings. Dependencies are pinned; restart the kernel/runtime if an already imported package version changed.'), code(f'''import sys, subprocess
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', *{requirements.split()!r}])
-import torch
-if tuple(map(int, torch.__version__.split('+')[0].split('.')[:2])) < (2, 7):
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'torch==2.7.1', 'torchvision==0.22.1', '--index-url', 'https://download.pytorch.org/whl/cu128'])
-    raise RuntimeError('PyTorch changed: restart this runtime, then rerun the notebook.')
-import torchvision
+        cells += [markdown('Internet access is required for initial preparation. Enable a GPU in runtime settings. Dependencies are pinned; restart the kernel/runtime if an already imported package version changed.'), code(bootstrap + f'''
+prepare_cloud_runtime({requirements!r})
 from pathlib import Path
 import os, shutil
-ROOT = Path('/content/rgcbm' if '{mode}' == 'Colab' else '/kaggle/working/rgcbm')
+ROOT = Path(os.getenv('RGCBM_ROOT', '/content/rgcbm' if '{mode}' == 'Colab' else '/kaggle/working/rgcbm'))
 ROOT.mkdir(parents=True, exist_ok=True)
 ONLINE = True
 SYNC_CALLBACK = None
@@ -80,7 +76,7 @@ display(check_requested_libraries())
     if mode == 'Colab':
         cells += [markdown('Google Drive stores source archives, backbone assets, run manifests, progress, checkpoints and figures. Training images are extracted to local runtime storage for speed. Google Drive authentication is interactive and cannot be pretested here.'), code('''from google.colab import drive
 drive.mount('/content/drive', force_remount=False)
-DRIVE_ROOT = Path('/content/drive/MyDrive/RGCBM_MultiDataset')
+DRIVE_ROOT = Path(os.getenv('RGCBM_DRIVE_ROOT', '/content/drive/MyDrive/RGCBM_MultiDataset'))
 for folder in ['datasets', 'assets', 'results']:
     (DRIVE_ROOT / folder).mkdir(parents=True, exist_ok=True)
 # Atomic checkpoint writes are made directly into this mounted Drive results folder.
@@ -99,6 +95,12 @@ if not archive.exists() and (DRIVE_ROOT / 'datasets' / archive.name).exists():
 weight = ROOT / 'assets' / 'efficientnet_b1_imagenet.pth'
 if not weight.exists() and (DRIVE_ROOT / 'assets' / weight.name).exists():
     shutil.copy2(DRIVE_ROOT / 'assets' / weight.name, weight)
+if LLM_BACKEND == 'local_qwen':
+    for filename in ['llm_manifest.json']:
+        if (DRIVE_ROOT / 'assets' / filename).is_file():
+            shutil.copy2(DRIVE_ROOT / 'assets' / filename, ROOT / 'assets' / filename)
+    if (DRIVE_ROOT / 'assets' / 'qwen2.5-1.5b-instruct').is_dir():
+        shutil.copytree(DRIVE_ROOT / 'assets' / 'qwen2.5-1.5b-instruct', ROOT / 'assets' / 'qwen2.5-1.5b-instruct', dirs_exist_ok=True)
 ''')]
     elif mode == 'Kaggle':
         cells += [markdown('Kaggle cannot mount Google Drive through `google.colab.drive`. Use the supported Drive API with a securely stored user OAuth token. Follow `docs/CLOUD_STORAGE.md`; add Kaggle secret **GDRIVE_TOKEN_JSON**. No credential belongs in the notebook. Remote outages are recorded while local checkpoints remain recoverable.'), code('''from rgcbm.cloud import DriveStore
@@ -108,10 +110,7 @@ if REQUIRE_DRIVE:
     DRIVE.ensure_dataset(ROOT, DATASET)
     DRIVE.restore_run(ROOT, RUN_NAME)
     SYNC_CALLBACK = DRIVE.sync_run
-    (ROOT / 'assets').mkdir(exist_ok=True)
-    weight = ROOT / 'assets' / 'efficientnet_b1_imagenet.pth'
-    if not weight.exists():
-        DRIVE.download(weight.name, weight, 'assets')
+    DRIVE.restore_assets(ROOT, include_llm=LLM_BACKEND == 'local_qwen')
 else:
     DRIVE = None
     print('Drive disabled explicitly: persist /kaggle/working using Kaggle Save Version.')
@@ -140,11 +139,11 @@ for filename in ['efficientnet_b1_imagenet.pth', 'backbone_manifest.json']:
     shutil.copy2(ROOT / 'assets' / filename, DRIVE_ROOT / 'assets' / filename)
 if LLM_BACKEND == 'local_qwen':
     shutil.copytree(ROOT / 'assets' / 'qwen2.5-1.5b-instruct', DRIVE_ROOT / 'assets' / 'qwen2.5-1.5b-instruct', dirs_exist_ok=True)
+    shutil.copy2(ROOT / 'assets' / 'llm_manifest.json', DRIVE_ROOT / 'assets' / 'llm_manifest.json')
 ''')]
     elif mode == 'Kaggle':
         cells += [code('''if DRIVE is not None:
-    for filename in ['efficientnet_b1_imagenet.pth', 'backbone_manifest.json']:
-        DRIVE.upload(ROOT / 'assets' / filename, 'assets')
+    DRIVE.sync_assets(ROOT, include_llm=LLM_BACKEND == 'local_qwen')
 ''')]
     cells += [markdown('GPU check: the Windows Blackwell wheelhouse uses PyTorch 2.7.1 + CUDA 12.8. Driver compatibility must be checked on that actual machine. This development machine had only a CPU.'), code('''import torch
 print('PyTorch:', torch.__version__, 'CUDA runtime:', torch.version.cuda)
@@ -153,6 +152,8 @@ if DEVICE == 'cuda':
     print('GPU:', torch.cuda.get_device_name(0), 'capability:', torch.cuda.get_device_capability(0))
 else:
     print('CPU mode. Set SMOKE_TEST=True for validation, or enable the intended NVIDIA GPU.')
+    if not SMOKE_TEST:
+        raise RuntimeError('Enable a GPU for full training, or set SMOKE_TEST=True for CPU validation.')
 torch.set_num_threads(min(4, os.cpu_count() or 1))
 cfg = Config(dataset=DATASET, seed=SEED, concepts=NUM_CONCEPTS, batch_size=BATCH_SIZE,
              head_epochs=1 if SMOKE_TEST else HEAD_EPOCHS,
@@ -165,6 +166,8 @@ print(cfg.to_dict())
 from rgcbm.data import atomic_json
 model, RUN_DIR, status = fit(ROOT, manifest, cfg, device=DEVICE, sync_callback=SYNC_CALLBACK, run_name=RUN_NAME)
 atomic_json(RUN_DIR / 'dataset_manifest.json', manifest)
+from rgcbm.environment import runtime_manifest
+atomic_json(RUN_DIR / 'environment.json', runtime_manifest())
 assert status['complete']
 print('Training complete. Best validation model restored:', RUN_DIR)
 '''), markdown('Ground names on validation; evaluate the frozen names and classifier on the official test set. CUB boxes and Pet trimaps enter evaluation only, never training or cropping. Smoke mode intentionally evaluates only two test batches and cannot supply paper results.'), code('''from rgcbm.evaluate import ground_concepts, evaluate

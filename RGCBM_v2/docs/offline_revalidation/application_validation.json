@@ -1,0 +1,116 @@
+{
+  "runtime": "existing Linux CPU environment; NOT the fresh portable-component environment",
+  "network": "Internet sockets blocked by kernel seccomp throughout this process",
+  "datasets": [
+    {
+      "dataset": "pets",
+      "split_counts": {
+        "train": 3312,
+        "validation": 368,
+        "test": 3669
+      },
+      "training_updates": 2,
+      "test_examples": 2,
+      "sampled_images_match_archive_bytes": 6,
+      "checks": "both training stages, no exact leakage, frozen grounding, scoring, exact intervention identity, template report, figures, checkpoint fields and completed-run reload",
+      "run": "/workspace/rgcbm-offline-validation-20261015/extracted/RGCBM_MultiDataset/results/pets_offline_validation_20261015"
+    },
+    {
+      "dataset": "brain_mri",
+      "split_counts": {
+        "train": 5038,
+        "validation": 562,
+        "test": 1600
+      },
+      "training_updates": 2,
+      "test_examples": 2,
+      "sampled_images_match_archive_bytes": 6,
+      "checks": "both training stages, no exact leakage, frozen grounding, scoring, exact intervention identity, template report, figures, checkpoint fields and completed-run reload",
+      "run": "/workspace/rgcbm-offline-validation-20261015/extracted/RGCBM_MultiDataset/results/brain_mri_offline_validation_20261015"
+    }
+  ],
+  "requested_libraries": {
+    "versions": [
+      {
+        "module": "tensorflow",
+        "requirement": "tensorflow==2.19.1",
+        "installed": "2.19.1",
+        "module_found": true,
+        "passes": true
+      },
+      {
+        "module": "numpy",
+        "requirement": "numpy>=1.26,<3",
+        "installed": "1.26.4",
+        "module_found": true,
+        "passes": true
+      },
+      {
+        "module": "pandas",
+        "requirement": "pandas>=2.0,<3",
+        "installed": "2.2.3",
+        "module_found": true,
+        "passes": true
+      },
+      {
+        "module": "matplotlib",
+        "requirement": "matplotlib>=3.8,<4",
+        "installed": "3.9.2",
+        "module_found": true,
+        "passes": true
+      },
+      {
+        "module": "PIL",
+        "requirement": "pillow>=10",
+        "installed": "11.0.0",
+        "module_found": true,
+        "passes": true
+      },
+      {
+        "module": "sklearn",
+        "requirement": "scikit-learn>=1.4,<2",
+        "installed": "1.5.2",
+        "module_found": true,
+        "passes": true
+      },
+      {
+        "module": "medmnist",
+        "requirement": "medmnist>=3,<4",
+        "installed": "3.0.2",
+        "module_found": true,
+        "passes": true
+      },
+      {
+        "module": "kagglehub",
+        "requirement": "kagglehub>=0.3,<1",
+        "installed": "0.4.3",
+        "module_found": true,
+        "passes": true
+      },
+      {
+        "module": "tensorflow_datasets",
+        "requirement": "tensorflow-datasets>=4.9,<5",
+        "installed": "4.9.9",
+        "module_found": true,
+        "passes": true
+      }
+    ],
+    "tensorflow_matmul": "passed CPU",
+    "medmnist_registry": "passed",
+    "kagglehub_import": "passed",
+    "tfds_offline_registry": "passed",
+    "protobuf_compatibility": "passed"
+  },
+  "local_llm": {
+    "model_load_and_raw_generation": "completed offline",
+    "raw_response_validation": "failed",
+    "specific_error": "concept index 8 has a positive margin contribution but was listed as opposition",
+    "additional_prose_issue": "claims species-specific texture despite weak concept grounding",
+    "fallback_reason": "ValueError: LLM used an unsupported concept or sign.",
+    "final_backend_used": "template",
+    "fallback_result_revalidated": "passed and exactly equals deterministic template",
+    "semantic_prose": "raw LLM prose is unsuitable as evidence; human review remains necessary"
+  },
+  "classification_and_default_template_pipeline": "passed real-image CPU checks",
+  "strict_local_qwen_test": "failed; validator and fallback worked as designed"
+}

@@ -11,6 +11,11 @@ For the GitHub distribution, first follow [offline ZIP assembly instructions](ht
 
 ## Start on the offline Windows 11 machine
 
+Read [offline system prerequisites](docs/OFFLINE_PREREQUISITES.md) before permanent disconnection.
+It includes the driver, browser, filesystem and certificate checks, plus a native acceptance test.
+The Intel NPU is optional; this pipeline uses the NVIDIA GPU and CPU. Shared graphics memory is not
+additional dedicated VRAM.
+
 1. Obtain the complete offline bundle, reconstruct its ZIP if distributed in parts, and extract it
    to a writable local folder such as `D:\RGCBM`. Allow at least **60 GB free disk** when retaining
    source ZIPs, installed dependencies, extracted data, checkpoints and distribution parts.
@@ -90,6 +95,12 @@ Use three full seeds and matched reruns before writing result claims; software s
 research results. Descriptor correlations do not establish named parts, clinical findings or causal image mechanisms.
 
 ## What was validated
+
+The new Colab and Kaggle notebooks also passed complete local real-CUB CPU smoke execution with
+NumPy 2.1.3. Pip calls and cloud mount/OAuth/Drive endpoints were substituted; actual training,
+checkpointing, figures and journal blocks executed. Drive API contract tests cover cold restore,
+newer-local-checkpoint preservation and complete LLM assets. See `docs/cloud_notebook_validation.json`.
+Live platform GPUs and authenticated Drive sessions still require target-platform validation.
 
 The shared implementation passed actual CUB/Pet/MRI CPU training steps in both stages, checkpoint
 reload, classification/explanation exports, independent-annotation evaluation, reports and figures.

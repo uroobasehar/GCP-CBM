@@ -11,5 +11,5 @@
   "distribution_route": "Publisher metadata/tokenizer + public Kaggle mirror xatri007/qwen2-5-1-5b-instruct for weights",
   "integrity": "Weights SHA-256 matches authoritative Qwen Hugging Face metadata",
   "license": "Apache-2.0; bundled LICENSE",
-  "offline_test": "Model/tokenizer loaded with local_files_only=True; generated report passed prediction/index/sign validation"
+  "offline_test": "Model/tokenizer load and generation work with local_files_only=True. One earlier structured response passed; a later response assigned a supporting concept to opposition and was rejected with deterministic fallback. Raw prose requires human review."
 }

@@ -26,3 +26,7 @@ names intact. Allow at least 60 GB free disk for cloning, assembly, extraction, 
 
 The separate `../RGCBM_Code.zip` is a small code/documentation download; it intentionally has no
 datasets, Windows wheels or model weights. It is useful for reviewing or running the cloud notebooks.
+
+Before permanent disconnection, read [system prerequisites](../docs/OFFLINE_PREREQUISITES.md).
+The standalone NVIDIA driver remains a separately collected companion; this ZIP does not contain it.
+The new preflight and native acceptance tools detect system prerequisites on the actual Windows PC.

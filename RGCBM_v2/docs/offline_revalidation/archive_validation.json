@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "network": "IPv4/IPv6 sockets denied by kernel seccomp during verification",
+  "archive_sha256": "83cbbd896d27504c4feb81b86f68ccacd6dad82f419c4b245251775579b58282",
+  "archive_bytes": 9195430854,
+  "parts_verified": 5,
+  "members_crc_verified": 394,
+  "member_sha256_verified": 393,
+  "extracted_source": "/workspace/rgcbm-offline-validation-20261015/extracted/RGCBM_MultiDataset",
+  "pure_python_wheels_extracted": 146,
+  "large_artifacts": "read-only references to existing local files after independent SHA-256 verification against the delivered ZIP",
+  "dataset_images": "previous local extraction reused; source archives fully checked; no download",
+  "platform_scope": "Windows binary runtime cannot execute on this Linux CPU host"
+}

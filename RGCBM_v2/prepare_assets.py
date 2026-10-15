@@ -16,20 +16,21 @@ for name in args.datasets: prepare_data(root, name, online=True)
 backbone = assets / 'efficientnet_b1_imagenet.pth'
 if not backbone.exists():
     torch.hub.set_dir(str(assets / 'torch-cache'))
-    model = efficientnet_b1(weights=EfficientNet_B1_Weights.IMAGENET1K_V2)
-    torch.save(model.state_dict(), backbone)
+    weights = EfficientNet_B1_Weights.IMAGENET1K_V2
+    import re
+    prefix = re.search(r'-([0-9a-f]+)\.pth$', weights.url).group(1)
+    torch.hub.download_url_to_file(weights.url, str(backbone), hash_prefix=prefix)
 if args.llm:
-    from huggingface_hub import snapshot_download, HfApi
-    metadata = HfApi().model_info('Qwen/Qwen2.5-1.5B-Instruct', files_metadata=True)
+    import json
+    revision = '989aa7980e4cf806f80c7fef2b1adb7bc71aa306'
+    expected = 'dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee'
     model_dir = assets / 'qwen2.5-1.5b-instruct'
-    snapshot_download('Qwen/Qwen2.5-1.5B-Instruct', revision=metadata.sha, local_dir=str(model_dir), allow_patterns=['*.json', '*.safetensors', '*.txt', '*.model', 'LICENSE*', 'README.md'])
-    verified = []
-    for item in metadata.siblings:
-        if item.rfilename.endswith('.safetensors'):
-            expected = item.lfs.sha256
-            actual = sha256(model_dir / item.rfilename)
-            if expected != actual: raise RuntimeError('Qwen weights failed publisher SHA-256 verification.')
-            verified.append({'name': item.rfilename, 'sha256': actual})
-    atomic_json(assets / 'llm_manifest.json', {'repo': 'Qwen/Qwen2.5-1.5B-Instruct', 'revision': metadata.sha, 'weights': verified})
+    required = ['config.json', 'generation_config.json', 'tokenizer.json', 'tokenizer_config.json', 'vocab.json', 'merges.txt', 'model.safetensors']
+    if not all((model_dir / name).is_file() for name in required):
+        from huggingface_hub import snapshot_download
+        snapshot_download('Qwen/Qwen2.5-1.5B-Instruct', revision=revision, local_dir=str(model_dir), allow_patterns=['*.json', '*.safetensors', '*.txt', '*.model', 'LICENSE*', 'README.md'])
+    actual = sha256(model_dir / 'model.safetensors')
+    if actual != expected: raise RuntimeError('Qwen weights failed the pinned publisher SHA-256 check. Preserve the error and replace the corrupt asset; no unverified model will be used.')
+    atomic_json(assets / 'llm_manifest.json', {'repo': 'Qwen/Qwen2.5-1.5B-Instruct', 'revision': revision, 'weights': [{'name': 'model.safetensors', 'sha256': actual}], 'offline_reuse': 'complete local assets verified before any model download'})
 atomic_json(assets / 'backbone_manifest.json', {'architecture': 'torchvision EfficientNet-B1', 'weights': 'IMAGENET1K_V2', 'sha256': sha256(backbone), 'note': 'Architecture unchanged; torchvision preprocessing/checkpoint differs from the original TensorFlow implementation. Re-run comparisons; do not reuse old metrics.'})
 print('Preparation completed; transfer the full bundle, not just the notebook.')

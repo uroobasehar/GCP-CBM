@@ -1,0 +1,10 @@
+```json
+{
+  "predicted_class": "125.Lincoln_Sparrow",
+  "confidence": 0.009663546039934938,
+  "supporting_concept_indices": [0, 3],
+  "opposing_concept_indices": [5, 8],
+  "explanation": "The prediction is based on the concept of texture in the image, which is consistent with the presence of Lincoln Sparrows. The activation for this concept is high (0.433), contributing positively to the overall prediction.",
+  "limitations": "The prediction is uncalibrated, meaning it does not provide an exact probability but rather a likelihood score."
+}
+```

@@ -1,8 +1,8 @@
 {
   "format": "one ZIP64 archive split into ordered binary parts",
   "archive_name": "RGCBM_Offline.zip",
-  "archive_bytes": 9195430854,
-  "archive_sha256": "83cbbd896d27504c4feb81b86f68ccacd6dad82f419c4b245251775579b58282",
+  "archive_bytes": 9207481802,
+  "archive_sha256": "084b70a919ec2fd650b6bb9fc30f45e1cebd37457edd5231c543ed6695468c78",
   "parts": [
     {
       "name": "RGCBM_Offline.zip.001",
@@ -26,11 +26,11 @@
     },
     {
       "name": "RGCBM_Offline.zip.005",
-      "bytes": 1595430854,
-      "sha256": "f87a300b8fe1f7b042a4837d8fa7f517f5836db53f0c8d6ee35cc91533816144"
+      "bytes": 1607481802,
+      "sha256": "f66ad54c76adfc75e53e8e0ff7c8c6dbd601a404d5b2e270950709aaf8707d5f"
     }
   ],
-  "files": 394,
+  "files": 417,
   "contents": "Windows conda runtime, CUDA 12.8 PyTorch wheels, Jupyter Notebook, three datasets, pretrained backbone, local Qwen, notebooks, source, documents, validation outputs",
   "native_windows_gpu_validation": "required on target machine; not claimed",
   "complete_zip_crc_validation": "passed",

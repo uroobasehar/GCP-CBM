@@ -2,12 +2,13 @@
   "shared_pipeline": "passed real-image CPU checks on all three datasets",
   "resume": "passed bitwise CPU replay and incompatible-run rejection",
   "offline_notebook": "all cells executed in real-CUB CPU smoke mode; final ablation section separately executed on real Pet images",
-  "colab_kaggle_notebooks": "schema/syntax validated; live runtimes and Drive OAuth not tested",
+  "colab_kaggle_notebooks": "Both 36-cell notebooks passed all 19 executable cells in local real-CUB CPU smoke runs, with pip/mount/OAuth/Drive transport substituted. Live cloud GPU/authorization untested.",
   "windows_packages": "188-package target dependency closure verified; conda publisher checksums verified",
   "blackwell_gpu": "native runtime must be verified on target computer; no GPU in this workspace",
-  "local_qwen": "weights matched publisher SHA-256; loaded/generated offline and passed structured evidence checks",
+  "local_qwen": "Offline load/generation verified; later invalid-sign output rejected and deterministic fallback independently verified. Prose remains subject to human review.",
   "research_accuracy": "full experiments not executed; do not use smoke metrics as paper results",
   "mcpnet_plus": "exact supplied extension full text inaccessible at 32MiB attachment limit; DOI metadata and older public MCPNet paper reviewed",
   "journal_blocks": "33 offline cells passed after dependency changes, including all XAI blocks",
-  "requested_dependencies": "All nine supplied version requirements pass; TensorFlow 2.19.1 functional CPU checks; TFDS/Protobuf compatibility pins verified"
+  "requested_dependencies": "All nine supplied version requirements pass; TensorFlow 2.19.1 functional CPU checks; TFDS/Protobuf compatibility pins verified",
+  "offline_acceptance": "New preflight and acceptance tools included. Python harness passed on Linux CPU; native Windows/driver/certificate/GPU checks remain mandatory."
 }

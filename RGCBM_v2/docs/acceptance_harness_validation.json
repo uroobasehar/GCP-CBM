@@ -1,0 +1,101 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "checks": {
+    "tensorflow_registry_protobuf": "passed",
+    "real_image_training_explanations_checkpoint": "passed",
+    "registered_jupyter_kernel": "passed"
+  },
+  "research_accuracy": "not measured; two training batches only",
+  "requested_libraries": [
+    {
+      "module": "tensorflow",
+      "requirement": "tensorflow==2.19.1",
+      "installed": "2.19.1",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "numpy",
+      "requirement": "numpy>=1.26,<3",
+      "installed": "1.26.4",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "pandas",
+      "requirement": "pandas>=2.0,<3",
+      "installed": "2.2.3",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "matplotlib",
+      "requirement": "matplotlib>=3.8,<4",
+      "installed": "3.9.2",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "PIL",
+      "requirement": "pillow>=10",
+      "installed": "11.0.0",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "sklearn",
+      "requirement": "scikit-learn>=1.4,<2",
+      "installed": "1.5.2",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "medmnist",
+      "requirement": "medmnist>=3,<4",
+      "installed": "3.0.2",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "kagglehub",
+      "requirement": "kagglehub>=0.3,<1",
+      "installed": "0.4.3",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "tensorflow_datasets",
+      "requirement": "tensorflow-datasets>=4.9,<5",
+      "installed": "4.9.9",
+      "module_found": true,
+      "passes": true
+    }
+  ],
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "packages": {
+      "torch": "2.7.1+cpu",
+      "torchvision": "0.22.1+cpu",
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.5.2",
+      "matplotlib": "3.9.2",
+      "tensorflow": "2.19.1",
+      "transformers": "4.51.3",
+      "protobuf": "5.29.6",
+      "tensorflow-datasets": "4.9.9"
+    },
+    "cuda_runtime": null,
+    "cuda_available": false
+  },
+  "report_backend": {
+    "backend_requested": "template",
+    "backend_used": "template",
+    "fallback_reason": null
+  },
+  "run_directory": "/workspace/rgcbm-research/native-check/results/offline_acceptance_cub_1792029459214295926",
+  "status": "passed",
+  "validation_scope": "New target acceptance harness executed on Linux CPU with private registered kernel. Native Windows/GPU execution remains untested."
+}
