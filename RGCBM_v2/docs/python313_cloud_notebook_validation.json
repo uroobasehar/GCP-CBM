@@ -1,0 +1,38 @@
+[
+  {
+    "platform_notebook": "Colab",
+    "status": "passed",
+    "cells": 36,
+    "executed_code_cells": 19,
+    "duration_seconds": 17.57655429499573,
+    "data": "real CUB images, original split metadata",
+    "runtime": "fresh CPython 3.13.5 Linux CPU; NumPy 2.1.3; TensorFlow 2.20.0",
+    "substitutions": [
+      "pip calls simulated after installed requirement checks",
+      "Colab mount simulated"
+    ],
+    "executed": "embedded source preparation, actual data/asset helper subprocess, both training stages, checkpointing, evaluation, report generation, all journal code, storage cell logic",
+    "ablation_sweep": "disabled in this cloud smoke check; separately validated in offline notebook",
+    "live_cloud_authentication": "not tested; requires actual Google/Kaggle session",
+    "error": null,
+    "dependency_installation": "actual fresh installation before notebook execution; notebook pip subprocess itself simulated"
+  },
+  {
+    "platform_notebook": "Kaggle",
+    "status": "passed",
+    "cells": 36,
+    "executed_code_cells": 19,
+    "duration_seconds": 17.85396426699299,
+    "data": "real CUB images, original split metadata",
+    "runtime": "fresh CPython 3.13.5 Linux CPU; NumPy 2.1.3; TensorFlow 2.20.0",
+    "substitutions": [
+      "pip calls simulated after installed requirement checks",
+      "Google OAuth/Drive API simulated"
+    ],
+    "executed": "embedded source preparation, actual data/asset helper subprocess, both training stages, checkpointing, evaluation, report generation, all journal code, storage cell logic",
+    "ablation_sweep": "disabled in this cloud smoke check; separately validated in offline notebook",
+    "live_cloud_authentication": "not tested; requires actual Google/Kaggle session",
+    "error": null,
+    "dependency_installation": "actual fresh installation before notebook execution; notebook pip subprocess itself simulated"
+  }
+]

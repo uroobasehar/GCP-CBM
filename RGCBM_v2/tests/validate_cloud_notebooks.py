@@ -19,6 +19,7 @@ from importlib import metadata
 from packaging.requirements import Requirement
 for line in (SOURCE/'cloud_requirements.txt').read_text().splitlines():
     requirement=Requirement(line)
+    if requirement.marker and not requirement.marker.evaluate():continue
     assert requirement.specifier.contains(metadata.version(requirement.name)),line
 records=[]
 for mode in ['Colab','Kaggle']:
@@ -53,7 +54,7 @@ fixture=install_cloud_fixture({mode!r},{str(root)!r},{str(SOURCE)!r})
         raise
     finally:
         nbformat.write(notebook,OUTPUT/f'executed_{mode.lower()}_smoke.ipynb')
-        record={'platform_notebook':mode,'status':'passed' if error is None else 'failed','cells':len(notebook.cells),'executed_code_cells':len(completed),'duration_seconds':time.monotonic()-started,'data':'real CUB images, original split metadata','runtime':'local Linux CPU, NumPy 2.1.3, retained scientific libraries','substitutions':['pip calls simulated after installed requirement checks','Colab mount simulated' if mode=='Colab' else 'Google OAuth/Drive API simulated'],'executed':'embedded source preparation, actual data/asset helper subprocess, both training stages, checkpointing, evaluation, report generation, all journal code, storage cell logic','ablation_sweep':'disabled in this cloud smoke check; separately validated in offline notebook','live_cloud_authentication':'not tested; requires actual Google/Kaggle session','error':error}
+        record={'platform_notebook':mode,'status':'passed' if error is None else 'failed','cells':len(notebook.cells),'executed_code_cells':len(completed),'duration_seconds':time.monotonic()-started,'data':'real CUB images, original split metadata','runtime':f'local Linux CPU, Python {sys.version.split()[0]}, NumPy {metadata.version("numpy")}','substitutions':['pip calls simulated after installed requirement checks','Colab mount simulated' if mode=='Colab' else 'Google OAuth/Drive API simulated'],'executed':'embedded source preparation, actual data/asset helper subprocess, both training stages, checkpointing, evaluation, report generation, all journal code, storage cell logic','ablation_sweep':'disabled in this cloud smoke check; separately validated in offline notebook','live_cloud_authentication':'not tested; requires actual Google/Kaggle session','error':error}
         records.append(record)
         (OUTPUT/'cloud_notebook_validation.json').write_text(json.dumps(records,indent=2))
     if mode=='Colab':

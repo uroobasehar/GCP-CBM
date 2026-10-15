@@ -1,0 +1,84 @@
+{
+  "status": "passed",
+  "python": "3.13.5 (main, Aug 10 2026, 12:06:59) [GCC 14.2.0]",
+  "numpy": "2.1.3",
+  "tensorflow": "2.20.0",
+  "torch": "2.7.1+cpu",
+  "torchvision": "0.22.1+cpu",
+  "cloud_requirements": [
+    {
+      "module": "tensorflow",
+      "requirement": "tensorflow==2.20.0",
+      "installed": "2.20.0",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "numpy",
+      "requirement": "numpy>=1.26,<3",
+      "installed": "2.1.3",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "pandas",
+      "requirement": "pandas>=2.0,<3",
+      "installed": "2.2.3",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "matplotlib",
+      "requirement": "matplotlib>=3.8,<4",
+      "installed": "3.9.2",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "PIL",
+      "requirement": "pillow>=10",
+      "installed": "11.0.0",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "sklearn",
+      "requirement": "scikit-learn>=1.4,<2",
+      "installed": "1.5.2",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "medmnist",
+      "requirement": "medmnist>=3,<4",
+      "installed": "3.0.2",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "kagglehub",
+      "requirement": "kagglehub>=0.3,<1",
+      "installed": "0.4.3",
+      "module_found": true,
+      "passes": true
+    },
+    {
+      "module": "tensorflow_datasets",
+      "requirement": "tensorflow-datasets>=4.9,<5",
+      "installed": "4.9.9",
+      "module_found": true,
+      "passes": true
+    }
+  ],
+  "offline_tensorflow_requirement_preserved": "tensorflow==2.19.1",
+  "checks": [
+    "fresh Python 3.13 environment installation",
+    "all active cloud root requirements",
+    "pip check",
+    "TensorFlow CPU matrix",
+    "compiled torchvision operators",
+    "MedMNIST and TFDS offline registries",
+    "cloud/offline profile distinction"
+  ],
+  "hardware": "Linux CPU; live Colab GPU/Drive authorization not tested"
+}

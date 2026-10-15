@@ -31,8 +31,11 @@ with patch.object(torch.cuda,'is_available',return_value=True),patch.object(torc
     else:raise AssertionError('Unsupported Blackwell kernel did not request repair')
     assert install.call_args.args[0][-1].endswith('/cu128')
 
-with patch.object(bootstrap.sys,'version_info',(3,13)):
+with patch.object(bootstrap.sys,'version_info',(3,13)),patch.object(bootstrap.subprocess,'check_call'):
+    bootstrap.prepare_cloud_runtime([])
+
+with patch.object(bootstrap.sys,'version_info',(3,14)):
     try:bootstrap.prepare_cloud_runtime([])
     except RuntimeError as exc:assert 'Python 3.10' in str(exc)
     else:raise AssertionError('Unsupported Python runtime accepted')
-print('Passed: compatible stack, restart after loaded-library changes, paired legacy-GPU repair, Blackwell CUDA 12.8 repair, and unsupported Python rejection.')
+print('Passed: compatible stack, restart after loaded-library changes, paired legacy-GPU repair, Blackwell CUDA 12.8 repair, Python 3.13 acceptance, and unsupported Python rejection.')

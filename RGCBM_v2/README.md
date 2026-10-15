@@ -42,6 +42,10 @@ fails, preserve the error; do not bypass signature, checksum or dependency check
 
 ## Cloud notebooks
 
+Current Colab uses Python 3.13. The notebook automatically selects TensorFlow 2.20.0 there;
+cloud Python 3.10–3.12 and the Windows offline lock retain TensorFlow 2.19.1.
+See [Python compatibility and fresh Python 3.13 validation](docs/PYTHON_COMPATIBILITY.md).
+
 `notebooks/RGCBM_Colab.ipynb` uses a Google Drive mount and local image extraction.
 `notebooks/RGCBM_Kaggle.ipynb` uses Google Drive API uploads/downloads and a securely provided OAuth
 token, because Kaggle cannot mount Drive using Colab's API. Both embed the complete shared Python

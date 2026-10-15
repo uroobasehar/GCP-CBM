@@ -5,15 +5,24 @@ import sys
 
 
 def prepare_cloud_runtime(requirements):
-    if not (3, 10) <= sys.version_info[:2] <= (3, 12):
-        raise RuntimeError('TensorFlow 2.19.1 requires Python 3.10–3.12. Select a compatible cloud runtime before running this notebook.')
+    if not (3, 10) <= sys.version_info[:2] <= (3, 13):
+        raise RuntimeError('This notebook supports Python 3.10–3.13. Select a supported cloud runtime before installation.')
+    print('Python compatibility profile:', 'TensorFlow 2.20.0 (Python 3.13)' if sys.version_info[:2] >= (3, 13) else 'TensorFlow 2.19.1 (Python 3.10–3.12)')
     modules = {'numpy': 'numpy', 'pandas': 'pandas', 'matplotlib': 'matplotlib',
                'PIL': 'pillow', 'sklearn': 'scikit-learn', 'tensorflow': 'tensorflow',
-               'google.protobuf': 'protobuf'}
+               'google.protobuf': 'protobuf', 'transformers': 'transformers',
+               'accelerate': 'accelerate', 'huggingface_hub': 'huggingface-hub',
+               'tokenizers': 'tokenizers', 'safetensors': 'safetensors',
+               'tensorflow_datasets': 'tensorflow-datasets', 'medmnist': 'medmnist',
+               'kagglehub': 'kagglehub', 'google.genai': 'google-genai'}
     loaded = {}
     for module, distribution in modules.items():
         if module in sys.modules:
-            loaded[distribution] = str(getattr(sys.modules[module], '__version__', metadata.version(distribution)))
+            version = getattr(sys.modules[module], '__version__', None)
+            if version is None:
+                try: version = metadata.version(distribution)
+                except metadata.PackageNotFoundError: version = None
+            loaded[distribution] = str(version)
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade-strategy',
                            'only-if-needed', *requirements])
     changed = [name for name, version in loaded.items() if version != metadata.version(name)]

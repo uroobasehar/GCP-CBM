@@ -10,5 +10,6 @@
   "mcpnet_plus": "exact supplied extension full text inaccessible at 32MiB attachment limit; DOI metadata and older public MCPNet paper reviewed",
   "journal_blocks": "33 offline cells passed after dependency changes, including all XAI blocks",
   "requested_dependencies": "All nine supplied version requirements pass; TensorFlow 2.19.1 functional CPU checks; TFDS/Protobuf compatibility pins verified",
-  "offline_acceptance": "New preflight and acceptance tools included. Python harness passed on Linux CPU; native Windows/driver/certificate/GPU checks remain mandatory."
+  "offline_acceptance": "New preflight and acceptance tools included. Python harness passed on Linux CPU; native Windows/driver/certificate/GPU checks remain mandatory.",
+  "python313": "Fresh CPython 3.13.5 install and pip check passed; TensorFlow 2.20.0 CPU checks and both full cloud notebook smoke executions passed. Windows TensorFlow 2.19.1 unchanged."
 }

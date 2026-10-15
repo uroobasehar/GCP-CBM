@@ -15,10 +15,16 @@ REQUESTED = {
 }
 
 
-def check_requested_libraries(strict=True):
+def check_requested_libraries(strict=True, profile='offline'):
     """Inspect versions/specs without initializing TensorFlow or reserving GPU memory."""
+    import sys
+    if profile not in ['offline', 'cloud']:
+        raise ValueError('Use the offline or cloud dependency profile.')
+    requirements = dict(REQUESTED)
+    if profile == 'cloud' and sys.version_info[:2] >= (3, 13):
+        requirements['tensorflow'] = 'tensorflow==2.20.0'
     rows=[]
-    for module,text in REQUESTED.items():
+    for module,text in requirements.items():
         requirement=Requirement(text)
         try:
             version=metadata.version(requirement.name)

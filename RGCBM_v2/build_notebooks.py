@@ -70,8 +70,10 @@ if str(CODE_ROOT) not in sys.path:
 The requested TensorFlow/scientific/MedMNIST/KaggleHub/TFDS libraries are included. This check reads
 package metadata without initializing TensorFlow or reserving GPU memory. Native Windows TensorFlow
 2.19.1 is CPU-only; the revised model uses PyTorch CUDA 12.8 for Blackwell GPU training.
-'''), code('''from rgcbm.environment import check_requested_libraries
-display(check_requested_libraries())
+Cloud Python 3.13 selects TensorFlow 2.20.0 because 2.19.1 has no Python 3.13 wheel.
+Python 3.10–3.12 and the Windows offline environment retain TensorFlow 2.19.1.
+'''), code(f'''from rgcbm.environment import check_requested_libraries
+display(check_requested_libraries(profile={('offline' if mode == 'Offline' else 'cloud')!r}))
 ''')]
     if mode == 'Colab':
         cells += [markdown('Google Drive stores source archives, backbone assets, run manifests, progress, checkpoints and figures. Training images are extracted to local runtime storage for speed. Google Drive authentication is interactive and cannot be pretested here.'), code('''from google.colab import drive

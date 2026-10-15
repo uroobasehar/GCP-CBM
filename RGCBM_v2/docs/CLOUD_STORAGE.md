@@ -43,7 +43,8 @@ the local simulations are not evidence that a live authenticated session has pas
 environment variables; local Qwen and the deterministic template need no API key.
 
 
-Cloud bootstrap accepts Python 3.10–3.12 for TensorFlow 2.19.1. It preserves a functional compatible
+Cloud bootstrap accepts Python 3.10–3.13. Python 3.13 selects TensorFlow 2.20.0;
+Python 3.10–3.12 retains TensorFlow 2.19.1. See [Python compatibility](PYTHON_COMPATIBILITY.md). It preserves a functional compatible
 PyTorch/torchvision pair, exercises compiled operators and available GPU kernels, and repairs both
 packages together when required. Repairs require restarting the kernel. Older supported cloud GPUs
 use CUDA 12.6 repair wheels; detected Blackwell uses CUDA 12.8. A loaded package change also stops
