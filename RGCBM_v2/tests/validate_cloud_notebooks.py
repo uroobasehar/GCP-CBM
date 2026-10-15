@@ -27,7 +27,8 @@ for mode in ['Colab','Kaggle']:
     root.mkdir(parents=True,exist_ok=True)
     notebook=nbformat.read(SOURCE/'notebooks'/f'RGCBM_{mode}.ipynb',as_version=4)
     notebook.cells[1].source=notebook.cells[1].source.replace('BATCH_SIZE = 24','BATCH_SIZE = 2').replace('SMOKE_TEST = False','SMOKE_TEST = True')
-    notebook.cells[1].source+=f'''\nRUN_NAME += '_cloud_validation_{mode.lower()}'
+    notebook.cells[1].source+=f'''\nRUN_TAG += '_cloud_validation_{mode.lower()}'
+RUN_NAME = f'{{DATASET}}_K{{NUM_CONCEPTS}}_seed{{SEED}}_{{RUN_TAG}}_smoke'
 import sys
 sys.path.insert(0,{str(SOURCE/'tests')!r})
 from drive_fixture import install_cloud_fixture
@@ -49,16 +50,20 @@ fixture=install_cloud_fixture({mode!r},{str(root)!r},{str(SOURCE)!r})
     error=None
     try:
         client.execute(cwd=str(root))
+        summary=root/'results'/f'dataset_suite_calibrated_v3_cloud_validation_{mode.lower()}_K16_seed42_smoke'
+        queue=json.loads((summary/'queue_status.json').read_text())
+        assert queue['complete'] and [r['dataset'] for r in queue['runs']]==['cub','pets','brain_mri']
+        assert (summary/'dataset_accuracy.png').is_file()
     except Exception as exc:
         error=f'{type(exc).__name__}: {exc}'
         raise
     finally:
         nbformat.write(notebook,OUTPUT/f'executed_{mode.lower()}_smoke.ipynb')
-        record={'platform_notebook':mode,'status':'passed' if error is None else 'failed','cells':len(notebook.cells),'executed_code_cells':len(completed),'duration_seconds':time.monotonic()-started,'data':'real CUB images, original split metadata','runtime':f'local Linux CPU, Python {sys.version.split()[0]}, NumPy {metadata.version("numpy")}','substitutions':['pip calls simulated after installed requirement checks','Colab mount simulated' if mode=='Colab' else 'Google OAuth/Drive API simulated'],'executed':'embedded source preparation, actual data/asset helper subprocess, both training stages, checkpointing, evaluation, report generation, all journal code, storage cell logic','ablation_sweep':'disabled in this cloud smoke check; separately validated in offline notebook','live_cloud_authentication':'not tested; requires actual Google/Kaggle session','error':error}
+        record={'platform_notebook':mode,'status':'passed' if error is None else 'failed','cells':len(notebook.cells),'executed_code_cells':len(completed),'duration_seconds':time.monotonic()-started,'data':'real CUB, Pet and MRI images; automatic sequential queue enabled','runtime':f'local Linux CPU, Python {sys.version.split()[0]}, NumPy {metadata.version("numpy")}','substitutions':['pip calls simulated after installed requirement checks','Colab mount simulated' if mode=='Colab' else 'Google OAuth/Drive API simulated'],'executed':'embedded source preparation, data/assets, both training stages, epoch snapshots, evaluation, reports, journal code and automatic three-dataset queue with platform storage logic','ablation_sweep':'disabled in this cloud smoke check; separately validated in offline notebook','live_cloud_authentication':'not tested; requires actual Google/Kaggle session','error':error}
         records.append(record)
         (OUTPUT/'cloud_notebook_validation.json').write_text(json.dumps(records,indent=2))
     if mode=='Colab':
-        run=OUTPUT/'colab-mounted-drive/results'/f'cub_K16_seed42_smoke_cloud_validation_colab'
+        run=OUTPUT/'colab-mounted-drive/results'/f'cub_K16_seed42_calibrated_v3_cloud_validation_colab_smoke'
         assert (run/'last.pt').is_file() and (run/'figures/learning_curves.png').is_file()
     print(mode,'notebook smoke completed',flush=True)
 print(json.dumps(records,indent=2),flush=True)

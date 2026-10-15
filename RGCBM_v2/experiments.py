@@ -4,7 +4,7 @@ import argparse
 import numpy as np
 import torch
 from sklearn.metrics import accuracy_score, balanced_accuracy_score, f1_score, classification_report, confusion_matrix
-from rgcbm.core import Config
+from rgcbm.core import training_config
 from rgcbm.data import build_manifest, leakage_audit, ImageDataset, loader, atomic_json
 from rgcbm.train import fit
 from rgcbm.evaluate import ground_concepts, evaluate, expected_calibration_error
@@ -14,17 +14,19 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--root', default=str(Path(__file__).resolve().parent))
 parser.add_argument('--dataset', choices=['cub', 'pets', 'brain_mri'], default='cub')
 parser.add_argument('--seed', type=int, default=42)
-parser.add_argument('--variant', choices=['full', 'backbone', 'unguided', 'no_edge', 'no_texture', 'no_region', 'no_diversity', 'no_decorrelation', 'no_stability', 'no_sparsity', 'no_finetune', 'K32', 'K64'], default='full')
+parser.add_argument('--variant', choices=['full', 'backbone', 'unguided', 'no_edge', 'no_texture', 'no_region', 'no_diversity', 'no_decorrelation', 'no_stability', 'no_sparsity', 'no_finetune', 'no_standardization', 'K32', 'K64'], default='full')
 parser.add_argument('--smoke', action='store_true')
 parser.add_argument('--batch-size', type=int, default=24)
+parser.add_argument('--profile', choices=['calibrated_v3', 'legacy'], default='calibrated_v3')
 args = parser.parse_args()
 root = Path(args.root)
 torch.set_num_threads(4)
-cfg = Config(dataset=args.dataset, seed=args.seed, batch_size=args.batch_size)
+cfg = training_config(args.profile, dataset=args.dataset, seed=args.seed, batch_size=args.batch_size)
 if args.variant == 'unguided': cfg.edge = cfg.texture = cfg.morphology = 0.
 for variant, field in [('no_edge', 'edge'), ('no_texture', 'texture'), ('no_region', 'morphology'), ('no_diversity', 'diversity'), ('no_decorrelation', 'disentangle'), ('no_stability', 'stability')]:
     if args.variant == variant: setattr(cfg, field, 0.)
 if args.variant == 'no_finetune': cfg.finetune_epochs = 0
+if args.variant == 'no_standardization': cfg.concept_normalization = 'none'
 if args.variant == 'no_sparsity': cfg.activation_l1 = cfg.classifier_l1 = 0.
 if args.variant in ['K32', 'K64']: cfg.concepts = int(args.variant[1:])
 if args.smoke:
@@ -34,7 +36,7 @@ if args.smoke:
     cfg.checkpoint_every_batches = 1
 manifest = build_manifest(root, args.dataset, args.seed, cfg.validation_fraction)
 assert not leakage_audit(root, manifest)['cross_split_exact_duplicates'], 'Resolve leakage before reporting results.'
-name = f'{args.dataset}_{args.variant}_K{cfg.concepts}_seed{cfg.seed}' + ('_smoke' if args.smoke else '')
+name = f'{args.dataset}_{args.variant}_K{cfg.concepts}_seed{cfg.seed}_{args.profile}' + ('_smoke' if args.smoke else '')
 model, run, _ = fit(root, manifest, cfg, run_name=name, model_type='backbone' if args.variant == 'backbone' else 'rgcbm')
 if args.variant == 'backbone':
     dataset = ImageDataset(root, manifest, 'test', cfg)

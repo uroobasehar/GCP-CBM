@@ -1,0 +1,786 @@
+[
+  {
+    "prediction": {
+      "class": "Sphynx",
+      "probability": 0.06430767130680025,
+      "runner_up": "miniature_pinscher",
+      "runner_up_probability": 0.0448216573051042
+    },
+    "exact_decomposition": {
+      "bias": 0.17028267681598663,
+      "logit": 0.8845838308334351,
+      "reconstructed_logit": 0.8845838414916924,
+      "margin_bias": -0.004345327615737915,
+      "margin": 0.36098748445510864,
+      "reconstructed_margin": 0.36098748179587115
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "C01: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.32965654134750366,
+        "activation": 0.607571005821228,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07647603342761933,
+        "margin_contribution": -0.027517312289626616
+      },
+      {
+        "concept_index": 1,
+        "name": "C02: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.17217226326465607,
+        "activation": 0.6116185188293457,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07151210615557702,
+        "margin_contribution": 0.22024271741443613
+      },
+      {
+        "concept_index": 2,
+        "name": "C03: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "edge",
+        "grounding_correlation": -0.15657669305801392,
+        "activation": 0.6030884981155396,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.01175129428062327,
+        "margin_contribution": -0.09588425588841964
+      },
+      {
+        "concept_index": 3,
+        "name": "C04: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.18404518067836761,
+        "activation": 0.5955109596252441,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.06026843748249533,
+        "margin_contribution": -0.062190228514676704
+      },
+      {
+        "concept_index": 4,
+        "name": "C05: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.33104926347732544,
+        "activation": 0.5971614122390747,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.05076939420318105,
+        "margin_contribution": -0.05772784391848873
+      },
+      {
+        "concept_index": 5,
+        "name": "C06: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.3052993416786194,
+        "activation": 0.6102253198623657,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09213248907252947,
+        "margin_contribution": 0.23966357256515636
+      },
+      {
+        "concept_index": 6,
+        "name": "C07: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.25097331404685974,
+        "activation": 0.6277858018875122,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.02784973388368206,
+        "margin_contribution": -0.12235579336018887
+      },
+      {
+        "concept_index": 7,
+        "name": "C08: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.23498597741127014,
+        "activation": 0.6035995483398438,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.1023242585074513,
+        "margin_contribution": 0.13862320557961993
+      },
+      {
+        "concept_index": 8,
+        "name": "C09: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.2572864890098572,
+        "activation": 0.6299716234207153,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.03693235722812105,
+        "margin_contribution": -0.11930172930391336
+      },
+      {
+        "concept_index": 9,
+        "name": "C10: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.29303762316703796,
+        "activation": 0.6085269451141357,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.14514723212774427,
+        "margin_contribution": 0.021827481113557923
+      },
+      {
+        "concept_index": 10,
+        "name": "C11: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.24429552257061005,
+        "activation": 0.6005656719207764,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.140050142006114,
+        "margin_contribution": 0.2753342838362727
+      },
+      {
+        "concept_index": 11,
+        "name": "C12: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.27102112770080566,
+        "activation": 0.596808135509491,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06334645765185654,
+        "margin_contribution": -0.007739085539827162
+      },
+      {
+        "concept_index": 12,
+        "name": "C13: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.2508600056171417,
+        "activation": 0.6020365953445435,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04954967507246533,
+        "margin_contribution": -0.1100001289341428
+      },
+      {
+        "concept_index": 13,
+        "name": "C14: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.3589799702167511,
+        "activation": 0.6305187344551086,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.057668627391183946,
+        "margin_contribution": 0.05548454906242295
+      },
+      {
+        "concept_index": 14,
+        "name": "C15: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "edge",
+        "grounding_correlation": -0.15019120275974274,
+        "activation": 0.6084463000297546,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09563798986823357,
+        "margin_contribution": -0.011811148080074219
+      },
+      {
+        "concept_index": 15,
+        "name": "C16: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.19398021697998047,
+        "activation": 0.6099638342857361,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.027924664289353807,
+        "margin_contribution": 0.028684525669501193
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/pets/images/Abyssinian_201.jpg"
+  },
+  {
+    "prediction": {
+      "class": "Sphynx",
+      "probability": 0.06419786353373229,
+      "runner_up": "miniature_pinscher",
+      "runner_up_probability": 0.04474790442088509
+    },
+    "exact_decomposition": {
+      "bias": 0.17028267681598663,
+      "logit": 0.8826716542243958,
+      "reconstructed_logit": 0.882671629472414,
+      "margin_bias": -0.004345327615737915,
+      "margin": 0.3609253168106079,
+      "reconstructed_margin": 0.36092531129583416
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "C01: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.32965654134750366,
+        "activation": 0.6175646781921387,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0777339545841258,
+        "margin_contribution": -0.027969932643323148
+      },
+      {
+        "concept_index": 1,
+        "name": "C02: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.17217226326465607,
+        "activation": 0.612849771976471,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0716560676332807,
+        "margin_contribution": 0.22068608943571988
+      },
+      {
+        "concept_index": 2,
+        "name": "C03: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "edge",
+        "grounding_correlation": -0.15657669305801392,
+        "activation": 0.6024082899093628,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.01173804029413894,
+        "margin_contribution": -0.09577611047045487
+      },
+      {
+        "concept_index": 3,
+        "name": "C04: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.18404518067836761,
+        "activation": 0.5996334552764893,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.06068565292985717,
+        "margin_contribution": -0.06262074778969229
+      },
+      {
+        "concept_index": 4,
+        "name": "C05: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.33104926347732544,
+        "activation": 0.6036522388458252,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.051321230487221925,
+        "margin_contribution": -0.058355314846075146
+      },
+      {
+        "concept_index": 5,
+        "name": "C06: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.3052993416786194,
+        "activation": 0.6187416911125183,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09341830015837438,
+        "margin_contribution": 0.24300834357459777
+      },
+      {
+        "concept_index": 6,
+        "name": "C07: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.25097331404685974,
+        "activation": 0.620327353477478,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.02751886338170495,
+        "margin_contribution": -0.12090213771888259
+      },
+      {
+        "concept_index": 7,
+        "name": "C08: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.23498597741127014,
+        "activation": 0.5983642339706421,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.10143675012154318,
+        "margin_contribution": 0.13742085865594866
+      },
+      {
+        "concept_index": 8,
+        "name": "C09: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.2572864890098572,
+        "activation": 0.6216881275177002,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.03644673371999119,
+        "margin_contribution": -0.11773303104962451
+      },
+      {
+        "concept_index": 9,
+        "name": "C10: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.29303762316703796,
+        "activation": 0.606756865978241,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.14472502882305083,
+        "margin_contribution": 0.021763989481480728
+      },
+      {
+        "concept_index": 10,
+        "name": "C11: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.24429552257061005,
+        "activation": 0.5926303267478943,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.13819964293450493,
+        "margin_contribution": 0.2716962594164265
+      },
+      {
+        "concept_index": 11,
+        "name": "C12: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.27102112770080566,
+        "activation": 0.5959380269050598,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06325410251360752,
+        "margin_contribution": -0.007727802441427567
+      },
+      {
+        "concept_index": 12,
+        "name": "C13: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.2508600056171417,
+        "activation": 0.603020966053009,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04963069215536775,
+        "margin_contribution": -0.1101799866133728
+      },
+      {
+        "concept_index": 13,
+        "name": "C14: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.3589799702167511,
+        "activation": 0.6313591003417969,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.057745489099715996,
+        "margin_contribution": 0.055558499794926774
+      },
+      {
+        "concept_index": 14,
+        "name": "C15: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "edge",
+        "grounding_correlation": -0.15019120275974274,
+        "activation": 0.6081259250640869,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09558763206719334,
+        "margin_contribution": -0.011804928967293904
+      },
+      {
+        "concept_index": 15,
+        "name": "C16: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.19398021697998047,
+        "activation": 0.5998007655143738,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.02745939033762479,
+        "margin_contribution": 0.028206591092618583
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/pets/images/Abyssinian_202.jpg"
+  },
+  {
+    "prediction": {
+      "class": "Sphynx",
+      "probability": 0.06433608550103279,
+      "runner_up": "miniature_pinscher",
+      "runner_up_probability": 0.04487538912199121
+    },
+    "exact_decomposition": {
+      "bias": 0.17028267681598663,
+      "logit": 0.8850843906402588,
+      "reconstructed_logit": 0.885084402425643,
+      "margin_bias": -0.004345327615737915,
+      "margin": 0.3602311611175537,
+      "reconstructed_margin": 0.36023118908895624
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "C01: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.32965654134750366,
+        "activation": 0.6101740598678589,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07680368442869856,
+        "margin_contribution": -0.027635206412982782
+      },
+      {
+        "concept_index": 1,
+        "name": "C02: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.17217226326465607,
+        "activation": 0.6016027331352234,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07034103316197227,
+        "margin_contribution": 0.21663605118311224
+      },
+      {
+        "concept_index": 2,
+        "name": "C03: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "edge",
+        "grounding_correlation": -0.15657669305801392,
+        "activation": 0.5977796912193298,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.011647851166865841,
+        "margin_contribution": -0.09504021558506626
+      },
+      {
+        "concept_index": 3,
+        "name": "C04: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.18404518067836761,
+        "activation": 0.5969633460044861,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.06041542563826807,
+        "margin_contribution": -0.06234190370949344
+      },
+      {
+        "concept_index": 4,
+        "name": "C05: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.33104926347732544,
+        "activation": 0.5978941321372986,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.05083168849177877,
+        "margin_contribution": -0.05779867625804336
+      },
+      {
+        "concept_index": 5,
+        "name": "C06: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.3052993416786194,
+        "activation": 0.6126854419708252,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09250392101069593,
+        "margin_contribution": 0.24062977575972866
+      },
+      {
+        "concept_index": 6,
+        "name": "C07: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.25097331404685974,
+        "activation": 0.6250613927841187,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.02772887408039937,
+        "margin_contribution": -0.12182480454795197
+      },
+      {
+        "concept_index": 7,
+        "name": "C08: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.23498597741127014,
+        "activation": 0.5993248224258423,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.10159959235971172,
+        "margin_contribution": 0.1376414682492939
+      },
+      {
+        "concept_index": 8,
+        "name": "C09: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.2572864890098572,
+        "activation": 0.6311715245246887,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.037002701946141414,
+        "margin_contribution": -0.11952896220040543
+      },
+      {
+        "concept_index": 9,
+        "name": "C10: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.29303762316703796,
+        "activation": 0.6133319139480591,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.14629332423147723,
+        "margin_contribution": 0.02199983234190661
+      },
+      {
+        "concept_index": 10,
+        "name": "C11: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.24429552257061005,
+        "activation": 0.6080965399742126,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.14180631820736078,
+        "margin_contribution": 0.27878687238587574
+      },
+      {
+        "concept_index": 11,
+        "name": "C12: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.27102112770080566,
+        "activation": 0.5955079793930054,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06320845637561145,
+        "margin_contribution": -0.007722225817578199
+      },
+      {
+        "concept_index": 12,
+        "name": "C13: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.2508600056171417,
+        "activation": 0.6106364130973816,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.05025746954647348,
+        "margin_contribution": -0.11157143052766294
+      },
+      {
+        "concept_index": 13,
+        "name": "C14: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.3589799702167511,
+        "activation": 0.6296718716621399,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.05759117146134329,
+        "margin_contribution": 0.05541002661349648
+      },
+      {
+        "concept_index": 14,
+        "name": "C15: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "edge",
+        "grounding_correlation": -0.15019120275974274,
+        "activation": 0.6093620657920837,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0957819335436163,
+        "margin_contribution": -0.011828924907749894
+      },
+      {
+        "concept_index": 15,
+        "name": "C16: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.19398021697998047,
+        "activation": 0.6116716861724854,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.02800285120456536,
+        "margin_contribution": 0.028764840138214787
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/pets/images/Abyssinian_204.jpg"
+  },
+  {
+    "prediction": {
+      "class": "Sphynx",
+      "probability": 0.06437922238012388,
+      "runner_up": "miniature_pinscher",
+      "runner_up_probability": 0.044956278410536614
+    },
+    "exact_decomposition": {
+      "bias": 0.17028267681598663,
+      "logit": 0.885506808757782,
+      "reconstructed_logit": 0.8855067839581718,
+      "margin_bias": -0.004345327615737915,
+      "margin": 0.3591005206108093,
+      "reconstructed_margin": 0.3591005182547238
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "C01: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.32965654134750366,
+        "activation": 0.604925811290741,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0761430781295589,
+        "margin_contribution": -0.027397509594526248
+      },
+      {
+        "concept_index": 1,
+        "name": "C02: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.17217226326465607,
+        "activation": 0.601992666721344,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07038662526088002,
+        "margin_contribution": 0.2167764655590254
+      },
+      {
+        "concept_index": 2,
+        "name": "C03: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "edge",
+        "grounding_correlation": -0.15657669305801392,
+        "activation": 0.6082295179367065,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.01185146803125825,
+        "margin_contribution": -0.09670161994294979
+      },
+      {
+        "concept_index": 3,
+        "name": "C04: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.18404518067836761,
+        "activation": 0.6010156869888306,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.060825541111921844,
+        "margin_contribution": -0.06276509661260032
+      },
+      {
+        "concept_index": 4,
+        "name": "C05: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.33104926347732544,
+        "activation": 0.6012831926345825,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.05111981921295161,
+        "margin_contribution": -0.058126298156256695
+      },
+      {
+        "concept_index": 5,
+        "name": "C06: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.3052993416786194,
+        "activation": 0.6164675951004028,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0930749546445675,
+        "margin_contribution": 0.2421152013910799
+      },
+      {
+        "concept_index": 6,
+        "name": "C07: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.25097331404685974,
+        "activation": 0.6229729056358337,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.027636224945735366,
+        "margin_contribution": -0.1214177572697519
+      },
+      {
+        "concept_index": 7,
+        "name": "C08: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.23498597741127014,
+        "activation": 0.6024118065834045,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.10212290846525818,
+        "margin_contribution": 0.13835042775841178
+      },
+      {
+        "concept_index": 8,
+        "name": "C09: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.2572864890098572,
+        "activation": 0.632836639881134,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.03710032004969399,
+        "margin_contribution": -0.11984429567596067
+      },
+      {
+        "concept_index": 9,
+        "name": "C10: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.29303762316703796,
+        "activation": 0.6145183444023132,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.14657631432407658,
+        "margin_contribution": 0.022042388860628925
+      },
+      {
+        "concept_index": 10,
+        "name": "C11: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.24429552257061005,
+        "activation": 0.6029842495918274,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.140614147180103,
+        "margin_contribution": 0.2764431007102566
+      },
+      {
+        "concept_index": 11,
+        "name": "C12: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": 0.27102112770080566,
+        "activation": 0.6017236113548279,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06386819648876019,
+        "margin_contribution": -0.007802826775531901
+      },
+      {
+        "concept_index": 12,
+        "name": "C13: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": 0.2508600056171417,
+        "activation": 0.605216383934021,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04981138257102291,
+        "margin_contribution": -0.110581118790126
+      },
+      {
+        "concept_index": 13,
+        "name": "C14: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.3589799702167511,
+        "activation": 0.6283752918243408,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.05747258342348971,
+        "margin_contribution": 0.0552959298488922
+      },
+      {
+        "concept_index": 14,
+        "name": "C15: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "edge",
+        "grounding_correlation": -0.15019120275974274,
+        "activation": 0.611805260181427,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09616596447657244,
+        "margin_contribution": -0.011876352151073633
+      },
+      {
+        "concept_index": 15,
+        "name": "C16: weakly grounded visual pattern",
+        "weak_grounding": true,
+        "descriptor": "morphology",
+        "grounding_correlation": -0.19398021697998047,
+        "activation": 0.6152944564819336,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.028168704717515425,
+        "margin_contribution": 0.028935206710944072
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/pets/images/Abyssinian_205.jpg"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "backend_requested": "template",
+  "backend_used": "template",
+  "fallback_reason": null,
+  "structured_checks": "passed",
+  "semantic_validation": "human review required; JSON checks do not guarantee hallucination-free prose",
+  "result": {
+    "predicted_class": "Sphynx",
+    "confidence": 0.06430767130680025,
+    "supporting_concept_indices": [
+      10,
+      5,
+      1
+    ],
+    "opposing_concept_indices": [
+      6,
+      8,
+      12
+    ],
+    "explanation": "The model predicted Sphynx with an uncalibrated probability of 0.064; the runner-up was miniature_pinscher. Supporting model patterns: C11: weakly grounded visual pattern (margin contribution +0.2753); C06: weakly grounded visual pattern (margin contribution +0.2397); C02: weakly grounded visual pattern (margin contribution +0.2202)",
+    "limitations": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated."
+  }
+}

@@ -1,0 +1,3 @@
+stage,epoch,train_loss,train_n,validation_accuracy,validation_loss,validation_n,auxiliary_scale,lr,classifier_l2_update,train_accuracy,classification_loss,chance_accuracy,validation_top5_accuracy,validation_predicted_classes,validation_concept_std_mean,learning_rates
+head,1,5.3945252895355225,4,0.0,5.43903660774231,4,0.0,0.002,0.21333341300487518,0.0,5.392540216445923,0.005,0.0,1,0.0017209135694429278,{'head': 0.002}
+finetune,1,5.334132671356201,4,0.0,5.43250036239624,4,1.0,0.001,0.10652884095907211,0.0,5.265597105026245,0.005,0.0,1,0.002051364164799452,"{'head': 0.001, 'backbone': 2e-05}"

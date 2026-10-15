@@ -47,7 +47,7 @@ try:
     if device=='cuda':
         x=torch.randn(64,64,device=device);assert torch.isfinite(x@x).all();torch.cuda.synchronize()
         report['checks']['cuda_matrix']='passed'
-    from rgcbm.core import Config
+    from rgcbm.core import training_config
     from rgcbm.data import build_manifest,leakage_audit,ImageDataset
     from rgcbm.train import fit,load_model
     from rgcbm.evaluate import ground_concepts,evaluate
@@ -55,7 +55,7 @@ try:
     from rgcbm.reports import generate_reports
     manifest=build_manifest(root,args.dataset)
     assert not leakage_audit(root,manifest)['cross_split_exact_duplicates']
-    cfg=Config(dataset=args.dataset,batch_size=2,head_epochs=1,finetune_epochs=1,max_train_batches=1,max_validation_batches=1,checkpoint_every_batches=1)
+    cfg=training_config(dataset=args.dataset,batch_size=2,head_epochs=1,finetune_epochs=1,max_train_batches=1,max_validation_batches=1,checkpoint_every_batches=1)
     name=f'offline_acceptance_{args.dataset}_{time.time_ns()}'
     model,run,status=fit(root,manifest,cfg,device=device,run_name=name)
     assert status['complete']

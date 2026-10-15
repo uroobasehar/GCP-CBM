@@ -1,0 +1,5 @@
+path,has_positive_margin_support,concept_index,positive_margin_probability_drop,random_probability_drop,legacy_absolute_probability_drop
+data/brain_mri/Testing/glioma/Te-gl_1.jpg,True,3,0.03619346022605896,0.009542107582092285,-0.04057204723358154
+data/brain_mri/Testing/glioma/Te-gl_10.jpg,True,3,0.03571595251560211,-0.01603829860687256,-0.04119411110877991
+data/brain_mri/Testing/glioma/Te-gl_100.jpg,True,3,0.03534908592700958,-0.012050837278366089,-0.04109853506088257
+data/brain_mri/Testing/glioma/Te-gl_101.jpg,True,3,0.03599926829338074,-0.03520879149436951,-0.03520879149436951

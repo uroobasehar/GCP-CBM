@@ -10,7 +10,14 @@ descriptor associations rather than assuming automatically discovered anatomical
 
 For RGB image x in [0,1], EfficientNet-B1 produces spatial features F. A 1×1 convolution, batch
 normalization and SiLU project F to d=128 dimensions. Both local features and K prototypes are
-L2-normalized. Their response is A_k(i,j)=sigmoid(4·<z_hat(i,j),p_hat_k>), and c_k=mean_(i,j) A_k(i,j).
+L2-normalized. Their response is A_k(i,j)=sigmoid(4·<z_hat(i,j),p_hat_k>), and u_k=mean_(i,j) A_k(i,j).
+The `calibrated_v3` profile standardizes each pooled response with a non-affine BatchNorm1d,
+then sets c_k=sigmoid((u_k−mu_k)/sqrt(v_k+epsilon)). Mini-batch statistics are used during training;
+running mean/variance estimated only during training are fixed at validation/test/inference.
+This addresses compressed pooled scores without adding a feature-to-class bypass. The legacy
+profile uses c_k=u_k. Spatial guidance and descriptor grounding still use the original A maps.
+This is feature standardization, not calibration of class probabilities. c_k=0.5 corresponds to
+the estimated training-mean response; zero clamping is an extreme latent edit, not removal of anatomy.
 The default K=16 comprises four edge-guided, four texture-guided, four region-prior-guided and four
 unguided concepts. K=32/64 are capacity ablations, not changed default results.
 
@@ -46,8 +53,10 @@ Class weights are calculated from training labels only.
 
 Images are resized to 240×240. Natural-image augmentation permits horizontal flips; MRI does not
 use them. Modest affine/contrast changes are seeded per image and epoch. The head stage freezes the
-backbone for up to 20 epochs with AdamW at 4e−4. The fine-tuning stage updates the last three
-torchvision feature blocks for up to 20 epochs at 8e−6, keeping backbone BN frozen. This block
+backbone for up to 8 epochs with AdamW at 2e−3. The fine-tuning stage updates the last three
+torchvision feature blocks for up to 30 epochs at 2e−5, with projection/prototypes/classifier at
+1e−3, keeping backbone BN frozen. These explicit `calibrated_v3` settings replace the initial
+20/20-epoch shared-LR 4e−4/8e−6 profile; saved configurations specify the actual protocol. This block
 selection is explicitly different from the old Keras layer count. Reduce-on-plateau and validation
 early stopping are stage-local. The final model is the checkpoint with best validation accuracy
 across both stages; the fine-tuning stage starts from the best head checkpoint.
@@ -61,6 +70,11 @@ MRI exact duplicate images are grouped. Run identity includes configuration, cla
 manifest hash and backbone checksum. Atomic checkpoints store model, optimizer, scheduler, scaler,
 stage, epoch, batch position, running totals and random states. Exact CPU interrupted/resumed
 weights were verified; bitwise GPU reproducibility still depends on the target CUDA/driver stack.
+Periodic full-state snapshots are saved every five epochs and at stage end, retaining three per
+stage by default. last.pt still updates every 50 batches and every epoch. Live training status,
+CSV history and accuracy/CE curves are saved during training. The sequential dataset queue uses
+separate models, standardization statistics, run folders and manifests; completed evidence is
+reused only under its exact saved configuration and pipeline status. Test scores never tune the queue.
 
 ## Grounding, evaluation and text
 

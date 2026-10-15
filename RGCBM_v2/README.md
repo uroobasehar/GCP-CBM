@@ -7,6 +7,11 @@ Blackwell support uses **PyTorch 2.7.1 + CUDA 12.8**, with EfficientNet-B1, 128-
 notebook is preserved in the repository; old TensorFlow weights and reported paper metrics are
 not interchangeable with this implementation.
 
+The current `calibrated_v3` notebook profile adds training-only running standardization of pooled
+concept scores (followed by sigmoid), an 8-epoch head stage and up to 30 fine-tuning epochs with
+independent head/backbone learning rates. This is an explicit methodology revision; class
+probabilities remain uncalibrated. See [training diagnosis and automatic runs](docs/TRAINING_AND_DATASET_QUEUE.md).
+
 For the GitHub distribution, first follow [offline ZIP assembly instructions](https://github.com/uroobasehar/GCP-CBM/blob/main/RGCBM_v2/offline_bundle/README.md).
 
 ## Start on the offline Windows 11 machine
@@ -54,9 +59,17 @@ token, because Kaggle cannot mount Drive using Colab's API. Both embed the compl
 implementation and can obtain the datasets online. See [cloud storage instructions](docs/CLOUD_STORAGE.md).
 Change the dataset selector to repeat the same workflow on each benchmark; train separate models.
 
+All three notebooks default to `RUN_ALL_DATASETS=True` with `DATASETS=['cub','pets','brain_mri']`.
+Run All previews the first dataset in detailed cells, then automatically trains/evaluates the full
+queue with independent models and saved explanations. Dataset summary CSV/status/chart are stored
+alongside the runs and synced to configured Drive storage. Restarting the same configuration resumes
+training and reuses completed evidence. `RUN_TAG='calibrated_v3'` preserves the older run folders.
+
 Each notebook contains an **Ablation study** code block. Set `RUN_ABLATIONS=True` to execute full,
 unguided, individual guidance/regularizer removals, no-fine-tuning and K=32/64 variants with isolated
-checkpoints. Per-run and mean/std CSVs are saved under `results/<dataset>_ablation_summary` and synced
+checkpoints. The new `no_standardization` variant isolates the score-standardization change with
+the same learning rates and schedule. In all-dataset mode the sweep repeats on each dataset.
+Per-run and mean/std CSVs are saved under `results/<dataset>_ablation_summary_calibrated_v3` and synced
 to configured Drive storage. Defaults leave the expensive sweep disabled. `ABLATION_SEEDS` and
 `ABLATION_VARIANTS` are editable; smoke outputs must not be reported as scientific findings.
 
@@ -77,7 +90,10 @@ initializing TensorFlow or reserving GPU memory.
 Checkpoints include stage, epoch, batch, model, optimizer, scheduler, mixed-precision scaler and RNG.
 Rerun the same configuration/run name to resume; use a new run name for changed settings/ablations.
 Progress is committed every 50 batches and each epoch. A crash can require repeating work since the
-last committed batch. `last.pt` is a trusted, locally generated full-state checkpoint; do not load
+last committed batch. Full epoch snapshots are retained every five epochs and at stage end, with
+three per stage by default. Batch bars, training accuracy/CE, class coverage and concept variation
+are visible; live curves, status JSON and history CSV are saved during training.
+`last.pt` is a trusted, locally generated full-state checkpoint; do not load
 arbitrary untrusted pickle checkpoints. `best.pt` is selected on validation only.
 
 Outputs include history, predictions, class metrics/confusion matrices, calibration, concept arrays,
@@ -102,9 +118,11 @@ research results. Descriptor correlations do not establish named parts, clinical
 
 ## What was validated
 
-The new Colab and Kaggle notebooks also passed complete local real-CUB CPU smoke execution with
-NumPy 2.1.3. Pip calls and cloud mount/OAuth/Drive endpoints were substituted; actual training,
-checkpointing, figures and journal blocks executed. Drive API contract tests cover cold restore,
+The current Colab and Kaggle notebooks passed all 20 code cells locally, including the automatic
+CUB/Pet/MRI queue, on Python 3.13 and NumPy 2.1.3. The offline notebook passed all 18 code cells,
+including the three-dataset queue and two selected ablations on each dataset. Pip calls and cloud
+mount/OAuth/Drive endpoints were substituted; actual training, checkpointing, figures and journal
+blocks executed. See `docs/training_v3/` for the current evidence. Drive API contract tests cover cold restore,
 newer-local-checkpoint preservation and complete LLM assets. See `docs/cloud_notebook_validation.json`.
 Live platform GPUs and authenticated Drive sessions still require target-platform validation.
 

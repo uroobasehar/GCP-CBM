@@ -1,0 +1,5 @@
+path,has_positive_margin_support,concept_index,positive_margin_probability_drop,random_probability_drop,legacy_absolute_probability_drop
+data/pets/images/Abyssinian_201.jpg,True,10,0.008723501116037369,0.004277065396308899,0.007376197725534439
+data/pets/images/Abyssinian_202.jpg,True,10,0.00860542431473732,-0.0037003085017204285,0.007344111800193787
+data/pets/images/Abyssinian_204.jpg,True,10,0.008828219026327133,0.008828219026327133,0.007430657744407654
+data/pets/images/Abyssinian_205.jpg,True,10,0.008769255131483078,0.005420219153165817,0.007447179406881332

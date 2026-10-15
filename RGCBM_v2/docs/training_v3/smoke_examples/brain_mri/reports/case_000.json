@@ -1,0 +1,23 @@
+{
+  "backend_requested": "template",
+  "backend_used": "template",
+  "fallback_reason": null,
+  "structured_checks": "passed",
+  "semantic_validation": "human review required; JSON checks do not guarantee hallucination-free prose",
+  "result": {
+    "predicted_class": "glioma",
+    "confidence": 0.28404102992491254,
+    "supporting_concept_indices": [
+      3,
+      8,
+      4
+    ],
+    "opposing_concept_indices": [
+      13,
+      5,
+      14
+    ],
+    "explanation": "The model predicted glioma with an uncalibrated probability of 0.284; the runner-up was notumor. Supporting model patterns: C04: weakly grounded visual pattern (margin contribution +0.2274); C09: weakly grounded visual pattern (margin contribution +0.2115); C05: weakly grounded visual pattern (margin contribution +0.1609)",
+    "limitations": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated."
+  }
+}

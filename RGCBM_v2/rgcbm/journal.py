@@ -23,13 +23,16 @@ def concept_cards(manifest, run, grounding):
     W = None
     checkpoint = torch.load(run / 'best.pt', map_location='cpu', weights_only=True)
     W = checkpoint['model']['classifier.weight'].numpy()
+    score_definition = ('Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.'
+                        if checkpoint['config'].get('concept_normalization') == 'running_standardize'
+                        else 'Unstandardized mean spatial prototype response.')
     test = json.loads((run / 'test_frozen_alignment.json').read_text())
     test_by_id = {r['concept_index']: r for r in test}
     cards = []
     for row in grounding:
         k = row['concept_index']
         order = np.argsort(-W[:, k])[:3]
-        cards.append({'id': f'C{k+1:02d}', 'name': row['concept_name'], 'name_basis': 'validation image-descriptor correlation, not anatomy/part annotation', 'group': row['training_group'], 'validation_correlation': row['mean'], 'validation_image_bootstrap_95ci': [row['ci_low'], row['ci_high']], 'weak_grounding': row['weak_grounding'], 'frozen_descriptor_test_audit': test_by_id[k], 'classes_with_largest_classifier_weights': [{'class': manifest['classes'][int(j)], 'weight': float(W[j, k])} for j in order], 'weight_interpretation': 'Relative classifier use; class weights do not name the visual concept.', 'domain_scope': DOMAIN_SCOPE[manifest['dataset']], 'human_review': 'Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation.'})
+        cards.append({'id': f'C{k+1:02d}', 'name': row['concept_name'], 'name_basis': 'validation image-descriptor correlation, not anatomy/part annotation', 'score_definition': score_definition, 'group': row['training_group'], 'validation_correlation': row['mean'], 'validation_image_bootstrap_95ci': [row['ci_low'], row['ci_high']], 'weak_grounding': row['weak_grounding'], 'frozen_descriptor_test_audit': test_by_id[k], 'classes_with_largest_classifier_weights': [{'class': manifest['classes'][int(j)], 'weight': float(W[j, k])} for j in order], 'weight_interpretation': 'Relative classifier use; class weights do not name the visual concept.', 'domain_scope': DOMAIN_SCOPE[manifest['dataset']], 'human_review': 'Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation.'})
     atomic_json(run / 'concept_cards.json', cards)
     text = '# Concept evidence cards\n\n' + DOMAIN_SCOPE[manifest['dataset']] + '\n\n'
     for card in cards:

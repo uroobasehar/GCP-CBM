@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "top5_accuracy": null,
+  "classes": 4,
+  "test_cases": 4,
+  "reason": "Top-5 is not informative for a four-class task and is omitted."
+}

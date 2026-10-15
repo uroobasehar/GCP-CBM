@@ -21,6 +21,19 @@
         "tensorflow": "2.19.1",
         "torch": "2.7.1+cpu",
         "numpy": "1.26.4",
+        "package_versions": {
+          "pyarrow": "19.0.1",
+          "scipy": "1.13.1",
+          "scikit-learn": "1.5.2",
+          "pandas": "2.2.3",
+          "opencv-python-headless": "4.10.0.84",
+          "Pillow": "11.0.0",
+          "h5py": "3.16.0",
+          "protobuf": "5.29.6",
+          "matplotlib": "3.9.2",
+          "transformers": "4.51.3",
+          "torchvision": "0.22.1+cpu"
+        },
         "operations": [
           "TensorFlow CPU matmul",
           "PyTorch CPU matmul",
@@ -44,6 +57,19 @@
         "tensorflow": "2.19.1",
         "torch": "2.7.1+cpu",
         "numpy": "1.26.4",
+        "package_versions": {
+          "pyarrow": "19.0.1",
+          "scipy": "1.13.1",
+          "scikit-learn": "1.5.2",
+          "pandas": "2.2.3",
+          "opencv-python-headless": "4.10.0.84",
+          "Pillow": "11.0.0",
+          "h5py": "3.16.0",
+          "protobuf": "5.29.6",
+          "matplotlib": "3.9.2",
+          "transformers": "4.51.3",
+          "torchvision": "0.22.1+cpu"
+        },
         "operations": [
           "TensorFlow CPU matmul",
           "PyTorch CPU matmul",
@@ -149,7 +175,7 @@
     "backend_used": "template",
     "fallback_reason": null
   },
-  "run_directory": "/workspace/rgcbm-research/native-check/results/offline_acceptance_cub_1792077920482322076",
+  "run_directory": "/workspace/rgcbm-research/native-check/results/offline_acceptance_cub_1792080805900619508",
   "status": "passed",
-  "validation_scope": "Updated acceptance harness executed on Linux CPU, not a Windows installation; Internet sockets blocked. Registered private kernel and real CUB images."
+  "validation_scope": "Updated calibrated_v3 acceptance harness on Linux CPU with Internet sockets denied; native Windows GPU not tested."
 }

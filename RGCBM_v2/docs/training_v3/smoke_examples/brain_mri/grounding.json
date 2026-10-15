@@ -1,0 +1,631 @@
+{
+  "source_split": "validation",
+  "validation_n": 4,
+  "selection_note": "Names describe measured image associations; no part, clinical, shape, or color diagnosis is inferred.",
+  "concepts": [
+    {
+      "concept_index": 0,
+      "concept_name": "C01: weakly grounded visual pattern",
+      "training_group": "boundary-guided",
+      "descriptor": "intensity",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "grounding_strength": 0.2178322672843933,
+      "mean": -0.2178322672843933,
+      "ci_low": -0.454839825630188,
+      "ci_high": 0.012533929292112764,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.06158684194087982,
+          "ci_low": -0.1704873364418745,
+          "ci_high": 0.1229141354560852,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": -0.012560471892356873,
+          "ci_low": -0.10025195777416229,
+          "ci_high": 0.1482413411140442,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": -0.21659649908542633,
+          "ci_low": -0.5413123369216919,
+          "ci_high": 0.03511265637353072,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": -0.2178322672843933,
+          "ci_low": -0.454839825630188,
+          "ci_high": 0.012533929292112764,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 1,
+      "concept_name": "C02: weakly grounded visual pattern",
+      "training_group": "boundary-guided",
+      "descriptor": "intensity",
+      "direction": "positive",
+      "weak_grounding": true,
+      "grounding_strength": 0.5549377202987671,
+      "mean": 0.5549377202987671,
+      "ci_low": 0.44870187938213346,
+      "ci_high": 0.682404036819935,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.19435936212539673,
+          "ci_low": 0.054383304994553336,
+          "ci_high": 0.3557398319244385,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": 0.059403665363788605,
+          "ci_low": 0.012823089025914669,
+          "ci_high": 0.13339633494615555,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": 0.4923076629638672,
+          "ci_low": 0.3354845643043518,
+          "ci_high": 0.7004759311676025,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": 0.5549377202987671,
+          "ci_low": 0.44870187938213346,
+          "ci_high": 0.682404036819935,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 2,
+      "concept_name": "C03: weakly grounded visual pattern",
+      "training_group": "boundary-guided",
+      "descriptor": "intensity",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "grounding_strength": 0.5272554755210876,
+      "mean": -0.5272554755210876,
+      "ci_low": -0.7092698812484741,
+      "ci_high": -0.4245932325720787,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.1839705854654312,
+          "ci_low": -0.31150800064206124,
+          "ci_high": -0.05643313378095627,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": -0.047825902700424194,
+          "ci_low": -0.11493268627673388,
+          "ci_high": 0.0016999123152346548,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": -0.5012791156768799,
+          "ci_low": -0.6826552748680115,
+          "ci_high": -0.34132567048072815,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": -0.5272554755210876,
+          "ci_low": -0.7092698812484741,
+          "ci_high": -0.4245932325720787,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 3,
+      "concept_name": "C04: weakly grounded visual pattern",
+      "training_group": "boundary-guided",
+      "descriptor": "texture",
+      "direction": "positive",
+      "weak_grounding": true,
+      "grounding_strength": 0.2332489788532257,
+      "mean": 0.2332489788532257,
+      "ci_low": 0.12480045855045319,
+      "ci_high": 0.379803329706192,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.2110864669084549,
+          "ci_low": 0.17917396128177643,
+          "ci_high": 0.24739041924476624,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": 0.2332489788532257,
+          "ci_low": 0.12480045855045319,
+          "ci_high": 0.379803329706192,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": 0.006711788475513458,
+          "ci_low": -0.22934207320213318,
+          "ci_high": 0.24814437329769135,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": 0.12288299202919006,
+          "ci_low": -0.13356935270130632,
+          "ci_high": 0.38229516223073007,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 4,
+      "concept_name": "C05: weakly grounded visual pattern",
+      "training_group": "texture-guided",
+      "descriptor": "intensity",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "grounding_strength": 0.32071614265441895,
+      "mean": -0.32071614265441895,
+      "ci_low": -0.44910222068428995,
+      "ci_high": -0.1806513961404562,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.19838297367095947,
+          "ci_low": -0.31287145614624023,
+          "ci_high": -0.07782681286334991,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": -0.16596972942352295,
+          "ci_low": -0.29054760932922363,
+          "ci_high": -0.016077347099781036,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": -0.27204278111457825,
+          "ci_low": -0.3644501090049743,
+          "ci_high": -0.16750819981098175,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": -0.32071614265441895,
+          "ci_low": -0.44910222068428995,
+          "ci_high": -0.1806513961404562,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 5,
+      "concept_name": "C06: weakly grounded visual pattern",
+      "training_group": "texture-guided",
+      "descriptor": "intensity",
+      "direction": "positive",
+      "weak_grounding": true,
+      "grounding_strength": 0.5489957332611084,
+      "mean": 0.5489957332611084,
+      "ci_low": 0.44300976395606995,
+      "ci_high": 0.704940915107727,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.22178217768669128,
+          "ci_low": 0.09791365731507541,
+          "ci_high": 0.4087156355381012,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": 0.07559876143932343,
+          "ci_low": 0.0061708055436611176,
+          "ci_high": 0.15194626189768315,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": 0.5170913934707642,
+          "ci_low": 0.35641494393348694,
+          "ci_high": 0.7353464961051941,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": 0.5489957332611084,
+          "ci_low": 0.44300976395606995,
+          "ci_high": 0.704940915107727,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 6,
+      "concept_name": "C07: weakly grounded visual pattern",
+      "training_group": "texture-guided",
+      "descriptor": "morphology",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "grounding_strength": 0.39627939462661743,
+      "mean": -0.39627939462661743,
+      "ci_low": -0.5383412584662437,
+      "ci_high": -0.2772231101989746,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.31899112462997437,
+          "ci_low": -0.5573857426643372,
+          "ci_high": -0.16280397772789001,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": -0.26003721356391907,
+          "ci_low": -0.4128018021583557,
+          "ci_high": -0.16527484357357025,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": -0.39627939462661743,
+          "ci_low": -0.5383412584662437,
+          "ci_high": -0.2772231101989746,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": -0.3904522955417633,
+          "ci_low": -0.5498711466789246,
+          "ci_high": -0.269730806350708,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 7,
+      "concept_name": "C08: weakly grounded visual pattern",
+      "training_group": "texture-guided",
+      "descriptor": "intensity",
+      "direction": "positive",
+      "weak_grounding": true,
+      "grounding_strength": 0.46482571959495544,
+      "mean": 0.46482571959495544,
+      "ci_low": 0.37613797187805176,
+      "ci_high": 0.5541383877396585,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.11490923911333084,
+          "ci_low": 0.029801439493894577,
+          "ci_high": 0.20054512172937405,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": -0.04300457984209061,
+          "ci_low": -0.08956515789031982,
+          "ci_high": 0.00377828220371162,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": 0.4304615557193756,
+          "ci_low": 0.2925207667052746,
+          "ci_high": 0.583265483379364,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": 0.46482571959495544,
+          "ci_low": 0.37613797187805176,
+          "ci_high": 0.5541383877396585,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 8,
+      "concept_name": "C09: weakly grounded visual pattern",
+      "training_group": "region-prior-guided",
+      "descriptor": "morphology",
+      "direction": "positive",
+      "weak_grounding": true,
+      "grounding_strength": 0.3896426558494568,
+      "mean": 0.3896426558494568,
+      "ci_low": 0.20136569440364838,
+      "ci_high": 0.5898957848548892,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.0958080142736435,
+          "ci_low": -0.20208163559436798,
+          "ci_high": 0.4207061141729356,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": 0.028507456183433533,
+          "ci_low": -0.20210526697337627,
+          "ci_high": 0.25996491089463236,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": 0.3896426558494568,
+          "ci_low": 0.20136569440364838,
+          "ci_high": 0.5898957848548892,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": 0.3172682821750641,
+          "ci_low": 0.1110074371099472,
+          "ci_high": 0.5790070295333862,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 9,
+      "concept_name": "C10: weakly grounded visual pattern",
+      "training_group": "region-prior-guided",
+      "descriptor": "intensity",
+      "direction": "positive",
+      "weak_grounding": true,
+      "grounding_strength": 0.5446432828903198,
+      "mean": 0.5446432828903198,
+      "ci_low": 0.4366718828678131,
+      "ci_high": 0.7165473088622094,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.20695163309574127,
+          "ci_low": 0.035657483432441954,
+          "ci_high": 0.3714687943458558,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": 0.04747803509235382,
+          "ci_low": -0.044175658375024796,
+          "ci_high": 0.09751582145690918,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": 0.5282229781150818,
+          "ci_low": 0.36357060074806213,
+          "ci_high": 0.6938848823308947,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": 0.5446432828903198,
+          "ci_low": 0.4366718828678131,
+          "ci_high": 0.7165473088622094,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 10,
+      "concept_name": "C11: weakly grounded visual pattern",
+      "training_group": "region-prior-guided",
+      "descriptor": "intensity",
+      "direction": "positive",
+      "weak_grounding": true,
+      "grounding_strength": 0.5893657803535461,
+      "mean": 0.5893657803535461,
+      "ci_low": 0.44953101873397827,
+      "ci_high": 0.7886005058884621,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.3235298693180084,
+          "ci_low": 0.18556123971939087,
+          "ci_high": 0.461498498916626,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": 0.14382988214492798,
+          "ci_low": 0.08562204241752625,
+          "ci_high": 0.19971522688865662,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": 0.5293437838554382,
+          "ci_low": 0.32745543122291565,
+          "ci_high": 0.7500783801078796,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": 0.5893657803535461,
+          "ci_low": 0.44953101873397827,
+          "ci_high": 0.7886005058884621,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 11,
+      "concept_name": "C12: weakly grounded visual pattern",
+      "training_group": "region-prior-guided",
+      "descriptor": "intensity",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "grounding_strength": 0.5093963742256165,
+      "mean": -0.5093963742256165,
+      "ci_low": -0.7259941101074219,
+      "ci_high": -0.3739272952079773,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.20628681778907776,
+          "ci_low": -0.3836649820208549,
+          "ci_high": -0.07849954813718796,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": -0.07802408188581467,
+          "ci_low": -0.17437022924423218,
+          "ci_high": -0.009946614503860474,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": -0.44577261805534363,
+          "ci_low": -0.658015251159668,
+          "ci_high": -0.21642076969146729,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": -0.5093963742256165,
+          "ci_low": -0.7259941101074219,
+          "ci_high": -0.3739272952079773,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 12,
+      "concept_name": "C13: weakly grounded visual pattern",
+      "training_group": "unguided",
+      "descriptor": "texture",
+      "direction": "positive",
+      "weak_grounding": true,
+      "grounding_strength": 0.22173210978507996,
+      "mean": 0.22173210978507996,
+      "ci_low": 0.1059234267100692,
+      "ci_high": 0.3340008020401001,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.13628098368644714,
+          "ci_low": -0.028423679992556572,
+          "ci_high": 0.23773275315761566,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": 0.22173210978507996,
+          "ci_low": 0.1059234267100692,
+          "ci_high": 0.3340008020401001,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": 0.00458916649222374,
+          "ci_low": -0.16749638319015503,
+          "ci_high": 0.1009155996143818,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": 0.029017142951488495,
+          "ci_low": -0.02658805623650551,
+          "ci_high": 0.0846223384141922,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 13,
+      "concept_name": "C14: weakly grounded visual pattern",
+      "training_group": "unguided",
+      "descriptor": "edge",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "grounding_strength": 0.0918567031621933,
+      "mean": -0.0918567031621933,
+      "ci_low": -0.25528085231781006,
+      "ci_high": 0.084418386220932,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.0918567031621933,
+          "ci_low": -0.25528085231781006,
+          "ci_high": 0.084418386220932,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": -0.019752107560634613,
+          "ci_low": -0.1192268431186676,
+          "ci_high": 0.15175849199295044,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": 0.08435641974210739,
+          "ci_low": -0.1293897520750761,
+          "ci_high": 0.2977445721626282,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": -0.08038483560085297,
+          "ci_low": -0.28396688029170036,
+          "ci_high": 0.16224248707294464,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 14,
+      "concept_name": "C15: weakly grounded visual pattern",
+      "training_group": "unguided",
+      "descriptor": "intensity",
+      "direction": "positive",
+      "weak_grounding": true,
+      "grounding_strength": 0.4610331058502197,
+      "mean": 0.4610331058502197,
+      "ci_low": 0.3550419509410858,
+      "ci_high": 0.5634034320712091,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.2923676073551178,
+          "ci_low": 0.07944773864001035,
+          "ci_high": 0.5044341683387756,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": 0.14997202157974243,
+          "ci_low": 0.08366896957159042,
+          "ci_high": 0.22833451628684998,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": 0.40044641494750977,
+          "ci_low": 0.21972104012966157,
+          "ci_high": 0.5872769355773926,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": 0.4610331058502197,
+          "ci_low": 0.3550419509410858,
+          "ci_high": 0.5634034320712091,
+          "valid_n": 4
+        }
+      }
+    },
+    {
+      "concept_index": 15,
+      "concept_name": "C16: weakly grounded visual pattern",
+      "training_group": "unguided",
+      "descriptor": "morphology",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "grounding_strength": 0.3480783700942993,
+      "mean": -0.3480783700942993,
+      "ci_low": -0.5424510940909385,
+      "ci_high": -0.18559155203402034,
+      "valid_n": 4,
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.06066235899925232,
+          "ci_low": -0.13153782486915588,
+          "ci_high": 0.21702471412718297,
+          "valid_n": 4
+        },
+        "texture": {
+          "mean": 0.13751107454299927,
+          "ci_low": -0.033268560469150533,
+          "ci_high": 0.2655428349971771,
+          "valid_n": 4
+        },
+        "morphology": {
+          "mean": -0.3480783700942993,
+          "ci_low": -0.5424510940909385,
+          "ci_high": -0.18559155203402034,
+          "valid_n": 4
+        },
+        "intensity": {
+          "mean": -0.3328140377998352,
+          "ci_low": -0.5795890688896179,
+          "ci_high": -0.16993397437036037,
+          "valid_n": 4
+        }
+      }
+    }
+  ]
+}

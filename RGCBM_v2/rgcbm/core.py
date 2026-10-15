@@ -20,6 +20,8 @@ class Config:
     finetune_blocks: int = 3
     head_lr: float = 4e-4
     finetune_lr: float = 8e-6
+    finetune_head_lr: float | None = None  # None preserves the original shared LR.
+    concept_normalization: str = 'none'  # Legacy checkpoint-compatible default.
     validation_fraction: float = 0.1
     dropout: float = 0.10
     edge: float = 0.18
@@ -33,6 +35,9 @@ class Config:
     classification_only_epochs: int = 3
     ramp_epochs: int = 5
     checkpoint_every_batches: int = 50
+    checkpoint_every_epochs: int = 5
+    keep_epoch_checkpoints: int = 3  # Per stage; 0 keeps every periodic snapshot.
+    show_progress: bool = True
     patience: int = 8
     mixed_precision: bool = True
     pretrained: bool = True
@@ -48,9 +53,27 @@ class Config:
             raise ValueError('Use at least one head epoch and nonnegative fine-tuning epochs.')
         if self.workers < 0 or not 0 < self.validation_fraction < 1:
             raise ValueError('Invalid loader/split configuration.')
+        if self.concept_normalization not in ['none', 'running_standardize']:
+            raise ValueError('Unknown concept normalization.')
+        if min(self.head_lr, self.finetune_lr) <= 0 or (self.finetune_head_lr is not None and self.finetune_head_lr <= 0):
+            raise ValueError('Learning rates must be positive.')
+        if self.checkpoint_every_batches < 1 or self.checkpoint_every_epochs < 1 or self.keep_epoch_checkpoints < 0:
+            raise ValueError('Invalid checkpoint interval/retention.')
 
     def to_dict(self):
         return asdict(self)
+
+
+def training_config(profile='calibrated_v3', **overrides):
+    if profile == 'calibrated_v3':
+        values = dict(head_epochs=8, finetune_epochs=30, head_lr=2e-3, finetune_lr=2e-5,
+                      finetune_head_lr=1e-3, concept_normalization='running_standardize')
+    elif profile == 'legacy':
+        values = {}
+    else:
+        raise ValueError('Use calibrated_v3 or legacy.')
+    values.update(overrides)
+    return Config(**values)
 
 
 def normalize_map(x):
@@ -100,6 +123,8 @@ class RGCBM(nn.Module):
         self.prototypes = nn.Parameter(torch.randn(config.concepts, config.projection) * 0.02)
         self.dropout = nn.Dropout(config.dropout)
         self.classifier = nn.Linear(config.concepts, num_classes)
+        if config.concept_normalization == 'running_standardize':
+            self.concept_norm = nn.BatchNorm1d(config.concepts, affine=False)
         self.register_buffer('image_mean', torch.tensor([0.485, 0.456, 0.406])[None, :, None, None])
         self.register_buffer('image_std', torch.tensor([0.229, 0.224, 0.225])[None, :, None, None])
         self.stage = 'head'
@@ -136,7 +161,11 @@ class RGCBM(nn.Module):
         features = F.normalize(z, dim=1)
         p = F.normalize(self.prototypes, dim=1)
         maps = torch.sigmoid(4 * torch.einsum('bdhw,kd->bkhw', features, p))
-        return maps, maps.mean((2, 3))
+        concepts = maps.mean((2, 3))
+        if self.config.concept_normalization == 'running_standardize':
+            # Training-only running statistics; fixed at evaluation, no class bypass.
+            concepts = torch.sigmoid(self.concept_norm(concepts))
+        return maps, concepts
 
     def forward(self, images):
         maps, concepts = self.concepts_from(images)

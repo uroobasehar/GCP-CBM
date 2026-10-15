@@ -11,17 +11,26 @@ bootstrap = (ROOT / 'cloud_bootstrap.py').read_text()
 def markdown(text): return nbformat.v4.new_markdown_cell(text)
 def code(text): return nbformat.v4.new_code_cell(text)
 
-config_cell = '''# Select one dataset per run; use all three for the complete research evaluation.
-DATASET = 'cub'                 # 'cub', 'pets', 'brain_mri'
+config_cell = '''# Run All trains/evaluates these datasets in order, with independent models/results.
+RUN_ALL_DATASETS = True
+DATASETS = ['cub', 'pets', 'brain_mri']
+DATASET = DATASETS[0]           # Detailed figures below preview the first dataset.
+RUN_TAG = 'calibrated_v3'       # New protocol: preserves all older run folders/checkpoints.
 SEED = 42                      # Repeat independent full runs with 42, 43, 44.
 NUM_CONCEPTS = 16               # Capacity ablation: 16, 32, 64.
 BATCH_SIZE = 24                 # 32 GB GPU: start here; lower if CUDA memory is exhausted.
-HEAD_EPOCHS = 20
-FINETUNE_EPOCHS = 20
+HEAD_EPOCHS = 8
+FINETUNE_EPOCHS = 30
+HEAD_LR = 2e-3
+FINETUNE_BACKBONE_LR = 2e-5
+FINETUNE_HEAD_LR = 1e-3
+CONCEPT_NORMALIZATION = 'running_standardize'  # 'none' reproduces the old pooling path.
+CHECKPOINT_EVERY_EPOCHS = 5
+KEEP_EPOCH_CHECKPOINTS = 3      # Per stage; 0 retains all periodic snapshots.
 SMOKE_TEST = False              # True executes two real training batches per stage; not paper results.
 LLM_BACKEND = 'template'        # 'local_qwen' (offline-capable) or 'gemini' (online key required).
 LLM_DEVICE = 'cpu'              # 'cuda' also works; release training tensors before loading Qwen.
-RUN_NAME = f'{DATASET}_K{NUM_CONCEPTS}_seed{SEED}' + ('_smoke' if SMOKE_TEST else '')
+RUN_NAME = f'{DATASET}_K{NUM_CONCEPTS}_seed{SEED}_{RUN_TAG}' + ('_smoke' if SMOKE_TEST else '')
 print('Dataset:', DATASET, 'run:', RUN_NAME)
 '''
 
@@ -29,13 +38,16 @@ for mode in ['Offline', 'Colab', 'Kaggle']:
     cells = [markdown(f'''# RG-CBM: descriptor-grounded visual concept bottleneck — {mode}
 
 CUB-200-2011, Oxford-IIIT Pet and MRI share the original architecture: EfficientNet-B1 →
-128-dimensional projection → cosine-matched prototypes → 16 pooled concepts → sparse linear classifier.
+128-dimensional projection → cosine-matched prototypes → 16 calibrated pooled concepts → sparse linear classifier.
 The three guided groups model edge, texture and image-derived region priors; the fourth is unguided.
 Names are selected from measured validation associations, without asserting tumor anatomy or bird parts.
 
 Use the supplied README and research methodology. This notebook does not contain fabricated research
 results. Full training and independent held-out evaluation must run on your GPU. Resume by rerunning
 the same configuration; incompatible checkpoints are rejected. Change RUN_NAME for a new experiment.
+Run All executes the first dataset's detailed cells, then the automatic queue processes every
+remaining dataset and writes a combined summary. Concept calibration is an explicit protocol
+revision; it uses training running statistics fixed at inference, and preserves the linear bottleneck.
 '''), code(config_cell)]
     if mode == 'Offline':
         cells += [markdown('Run `offline/setup_windows.ps1` first. No network operation occurs in this notebook unless you explicitly select an online LLM. The bundled datasets and backbone are required. Use the **RG-CBM Anaconda offline GPU (Python 3.11)** kernel.'), code('''from pathlib import Path
@@ -158,13 +170,17 @@ else:
         raise RuntimeError('Enable a GPU for full training, or set SMOKE_TEST=True for CPU validation.')
 torch.set_num_threads(min(4, os.cpu_count() or 1))
 cfg = Config(dataset=DATASET, seed=SEED, concepts=NUM_CONCEPTS, batch_size=BATCH_SIZE,
+             head_lr=HEAD_LR, finetune_lr=FINETUNE_BACKBONE_LR,
+             finetune_head_lr=FINETUNE_HEAD_LR, concept_normalization=CONCEPT_NORMALIZATION,
+             checkpoint_every_epochs=CHECKPOINT_EVERY_EPOCHS,
+             keep_epoch_checkpoints=KEEP_EPOCH_CHECKPOINTS,
              head_epochs=1 if SMOKE_TEST else HEAD_EPOCHS,
              finetune_epochs=1 if SMOKE_TEST else FINETUNE_EPOCHS,
              max_train_batches=2 if SMOKE_TEST else None,
              max_validation_batches=2 if SMOKE_TEST else None,
              checkpoint_every_batches=1 if SMOKE_TEST else 50)
 print(cfg.to_dict())
-'''), markdown('Train or resume. Stop/restart preserves progress at each epoch and every 50 batches; at most the batches since the last committed checkpoint need repeating. Model selection and scheduler updates use validation only.'), code('''from rgcbm.train import fit
+'''), markdown('Train or resume. Batch progress bars show loss, accuracy and ETA. last.pt is saved each epoch and every 50 batches; full periodic snapshots are saved every CHECKPOINT_EVERY_EPOCHS epochs and at stage end. live_learning_curves.png, history.csv and training_status.json update during training. New calibrated_v3 runs use separate names; old checkpoints remain intact. Model selection and scheduler updates use validation only.'), code('''from rgcbm.train import fit
 from rgcbm.data import atomic_json
 model, RUN_DIR, status = fit(ROOT, manifest, cfg, device=DEVICE, sync_callback=SYNC_CALLBACK, run_name=RUN_NAME)
 atomic_json(RUN_DIR / 'dataset_manifest.json', manifest)
@@ -173,14 +189,23 @@ atomic_json(RUN_DIR / 'environment.json', runtime_manifest())
 assert status['complete']
 print('Training complete. Best validation model restored:', RUN_DIR)
 '''), markdown('Ground names on validation; evaluate the frozen names and classifier on the official test set. CUB boxes and Pet trimaps enter evaluation only, never training or cropping. Smoke mode intentionally evaluates only two test batches and cannot supply paper results.'), code('''from rgcbm.evaluate import ground_concepts, evaluate
-grounding = ground_concepts(model, ROOT, manifest, RUN_DIR, max_batches=2 if SMOKE_TEST else None)
-metrics = evaluate(model, ROOT, manifest, RUN_DIR, grounding, max_batches=2 if SMOKE_TEST else None)
+expected_pipeline = {'complete': True,
+                     'fingerprint': json.loads((RUN_DIR / 'configuration.json').read_text())['fingerprint'],
+                     'llm_backend': LLM_BACKEND, 'protocol': 'calibrated_v3'}
+PIPELINE_CACHED = (RUN_DIR / 'pipeline_status.json').is_file() and json.loads((RUN_DIR / 'pipeline_status.json').read_text()) == expected_pipeline
+if PIPELINE_CACHED:
+    grounding = json.loads((RUN_DIR / 'grounding.json').read_text())['concepts']
+    metrics = json.loads((RUN_DIR / 'metrics.json').read_text())
+    print('Using previously completed evaluation for this exact run.')
+else:
+    grounding = ground_concepts(model, ROOT, manifest, RUN_DIR, max_batches=2 if SMOKE_TEST else None)
+    metrics = evaluate(model, ROOT, manifest, RUN_DIR, grounding, max_batches=2 if SMOKE_TEST else None)
 import pandas as pd
 display(pd.DataFrame(grounding).drop(columns=['all_descriptor_statistics']))
 display(pd.DataFrame([metrics]).T)
 '''), code('''from rgcbm.visualize import visualize_run
 from IPython.display import display, Image as DisplayImage
-FIGURES = visualize_run(model, ROOT, manifest, RUN_DIR, grounding, examples=3,
+FIGURES = RUN_DIR / 'figures' if PIPELINE_CACHED else visualize_run(model, ROOT, manifest, RUN_DIR, grounding, examples=3,
                         prototype_batches=2 if SMOKE_TEST else None)
 for name in ['learning_curves.png', 'confusion_matrix.png', 'grounding_uncertainty.png',
              'case_00_priors.png', 'case_00_contributions.png', 'case_00_concept_maps.png', 'prototype_patches.png']:
@@ -231,6 +256,8 @@ from rgcbm.journal import intervention
 example_dataset = ImageDataset(ROOT, manifest, 'test', cfg)
 EXAMPLE_INDEX = 0
 EDITED_CONCEPTS = {0: 0.0}  # ZERO-BASED concept index -> activation in [0,1].
+# For standardized scores, 0.5 is the estimated training-mean response; 0 is an
+# extreme latent clamp, not evidence that a visible object part has disappeared.
 example_image, _, _ = example_dataset[EXAMPLE_INDEX]
 edited_table = intervention(model, example_image, grounding, manifest['classes'], EDITED_CONCEPTS)
 edited_table.to_csv(RUN_DIR / 'manual_intervention.csv', index=False)
@@ -274,8 +301,56 @@ Device/version, parameters and peak CUDA memory are saved; full seeds are needed
 '''), code('''from rgcbm.journal import profile_inference
 profile = profile_inference(model, example_image, RUN_DIR, repeats=20)
 display(pd.DataFrame([profile]).T)
+atomic_json(RUN_DIR / 'pipeline_status.json', {'complete': True,
+            'fingerprint': json.loads((RUN_DIR / 'configuration.json').read_text())['fingerprint'],
+            'llm_backend': LLM_BACKEND, 'protocol': 'calibrated_v3'})
 if SYNC_CALLBACK is not None: SYNC_CALLBACK(RUN_DIR)
 print('Journal-facing evidence and figures saved:', RUN_DIR)
+''')]
+    cells += [markdown('''## Automatic sequential dataset queue
+
+With RUN_ALL_DATASETS=True, this cell resumes the completed first model, reuses its saved evidence,
+then prepares/trains/evaluates each remaining dataset. Each receives independent checkpoints,
+learning curves, concept cards, reports and journal figures. A summary CSV, status JSON and chart
+are saved alongside the runs and synchronized to configured Drive storage. Restart with the same
+configuration to resume. Dataset failures are recorded and the queue continues; inspect failed rows.
+'''), code(f'''from rgcbm.suite import run_dataset_suite
+def prepare_queued_dataset(dataset, run_name):
+    if '{mode}' == 'Colab':
+        target = ROOT / 'data' / f'{{dataset}}.zip'
+        source = DRIVE_ROOT / 'datasets' / target.name
+        if not target.exists() and source.exists(): shutil.copy2(source, target)
+    elif '{mode}' == 'Kaggle' and DRIVE is not None:
+        DRIVE.ensure_dataset(ROOT, dataset)
+        DRIVE.restore_run(ROOT, run_name)
+    if ONLINE:
+        command = [sys.executable, str(CODE_ROOT / 'prepare_assets.py'), '--root', str(ROOT), '--datasets', dataset]
+        if LLM_BACKEND == 'local_qwen': command.append('--llm')
+        subprocess.check_call(command)
+    else:
+        prepare_data(ROOT, dataset, online=False)
+    if '{mode}' == 'Colab':
+        archive = ROOT / 'data' / f'{{dataset}}.zip'
+        if not (DRIVE_ROOT / 'datasets' / archive.name).exists():
+            shutil.copy2(archive, DRIVE_ROOT / 'datasets' / archive.name)
+    elif '{mode}' == 'Kaggle' and DRIVE is not None:
+        DRIVE.sync_assets(ROOT, include_llm=LLM_BACKEND == 'local_qwen')
+
+if RUN_ALL_DATASETS:
+    model.cpu()  # Keep the preview model available, release its GPU allocation for the queue.
+    dataset_summary = run_dataset_suite(ROOT, DATASETS, cfg, run_tag=RUN_TAG,
+                         device=DEVICE, prepare_callback=prepare_queued_dataset,
+                         sync_callback=SYNC_CALLBACK, llm_backend=LLM_BACKEND,
+                         llm_device=LLM_DEVICE, continue_on_error=True)
+    display(dataset_summary)
+    suite_dir = ROOT / 'results' / (f'dataset_suite_{{RUN_TAG}}_K{{cfg.concepts}}_seed{{cfg.seed}}' + ('_smoke' if SMOKE_TEST else ''))
+    print('Combined queue status, CSV and chart:', suite_dir)
+    if (suite_dir / 'dataset_accuracy.png').exists():
+        display(DisplayImage(filename=str(suite_dir / 'dataset_accuracy.png')))
+    if not (dataset_summary.status == 'complete').all():
+        print('Some datasets failed. Inspect queue_status.json and dataset error files; successful models are retained.')
+else:
+    print('Single-dataset mode: only the detailed DATASET run was requested.')
 ''')]
     cells += [markdown('''## Ablation study — optional experiment sweep
 
@@ -288,16 +363,21 @@ produces software checks only. Set RUN_ABLATIONS=True deliberately to start this
 RUN_ABLATIONS = False
 ABLATION_VARIANTS = ['full', 'unguided', 'no_edge', 'no_texture', 'no_region',
                      'no_diversity', 'no_decorrelation', 'no_stability',
-                     'no_sparsity', 'no_finetune', 'K32', 'K64']
+                     'no_sparsity', 'no_finetune', 'no_standardization', 'K32', 'K64']
 ABLATION_SEEDS = [42, 43, 44]  # Use [42] only for exploratory checks, not uncertainty claims.
+ABLATION_DATASETS = DATASETS if RUN_ALL_DATASETS else [DATASET]
 if RUN_ABLATIONS:
-    ablation_table = run_ablation_suite(ROOT, cfg, variants=ABLATION_VARIANTS,
+    from dataclasses import replace
+    for ablation_dataset in ABLATION_DATASETS:
+        ablation_cfg = replace(cfg, dataset=ablation_dataset)
+        ablation_table = run_ablation_suite(ROOT, ablation_cfg, variants=ABLATION_VARIANTS,
                                        seeds=ABLATION_SEEDS, device=DEVICE,
                                        sync_callback=SYNC_CALLBACK)
-    display(ablation_table[['variant', 'seed', 'concepts', 'software_smoke_only',
+        display(ablation_table[['variant', 'seed', 'concepts', 'software_smoke_only',
                             'accuracy', 'macro_f1', 'stability_mae']])
-    summary_path = ROOT / 'results' / f'{DATASET}_ablation_summary'
-    print('Per-run and mean/std CSVs saved:', summary_path)
+        profile_name = 'calibrated_v3' if cfg.concept_normalization == 'running_standardize' else 'legacy'
+        summary_path = ROOT / 'results' / f'{ablation_dataset}_ablation_summary_{profile_name}'
+        print('Per-run and mean/std CSVs saved:', summary_path)
 else:
     print('Ablation code is ready. Set RUN_ABLATIONS=True to execute the selected variants.')
 ''')]

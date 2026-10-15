@@ -1,0 +1,22 @@
+{
+  "n_test_evaluated": 4,
+  "n_test_available": 1600,
+  "complete_test": false,
+  "accuracy": 1.0,
+  "balanced_accuracy": 1.0,
+  "macro_f1": 0.25,
+  "weighted_f1": 1.0,
+  "top5_accuracy": null,
+  "ece_15_bins": 0.7175941169261932,
+  "multiclass_brier_sum": 0.6930104034909068,
+  "n_positive_margin_cases": 4,
+  "positive_margin_probability_drop_mean": 0.03581444174051285,
+  "random_probability_drop_mean": -0.013438954949378967,
+  "legacy_absolute_probability_drop_mean": -0.03951837122440338,
+  "stability_mae": 0.00028513092547655106,
+  "stability_cosine": 0.9999998211860657,
+  "warning": "Latent concept ablation measures model dependence, not a causal intervention on the image or clinical outcome. Smoke runs are not paper results.",
+  "concept_effective_rank": 1.3053460121154785,
+  "mean_absolute_interconcept_correlation": 0.8267669189869731,
+  "matched_top_minus_random_drop": 0.049253396689891815
+}

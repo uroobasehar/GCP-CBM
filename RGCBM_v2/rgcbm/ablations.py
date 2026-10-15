@@ -7,7 +7,7 @@ from .data import build_manifest, atomic_json
 from .train import fit
 from .evaluate import ground_concepts, evaluate
 
-VARIANTS = ['full', 'unguided', 'no_edge', 'no_texture', 'no_region', 'no_diversity', 'no_decorrelation', 'no_stability', 'no_sparsity', 'no_finetune', 'K32', 'K64']
+VARIANTS = ['full', 'unguided', 'no_edge', 'no_texture', 'no_region', 'no_diversity', 'no_decorrelation', 'no_stability', 'no_sparsity', 'no_finetune', 'no_standardization', 'K32', 'K64']
 
 
 def variant_config(base, variant, seed=None):
@@ -19,6 +19,7 @@ def variant_config(base, variant, seed=None):
         if variant == name: setattr(cfg, field, 0.)
     if variant == 'no_sparsity': cfg.activation_l1 = cfg.classifier_l1 = 0.
     if variant == 'no_finetune': cfg.finetune_epochs = 0
+    if variant == 'no_standardization': cfg.concept_normalization = 'none'
     if variant in ['K32', 'K64']: cfg.concepts = int(variant[1:])
     return cfg
 
@@ -28,14 +29,15 @@ def run_ablation_suite(root, base_config, variants=None, seeds=(42,), device=Non
     root = Path(root)
     variants = VARIANTS if variants is None else list(variants)
     records = []
-    summary = root / 'results' / f'{base_config.dataset}_ablation_summary'
+    profile = 'calibrated_v3' if base_config.concept_normalization == 'running_standardize' else 'legacy'
+    summary = root / 'results' / f'{base_config.dataset}_ablation_summary_{profile}'
     summary.mkdir(parents=True, exist_ok=True)
     for seed in seeds:
         manifest = build_manifest(root, base_config.dataset, seed, base_config.validation_fraction)
         for variant in variants:
             cfg = variant_config(base_config, variant, seed)
             smoke = cfg.max_train_batches is not None or cfg.max_validation_batches is not None
-            name = f'{cfg.dataset}_ablation_{variant}_K{cfg.concepts}_seed{seed}' + ('_smoke' if smoke else '')
+            name = f'{cfg.dataset}_ablation_{variant}_K{cfg.concepts}_seed{seed}_{profile}' + ('_smoke' if smoke else '')
             print(f'Running {name}', flush=True)
             model, run, status = fit(root, manifest, cfg, device=device, sync_callback=sync_callback, run_name=name)
             assert status['complete']

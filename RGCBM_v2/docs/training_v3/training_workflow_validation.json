@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "hardware": "Linux CPU; no Windows/CUDA or live cloud authentication",
+  "data": "real CUB, Pet and MRI images; tiny smoke subsets",
+  "checks": [
+    "calibrated bottleneck stays in [0,1]",
+    "exact linear logit reconstruction",
+    "evaluation uses fixed running statistics",
+    "legacy uncalibrated model construction",
+    "bitwise identical interrupted/resumed weights and BN buffers",
+    "independent head/backbone fine-tuning LRs",
+    "full epoch snapshots and retention",
+    "live history CSV/figure",
+    "three-dataset queue plus saved metrics/figures/reports",
+    "repeat queue reuses completed evidence"
+  ],
+  "research_accuracy": "not estimated by software smoke checks"
+}

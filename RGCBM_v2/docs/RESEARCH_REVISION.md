@@ -1,5 +1,11 @@
 # Research revision and study selection
 
+Current training revision: `calibrated_v3` adds training-only standardization of pooled scores,
+independent head/backbone fine-tuning learning rates and automatic dataset execution. See
+[the training diagnosis](TRAINING_AND_DATASET_QUEUE.md) and the updated [methodology](METHODOLOGY.md).
+Older paper/code optimization settings described below are historical; actual comparisons must
+use the saved current protocol, including the matched `no_standardization` ablation.
+
 Suggested title: **RG-CBM: Radiomics-Inspired Descriptor Guidance for Annotation-Efficient Visual Concept Bottlenecks**.
 
 The paper should ask whether image-derived descriptor guidance improves an explicitly interpretable,

@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "colab_executed_code_cells": 20,
+  "kaggle_executed_code_cells": 20,
+  "offline_executed_code_cells": 18,
+  "datasets": [
+    "cub",
+    "pets",
+    "brain_mri"
+  ],
+  "offline_ablation_checks": [
+    "no_finetune",
+    "K32"
+  ],
+  "all_notebook_queue_statuses": "complete",
+  "original_notebook_sha256": "unchanged",
+  "cli_smoke_checks": [
+    "matched backbone baseline",
+    "no_standardization"
+  ],
+  "additional_regression_checks": [
+    "MRI top-5 omitted for four classes",
+    "V2 best checkpoint inference loading",
+    "normalization-free ablation changes only its named factor"
+  ],
+  "limitations": "CPU smoke checks and controlled optimization diagnostic only; full research GPU training, native Windows GPU and live cloud authentication not run."
+}

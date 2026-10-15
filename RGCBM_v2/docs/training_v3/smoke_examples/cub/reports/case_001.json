@@ -1,0 +1,23 @@
+{
+  "backend_requested": "template",
+  "backend_used": "template",
+  "fallback_reason": null,
+  "structured_checks": "passed",
+  "semantic_validation": "human review required; JSON checks do not guarantee hallucination-free prose",
+  "result": {
+    "predicted_class": "125.Lincoln_Sparrow",
+    "confidence": 0.011153127656494143,
+    "supporting_concept_indices": [
+      0,
+      8,
+      3
+    ],
+    "opposing_concept_indices": [
+      5,
+      10,
+      1
+    ],
+    "explanation": "The model predicted 125.Lincoln_Sparrow with an uncalibrated probability of 0.011; the runner-up was 184.Louisiana_Waterthrush. Supporting model patterns: C01: weakly grounded visual pattern (margin contribution +0.1964); C09: weakly grounded visual pattern (margin contribution +0.1567); C04: weakly grounded visual pattern (margin contribution +0.0842)",
+    "limitations": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated."
+  }
+}
