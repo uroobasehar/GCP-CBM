@@ -5,6 +5,15 @@ Windows 11 Dell workstation with Anaconda3 already installed. The examples use
 `D:\\RGCBM`; a short local NTFS path is recommended. Do not install the project
 inside OneDrive, a network share, FAT32 media, or an Anaconda base directory.
 
+### Target machine profile
+
+The supplied target details are recorded as **Windows 11 Pro, build 26200,
+Dell Pro Max Tower T2FCT2250**, with an NVIDIA RTX PRO 4500 Blackwell. Before
+downloading the driver, confirm the Dell Service Tag and the exact GPU name in
+the Dell support page or NVIDIA Control Panel. Download the driver package
+matching that Service Tag, Windows 11 x64, and the RTX PRO/Blackwell GPU; do
+not substitute a consumer GeForce package.
+
 ## What is installed, and what is not
 
 The archive contains the Windows Python 3.11 conda runtime, locked wheels,
