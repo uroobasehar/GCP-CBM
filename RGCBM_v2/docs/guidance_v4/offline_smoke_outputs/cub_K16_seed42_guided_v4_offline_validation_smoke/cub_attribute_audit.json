@@ -1,0 +1,90 @@
+{
+  "names_selected_on": "validation only",
+  "test_never_renames": true,
+  "attributes_used_for_training": false,
+  "certainty_rule": ">=3",
+  "candidates": 312,
+  "concepts": [
+    {
+      "concept_index": 0,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 1,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 2,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 3,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 4,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 5,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 6,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 7,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 8,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 9,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 10,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 11,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 12,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 13,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 14,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    },
+    {
+      "concept_index": 15,
+      "provisional_annotation_assisted_name": null,
+      "status": "insufficient validation evidence; keep descriptor name"
+    }
+  ],
+  "note": "Association does not prove a spatial bird part. Default descriptor names remain unchanged. Report this separately from annotation-free concept discovery."
+}

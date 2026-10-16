@@ -1,1 +1,2 @@
 RGCBM_v2/offline_bundle/*.zip.* filter=lfs diff=lfs merge=lfs -text
+RGCBM_v2/RGCBM_Code.zip filter=lfs diff=lfs merge=lfs -text

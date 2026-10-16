@@ -1,0 +1,49 @@
+concept_index,concept_name,rank,image_path,class_label,peak_response,crop_xyxy,figure
+0,Pet-image edge-transition steepness — unverified guidance,1,data/pets/images/Abyssinian_100.jpg,0,0.6940447092056274,"[35, 35, 115, 115]",figures/prototype_01.pdf
+0,Pet-image edge-transition steepness — unverified guidance,2,data/pets/images/Abyssinian_102.jpg,0,0.6157209277153015,"[0, 155, 55, 235]",figures/prototype_01.pdf
+0,Pet-image edge-transition steepness — unverified guidance,3,data/pets/images/Abyssinian_103.jpg,0,0.6028180718421936,"[65, 95, 145, 175]",figures/prototype_01.pdf
+1,Pet-image local edge abundance — unverified guidance,1,data/pets/images/Abyssinian_101.jpg,0,0.7236367464065552,"[65, 125, 145, 205]",figures/prototype_02.pdf
+1,Pet-image local edge abundance — unverified guidance,2,data/pets/images/Abyssinian_102.jpg,0,0.6596159934997559,"[65, 95, 145, 175]",figures/prototype_02.pdf
+1,Pet-image local edge abundance — unverified guidance,3,data/pets/images/Abyssinian_100.jpg,0,0.6218824982643127,"[95, 95, 175, 175]",figures/prototype_02.pdf
+2,Pet-image directional edge coherence — unverified guidance,1,data/pets/images/Abyssinian_103.jpg,0,0.7283411026000977,"[185, 65, 240, 145]",figures/prototype_03.pdf
+2,Pet-image directional edge coherence — unverified guidance,2,data/pets/images/Abyssinian_101.jpg,0,0.6072767376899719,"[125, 155, 205, 235]",figures/prototype_03.pdf
+2,Pet-image directional edge coherence — unverified guidance,3,data/pets/images/Abyssinian_100.jpg,0,0.6048522591590881,"[95, 95, 175, 175]",figures/prototype_03.pdf
+3,Pet-image fine edge detail — unverified guidance,1,data/pets/images/Abyssinian_101.jpg,0,0.6204562783241272,"[35, 65, 115, 145]",figures/prototype_04.pdf
+3,Pet-image fine edge detail — unverified guidance,2,data/pets/images/Abyssinian_103.jpg,0,0.5850051641464233,"[95, 95, 175, 175]",figures/prototype_04.pdf
+3,Pet-image fine edge detail — unverified guidance,3,data/pets/images/Abyssinian_100.jpg,0,0.5847688317298889,"[0, 5, 55, 85]",figures/prototype_04.pdf
+4,Pet-image local texture variability — unverified guidance,1,data/pets/images/Abyssinian_100.jpg,0,0.6808624267578125,"[185, 65, 240, 145]",figures/prototype_05.pdf
+4,Pet-image local texture variability — unverified guidance,2,data/pets/images/Abyssinian_103.jpg,0,0.6708729863166809,"[185, 65, 240, 145]",figures/prototype_05.pdf
+4,Pet-image local texture variability — unverified guidance,3,data/pets/images/Abyssinian_101.jpg,0,0.6081413626670837,"[35, 35, 115, 115]",figures/prototype_05.pdf
+5,Pet-image neighbouring-pixel contrast — unverified guidance,1,data/pets/images/Abyssinian_103.jpg,0,0.7069609761238098,"[5, 65, 85, 145]",figures/prototype_06.pdf
+5,Pet-image neighbouring-pixel contrast — unverified guidance,2,data/pets/images/Abyssinian_100.jpg,0,0.693989634513855,"[35, 0, 115, 55]",figures/prototype_06.pdf
+5,Pet-image neighbouring-pixel contrast — unverified guidance,3,data/pets/images/Abyssinian_101.jpg,0,0.6207766532897949,"[0, 35, 55, 115]",figures/prototype_06.pdf
+6,Pet-image local texture homogeneity — unverified guidance,1,data/pets/images/Abyssinian_102.jpg,0,0.6886579394340515,"[95, 5, 175, 85]",figures/prototype_07.pdf
+6,Pet-image local texture homogeneity — unverified guidance,2,data/pets/images/Abyssinian_100.jpg,0,0.6587839126586914,"[0, 65, 55, 145]",figures/prototype_07.pdf
+6,Pet-image local texture homogeneity — unverified guidance,3,data/pets/images/Abyssinian_103.jpg,0,0.6402740478515625,"[185, 95, 240, 175]",figures/prototype_07.pdf
+7,Pet-image local intensity entropy — unverified guidance,1,data/pets/images/Abyssinian_100.jpg,0,0.7522794604301453,"[65, 5, 145, 85]",figures/prototype_08.pdf
+7,Pet-image local intensity entropy — unverified guidance,2,data/pets/images/Abyssinian_101.jpg,0,0.6856878399848938,"[0, 95, 55, 175]",figures/prototype_08.pdf
+7,Pet-image local intensity entropy — unverified guidance,3,data/pets/images/Abyssinian_103.jpg,0,0.6781448125839233,"[125, 155, 205, 235]",figures/prototype_08.pdf
+8,Pet-image relatively bright image regions — unverified guidance,1,data/pets/images/Abyssinian_100.jpg,0,0.782928466796875,"[5, 185, 85, 240]",figures/prototype_09.pdf
+8,Pet-image relatively bright image regions — unverified guidance,2,data/pets/images/Abyssinian_101.jpg,0,0.7689288854598999,"[5, 125, 85, 205]",figures/prototype_09.pdf
+8,Pet-image relatively bright image regions — unverified guidance,3,data/pets/images/Abyssinian_103.jpg,0,0.7508044838905334,"[65, 0, 145, 55]",figures/prototype_09.pdf
+9,Pet-image relatively dark image regions — unverified guidance,1,data/pets/images/Abyssinian_103.jpg,0,0.7654114365577698,"[155, 65, 235, 145]",figures/prototype_10.pdf
+9,Pet-image relatively dark image regions — unverified guidance,2,data/pets/images/Abyssinian_100.jpg,0,0.6558803915977478,"[125, 125, 205, 205]",figures/prototype_10.pdf
+9,Pet-image relatively dark image regions — unverified guidance,3,data/pets/images/Abyssinian_101.jpg,0,0.6451797485351562,"[5, 35, 85, 115]",figures/prototype_10.pdf
+10,Pet-image local intensity deviation — unverified guidance,1,data/pets/images/Abyssinian_100.jpg,0,0.7073408365249634,"[125, 0, 205, 55]",figures/prototype_11.pdf
+10,Pet-image local intensity deviation — unverified guidance,2,data/pets/images/Abyssinian_103.jpg,0,0.6600341796875,"[65, 65, 145, 145]",figures/prototype_11.pdf
+10,Pet-image local intensity deviation — unverified guidance,3,data/pets/images/Abyssinian_101.jpg,0,0.5796502828598022,"[125, 35, 205, 115]",figures/prototype_11.pdf
+11,Pet-image threshold-region occupancy — unverified guidance,1,data/pets/images/Abyssinian_103.jpg,0,0.6516280770301819,"[185, 185, 240, 240]",figures/prototype_12.pdf
+11,Pet-image threshold-region occupancy — unverified guidance,2,data/pets/images/Abyssinian_100.jpg,0,0.6311497688293457,"[125, 65, 205, 145]",figures/prototype_12.pdf
+11,Pet-image threshold-region occupancy — unverified guidance,3,data/pets/images/Abyssinian_101.jpg,0,0.6119874715805054,"[65, 95, 145, 175]",figures/prototype_12.pdf
+12,Pet-image threshold-region occupancy — weak unguided association (learned variant 1),1,data/pets/images/Abyssinian_103.jpg,0,0.7331528663635254,"[65, 35, 145, 115]",figures/prototype_13.pdf
+12,Pet-image threshold-region occupancy — weak unguided association (learned variant 1),2,data/pets/images/Abyssinian_101.jpg,0,0.7121000289916992,"[35, 155, 115, 235]",figures/prototype_13.pdf
+12,Pet-image threshold-region occupancy — weak unguided association (learned variant 1),3,data/pets/images/Abyssinian_102.jpg,0,0.6813017725944519,"[5, 65, 85, 145]",figures/prototype_13.pdf
+13,Pet-image local edge abundance — weak unguided association (learned variant 1),1,data/pets/images/Abyssinian_103.jpg,0,0.77020663022995,"[65, 155, 145, 235]",figures/prototype_14.pdf
+13,Pet-image local edge abundance — weak unguided association (learned variant 1),2,data/pets/images/Abyssinian_101.jpg,0,0.7598616480827332,"[65, 5, 145, 85]",figures/prototype_14.pdf
+13,Pet-image local edge abundance — weak unguided association (learned variant 1),3,data/pets/images/Abyssinian_100.jpg,0,0.7411020398139954,"[0, 185, 55, 240]",figures/prototype_14.pdf
+14,Pet-image local edge abundance — weak unguided association (learned variant 2),1,data/pets/images/Abyssinian_103.jpg,0,0.6454724073410034,"[0, 5, 55, 85]",figures/prototype_15.pdf
+14,Pet-image local edge abundance — weak unguided association (learned variant 2),2,data/pets/images/Abyssinian_100.jpg,0,0.6429226398468018,"[35, 35, 115, 115]",figures/prototype_15.pdf
+14,Pet-image local edge abundance — weak unguided association (learned variant 2),3,data/pets/images/Abyssinian_102.jpg,0,0.6104180812835693,"[155, 155, 235, 235]",figures/prototype_15.pdf
+15,Pet-image threshold-region occupancy — weak unguided association (learned variant 2),1,data/pets/images/Abyssinian_102.jpg,0,0.6872193217277527,"[65, 0, 145, 55]",figures/prototype_16.pdf
+15,Pet-image threshold-region occupancy — weak unguided association (learned variant 2),2,data/pets/images/Abyssinian_103.jpg,0,0.6576948165893555,"[65, 35, 145, 115]",figures/prototype_16.pdf
+15,Pet-image threshold-region occupancy — weak unguided association (learned variant 2),3,data/pets/images/Abyssinian_100.jpg,0,0.6291971206665039,"[155, 5, 235, 85]",figures/prototype_16.pdf

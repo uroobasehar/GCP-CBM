@@ -1,0 +1,13 @@
+OFFLINE GUARD: IPv4/IPv6/packet sockets blocked by inherited kernel seccomp rules; Unix IPC allowed.
+Matplotlib created a temporary cache directory at /tmp/matplotlib-_vhwayao because the default path (/home/agent/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Fontconfig error: No writable cache directories
+brain_mri_K16_seed42_guided_v4_cloud_validation_colab_smoke
+pets_K16_seed42_guided_v4_cloud_validation_colab_smoke
+cub_K16_seed42_guided_v4_cloud_validation_colab_smoke
+brain_mri_K16_seed42_guided_v4_cloud_validation_kaggle_smoke
+pets_K16_seed42_guided_v4_cloud_validation_kaggle_smoke
+cub_K16_seed42_guided_v4_cloud_validation_kaggle_smoke
+brain_mri_K16_seed42_guided_v4_offline_validation_smoke
+pets_K16_seed42_guided_v4_offline_validation_smoke
+cub_K16_seed42_guided_v4_offline_validation_smoke
+pets_v4_xai

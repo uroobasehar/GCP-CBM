@@ -1,0 +1,345 @@
+[
+  {
+    "prediction": {
+      "class": "Sphynx",
+      "probability": 0.06319754603200893,
+      "runner_up": "miniature_pinscher",
+      "runner_up_probability": 0.04438586889016614
+    },
+    "exact_decomposition": {
+      "bias": 0.16828282177448273,
+      "logit": 0.8474665284156799,
+      "reconstructed_logit": 0.8474666087173223,
+      "margin_bias": -0.004346325993537903,
+      "margin": 0.3533443212509155,
+      "reconstructed_margin": 0.35334441549507667
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "Pet-image edge-transition steepness \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.24350258708000183,
+        "activation": 0.5957955718040466,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0738026491847541,
+        "margin_contribution": -0.02698319125191828,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.15717652440071106,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 1,
+        "name": "Pet-image local edge abundance \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": 0.2933659553527832,
+        "activation": 0.5976295471191406,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06868110457759258,
+        "margin_contribution": 0.21520289185559704,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2605612277984619,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 2,
+        "name": "Pet-image directional edge coherence \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": 0.15515728294849396,
+        "activation": 0.5778658986091614,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.010104483703047396,
+        "margin_contribution": -0.0918733812318191,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.04682331159710884,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 3,
+        "name": "Pet-image fine edge detail \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.2566513121128082,
+        "activation": 0.5638273358345032,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.05818972618337481,
+        "margin_contribution": -0.05889001478115441,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.03423973545432091,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 4,
+        "name": "Pet-image local texture variability \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.38346734642982483,
+        "activation": 0.5710050463676453,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04959654598080121,
+        "margin_contribution": -0.05517133768551119,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.17768891155719757,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 5,
+        "name": "Pet-image neighbouring-pixel contrast \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.2601548433303833,
+        "activation": 0.5915172696113586,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08812471387386367,
+        "margin_contribution": 0.23230664640981757,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.061685122549533844,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 6,
+        "name": "Pet-image local texture homogeneity \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.287784606218338,
+        "activation": 0.6251802444458008,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.026502871838953723,
+        "margin_contribution": -0.12183599785488752,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9750691652297974,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 7,
+        "name": "Pet-image local intensity entropy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": -0.34881824254989624,
+        "activation": 0.5985788702964783,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.10027631478018151,
+        "margin_contribution": 0.13747084794675946,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2782495617866516,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 8,
+        "name": "Pet-image relatively bright image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": -0.16487829387187958,
+        "activation": 0.6027745604515076,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.036543130212359776,
+        "margin_contribution": -0.1141506289125589,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3372632563114166,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 9,
+        "name": "Pet-image relatively dark image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.19951605796813965,
+        "activation": 0.5827860236167908,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.13784175295062173,
+        "margin_contribution": 0.020896832211573013,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2715624272823334,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 10,
+        "name": "Pet-image local intensity deviation \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": 0.2597964107990265,
+        "activation": 0.5740569233894348,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.1327201441632022,
+        "margin_contribution": 0.26317861460299774,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0834444984793663,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 11,
+        "name": "Pet-image threshold-region occupancy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.14560021460056305,
+        "activation": 0.5999675989151001,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06254507488619865,
+        "margin_contribution": -0.0077764304979730525,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.6041601896286011,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 12,
+        "name": "Pet-image local edge abundance \u2014 weak unguided association (learned variant 1)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": 0.3665487468242645,
+        "activation": 0.5840291976928711,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04923583499693507,
+        "margin_contribution": -0.10671915298495094,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.26600441336631775,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 13,
+        "name": "Pet-image local edge abundance \u2014 weak unguided association (learned variant 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.4497133195400238,
+        "activation": 0.6246429085731506,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0558823419658685,
+        "margin_contribution": 0.05496846861568061,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.24379552900791168,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 14,
+        "name": "Pet-image local edge abundance \u2014 weak unguided association (learned variant 3)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": 0.36268705129623413,
+        "activation": 0.5793222188949585,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08990142741673957,
+        "margin_contribution": -0.01125155852663795,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.27019697427749634,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 15,
+        "name": "Pet-image threshold-region occupancy \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.35038483142852783,
+        "activation": 0.6022328734397888,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.026366144975286776,
+        "margin_contribution": 0.028318133573600468,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.6055021286010742,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/pets/images/Abyssinian_201.jpg",
+    "true_class": "Abyssinian",
+    "test_index": 0,
+    "figure_prefix": "case_00"
+  }
+]

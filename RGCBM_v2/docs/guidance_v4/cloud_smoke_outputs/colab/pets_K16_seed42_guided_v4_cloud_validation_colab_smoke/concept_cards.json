@@ -1,0 +1,658 @@
+[
+  {
+    "id": 0,
+    "name": "Pet-image edge-transition steepness \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "edge_steepness",
+    "fdr_q": 0.1590638584560818,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": -0.24350258708000183,
+    "validation_image_bootstrap_95ci": [
+      -0.29460261911153796,
+      -0.15349723398685455
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 0,
+      "frozen_validation_descriptor": "edge_steepness",
+      "mean": -0.07661055028438568,
+      "ci_low": -0.16783840954303741,
+      "ci_high": 0.02066507190465927,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "japanese_chin",
+        "weight": 0.24214701354503632
+      },
+      {
+        "class": "Russian_Blue",
+        "weight": 0.2300047129392624
+      },
+      {
+        "class": "pomeranian",
+        "weight": 0.22425764799118042
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 1,
+    "name": "Pet-image local edge abundance \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "edge_density",
+    "fdr_q": 0.19507917269008365,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": 0.2933659553527832,
+    "validation_image_bootstrap_95ci": [
+      0.08054538071155548,
+      0.49684208631515503
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 1,
+      "frozen_validation_descriptor": "edge_density",
+      "mean": 0.1419556736946106,
+      "ci_low": 0.027241669595241547,
+      "ci_high": 0.24398118257522583,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "Ragdoll",
+        "weight": 0.19772668182849884
+      },
+      {
+        "class": "basset_hound",
+        "weight": 0.19355808198451996
+      },
+      {
+        "class": "yorkshire_terrier",
+        "weight": 0.18182803690433502
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 2,
+    "name": "Pet-image directional edge coherence \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "edge_coherence",
+    "fdr_q": 0.4860988931918363,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": 0.15515728294849396,
+    "validation_image_bootstrap_95ci": [
+      -0.11434166878461838,
+      0.42564460560679457
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 2,
+      "frozen_validation_descriptor": "edge_coherence",
+      "mean": 0.04568036273121834,
+      "ci_low": -0.06480330228805542,
+      "ci_high": 0.13000188805162907,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "american_bulldog",
+        "weight": 0.2397834062576294
+      },
+      {
+        "class": "Abyssinian",
+        "weight": 0.17937859892845154
+      },
+      {
+        "class": "miniature_pinscher",
+        "weight": 0.1764732301235199
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 3,
+    "name": "Pet-image fine edge detail \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "fine_edge_detail",
+    "fdr_q": 0.19507917269008365,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": 0.2566513121128082,
+    "validation_image_bootstrap_95ci": [
+      0.051503084413707254,
+      0.407096803188324
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 3,
+      "frozen_validation_descriptor": "fine_edge_detail",
+      "mean": 0.20875447988510132,
+      "ci_low": 0.1666396852582693,
+      "ci_high": 0.2559266991913319,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "havanese",
+        "weight": 0.2243645042181015
+      },
+      {
+        "class": "german_shorthaired",
+        "weight": 0.22399133443832397
+      },
+      {
+        "class": "Maine_Coon",
+        "weight": 0.21818198263645172
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 4,
+    "name": "Pet-image local texture variability \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_variation",
+    "fdr_q": 0.1635171707640303,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": 0.38346734642982483,
+    "validation_image_bootstrap_95ci": [
+      0.14550566952675584,
+      0.5626890063285828
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 4,
+      "frozen_validation_descriptor": "texture_variation",
+      "mean": 0.11390968412160873,
+      "ci_low": 0.03778387978672981,
+      "ci_high": 0.19003549218177795,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "beagle",
+        "weight": 0.2308121621608734
+      },
+      {
+        "class": "saint_bernard",
+        "weight": 0.21711218357086182
+      },
+      {
+        "class": "Persian",
+        "weight": 0.1841740608215332
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 5,
+    "name": "Pet-image neighbouring-pixel contrast \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_contrast",
+    "fdr_q": 0.1590638584560818,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": 0.2601548433303833,
+    "validation_image_bootstrap_95ci": [
+      0.14294858276844025,
+      0.35129809379577637
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 5,
+      "frozen_validation_descriptor": "texture_contrast",
+      "mean": 0.06614518165588379,
+      "ci_low": -0.10643913596868515,
+      "ci_high": 0.2074788510799408,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "Persian",
+        "weight": 0.24004067480564117
+      },
+      {
+        "class": "Maine_Coon",
+        "weight": 0.23663540184497833
+      },
+      {
+        "class": "Siamese",
+        "weight": 0.22948873043060303
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 6,
+    "name": "Pet-image local texture homogeneity \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_homogeneity",
+    "fdr_q": 0.1590638584560818,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": 0.287784606218338,
+    "validation_image_bootstrap_95ci": [
+      0.18417720161378384,
+      0.3671914041042328
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 6,
+      "frozen_validation_descriptor": "texture_homogeneity",
+      "mean": 0.20857256650924683,
+      "ci_low": 0.03222900619730353,
+      "ci_high": 0.35116201639175415,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "miniature_pinscher",
+        "weight": 0.23727376759052277
+      },
+      {
+        "class": "saint_bernard",
+        "weight": 0.23592129349708557
+      },
+      {
+        "class": "staffordshire_bull_terrier",
+        "weight": 0.200823113322258
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 7,
+    "name": "Pet-image local intensity entropy \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_entropy",
+    "fdr_q": 0.1590638584560818,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": -0.34881824254989624,
+    "validation_image_bootstrap_95ci": [
+      -0.533943535387516,
+      -0.16416309773921967
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 7,
+      "frozen_validation_descriptor": "texture_entropy",
+      "mean": -0.1515703648328781,
+      "ci_low": -0.2685302339494228,
+      "ci_high": -0.03835946749895788,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "Persian",
+        "weight": 0.24180720746517181
+      },
+      {
+        "class": "newfoundland",
+        "weight": 0.2346968948841095
+      },
+      {
+        "class": "basset_hound",
+        "weight": 0.22822429239749908
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 8,
+    "name": "Pet-image relatively bright image regions \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "bright_region",
+    "fdr_q": 0.21522469307059672,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": -0.16487829387187958,
+    "validation_image_bootstrap_95ci": [
+      -0.28821968734264375,
+      -0.03859945759177208
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 8,
+      "frozen_validation_descriptor": "bright_region",
+      "mean": 0.07143719494342804,
+      "ci_low": -0.10988730192184448,
+      "ci_high": 0.25276169180870056,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "Siamese",
+        "weight": 0.24306067824363708
+      },
+      {
+        "class": "British_Shorthair",
+        "weight": 0.24270322918891907
+      },
+      {
+        "class": "english_setter",
+        "weight": 0.18575341999530792
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 9,
+    "name": "Pet-image relatively dark image regions \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "dark_region",
+    "fdr_q": 0.3320613349835897,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": 0.19951605796813965,
+    "validation_image_bootstrap_95ci": [
+      -0.040253896266222,
+      0.4922769367694855
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 9,
+      "frozen_validation_descriptor": "dark_region",
+      "mean": -0.11225676536560059,
+      "ci_low": -0.2373633250594139,
+      "ci_high": 0.05955743407830605,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "Sphynx",
+        "weight": 0.23652206361293793
+      },
+      {
+        "class": "Russian_Blue",
+        "weight": 0.21705687046051025
+      },
+      {
+        "class": "Bombay",
+        "weight": 0.2030341476202011
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 10,
+    "name": "Pet-image local intensity deviation \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "local_intensity_deviation",
+    "fdr_q": 0.21690862641917716,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": 0.2597964107990265,
+    "validation_image_bootstrap_95ci": [
+      0.06532755652442575,
+      0.4540133781731129
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 10,
+      "frozen_validation_descriptor": "local_intensity_deviation",
+      "mean": 0.06404618918895721,
+      "ci_low": -0.14205241203308105,
+      "ci_high": 0.27429327368736267,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "Sphynx",
+        "weight": 0.2311968356370926
+      },
+      {
+        "class": "great_pyrenees",
+        "weight": 0.2168383151292801
+      },
+      {
+        "class": "basset_hound",
+        "weight": 0.21245084702968597
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 11,
+    "name": "Pet-image threshold-region occupancy \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "region_occupancy",
+    "fdr_q": 0.36946906113043065,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": -0.14560021460056305,
+    "validation_image_bootstrap_95ci": [
+      -0.34302252531051636,
+      0.05182208502665162
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 11,
+      "frozen_validation_descriptor": "region_occupancy",
+      "mean": 0.23735909163951874,
+      "ci_low": 0.10081400722265244,
+      "ci_high": 0.3745159514248372,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "yorkshire_terrier",
+        "weight": 0.2075396478176117
+      },
+      {
+        "class": "wheaten_terrier",
+        "weight": 0.19548271596431732
+      },
+      {
+        "class": "english_setter",
+        "weight": 0.17762264609336853
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 12,
+    "name": "Pet-image local edge abundance \u2014 weak unguided association (learned variant 1)",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.1590638584560818,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": 0.3665487468242645,
+    "validation_image_bootstrap_95ci": [
+      0.2154497653245926,
+      0.47572287917137146
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 12,
+      "frozen_validation_descriptor": "edge_density",
+      "mean": 0.12656672298908234,
+      "ci_low": 0.05320437522605062,
+      "ci_high": 0.21000343561172485,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "shiba_inu",
+        "weight": 0.2299066036939621
+      },
+      {
+        "class": "samoyed",
+        "weight": 0.21363075077533722
+      },
+      {
+        "class": "american_bulldog",
+        "weight": 0.21251411736011505
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 13,
+    "name": "Pet-image local edge abundance \u2014 weak unguided association (learned variant 2)",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.1590638584560818,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": -0.4497133195400238,
+    "validation_image_bootstrap_95ci": [
+      -0.6203274875879288,
+      -0.24978981800377362
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 13,
+      "frozen_validation_descriptor": "edge_density",
+      "mean": -0.1157517060637474,
+      "ci_low": -0.23938941955566406,
+      "ci_high": 0.018456507474184036,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "english_setter",
+        "weight": 0.24712836742401123
+      },
+      {
+        "class": "american_pit_bull_terrier",
+        "weight": 0.2359575480222702
+      },
+      {
+        "class": "Ragdoll",
+        "weight": 0.205062136054039
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 14,
+    "name": "Pet-image local edge abundance \u2014 weak unguided association (learned variant 3)",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.1590638584560818,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": 0.36268705129623413,
+    "validation_image_bootstrap_95ci": [
+      0.140921950340271,
+      0.49818938970565796
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 14,
+      "frozen_validation_descriptor": "edge_density",
+      "mean": 0.15926378965377808,
+      "ci_low": -0.051666781306266785,
+      "ci_high": 0.3389620788395405,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "Maine_Coon",
+        "weight": 0.23431895673274994
+      },
+      {
+        "class": "Ragdoll",
+        "weight": 0.2303166687488556
+      },
+      {
+        "class": "British_Shorthair",
+        "weight": 0.2302868813276291
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 15,
+    "name": "Pet-image threshold-region occupancy \u2014 weak unguided association",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.19507917269008365,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": -0.35038483142852783,
+    "validation_image_bootstrap_95ci": [
+      -0.5766670107841492,
+      -0.13390269875526428
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 15,
+      "frozen_validation_descriptor": "region_occupancy",
+      "mean": -0.1116076111793518,
+      "ci_low": -0.2198551595211029,
+      "ci_high": -0.03611787408590317,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "Siamese",
+        "weight": 0.23274382948875427
+      },
+      {
+        "class": "Russian_Blue",
+        "weight": 0.21468546986579895
+      },
+      {
+        "class": "Maine_Coon",
+        "weight": 0.21134313941001892
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Pet breed classification. Texture/region associations alone do not establish fur type, muzzle anatomy or disease. Foreground trimap alignment is localization evidence, not proof of a breed-specific semantic concept.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  }
+]

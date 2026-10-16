@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "meaning": "Actual local Qwen loaded/generated for each dataset; invalid outputs are explicitly rejected/fallback, not counted as faithful LLM explanations. Prose still needs human review.",
+  "records": [
+    {
+      "dataset": "cub",
+      "run": "/tmp/rgcbm-v4-llm-audited/cub",
+      "backend_requested": "local_qwen",
+      "backend_used": "template",
+      "fallback_reason": "ValueError: LLM inferred physical descriptor levels/changes from model contribution signs.",
+      "image_path": "data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0046_18.jpg",
+      "duration_seconds": 36.14791372499894,
+      "network": "Internet sockets denied; model loaded with local_files_only=True"
+    },
+    {
+      "dataset": "pets",
+      "run": "/tmp/rgcbm-v4-llm-audited/pets",
+      "backend_requested": "local_qwen",
+      "backend_used": "template",
+      "fallback_reason": "ValueError: LLM inferred physical descriptor levels/changes from model contribution signs.",
+      "image_path": "data/pets/images/Abyssinian_201.jpg",
+      "duration_seconds": 30.546094100005575,
+      "network": "Internet sockets denied; model loaded with local_files_only=True"
+    },
+    {
+      "dataset": "brain_mri",
+      "run": "/tmp/rgcbm-v4-llm-audited/brain_mri",
+      "backend_requested": "local_qwen",
+      "backend_used": "local_qwen",
+      "fallback_reason": null,
+      "image_path": "data/brain_mri/Testing/glioma/Te-gl_1.jpg",
+      "duration_seconds": 30.118388804999995,
+      "network": "Internet sockets denied; model loaded with local_files_only=True"
+    }
+  ]
+}

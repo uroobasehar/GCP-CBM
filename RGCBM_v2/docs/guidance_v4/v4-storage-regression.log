@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": [
+    "resumable upload/download API contract",
+    "last checkpoint uploaded after companion state",
+    "unchanged upload skipped",
+    "cold-session checkpoint restore",
+    "newer local checkpoint preserved",
+    "existing local dataset persisted remotely",
+    "dataset restored",
+    "backbone and complete LLM asset restore"
+  ],
+  "scope": "local fake Drive transport; no real Google authentication or Drive access"
+}

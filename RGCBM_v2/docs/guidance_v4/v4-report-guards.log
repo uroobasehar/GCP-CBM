@@ -1,0 +1,1 @@
+{"status": "passed", "checks": ["deterministic template valid", "qualitative named support/opposition accepted", "reject unsupported class descriptor comparisons", "reject invented numbers", "reject established-guidance claims with weak grounding", "reject missing opposition name", "reject diagnosis claims", "reject non-string prose", "reject modified prediction confidence"]}

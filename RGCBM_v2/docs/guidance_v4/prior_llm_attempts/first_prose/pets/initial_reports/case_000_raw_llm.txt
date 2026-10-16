@@ -1,0 +1,10 @@
+```json
+{
+  "predicted_class": "Sphynx",
+  "confidence": 0.06319754603200893,
+  "supporting_concept_indices": [10],
+  "opposing_concept_indices": [6, 8, 12],
+  "explanation": "The Sphynx concept was supported by the highest margin contribution of +0.26317861460299774 for Pet-image local intensity deviation, which indicates significant similarity between the model's predictions and the Sphynx concept in terms of this specific descriptor. The other concepts were either neutral or slightly opposed.",
+  "limitations": "The prediction is based on unverified guidance targets and may lack clinical relevance. The concept indices provided do not directly correspond to known veterinary classifications."
+}
+```

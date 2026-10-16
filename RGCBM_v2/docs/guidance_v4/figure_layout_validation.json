@@ -1,0 +1,62 @@
+[
+  {
+    "run": "brain_mri_K16_seed42_guided_v4_cloud_validation_colab_smoke",
+    "cases": 1,
+    "status": "passed",
+    "change": "Explicit row spacing prevents multiline domain labels overlapping adjacent images; regenerated from the same saved model/evidence."
+  },
+  {
+    "run": "pets_K16_seed42_guided_v4_cloud_validation_colab_smoke",
+    "cases": 1,
+    "status": "passed",
+    "change": "Explicit row spacing prevents multiline domain labels overlapping adjacent images; regenerated from the same saved model/evidence."
+  },
+  {
+    "run": "cub_K16_seed42_guided_v4_cloud_validation_colab_smoke",
+    "cases": 3,
+    "status": "passed",
+    "change": "Explicit row spacing prevents multiline domain labels overlapping adjacent images; regenerated from the same saved model/evidence."
+  },
+  {
+    "run": "brain_mri_K16_seed42_guided_v4_cloud_validation_kaggle_smoke",
+    "cases": 1,
+    "status": "passed",
+    "change": "Explicit row spacing prevents multiline domain labels overlapping adjacent images; regenerated from the same saved model/evidence."
+  },
+  {
+    "run": "pets_K16_seed42_guided_v4_cloud_validation_kaggle_smoke",
+    "cases": 1,
+    "status": "passed",
+    "change": "Explicit row spacing prevents multiline domain labels overlapping adjacent images; regenerated from the same saved model/evidence."
+  },
+  {
+    "run": "cub_K16_seed42_guided_v4_cloud_validation_kaggle_smoke",
+    "cases": 3,
+    "status": "passed",
+    "change": "Explicit row spacing prevents multiline domain labels overlapping adjacent images; regenerated from the same saved model/evidence."
+  },
+  {
+    "run": "brain_mri_K16_seed42_guided_v4_offline_validation_smoke",
+    "cases": 1,
+    "status": "passed",
+    "change": "Explicit row spacing prevents multiline domain labels overlapping adjacent images; regenerated from the same saved model/evidence."
+  },
+  {
+    "run": "pets_K16_seed42_guided_v4_offline_validation_smoke",
+    "cases": 1,
+    "status": "passed",
+    "change": "Explicit row spacing prevents multiline domain labels overlapping adjacent images; regenerated from the same saved model/evidence."
+  },
+  {
+    "run": "cub_K16_seed42_guided_v4_offline_validation_smoke",
+    "cases": 3,
+    "status": "passed",
+    "change": "Explicit row spacing prevents multiline domain labels overlapping adjacent images; regenerated from the same saved model/evidence."
+  },
+  {
+    "run": "pets_v4_xai",
+    "cases": 1,
+    "status": "passed",
+    "change": "Explicit row spacing prevents multiline domain labels overlapping adjacent images; regenerated from the same saved model/evidence."
+  }
+]

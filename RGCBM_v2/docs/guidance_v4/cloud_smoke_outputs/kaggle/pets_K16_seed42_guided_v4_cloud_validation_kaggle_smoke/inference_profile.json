@@ -1,0 +1,15 @@
+{
+  "device": "cpu",
+  "torch": "2.7.1+cpu",
+  "cuda": null,
+  "batch_size": 1,
+  "precision": "FP32",
+  "repeats": 3,
+  "median_latency_ms": 14.654379003331997,
+  "p95_latency_ms": 16.4446338036214,
+  "parameters": 6679957,
+  "trainable_parameters_current_stage": 5434897,
+  "peak_cuda_allocated_bytes": null,
+  "includes_llm": false,
+  "note": "Measures warmed classifier inference, not training or text generation."
+}

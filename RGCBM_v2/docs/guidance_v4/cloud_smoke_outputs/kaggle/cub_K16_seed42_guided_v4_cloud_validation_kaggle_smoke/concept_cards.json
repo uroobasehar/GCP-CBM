@@ -1,0 +1,658 @@
+[
+  {
+    "id": 0,
+    "name": "Bird-image edge-transition steepness \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "edge_steepness",
+    "fdr_q": 0.6633815527951569,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": 0.08964477479457855,
+    "validation_image_bootstrap_95ci": [
+      -0.103144377656281,
+      0.4155183732509613
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 0,
+      "frozen_validation_descriptor": "edge_steepness",
+      "mean": 0.0288322102278471,
+      "ci_low": -0.08396943733096122,
+      "ci_high": 0.13879945874214172,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "018.Spotted_Catbird",
+        "weight": 0.24212975800037384
+      },
+      {
+        "class": "041.Scissor_tailed_Flycatcher",
+        "weight": 0.23119457066059113
+      },
+      {
+        "class": "186.Cedar_Waxwing",
+        "weight": 0.23096071183681488
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 1,
+    "name": "Bird-image local edge abundance \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "edge_density",
+    "fdr_q": 0.19149098572907625,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": 0.2671656906604767,
+    "validation_image_bootstrap_95ci": [
+      0.1395571529865265,
+      0.4773675203323364
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 1,
+      "frozen_validation_descriptor": "edge_density",
+      "mean": 0.06983519345521927,
+      "ci_low": -0.19617679715156555,
+      "ci_high": 0.3035130798816681,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "064.Ring_billed_Gull",
+        "weight": 0.23596447706222534
+      },
+      {
+        "class": "066.Western_Gull",
+        "weight": 0.23243333399295807
+      },
+      {
+        "class": "083.White_breasted_Kingfisher",
+        "weight": 0.2308736890554428
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 2,
+    "name": "Bird-image directional edge coherence \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "edge_coherence",
+    "fdr_q": 0.14869229738102402,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": 0.2935909032821655,
+    "validation_image_bootstrap_95ci": [
+      0.1474902331829071,
+      0.4396916329860687
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 2,
+      "frozen_validation_descriptor": "edge_coherence",
+      "mean": 0.08047215640544891,
+      "ci_low": -0.0897650795057416,
+      "ci_high": 0.25034788250923157,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "184.Louisiana_Waterthrush",
+        "weight": 0.24063777923583984
+      },
+      {
+        "class": "002.Laysan_Albatross",
+        "weight": 0.2399449646472931
+      },
+      {
+        "class": "154.Red_eyed_Vireo",
+        "weight": 0.2397487908601761
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 3,
+    "name": "Bird-image fine edge detail \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "fine_edge_detail",
+    "fdr_q": 0.24181309957352895,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": 0.1312638372182846,
+    "validation_image_bootstrap_95ci": [
+      0.036938510835170746,
+      0.22461178936064244
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 3,
+      "frozen_validation_descriptor": "fine_edge_detail",
+      "mean": 0.140785813331604,
+      "ci_low": -0.08060675859451294,
+      "ci_high": 0.2989615797996521,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "154.Red_eyed_Vireo",
+        "weight": 0.2401617169380188
+      },
+      {
+        "class": "199.Winter_Wren",
+        "weight": 0.23999224603176117
+      },
+      {
+        "class": "110.Geococcyx",
+        "weight": 0.23387278616428375
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 4,
+    "name": "Bird-image local texture variability \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_variation",
+    "fdr_q": 0.08146700263023376,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": -0.4715964198112488,
+    "validation_image_bootstrap_95ci": [
+      -0.5725122481584549,
+      -0.3750487178564071
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 4,
+      "frozen_validation_descriptor": "texture_variation",
+      "mean": -0.1455063670873642,
+      "ci_low": -0.3593097977340221,
+      "ci_high": 0.031224628910422325,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "130.Tree_Sparrow",
+        "weight": 0.23937740921974182
+      },
+      {
+        "class": "083.White_breasted_Kingfisher",
+        "weight": 0.23539723455905914
+      },
+      {
+        "class": "154.Red_eyed_Vireo",
+        "weight": 0.2323078066110611
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 5,
+    "name": "Bird-image neighbouring-pixel contrast \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_contrast",
+    "fdr_q": 0.08146700263023376,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": 0.3040545880794525,
+    "validation_image_bootstrap_95ci": [
+      0.24509230069816113,
+      0.35060808062553406
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 5,
+      "frozen_validation_descriptor": "texture_contrast",
+      "mean": 0.15882250666618347,
+      "ci_low": -0.08580455183982849,
+      "ci_high": 0.33903732895851135,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "199.Winter_Wren",
+        "weight": 0.24263723194599152
+      },
+      {
+        "class": "024.Red_faced_Cormorant",
+        "weight": 0.24039115011692047
+      },
+      {
+        "class": "177.Prothonotary_Warbler",
+        "weight": 0.23888064920902252
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 6,
+    "name": "Bird-image local texture homogeneity \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_homogeneity",
+    "fdr_q": 0.14376351370740292,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": -0.2862379550933838,
+    "validation_image_bootstrap_95ci": [
+      -0.42117857933044434,
+      -0.1507743638008832
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 6,
+      "frozen_validation_descriptor": "texture_homogeneity",
+      "mean": -0.2090323567390442,
+      "ci_low": -0.5439126506447792,
+      "ci_high": 0.12584799528121948,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "022.Chuck_will_Widow",
+        "weight": 0.23719222843647003
+      },
+      {
+        "class": "050.Eared_Grebe",
+        "weight": 0.23711130023002625
+      },
+      {
+        "class": "029.American_Crow",
+        "weight": 0.23317435383796692
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 7,
+    "name": "Bird-image local intensity entropy \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_entropy",
+    "fdr_q": 0.1443168976727654,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": 0.3711649775505066,
+    "validation_image_bootstrap_95ci": [
+      0.19890093803405762,
+      0.5434290170669556
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 7,
+      "frozen_validation_descriptor": "texture_entropy",
+      "mean": 0.17022359371185303,
+      "ci_low": -0.05626004338264464,
+      "ci_high": 0.4022308774292472,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "125.Lincoln_Sparrow",
+        "weight": 0.24380287528038025
+      },
+      {
+        "class": "117.Clay_colored_Sparrow",
+        "weight": 0.24329620599746704
+      },
+      {
+        "class": "100.Brown_Pelican",
+        "weight": 0.24231664836406708
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 8,
+    "name": "Bird-image relatively bright image regions \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "bright_region",
+    "fdr_q": 0.3651807283100329,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": -0.07604985684156418,
+    "validation_image_bootstrap_95ci": [
+      -0.15800638496875763,
+      0.04134790599346161
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 8,
+      "frozen_validation_descriptor": "bright_region",
+      "mean": -0.048326533287763596,
+      "ci_low": -0.26273301243782043,
+      "ci_high": 0.16607993841171265,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "051.Horned_Grebe",
+        "weight": 0.24209453165531158
+      },
+      {
+        "class": "073.Blue_Jay",
+        "weight": 0.24057722091674805
+      },
+      {
+        "class": "033.Yellow_billed_Cuckoo",
+        "weight": 0.2391974776983261
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 9,
+    "name": "Bird-image relatively dark image regions \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "dark_region",
+    "fdr_q": 0.3651807283100329,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": 0.2574889361858368,
+    "validation_image_bootstrap_95ci": [
+      -0.05384613201022148,
+      0.5688239932060242
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 9,
+      "frozen_validation_descriptor": "dark_region",
+      "mean": 0.15494170784950256,
+      "ci_low": 0.04649773156270386,
+      "ci_high": 0.2627730667591095,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "159.Black_and_white_Warbler",
+        "weight": 0.24376694858074188
+      },
+      {
+        "class": "067.Anna_Hummingbird",
+        "weight": 0.24330680072307587
+      },
+      {
+        "class": "174.Palm_Warbler",
+        "weight": 0.2425241470336914
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 10,
+    "name": "Bird-image local intensity deviation \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "local_intensity_deviation",
+    "fdr_q": 0.19149098572907625,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": 0.3124161958694458,
+    "validation_image_bootstrap_95ci": [
+      0.11878533661365509,
+      0.5060470700263977
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 10,
+      "frozen_validation_descriptor": "local_intensity_deviation",
+      "mean": 0.08443494141101837,
+      "ci_low": -0.13742056488990784,
+      "ci_high": 0.32795414328575134,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "178.Swainson_Warbler",
+        "weight": 0.24016791582107544
+      },
+      {
+        "class": "106.Horned_Puffin",
+        "weight": 0.23676162958145142
+      },
+      {
+        "class": "184.Louisiana_Waterthrush",
+        "weight": 0.23361815512180328
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 11,
+    "name": "Bird-image threshold-region occupancy \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "region_occupancy",
+    "fdr_q": 0.4284389740830168,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": 0.15598860383033752,
+    "validation_image_bootstrap_95ci": [
+      -0.08907711505889893,
+      0.3609366431832316
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 11,
+      "frozen_validation_descriptor": "region_occupancy",
+      "mean": 0.10190749168395996,
+      "ci_low": -0.03227992355823517,
+      "ci_high": 0.28210148215293884,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "066.Western_Gull",
+        "weight": 0.24227064847946167
+      },
+      {
+        "class": "057.Rose_breasted_Grosbeak",
+        "weight": 0.2419651299715042
+      },
+      {
+        "class": "084.Red_legged_Kittiwake",
+        "weight": 0.2390240877866745
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 12,
+    "name": "Bird-image local texture variability \u2014 weak unguided association",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.11925252846309117,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": 0.2899590730667114,
+    "validation_image_bootstrap_95ci": [
+      0.19012888446450235,
+      0.4161735475063324
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 12,
+      "frozen_validation_descriptor": "texture_variation",
+      "mean": 0.11405297368764877,
+      "ci_low": -0.06422256678342819,
+      "ci_high": 0.3288267254829407,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "094.White_breasted_Nuthatch",
+        "weight": 0.24077792465686798
+      },
+      {
+        "class": "117.Clay_colored_Sparrow",
+        "weight": 0.23424088954925537
+      },
+      {
+        "class": "132.White_crowned_Sparrow",
+        "weight": 0.23344406485557556
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 13,
+    "name": "Bird-image local texture response \u2014 weak unguided association (learned variant 1)",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.07119210064411163,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": -0.425844669342041,
+    "validation_image_bootstrap_95ci": [
+      -0.5137579441070557,
+      -0.3578246235847473
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 13,
+      "frozen_validation_descriptor": "texture",
+      "mean": -0.1793450266122818,
+      "ci_low": -0.4214995510876179,
+      "ci_high": 0.06921270489692688,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "047.American_Goldfinch",
+        "weight": 0.24244222044944763
+      },
+      {
+        "class": "014.Indigo_Bunting",
+        "weight": 0.23992711305618286
+      },
+      {
+        "class": "003.Sooty_Albatross",
+        "weight": 0.23561906814575195
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 14,
+    "name": "Bird-image local texture homogeneity \u2014 weak unguided association",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.24027146911621095,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": -0.2920438349246979,
+    "validation_image_bootstrap_95ci": [
+      -0.5097425654530525,
+      -0.04301906004548073
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 14,
+      "frozen_validation_descriptor": "texture_homogeneity",
+      "mean": -0.1066848635673523,
+      "ci_low": -0.21480193734169006,
+      "ci_high": -0.014335280284285545,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "135.Bank_Swallow",
+        "weight": 0.24252241849899292
+      },
+      {
+        "class": "136.Barn_Swallow",
+        "weight": 0.2401767373085022
+      },
+      {
+        "class": "194.Cactus_Wren",
+        "weight": 0.2383602261543274
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 15,
+    "name": "Bird-image local texture response \u2014 weak unguided association (learned variant 2)",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.10990607738494873,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": 0.449066698551178,
+    "validation_image_bootstrap_95ci": [
+      0.3397718071937561,
+      0.5710437297821045
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 15,
+      "frozen_validation_descriptor": "texture",
+      "mean": 0.145654559135437,
+      "ci_low": -0.11091027408838272,
+      "ci_high": 0.3895285427570343,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "088.Western_Meadowlark",
+        "weight": 0.244198739528656
+      },
+      {
+        "class": "101.White_Pelican",
+        "weight": 0.23267915844917297
+      },
+      {
+        "class": "033.Yellow_billed_Cuckoo",
+        "weight": 0.22865445911884308
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "Bird species classification. Edge/texture/region associations alone do not establish a wing, bill, plumage color or anatomical part. Attribute-assisted labels require the separately reported annotation audit.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  }
+]

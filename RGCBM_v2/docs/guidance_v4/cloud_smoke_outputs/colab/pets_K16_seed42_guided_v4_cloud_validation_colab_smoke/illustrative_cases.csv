@@ -1,0 +1,2 @@
+case,image_path,test_index,true_class,predicted_class,figure,report,selection_policy
+0,data/pets/images/Abyssinian_201.jpg,0,Abyssinian,Sphynx,figures/case_00_explanation_panel.pdf,reports/case_000.md,evenly spaced indices in the official test listing; not selected for correct prediction

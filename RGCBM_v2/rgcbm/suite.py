@@ -16,7 +16,7 @@ from .journal import concept_cards, reliability_and_redundancy, deletion_curves,
 from .environment import runtime_manifest
 
 
-def run_dataset_suite(root, datasets, base_config, *, run_tag='calibrated_v3', device=None,
+def run_dataset_suite(root, datasets, base_config, *, run_tag='guided_v4', device=None, capacity_map=None,
                       prepare_callback=None, sync_callback=None, llm_backend='template',
                       llm_device='cpu', continue_on_error=True):
     """Resume each fit; reuse finished evidence only for its exact configuration fingerprint.
@@ -34,7 +34,8 @@ def run_dataset_suite(root, datasets, base_config, *, run_tag='calibrated_v3', d
     suffix = '_smoke' if smoke else ''
     summary = root / 'results' / f'dataset_suite_{run_tag}_K{base_config.concepts}_seed{base_config.seed}{suffix}'
     summary.mkdir(parents=True, exist_ok=True)
-    protocol = {'base_config': base_config.to_dict(), 'run_tag': run_tag, 'llm_backend': llm_backend}
+    capacity_map={} if capacity_map is None else dict(capacity_map)
+    protocol = {'base_config': base_config.to_dict(), 'run_tag': run_tag, 'llm_backend': llm_backend,'capacity_map':capacity_map}
     protocol_file = summary / 'suite_configuration.json'
     if protocol_file.exists() and json.loads(protocol_file.read_text()) != protocol:
         raise ValueError('Suite configuration differs. Choose a new run_tag to preserve the previous summary.')
@@ -49,7 +50,7 @@ def run_dataset_suite(root, datasets, base_config, *, run_tag='calibrated_v3', d
         _sync(sync_callback, summary)
     persist()
     for index, dataset in enumerate(datasets):
-        cfg = replace(base_config, dataset=dataset)
+        cfg = replace(base_config, dataset=dataset, concepts=capacity_map.get(dataset,base_config.concepts))
         name = f'{dataset}_K{cfg.concepts}_seed{cfg.seed}_{run_tag}{suffix}'
         model = None
         print(f'\nDataset {index+1}/{len(datasets)}: {dataset} -> {name}', flush=True)
@@ -68,9 +69,10 @@ def run_dataset_suite(root, datasets, base_config, *, run_tag='calibrated_v3', d
                 raise RuntimeError('Training did not finish; resume this queue with the same configuration.')
             identity = json.loads((run / 'configuration.json').read_text())['fingerprint']
             done = run / 'pipeline_status.json'
-            expected = {'complete': True, 'fingerprint': identity, 'llm_backend': llm_backend, 'protocol': 'calibrated_v3'}
+            expected = {'complete': True, 'fingerprint': identity, 'llm_backend': llm_backend, 'protocol': 'guided_v4'}
             required = ['metrics.json', 'grounding.json', 'concept_cards.json', 'deletion_curves.csv',
-                        'inference_profile.json', 'reports/case_000.json', 'figures/confusion_matrix.png']
+                        'inference_profile.json', 'reports/case_000.json', 'figures/case_00_explanation_panel.pdf',
+                        'prototype_provenance.csv','named_concept_dictionary.csv']
             cached = done.is_file() and json.loads(done.read_text()) == expected and all((run / p).is_file() for p in required)
             if cached:
                 metrics = json.loads((run / 'metrics.json').read_text())

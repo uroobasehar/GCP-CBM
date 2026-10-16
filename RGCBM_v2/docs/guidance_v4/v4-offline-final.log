@@ -1,0 +1,50 @@
+OFFLINE GUARD: IPv4/IPv6/packet sockets blocked by inherited kernel seccomp rules; Unix IPC allowed.
+/workspace/rgcbm-env/venv/lib/python3.12/site-packages/ipykernel/iostream.py:73: UserWarning: Couldn't bind IOPub Pipe to 127.0.0.1: Operation not permitted (addr='tcp://127.0.0.1:*')
+subprocess output will be unavailable.
+  self._setup_pipe_in()
+Completed code cell 2 / 35
+Completed code cell 4 / 35
+Completed code cell 6 / 35
+Completed code cell 8 / 35
+Completed code cell 9 / 35
+Completed code cell 11 / 35
+Fontconfig error: No writable cache directories
+Completed code cell 13 / 35
+Completed code cell 15 / 35
+Completed code cell 16 / 35
+Completed code cell 18 / 35
+Completed code cell 21 / 35
+Completed code cell 23 / 35
+Completed code cell 25 / 35
+Completed code cell 27 / 35
+Completed code cell 29 / 35
+Completed code cell 31 / 35
+Completed code cell 33 / 35
+Completed code cell 35 / 35
+{
+  "status": "passed",
+  "cells": 35,
+  "executed_code_cells": 18,
+  "duration_seconds": 708.8354344600084,
+  "data": "real CUB, Pet and MRI images",
+  "runtime": "Linux CPU Python 3.12.14; not Windows or GPU validation",
+  "network": "external inherited seccomp denies Internet sockets; Unix IPC permits Jupyter",
+  "test_parameters": {
+    "smoke_only": true,
+    "batch_size": 2,
+    "concepts": 16,
+    "head_epochs": 1,
+    "finetune_epochs": 1,
+    "max_batches": 2,
+    "ablations_per_dataset": [
+      "no_finetune",
+      "K32"
+    ],
+    "seeds": [
+      42
+    ],
+    "LLM": "deterministic template; actual Qwen tested separately"
+  },
+  "error": null
+}
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.

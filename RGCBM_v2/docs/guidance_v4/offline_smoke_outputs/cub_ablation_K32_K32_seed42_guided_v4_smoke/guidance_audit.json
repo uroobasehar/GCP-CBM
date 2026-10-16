@@ -1,0 +1,9 @@
+{
+  "validation_n": 4,
+  "selected_model_guidance_updates": 2,
+  "configured_guided_concepts": 24,
+  "verified_guided_associations": 0,
+  "conflicting_guided_associations": 0,
+  "unknown_or_weak": 32,
+  "causal_guidance_benefit": "Not established by association alone; use matched unguided/per-family ablations and multiple seeds."
+}

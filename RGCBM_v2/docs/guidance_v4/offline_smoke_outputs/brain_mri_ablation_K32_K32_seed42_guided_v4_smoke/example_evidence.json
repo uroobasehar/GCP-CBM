@@ -1,0 +1,2650 @@
+[
+  {
+    "prediction": {
+      "class": "notumor",
+      "probability": 0.2674747788589597,
+      "runner_up": "glioma",
+      "runner_up_probability": 0.2494784282808791
+    },
+    "exact_decomposition": {
+      "bias": -0.163109689950943,
+      "logit": 0.23329991102218628,
+      "reconstructed_logit": 0.23329987881089664,
+      "margin_bias": -0.1320914626121521,
+      "margin": 0.06965282559394836,
+      "reconstructed_margin": 0.06965273696525398
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "MRI-image edge-transition steepness \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": 0.4105391800403595,
+        "activation": 0.5851085782051086,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.008383993246032118,
+        "margin_contribution": -0.08464028753113872,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.12721873819828033,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 1,
+        "name": "MRI-image local edge abundance \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": 0.3428204655647278,
+        "activation": 0.5922319293022156,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.09438440273395354,
+        "margin_contribution": -0.09357251676217082,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2572339177131653,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 2,
+        "name": "MRI-image directional edge coherence \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": -0.26622122526168823,
+        "activation": 0.6022154688835144,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07347132000599421,
+        "margin_contribution": 0.026490157940118664,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0938948318362236,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 3,
+        "name": "MRI-image fine edge detail \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.26197850704193115,
+        "activation": 0.6126455068588257,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.004578056438384381,
+        "margin_contribution": 0.07505968866385526,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05380089208483696,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 4,
+        "name": "MRI-image edge-transition steepness \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.2791520953178406,
+        "activation": 0.597184419631958,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.022152192887903155,
+        "margin_contribution": 0.0068363256344796675,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.12343214452266693,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 5,
+        "name": "MRI-image local edge abundance \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.18001973628997803,
+        "activation": 0.629330575466156,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.08861419897975953,
+        "margin_contribution": -0.16129497099024448,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.26695355772972107,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 6,
+        "name": "MRI-image directional edge coherence \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": 0.00013535376638174057,
+        "activation": 0.5897274613380432,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.01108220109727276,
+        "margin_contribution": 0.06878449824616384,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.08558755367994308,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 7,
+        "name": "MRI-image fine edge detail \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.03763674944639206,
+        "activation": 0.5593572854995728,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.01612497715332295,
+        "margin_contribution": -0.07925948514759718,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05150512978434563,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 8,
+        "name": "MRI-image local texture variability \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.09563812613487244,
+        "activation": 0.5639069080352783,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.014178673404843245,
+        "margin_contribution": 0.10209253219111147,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2153203785419464,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 9,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.04519630968570709,
+        "activation": 0.5353384017944336,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0931044703609274,
+        "margin_contribution": 0.06829264303823379,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.060707561671733856,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 10,
+        "name": "MRI-image local texture homogeneity \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.14541882276535034,
+        "activation": 0.5940346717834473,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08919115534837374,
+        "margin_contribution": 0.16023716979560731,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9592382907867432,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 11,
+        "name": "MRI-image local intensity entropy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": -0.3274920582771301,
+        "activation": 0.6059935688972473,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06606706366748982,
+        "margin_contribution": 0.05133446589089541,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3106060028076172,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 12,
+        "name": "MRI-image local texture variability \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.03821449726819992,
+        "activation": 0.601691722869873,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07346134753183975,
+        "margin_contribution": 0.03724728923227261,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.23799949884414673,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 13,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.10734837502241135,
+        "activation": 0.5890055298805237,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.07633969139994257,
+        "margin_contribution": -0.0035360677973317323,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.07954558730125427,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 14,
+        "name": "MRI-image local texture homogeneity \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.0234425887465477,
+        "activation": 0.5841641426086426,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.004332789454306152,
+        "margin_contribution": -0.05090551351594996,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9574417471885681,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 15,
+        "name": "MRI-image local intensity entropy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.20759889483451843,
+        "activation": 0.5898441672325134,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.035873574201755076,
+        "margin_contribution": -0.0326319604387626,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3057170808315277,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 16,
+        "name": "MRI-image relatively bright image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.6267731189727783,
+        "activation": 0.6163766980171204,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06658073547641363,
+        "margin_contribution": 0.011103239221681438,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.25878798961639404,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 17,
+        "name": "MRI-image relatively dark image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.35679903626441956,
+        "activation": 0.5449419021606445,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.02934731125301937,
+        "margin_contribution": -0.03205273456098112,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3482033312320709,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 18,
+        "name": "MRI-image local intensity deviation \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.019873816519975662,
+        "activation": 0.6052135825157166,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09791267069977838,
+        "margin_contribution": 0.08127857493450286,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.08636452257633209,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 19,
+        "name": "MRI-image threshold-region occupancy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.010219966992735863,
+        "activation": 0.6019775867462158,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.007283966322726654,
+        "margin_contribution": -0.07028745504670475,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.5888597965240479,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 20,
+        "name": "MRI-image relatively bright image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.7041835784912109,
+        "activation": 0.5860813856124878,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.004831368601745489,
+        "margin_contribution": -0.09611795249259991,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2506880462169647,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 21,
+        "name": "MRI-image relatively dark image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.3992883265018463,
+        "activation": 0.6179422736167908,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07796065356721638,
+        "margin_contribution": -0.027210039900160687,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3159385919570923,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 22,
+        "name": "MRI-image local intensity deviation \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.07377585023641586,
+        "activation": 0.6358122229576111,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.04110275370544558,
+        "margin_contribution": 0.08853214034366275,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.08586877584457397,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 23,
+        "name": "MRI-image threshold-region occupancy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": 0.23331719636917114,
+        "activation": 0.5705916285514832,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.08209129593953701,
+        "margin_contribution": -0.02260262146444969,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.5446370244026184,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 24,
+        "name": "MRI-image local edge abundance \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.29272526502609253,
+        "activation": 0.597800612449646,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08194366564008959,
+        "margin_contribution": 0.18022191492411466,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2650183439254761,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 25,
+        "name": "MRI-image threshold-region occupancy \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.2029123306274414,
+        "activation": 0.5749868154525757,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.022313207597090212,
+        "margin_contribution": 0.011744574397634988,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.58064866065979,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 26,
+        "name": "MRI-image relatively dark image regions \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.3459756374359131,
+        "activation": 0.5936596393585205,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.01738544234082129,
+        "margin_contribution": 0.055858660546709515,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3262452483177185,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 27,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.34156399965286255,
+        "activation": 0.579364001750946,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.022095185541439744,
+        "margin_contribution": 0.11922214557761102,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0693635642528534,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 28,
+        "name": "MRI-image local edge abundance \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.29026782512664795,
+        "activation": 0.6125065684318542,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.035255228124264626,
+        "margin_contribution": -0.11014772235666825,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.25577282905578613,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 29,
+        "name": "MRI-image relatively bright image regions \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.25750625133514404,
+        "activation": 0.5992748737335205,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.022116255950466623,
+        "margin_contribution": 0.013242513382775378,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2641529440879822,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 30,
+        "name": "MRI-image relatively dark image regions \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.3048664331436157,
+        "activation": 0.5529824495315552,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.02008869236018329,
+        "margin_contribution": -0.05921580670510096,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3226381242275238,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 31,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.2624633312225342,
+        "activation": 0.6031457781791687,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.036262666418492184,
+        "margin_contribution": -0.032359199674163674,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.07886967808008194,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/brain_mri/Testing/glioma/Te-gl_1.jpg",
+    "true_class": "glioma",
+    "test_index": 0
+  },
+  {
+    "prediction": {
+      "class": "notumor",
+      "probability": 0.2666597586946792,
+      "runner_up": "glioma",
+      "runner_up_probability": 0.2505897536978494
+    },
+    "exact_decomposition": {
+      "bias": -0.163109689950943,
+      "logit": 0.22808882594108582,
+      "reconstructed_logit": 0.22808883039982797,
+      "margin_bias": -0.1320914626121521,
+      "margin": 0.06215637922286987,
+      "reconstructed_margin": 0.06215636390620172
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "MRI-image edge-transition steepness \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": 0.4105391800403595,
+        "activation": 0.5908130407333374,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.008465732220797495,
+        "margin_contribution": -0.08546548026729894,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.10927778482437134,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 1,
+        "name": "MRI-image local edge abundance \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": 0.3428204655647278,
+        "activation": 0.5921046733856201,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.09436412187254106,
+        "margin_contribution": -0.09355241035486728,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2806282937526703,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 2,
+        "name": "MRI-image directional edge coherence \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": -0.26622122526168823,
+        "activation": 0.6015457510948181,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07338961328720428,
+        "margin_contribution": 0.026460698500907043,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.04317192733287811,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 3,
+        "name": "MRI-image fine edge detail \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.26197850704193115,
+        "activation": 0.6055478453636169,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.004525018434282768,
+        "margin_contribution": 0.07419010216381983,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.033173441886901855,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 4,
+        "name": "MRI-image edge-transition steepness \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.2791520953178406,
+        "activation": 0.594531774520874,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.02205379463062762,
+        "margin_contribution": 0.006805959226422242,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.09686453640460968,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 5,
+        "name": "MRI-image local edge abundance \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.18001973628997803,
+        "activation": 0.6315966844558716,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.08893328316341886,
+        "margin_contribution": -0.16187576588247765,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.27131223678588867,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 6,
+        "name": "MRI-image directional edge coherence \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": 0.00013535376638174057,
+        "activation": 0.5912383794784546,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.011110594380223437,
+        "margin_contribution": 0.06896072837447331,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.04563913121819496,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 7,
+        "name": "MRI-image fine edge detail \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.03763674944639206,
+        "activation": 0.5669635534286499,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0163442482699383,
+        "margin_contribution": -0.08033727370167831,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.02961483970284462,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 8,
+        "name": "MRI-image local texture variability \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.09563812613487244,
+        "activation": 0.5554205775260925,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.013965296148809037,
+        "margin_contribution": 0.10055612439339168,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.12128133326768875,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 9,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.04519630968570709,
+        "activation": 0.5310602188110352,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09236042143889733,
+        "margin_contribution": 0.06774687904604093,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.053515102714300156,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 10,
+        "name": "MRI-image local texture homogeneity \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.14541882276535034,
+        "activation": 0.5862576961517334,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08802348370451796,
+        "margin_contribution": 0.15813937883493168,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9843795299530029,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 11,
+        "name": "MRI-image local intensity entropy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": -0.3274920582771301,
+        "activation": 0.6048341989517212,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0659406660092694,
+        "margin_contribution": 0.05123625422664979,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.16654132306575775,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 12,
+        "name": "MRI-image local texture variability \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.03821449726819992,
+        "activation": 0.5983014106750488,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0730474197796056,
+        "margin_contribution": 0.03703741441746544,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.12496615946292877,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 13,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.10734837502241135,
+        "activation": 0.5926330089569092,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.07680984086238851,
+        "margin_contribution": -0.0035578452022910767,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05676339939236641,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 14,
+        "name": "MRI-image local texture homogeneity \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.0234425887465477,
+        "activation": 0.5819470882415771,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.004316345395041665,
+        "margin_contribution": -0.05071231389478825,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9837963581085205,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 15,
+        "name": "MRI-image local intensity entropy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.20759889483451843,
+        "activation": 0.5832355618476868,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.03547164720338358,
+        "margin_contribution": -0.03226635243337217,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.18316078186035156,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 16,
+        "name": "MRI-image relatively bright image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.6267731189727783,
+        "activation": 0.6065323948860168,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06551735825136573,
+        "margin_contribution": 0.010925906670034014,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.4487367272377014,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 17,
+        "name": "MRI-image relatively dark image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.35679903626441956,
+        "activation": 0.5438610911369324,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.029289105236207646,
+        "margin_contribution": -0.03198916274035901,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 18,
+        "name": "MRI-image local intensity deviation \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.019873816519975662,
+        "activation": 0.6081312298774719,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09838469355848911,
+        "margin_contribution": 0.08167040721747831,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05367626994848251,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 19,
+        "name": "MRI-image threshold-region occupancy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.010219966992735863,
+        "activation": 0.6058751344680786,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.00733112689310722,
+        "margin_contribution": -0.07074253629279159,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.39603668451309204,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 20,
+        "name": "MRI-image relatively bright image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.7041835784912109,
+        "activation": 0.5853335857391357,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.004825204104941472,
+        "margin_contribution": -0.09599531254110971,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.4654213786125183,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 21,
+        "name": "MRI-image relatively dark image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.3992883265018463,
+        "activation": 0.6135009527206421,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0774003289308407,
+        "margin_contribution": -0.027014473867614797,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 22,
+        "name": "MRI-image local intensity deviation \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.07377585023641586,
+        "activation": 0.6312950849533081,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.04081073854099859,
+        "margin_contribution": 0.08790316235093343,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05166993290185928,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 23,
+        "name": "MRI-image threshold-region occupancy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": 0.23331719636917114,
+        "activation": 0.5723241567611694,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.08234055561820774,
+        "margin_contribution": -0.022671251422094585,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.44624418020248413,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 24,
+        "name": "MRI-image local edge abundance \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.29272526502609253,
+        "activation": 0.5970189571380615,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08183652004645126,
+        "margin_contribution": 0.17998626542136975,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.250434011220932,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 25,
+        "name": "MRI-image threshold-region occupancy \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.2029123306274414,
+        "activation": 0.580071747303009,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.022510535843489166,
+        "margin_contribution": 0.011848438275587236,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.38217130303382874,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 26,
+        "name": "MRI-image relatively dark image regions \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.3459756374359131,
+        "activation": 0.5949068665504456,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.017421967640830816,
+        "margin_contribution": 0.05597601472698299,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 27,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.34156399965286255,
+        "activation": 0.5791547894477844,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.022087206818837135,
+        "margin_contribution": 0.11917909364551171,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05409561097621918,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 28,
+        "name": "MRI-image local edge abundance \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.29026782512664795,
+        "activation": 0.6154575943946838,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.03542508604723604,
+        "margin_contribution": -0.11067840856506805,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.25563496351242065,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 29,
+        "name": "MRI-image relatively bright image regions \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.25750625133514404,
+        "activation": 0.6019191741943359,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.022213843932817667,
+        "margin_contribution": 0.013300945974854983,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.38219064474105835,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 30,
+        "name": "MRI-image relatively dark image regions \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.3048664331436157,
+        "activation": 0.5456599593162537,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.019822681651578966,
+        "margin_contribution": -0.05843168206324911,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 31,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.2624633312225342,
+        "activation": 0.6036393046379089,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.036292338491131115,
+        "margin_contribution": -0.03238567771944001,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.060693323612213135,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/brain_mri/Testing/glioma/Te-gl_10.jpg",
+    "true_class": "glioma",
+    "test_index": 1
+  },
+  {
+    "prediction": {
+      "class": "notumor",
+      "probability": 0.267841458173527,
+      "runner_up": "glioma",
+      "runner_up_probability": 0.24919732703686887
+    },
+    "exact_decomposition": {
+      "bias": -0.163109689950943,
+      "logit": 0.23133063316345215,
+      "reconstructed_logit": 0.23133065095835487,
+      "margin_bias": -0.1320914626121521,
+      "margin": 0.07215017080307007,
+      "reconstructed_margin": 0.07215015710857398
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "MRI-image edge-transition steepness \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": 0.4105391800403595,
+        "activation": 0.5885347127914429,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.008433086167075832,
+        "margin_contribution": -0.08513590326351661,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.08921650797128677,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 1,
+        "name": "MRI-image local edge abundance \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": 0.3428204655647278,
+        "activation": 0.5943823456764221,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.09472711604451067,
+        "margin_contribution": -0.09391228208427727,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.26616644859313965,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 2,
+        "name": "MRI-image directional edge coherence \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": -0.26622122526168823,
+        "activation": 0.6008874773979187,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07330930276724024,
+        "margin_contribution": 0.026431742462579066,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.034676019102334976,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 3,
+        "name": "MRI-image fine edge detail \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.26197850704193115,
+        "activation": 0.6004799604415894,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.004487148143981878,
+        "margin_contribution": 0.07356919845984589,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.02281133458018303,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 4,
+        "name": "MRI-image edge-transition steepness \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.2791520953178406,
+        "activation": 0.603285014629364,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.022378490749452862,
+        "margin_contribution": 0.006906162777906899,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.08607693761587143,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 5,
+        "name": "MRI-image local edge abundance \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.18001973628997803,
+        "activation": 0.624017596244812,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.08786609390390687,
+        "margin_contribution": -0.1599332751458249,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.26035305857658386,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 6,
+        "name": "MRI-image directional edge coherence \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": 0.00013535376638174057,
+        "activation": 0.5917096734046936,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.011119450969765077,
+        "margin_contribution": 0.06901569904884086,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.033820345997810364,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 7,
+        "name": "MRI-image fine edge detail \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.03763674944639206,
+        "activation": 0.5655747056007385,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.016304210998457136,
+        "margin_contribution": -0.08014047754537135,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.019789308309555054,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 8,
+        "name": "MRI-image local texture variability \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.09563812613487244,
+        "activation": 0.5600840449333191,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.014082552703674756,
+        "margin_contribution": 0.10140042189996645,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.11537917703390121,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 9,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.04519630968570709,
+        "activation": 0.5390492081642151,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09374984282162213,
+        "margin_contribution": 0.06876602730124581,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.036886487156152725,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 10,
+        "name": "MRI-image local texture homogeneity \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.14541882276535034,
+        "activation": 0.5918586254119873,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08886443352693618,
+        "margin_contribution": 0.1596501947780382,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9863780736923218,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 11,
+        "name": "MRI-image local intensity entropy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": -0.3274920582771301,
+        "activation": 0.6058111786842346,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0660471789914241,
+        "margin_contribution": 0.05131901539001671,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.1431274265050888,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 12,
+        "name": "MRI-image local texture variability \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.03821449726819992,
+        "activation": 0.5971257090568542,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07290387679590626,
+        "margin_contribution": 0.03696463346243606,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.10609835386276245,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 13,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.10734837502241135,
+        "activation": 0.5942060947418213,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.0770137249980607,
+        "margin_contribution": -0.003567289150954167,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.03759486600756645,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 14,
+        "name": "MRI-image local texture homogeneity \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.0234425887465477,
+        "activation": 0.5825343132019043,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.004320700886811579,
+        "margin_contribution": -0.05076348613555837,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9860876202583313,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 15,
+        "name": "MRI-image local intensity entropy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.20759889483451843,
+        "activation": 0.5814389586448669,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.035362380075067534,
+        "margin_contribution": -0.032166958919126465,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.15579630434513092,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 16,
+        "name": "MRI-image relatively bright image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.6267731189727783,
+        "activation": 0.6081873774528503,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0656961287286646,
+        "margin_contribution": 0.01095571906788484,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.4452918767929077,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 17,
+        "name": "MRI-image relatively dark image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.35679903626441956,
+        "activation": 0.5443384647369385,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.029314813722869815,
+        "margin_contribution": -0.03201724120014848,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 18,
+        "name": "MRI-image local intensity deviation \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.019873816519975662,
+        "activation": 0.6116042733192444,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09894656951214298,
+        "margin_contribution": 0.08213682771726205,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.03399534150958061,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 19,
+        "name": "MRI-image threshold-region occupancy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.010219966992735863,
+        "activation": 0.6111868619918823,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.007395399127241409,
+        "margin_contribution": -0.07136273846936714,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.40252745151519775,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 20,
+        "name": "MRI-image relatively bright image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.7041835784912109,
+        "activation": 0.5855880379676819,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.004827301684796115,
+        "margin_contribution": -0.09603704296936666,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.4535275399684906,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 21,
+        "name": "MRI-image relatively dark image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.3992883265018463,
+        "activation": 0.6114163398742676,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07713733061064687,
+        "margin_contribution": -0.026922681476726495,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 22,
+        "name": "MRI-image local intensity deviation \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.07377585023641586,
+        "activation": 0.6339158415794373,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0409801601252906,
+        "margin_contribution": 0.08826808328993607,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.033801235258579254,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 23,
+        "name": "MRI-image threshold-region occupancy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": 0.23331719636917114,
+        "activation": 0.5823710560798645,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.08378600792415813,
+        "margin_contribution": -0.023069235288013523,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.45432886481285095,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 24,
+        "name": "MRI-image local edge abundance \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.29272526502609253,
+        "activation": 0.6029096245765686,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08264398473103896,
+        "margin_contribution": 0.181762154143863,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.24827317893505096,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 25,
+        "name": "MRI-image threshold-region occupancy \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.2029123306274414,
+        "activation": 0.5762839913368225,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.022363546411854784,
+        "margin_contribution": 0.011771070272444506,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.351277232170105,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 26,
+        "name": "MRI-image relatively dark image regions \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.3459756374359131,
+        "activation": 0.6004705429077148,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.01758490102571919,
+        "margin_contribution": 0.05649951251667318,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 27,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.34156399965286255,
+        "activation": 0.5911242961883545,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.02254368749674107,
+        "margin_contribution": 0.12164219157842382,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.03614635020494461,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 28,
+        "name": "MRI-image local edge abundance \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.29026782512664795,
+        "activation": 0.6194004416465759,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.03565203215114554,
+        "margin_contribution": -0.11138745507457415,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.24894265830516815,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 29,
+        "name": "MRI-image relatively bright image regions \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.25750625133514404,
+        "activation": 0.6022592186927795,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.0222263932845288,
+        "margin_contribution": 0.01330846012907494,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.376437783241272,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 30,
+        "name": "MRI-image relatively dark image regions \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.3048664331436157,
+        "activation": 0.5367222428321838,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.01949799316100731,
+        "margin_contribution": -0.05747459184790138,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 31,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.2624633312225342,
+        "activation": 0.6008277535438538,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.03612330085026416,
+        "margin_contribution": -0.032234836004985334,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.03953681141138077,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/brain_mri/Testing/glioma/Te-gl_100.jpg",
+    "true_class": "glioma",
+    "test_index": 2
+  },
+  {
+    "prediction": {
+      "class": "notumor",
+      "probability": 0.2702729491164538,
+      "runner_up": "glioma",
+      "runner_up_probability": 0.2477330064716124
+    },
+    "exact_decomposition": {
+      "bias": -0.163109689950943,
+      "logit": 0.2448047399520874,
+      "reconstructed_logit": 0.24480477422970903,
+      "margin_bias": -0.1320914626121521,
+      "margin": 0.08708079159259796,
+      "reconstructed_margin": 0.08708079918039657
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "MRI-image edge-transition steepness \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": 0.4105391800403595,
+        "activation": 0.5988770723342896,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.008581281349619996,
+        "margin_contribution": -0.08663200213826272,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.16366712749004364,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 1,
+        "name": "MRI-image local edge abundance \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": 0.3428204655647278,
+        "activation": 0.6055222749710083,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.09650249410324996,
+        "margin_contribution": -0.09567238850386062,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.28226980566978455,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 2,
+        "name": "MRI-image directional edge coherence \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": -0.26622122526168823,
+        "activation": 0.5957143902778625,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07267817726672599,
+        "margin_contribution": 0.026204189531894073,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.03726913407444954,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 3,
+        "name": "MRI-image fine edge detail \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.26197850704193115,
+        "activation": 0.6052186489105225,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0045225584799948315,
+        "margin_contribution": 0.07414976989499245,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.042609330266714096,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 4,
+        "name": "MRI-image edge-transition steepness \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.2791520953178406,
+        "activation": 0.5938771963119507,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.022029513450028126,
+        "margin_contribution": 0.0067984658799076225,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.15510529279708862,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 5,
+        "name": "MRI-image local edge abundance \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.18001973628997803,
+        "activation": 0.5887725949287415,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.08290334827955714,
+        "margin_contribution": -0.15090011882632481,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.24659065902233124,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 6,
+        "name": "MRI-image directional edge coherence \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": 0.00013535376638174057,
+        "activation": 0.6083096861839294,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.011431399610276727,
+        "margin_contribution": 0.07095188758465865,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.03852355480194092,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 7,
+        "name": "MRI-image fine edge detail \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.03763674944639206,
+        "activation": 0.5919209122657776,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.017063711216946387,
+        "margin_contribution": -0.0838736671005913,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.04159284755587578,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 8,
+        "name": "MRI-image local texture variability \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.09563812613487244,
+        "activation": 0.6059303879737854,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.01523529673910784,
+        "margin_contribution": 0.10970067356563806,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.15055224299430847,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 9,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.04519630968570709,
+        "activation": 0.6078271269798279,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.1057114948951332,
+        "margin_contribution": 0.0775399651372819,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.06273439526557922,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 10,
+        "name": "MRI-image local texture homogeneity \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.14541882276535034,
+        "activation": 0.6001629829406738,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09011128876551311,
+        "margin_contribution": 0.16189024373574057,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9784719944000244,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 11,
+        "name": "MRI-image local intensity entropy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": -0.3274920582771301,
+        "activation": 0.5991279482841492,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06531855507359863,
+        "margin_contribution": 0.050752870664028116,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2738533616065979,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 12,
+        "name": "MRI-image local texture variability \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.03821449726819992,
+        "activation": 0.6098244190216064,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07445427928686499,
+        "margin_contribution": 0.03775073788261629,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.1452508568763733,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 13,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.10734837502241135,
+        "activation": 0.5903674364089966,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.0765162050637791,
+        "margin_contribution": -0.003544243940973857,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05415879935026169,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 14,
+        "name": "MRI-image local texture homogeneity \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.0234425887465477,
+        "activation": 0.6066513657569885,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.004499578882494415,
+        "margin_contribution": -0.052865105963378234,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9784740209579468,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 15,
+        "name": "MRI-image local intensity entropy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.20759889483451843,
+        "activation": 0.5870456695556641,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.03570337312214633,
+        "margin_contribution": -0.03247713909686922,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.28762808442115784,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 16,
+        "name": "MRI-image relatively bright image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.6267731189727783,
+        "activation": 0.6141998171806335,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06634558978125016,
+        "margin_contribution": 0.011064025492865337,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3754993975162506,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 17,
+        "name": "MRI-image relatively dark image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.35679903626441956,
+        "activation": 0.5905776619911194,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.031804980304899644,
+        "margin_contribution": -0.03473696730310505,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2815874516963959,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 18,
+        "name": "MRI-image local intensity deviation \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.019873816519975662,
+        "activation": 0.6176544427871704,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0999253780979128,
+        "margin_contribution": 0.08294934939005927,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.07828328758478165,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 19,
+        "name": "MRI-image threshold-region occupancy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.010219966992735863,
+        "activation": 0.6079688668251038,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.007356461185135943,
+        "margin_contribution": -0.07098700240276701,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.6599721312522888,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 20,
+        "name": "MRI-image relatively bright image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.7041835784912109,
+        "activation": 0.5936994552612305,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.004894168245976438,
+        "margin_contribution": -0.09736732378225099,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.40673133730888367,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 21,
+        "name": "MRI-image relatively dark image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.3992883265018463,
+        "activation": 0.5964110493659973,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07524423750966225,
+        "margin_contribution": -0.02626194896031553,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3293609619140625,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 22,
+        "name": "MRI-image local intensity deviation \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.07377585023641586,
+        "activation": 0.5948624610900879,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.038455513033493816,
+        "margin_contribution": 0.08283018946289644,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.07169631868600845,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 23,
+        "name": "MRI-image threshold-region occupancy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": 0.23331719636917114,
+        "activation": 0.6031672954559326,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.08677797302778956,
+        "margin_contribution": -0.023893028528188864,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.65696120262146,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 24,
+        "name": "MRI-image local edge abundance \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.29272526502609253,
+        "activation": 0.608454704284668,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08340407789268056,
+        "margin_contribution": 0.18343385681961877,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.26329305768013,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 25,
+        "name": "MRI-image threshold-region occupancy \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.2029123306274414,
+        "activation": 0.5870866179466248,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.022782758198387043,
+        "margin_contribution": 0.011991722726551357,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.6493268609046936,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 26,
+        "name": "MRI-image relatively dark image regions \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.3459756374359131,
+        "activation": 0.6116113662719727,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.017911162286191384,
+        "margin_contribution": 0.057547775577283744,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.26828816533088684,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 27,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": -0.34156399965286255,
+        "activation": 0.5996362566947937,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.022868307849650105,
+        "margin_contribution": 0.12339379193947941,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.053252749145030975,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 28,
+        "name": "MRI-image local edge abundance \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.29026782512664795,
+        "activation": 0.6127455830574036,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.03526898555248348,
+        "margin_contribution": -0.11019070461673053,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2581862211227417,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 29,
+        "name": "MRI-image relatively bright image regions \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.25750625133514404,
+        "activation": 0.6127474308013916,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.022613461045290606,
+        "margin_contribution": 0.01354022404125832,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.38362035155296326,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 30,
+        "name": "MRI-image relatively dark image regions \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.3048664331436157,
+        "activation": 0.5785887837409973,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.021018916765752182,
+        "margin_contribution": -0.06195784623683842,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2842082381248474,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 31,
+        "name": "MRI-image neighbouring-pixel contrast \u2014 weak unguided association (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.2624633312225342,
+        "activation": 0.5956676006317139,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.035813059262755687,
+        "margin_contribution": -0.03195799013376455,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05605967342853546,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/brain_mri/Testing/glioma/Te-gl_101.jpg",
+    "true_class": "glioma",
+    "test_index": 3
+  }
+]

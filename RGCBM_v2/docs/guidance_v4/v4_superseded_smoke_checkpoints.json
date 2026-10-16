@@ -1,0 +1,272 @@
+[
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/brain_mri_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/last.pt",
+    "bytes": 70648504,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/brain_mri_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/finetune_best.pt",
+    "bytes": 27151875,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/brain_mri_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/best.pt",
+    "bytes": 27121221,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/brain_mri_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/best_any.pt",
+    "bytes": 27149245,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/brain_mri_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/head_best.pt",
+    "bytes": 27149771,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/pets_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/last.pt",
+    "bytes": 70655224,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/pets_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/finetune_best.pt",
+    "bytes": 27154883,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/pets_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/best.pt",
+    "bytes": 27124165,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/pets_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/head_best.pt",
+    "bytes": 27152715,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/pets_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/best_any.pt",
+    "bytes": 27152189,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/cub_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/last.pt",
+    "bytes": 70688440,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/cub_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/finetune_best.pt",
+    "bytes": 27171075,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/cub_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/best.pt",
+    "bytes": 27140421,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/cub_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/head_best.pt",
+    "bytes": 27168971,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/cub_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/best_any.pt",
+    "bytes": 27168445,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/brain_mri_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/checkpoints/finetune_epoch_0001.pt",
+    "bytes": 70648440,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/brain_mri_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/checkpoints/head_epoch_0001.pt",
+    "bytes": 28468646,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/pets_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/checkpoints/finetune_epoch_0001.pt",
+    "bytes": 70655224,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/pets_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/checkpoints/head_epoch_0001.pt",
+    "bytes": 28475366,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/cub_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/checkpoints/finetune_epoch_0001.pt",
+    "bytes": 70688440,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/kaggle/results/cub_K16_seed42_guided_v4_cloud_validation_kaggle_smoke/checkpoints/head_epoch_0001.pt",
+    "bytes": 28508582,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/brain_mri_K16_seed42_guided_v4_cloud_validation_colab_smoke/last.pt",
+    "bytes": 70648504,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/brain_mri_K16_seed42_guided_v4_cloud_validation_colab_smoke/finetune_best.pt",
+    "bytes": 27151875,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/brain_mri_K16_seed42_guided_v4_cloud_validation_colab_smoke/best.pt",
+    "bytes": 27121221,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/brain_mri_K16_seed42_guided_v4_cloud_validation_colab_smoke/best_any.pt",
+    "bytes": 27149245,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/brain_mri_K16_seed42_guided_v4_cloud_validation_colab_smoke/head_best.pt",
+    "bytes": 27149771,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/pets_K16_seed42_guided_v4_cloud_validation_colab_smoke/last.pt",
+    "bytes": 70655224,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/pets_K16_seed42_guided_v4_cloud_validation_colab_smoke/finetune_best.pt",
+    "bytes": 27154883,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/pets_K16_seed42_guided_v4_cloud_validation_colab_smoke/best.pt",
+    "bytes": 27124165,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/pets_K16_seed42_guided_v4_cloud_validation_colab_smoke/head_best.pt",
+    "bytes": 27152715,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/pets_K16_seed42_guided_v4_cloud_validation_colab_smoke/best_any.pt",
+    "bytes": 27152189,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/cub_K16_seed42_guided_v4_cloud_validation_colab_smoke/last.pt",
+    "bytes": 70688440,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/cub_K16_seed42_guided_v4_cloud_validation_colab_smoke/finetune_best.pt",
+    "bytes": 27171075,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/cub_K16_seed42_guided_v4_cloud_validation_colab_smoke/best.pt",
+    "bytes": 27140421,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/cub_K16_seed42_guided_v4_cloud_validation_colab_smoke/head_best.pt",
+    "bytes": 27168971,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/cub_K16_seed42_guided_v4_cloud_validation_colab_smoke/best_any.pt",
+    "bytes": 27168445,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/brain_mri_K16_seed42_guided_v4_cloud_validation_colab_smoke/checkpoints/finetune_epoch_0001.pt",
+    "bytes": 70648440,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/brain_mri_K16_seed42_guided_v4_cloud_validation_colab_smoke/checkpoints/head_epoch_0001.pt",
+    "bytes": 28468646,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/pets_K16_seed42_guided_v4_cloud_validation_colab_smoke/checkpoints/finetune_epoch_0001.pt",
+    "bytes": 70655224,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/pets_K16_seed42_guided_v4_cloud_validation_colab_smoke/checkpoints/head_epoch_0001.pt",
+    "bytes": 28475366,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/cub_K16_seed42_guided_v4_cloud_validation_colab_smoke/checkpoints/finetune_epoch_0001.pt",
+    "bytes": 70688440,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-cloud/colab-mounted-drive/results/cub_K16_seed42_guided_v4_cloud_validation_colab_smoke/checkpoints/head_epoch_0001.pt",
+    "bytes": 28508582,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/warmup_only/last.pt",
+    "bytes": 28475366,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/warmup_only/best.pt",
+    "bytes": 27152189,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/warmup_only/head_best.pt",
+    "bytes": 27152715,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/warmup_only/best_any.pt",
+    "bytes": 27152189,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/pets_v4_xai/last.pt",
+    "bytes": 70655224,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/pets_v4_xai/finetune_best.pt",
+    "bytes": 27154883,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/pets_v4_xai/head_best.pt",
+    "bytes": 27152715,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/pets_v4_xai/best.pt",
+    "bytes": 27124165,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/pets_v4_xai/best_any.pt",
+    "bytes": 27152189,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/warmup_only/checkpoints/head_epoch_0001.pt",
+    "bytes": 28475366,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/pets_v4_xai/checkpoints/finetune_epoch_0001.pt",
+    "bytes": 70655224,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  },
+  {
+    "path": "/tmp/rgcbm-v4-xai/results/pets_v4_xai/checkpoints/head_epoch_0001.pt",
+    "bytes": 28475366,
+    "reason": "Superseded generated software-smoke checkpoint; final regression runs retained separately. Not a research-trained model."
+  }
+]

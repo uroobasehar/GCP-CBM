@@ -1,0 +1,2650 @@
+[
+  {
+    "prediction": {
+      "class": "198.Rock_Wren",
+      "probability": 0.011860474418403188,
+      "runner_up": "188.Pileated_Woodpecker",
+      "runner_up_probability": 0.011626705321752476
+    },
+    "exact_decomposition": {
+      "bias": -0.0976138710975647,
+      "logit": 0.8389534950256348,
+      "reconstructed_logit": 0.8389534627173261,
+      "margin_bias": -0.18054504692554474,
+      "margin": 0.01990675926208496,
+      "reconstructed_margin": 0.01990673270891552
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "Bird-image edge-transition steepness \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.2261332869529724,
+        "activation": 0.6013035774230957,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.028094091463648496,
+        "margin_contribution": -0.019932352599161263,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.1465694010257721,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 1,
+        "name": "Bird-image local edge abundance \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": 0.02493305690586567,
+        "activation": 0.590431272983551,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09901038440303989,
+        "margin_contribution": 0.12715078354547948,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2551690638065338,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 2,
+        "name": "Bird-image directional edge coherence \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": -0.25448063015937805,
+        "activation": 0.6090259552001953,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.064000740582415,
+        "margin_contribution": 0.08598560206891648,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.035340867936611176,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 3,
+        "name": "Bird-image fine edge detail \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.09329408407211304,
+        "activation": 0.5963669419288635,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09094856453898625,
+        "margin_contribution": 0.13488296148699952,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0332360602915287,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 4,
+        "name": "Bird-image edge-transition steepness \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.03607460856437683,
+        "activation": 0.5809891223907471,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.018621629090564973,
+        "margin_contribution": 0.0013341245910325483,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.14936265349388123,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 5,
+        "name": "Bird-image local edge abundance \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.028876090422272682,
+        "activation": 0.6001318097114563,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08305887938183254,
+        "margin_contribution": -0.003934779709649838,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2567882835865021,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 6,
+        "name": "Bird-image directional edge coherence \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": 0.09075848758220673,
+        "activation": 0.5902912020683289,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.04148236750718226,
+        "margin_contribution": 0.08728272975748741,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.03882206976413727,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 7,
+        "name": "Bird-image fine edge detail \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.17755833268165588,
+        "activation": 0.5833670496940613,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08442083901338826,
+        "margin_contribution": 0.046821496437976506,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.034244876354932785,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 8,
+        "name": "Bird-image local texture variability \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.07902152091264725,
+        "activation": 0.6224948763847351,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.016144652630166845,
+        "margin_contribution": -0.05705429547437646,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.15015293657779694,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 9,
+        "name": "Bird-image neighbouring-pixel contrast \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.39014744758605957,
+        "activation": 0.5959892868995667,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04946110986004726,
+        "margin_contribution": -0.08806629224595319,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.06355129927396774,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 10,
+        "name": "Bird-image local texture homogeneity \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.1574399769306183,
+        "activation": 0.6113439798355103,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.007372289484983141,
+        "margin_contribution": 0.09928867090009952,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9794344305992126,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 11,
+        "name": "Bird-image local intensity entropy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.09215516597032547,
+        "activation": 0.593306839466095,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.021703086872406185,
+        "margin_contribution": -0.024757828927532977,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.26622194051742554,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 12,
+        "name": "Bird-image local texture variability \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.02419085055589676,
+        "activation": 0.5959216356277466,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.022280349572362024,
+        "margin_contribution": -0.09129694423584134,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.15011774003505707,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 13,
+        "name": "Bird-image neighbouring-pixel contrast \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.24721848964691162,
+        "activation": 0.5724197030067444,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08238694513496725,
+        "margin_contribution": 0.04026530700961439,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.06737073510885239,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 14,
+        "name": "Bird-image local texture homogeneity \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": -0.11208466440439224,
+        "activation": 0.5956894755363464,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.04803840278786842,
+        "margin_contribution": -0.02542368227129055,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9793820977210999,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 15,
+        "name": "Bird-image local intensity entropy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.4063098132610321,
+        "activation": 0.5977126955986023,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04423238776776639,
+        "margin_contribution": -0.035708634219120405,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.275154709815979,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 16,
+        "name": "Bird-image relatively bright image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.044221844524145126,
+        "activation": 0.5944368839263916,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0236340138995903,
+        "margin_contribution": 0.006043239468065398,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3425184190273285,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 17,
+        "name": "Bird-image relatively dark image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.20210343599319458,
+        "activation": 0.5812692642211914,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.021026214659123355,
+        "margin_contribution": -0.044163336025206945,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.15943236649036407,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 18,
+        "name": "Bird-image local intensity deviation \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": 0.34595340490341187,
+        "activation": 0.6063829064369202,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.020955381636218684,
+        "margin_contribution": -0.06477099519020157,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.04828141629695892,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 19,
+        "name": "Bird-image threshold-region occupancy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.16537708044052124,
+        "activation": 0.6274076700210571,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.092049583578806,
+        "margin_contribution": 0.004628965187244205,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.49170538783073425,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 20,
+        "name": "Bird-image relatively bright image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.07894980162382126,
+        "activation": 0.5968665480613708,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09801085500097262,
+        "margin_contribution": 0.09513444495909607,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.33898329734802246,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 21,
+        "name": "Bird-image relatively dark image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.26499253511428833,
+        "activation": 0.574985921382904,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07176961929003589,
+        "margin_contribution": 0.12024821321164492,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.17132647335529327,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 22,
+        "name": "Bird-image local intensity deviation \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": 0.23955576121807098,
+        "activation": 0.5700355768203735,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.029915348724334212,
+        "margin_contribution": -0.053462198219831336,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05015009269118309,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 23,
+        "name": "Bird-image threshold-region occupancy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": 0.1552480161190033,
+        "activation": 0.5860454440116882,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07280245474693947,
+        "margin_contribution": -0.008210219976322097,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.5238540172576904,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 24,
+        "name": "Bird-image local texture homogeneity \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": -0.1956663578748703,
+        "activation": 0.6084454655647278,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.04258993158779534,
+        "margin_contribution": 0.10573775294507648,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9780641794204712,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 25,
+        "name": "Bird-image relatively dark image regions \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.10739897191524506,
+        "activation": 0.5872980356216431,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.09803313951045922,
+        "margin_contribution": -0.022493414199960426,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.16536620259284973,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 26,
+        "name": "Bird-image edge-transition steepness \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.12372297048568726,
+        "activation": 0.591796338558197,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09693230790321472,
+        "margin_contribution": 0.006197784880779267,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.14742137491703033,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 27,
+        "name": "Bird-image local intensity deviation \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.3085688054561615,
+        "activation": 0.6068252921104431,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.023467154581307215,
+        "margin_contribution": -0.1115138520922736,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.047299887984991074,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 28,
+        "name": "Bird-image local texture variability \u2014 weak unguided association (replicate 2) (learned variant 1)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.41507643461227417,
+        "activation": 0.5866897702217102,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09947860181586776,
+        "margin_contribution": 0.14117515989522467,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.16586638987064362,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 29,
+        "name": "Bird-image local texture response \u2014 weak unguided association (replicate 2) (learned variant 1)",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.45560091733932495,
+        "activation": 0.6105762124061584,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.09247223636052215,
+        "margin_contribution": -0.1369593029432945,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.125147745013237,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 30,
+        "name": "Bird-image local texture response \u2014 weak unguided association (replicate 2) (learned variant 2)",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.22690747678279877,
+        "activation": 0.5951964259147644,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.003338814904113363,
+        "margin_contribution": -0.08511101750559114,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.13087300956249237,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 31,
+        "name": "Bird-image local texture variability \u2014 weak unguided association (replicate 2) (learned variant 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.3250034749507904,
+        "activation": 0.6173233389854431,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04936152589866882,
+        "margin_contribution": -0.028866310874668955,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.14402800798416138,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0046_18.jpg",
+    "true_class": "001.Black_footed_Albatross",
+    "test_index": 0
+  },
+  {
+    "prediction": {
+      "class": "198.Rock_Wren",
+      "probability": 0.011880407616939804,
+      "runner_up": "188.Pileated_Woodpecker",
+      "runner_up_probability": 0.011651078760659146
+    },
+    "exact_decomposition": {
+      "bias": -0.0976138710975647,
+      "logit": 0.8406307101249695,
+      "reconstructed_logit": 0.8406306695546908,
+      "margin_bias": -0.18054504692554474,
+      "margin": 0.019491851329803467,
+      "reconstructed_margin": 0.019491822326333175
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "Bird-image edge-transition steepness \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.2261332869529724,
+        "activation": 0.5982455015182495,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.02795121211385032,
+        "margin_contribution": -0.019830981761702393,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.16327644884586334,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 1,
+        "name": "Bird-image local edge abundance \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": 0.02493305690586567,
+        "activation": 0.5947166681289673,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09972900931347617,
+        "margin_contribution": 0.12807365361600986,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.24903327226638794,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 2,
+        "name": "Bird-image directional edge coherence \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": -0.25448063015937805,
+        "activation": 0.6013299226760864,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06319198723309771,
+        "margin_contribution": 0.0848990342724587,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.06643218547105789,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 3,
+        "name": "Bird-image fine edge detail \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.09329408407211304,
+        "activation": 0.5960749387741089,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09090403278194437,
+        "margin_contribution": 0.13481691783583827,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.030843280255794525,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 4,
+        "name": "Bird-image edge-transition steepness \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.03607460856437683,
+        "activation": 0.5772340893745422,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.018501274286394365,
+        "margin_contribution": 0.0013255019134401635,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.1620766520500183,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 5,
+        "name": "Bird-image local edge abundance \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.028876090422272682,
+        "activation": 0.597173810005188,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08264948908317038,
+        "margin_contribution": -0.003915385508181046,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.24639245867729187,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 6,
+        "name": "Bird-image directional edge coherence \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": 0.09075848758220673,
+        "activation": 0.593798816204071,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0417288630303112,
+        "margin_contribution": 0.08780137908790397,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.06375143676996231,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 7,
+        "name": "Bird-image fine edge detail \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.17755833268165588,
+        "activation": 0.5833443403244019,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08441755267069695,
+        "margin_contribution": 0.04681967376617635,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.030763007700443268,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 8,
+        "name": "Bird-image local texture variability \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.07902152091264725,
+        "activation": 0.6223351359367371,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.016140509698005068,
+        "margin_contribution": -0.05703965458484461,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.23328897356987,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 9,
+        "name": "Bird-image neighbouring-pixel contrast \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.39014744758605957,
+        "activation": 0.5990697145462036,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.049716754338220426,
+        "margin_contribution": -0.08852147130258103,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.08820292353630066,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 10,
+        "name": "Bird-image local texture homogeneity \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.1574399769306183,
+        "activation": 0.6096770167350769,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0073521873249185465,
+        "margin_contribution": 0.09901793861820796,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9722371697425842,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 11,
+        "name": "Bird-image local intensity entropy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.09215516597032547,
+        "activation": 0.5957210659980774,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.021791398964342346,
+        "margin_contribution": -0.024858571078971714,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.43822306394577026,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 12,
+        "name": "Bird-image local texture variability \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.02419085055589676,
+        "activation": 0.596102237701416,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.022287101932226605,
+        "margin_contribution": -0.0913246130037848,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.23423665761947632,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 13,
+        "name": "Bird-image neighbouring-pixel contrast \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.24721848964691162,
+        "activation": 0.5781248807907104,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08320807719349688,
+        "margin_contribution": 0.04066662222257644,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.08828931301832199,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 14,
+        "name": "Bird-image local texture homogeneity \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": -0.11208466440439224,
+        "activation": 0.5957931280136108,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.04804676167224908,
+        "margin_contribution": -0.025428106099067982,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9724847078323364,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 15,
+        "name": "Bird-image local intensity entropy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.4063098132610321,
+        "activation": 0.597448468208313,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04421283421223343,
+        "margin_contribution": -0.03569284870996192,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.44020527601242065,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 16,
+        "name": "Bird-image relatively bright image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.044221844524145126,
+        "activation": 0.5977330207824707,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.023765063883832482,
+        "margin_contribution": 0.006076749071657339,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3326910138130188,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 17,
+        "name": "Bird-image relatively dark image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.20210343599319458,
+        "activation": 0.5765005946159363,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.020853717888813517,
+        "margin_contribution": -0.04380102483634296,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2086259424686432,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 18,
+        "name": "Bird-image local intensity deviation \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": 0.34595340490341187,
+        "activation": 0.6067685484886169,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.02096870865497613,
+        "margin_contribution": -0.06481218767635255,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.07210694998502731,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 19,
+        "name": "Bird-image threshold-region occupancy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.16537708044052124,
+        "activation": 0.62888103723526,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09226574739860993,
+        "margin_contribution": 0.004639835576416118,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.5303518176078796,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 20,
+        "name": "Bird-image relatively bright image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.07894980162382126,
+        "activation": 0.5989640355110168,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0983552813035713,
+        "margin_contribution": 0.095468763082601,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.33428898453712463,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 21,
+        "name": "Bird-image relatively dark image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.26499253511428833,
+        "activation": 0.5737069249153137,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07160997522547952,
+        "margin_contribution": 0.1199807335496006,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.20649376511573792,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 22,
+        "name": "Bird-image local intensity deviation \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": 0.23955576121807098,
+        "activation": 0.5727903246879578,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.030059917320501617,
+        "margin_contribution": -0.053720559070506546,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.07233776152133942,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 23,
+        "name": "Bird-image threshold-region occupancy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": 0.1552480161190033,
+        "activation": 0.5871902704238892,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07294467268228733,
+        "margin_contribution": -0.008226258453841062,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.535952091217041,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 24,
+        "name": "Bird-image local texture homogeneity \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": -0.1956663578748703,
+        "activation": 0.6034432053565979,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.04223978365818448,
+        "margin_contribution": 0.10486844290171327,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9721988439559937,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 25,
+        "name": "Bird-image relatively dark image regions \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.10739897191524506,
+        "activation": 0.5826982855796814,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.09726533864918174,
+        "margin_contribution": -0.022317244560978722,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2016746550798416,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 26,
+        "name": "Bird-image edge-transition steepness \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.12372297048568726,
+        "activation": 0.5960596799850464,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09763061489999458,
+        "margin_contribution": 0.006242434148298059,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.16303203999996185,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 27,
+        "name": "Bird-image local intensity deviation \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.3085688054561615,
+        "activation": 0.6045303344726562,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.023378403953500992,
+        "margin_contribution": -0.1110921169241692,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.07159381359815598,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 28,
+        "name": "Bird-image local texture variability \u2014 weak unguided association (replicate 2) (learned variant 1)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.41507643461227417,
+        "activation": 0.5869917273521423,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09952980140152334,
+        "margin_contribution": 0.14124781983977108,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2351495772600174,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 29,
+        "name": "Bird-image local texture response \u2014 weak unguided association (replicate 2) (learned variant 1)",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.45560091733932495,
+        "activation": 0.6129171848297119,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.092826778432201,
+        "margin_contribution": -0.1374844101204573,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.18330641090869904,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 30,
+        "name": "Bird-image local texture response \u2014 weak unguided association (replicate 2) (learned variant 2)",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.22690747678279877,
+        "activation": 0.5945042967796326,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0033349323353153437,
+        "margin_contribution": -0.08501204544801233,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.184278205037117,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 31,
+        "name": "Bird-image local texture variability \u2014 weak unguided association (replicate 2) (learned variant 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.3250034749507904,
+        "activation": 0.6165714263916016,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.049301402539271066,
+        "margin_contribution": -0.02883115111103507,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2325984090566635,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0002_55.jpg",
+    "true_class": "001.Black_footed_Albatross",
+    "test_index": 1
+  },
+  {
+    "prediction": {
+      "class": "198.Rock_Wren",
+      "probability": 0.011857765830276321,
+      "runner_up": "188.Pileated_Woodpecker",
+      "runner_up_probability": 0.011675231555007078
+    },
+    "exact_decomposition": {
+      "bias": -0.0976138710975647,
+      "logit": 0.838498055934906,
+      "reconstructed_logit": 0.8384980807196671,
+      "margin_bias": -0.18054504692554474,
+      "margin": 0.015513360500335693,
+      "reconstructed_margin": 0.01551338802804525
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "Bird-image edge-transition steepness \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.2261332869529724,
+        "activation": 0.6006160974502563,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.028061971040684863,
+        "margin_contribution": -0.019909563622448,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.17320668697357178,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 1,
+        "name": "Bird-image local edge abundance \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": 0.02493305690586567,
+        "activation": 0.5915841460227966,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09920371156575403,
+        "margin_contribution": 0.1273990575055084,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2900175154209137,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 2,
+        "name": "Bird-image directional edge coherence \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": -0.25448063015937805,
+        "activation": 0.597506046295166,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06279014734731803,
+        "margin_contribution": 0.0843591585741521,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05094096437096596,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 3,
+        "name": "Bird-image fine edge detail \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.09329408407211304,
+        "activation": 0.5910149812698364,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09013236715246897,
+        "margin_contribution": 0.13367248476084725,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.04344197362661362,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 4,
+        "name": "Bird-image edge-transition steepness \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.03607460856437683,
+        "activation": 0.5804941058158875,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.018605763018902932,
+        "margin_contribution": 0.0013329878850942833,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.17628447711467743,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 5,
+        "name": "Bird-image local edge abundance \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.028876090422272682,
+        "activation": 0.5951507091522217,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08236948977801006,
+        "margin_contribution": -0.003902120995189051,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2919706702232361,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 6,
+        "name": "Bird-image directional edge coherence \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": 0.09075848758220673,
+        "activation": 0.5935734510421753,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.041713025625931266,
+        "margin_contribution": 0.08776805572741075,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05485420301556587,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 7,
+        "name": "Bird-image fine edge detail \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.17755833268165588,
+        "activation": 0.5908438563346863,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0855028306858241,
+        "margin_contribution": 0.04742159079653696,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.04406696557998657,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 8,
+        "name": "Bird-image local texture variability \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.07902152091264725,
+        "activation": 0.6185234785079956,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.01604165284397019,
+        "margin_contribution": -0.05669030001593711,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.22900758683681488,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 9,
+        "name": "Bird-image neighbouring-pixel contrast \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.39014744758605957,
+        "activation": 0.594835638999939,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04936536870033592,
+        "margin_contribution": -0.08789582358936698,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.07102172076702118,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 10,
+        "name": "Bird-image local texture homogeneity \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.1574399769306183,
+        "activation": 0.607452392578125,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.007325360245857837,
+        "margin_contribution": 0.0986566363349084,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9692375063896179,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 11,
+        "name": "Bird-image local intensity entropy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.09215516597032547,
+        "activation": 0.5936073064804077,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.021714077916635155,
+        "margin_contribution": -0.024770366977735492,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3642473816871643,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 12,
+        "name": "Bird-image local texture variability \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.02419085055589676,
+        "activation": 0.5983859300613403,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.022372484742738674,
+        "margin_contribution": -0.09167448137836764,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2317231148481369,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 13,
+        "name": "Bird-image neighbouring-pixel contrast \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.24721848964691162,
+        "activation": 0.5766404867172241,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08299443204388268,
+        "margin_contribution": 0.0405622065590725,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.06487206369638443,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 14,
+        "name": "Bird-image local texture homogeneity \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": -0.11208466440439224,
+        "activation": 0.6045666933059692,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.048754291485530565,
+        "margin_contribution": -0.025802556791147957,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9678629636764526,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 15,
+        "name": "Bird-image local intensity entropy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.4063098132610321,
+        "activation": 0.599057674407959,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.044331919908664474,
+        "margin_contribution": -0.035788986128473255,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.36997419595718384,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 16,
+        "name": "Bird-image relatively bright image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.044221844524145126,
+        "activation": 0.5883296132087708,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.023391197000215858,
+        "margin_contribution": 0.005981150959695758,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.34134945273399353,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 17,
+        "name": "Bird-image relatively dark image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.20210343599319458,
+        "activation": 0.587321937084198,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.021245157594373065,
+        "margin_contribution": -0.04462320246224927,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.1905890256166458,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 18,
+        "name": "Bird-image local intensity deviation \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": 0.34595340490341187,
+        "activation": 0.6031090617179871,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.020842244104182894,
+        "margin_contribution": -0.06442129835954802,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.07204507291316986,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 19,
+        "name": "Bird-image threshold-region occupancy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.16537708044052124,
+        "activation": 0.6264427900314331,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09190802203040249,
+        "margin_contribution": 0.004621846377425243,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.5146214962005615,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 20,
+        "name": "Bird-image relatively bright image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.07894980162382126,
+        "activation": 0.5934825539588928,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09745517273601845,
+        "margin_contribution": 0.09459507078620977,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3434212803840637,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 21,
+        "name": "Bird-image relatively dark image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.26499253511428833,
+        "activation": 0.5734226703643799,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07157449463344534,
+        "margin_contribution": 0.11992128669955449,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.1823424994945526,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 22,
+        "name": "Bird-image local intensity deviation \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": 0.23955576121807098,
+        "activation": 0.5724385976791382,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.030041458760102113,
+        "margin_contribution": -0.05368757148196046,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.073883056640625,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 23,
+        "name": "Bird-image threshold-region occupancy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": 0.1552480161190033,
+        "activation": 0.583621621131897,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07250135138145186,
+        "margin_contribution": -0.008176263362154934,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.5116616487503052,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 24,
+        "name": "Bird-image local texture homogeneity \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": -0.1956663578748703,
+        "activation": 0.603489875793457,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.0422430504928073,
+        "margin_contribution": 0.1048765534513052,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9684576392173767,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 25,
+        "name": "Bird-image relatively dark image regions \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.10739897191524506,
+        "activation": 0.5869831442832947,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.09798057712368013,
+        "margin_contribution": -0.022481353915621227,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.1830247938632965,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 26,
+        "name": "Bird-image edge-transition steepness \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.12372297048568726,
+        "activation": 0.5965459942817688,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09771026995034937,
+        "margin_contribution": 0.006247527237253081,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.17794445157051086,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 27,
+        "name": "Bird-image local intensity deviation \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.3085688054561615,
+        "activation": 0.6077706813812256,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.023503714685912946,
+        "margin_contribution": -0.11168758248993882,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.0725334957242012,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 28,
+        "name": "Bird-image local texture variability \u2014 weak unguided association (replicate 2) (learned variant 1)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.41507643461227417,
+        "activation": 0.5907946228981018,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.10017461702805264,
+        "margin_contribution": 0.14216291059815056,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.2420007437467575,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 29,
+        "name": "Bird-image local texture response \u2014 weak unguided association (replicate 2) (learned variant 1)",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.45560091733932495,
+        "activation": 0.610468327999115,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.09245589718420799,
+        "margin_contribution": -0.13693510322360858,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.17110465466976166,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 30,
+        "name": "Bird-image local texture response \u2014 weak unguided association (replicate 2) (learned variant 2)",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.22690747678279877,
+        "activation": 0.600823163986206,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.003370378663767326,
+        "margin_contribution": -0.08591562146765597,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.17723944783210754,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 31,
+        "name": "Bird-image local texture variability \u2014 weak unguided association (replicate 2) (learned variant 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.3250034749507904,
+        "activation": 0.6235589981079102,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04986013275480161,
+        "margin_contribution": -0.029157893038131988,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.23144955933094025,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0085_92.jpg",
+    "true_class": "001.Black_footed_Albatross",
+    "test_index": 2
+  },
+  {
+    "prediction": {
+      "class": "198.Rock_Wren",
+      "probability": 0.011866211870096972,
+      "runner_up": "188.Pileated_Woodpecker",
+      "runner_up_probability": 0.011625063666522622
+    },
+    "exact_decomposition": {
+      "bias": -0.0976138710975647,
+      "logit": 0.8394846320152283,
+      "reconstructed_logit": 0.8394846683892794,
+      "margin_bias": -0.18054504692554474,
+      "margin": 0.02053159475326538,
+      "reconstructed_margin": 0.020531565285199282
+    },
+    "concepts": [
+      {
+        "concept_index": 0,
+        "name": "Bird-image edge-transition steepness \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.2261332869529724,
+        "activation": 0.6006419658660889,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.028063179664195026,
+        "margin_contribution": -0.019910421123392474,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.19698388874530792,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 1,
+        "name": "Bird-image local edge abundance \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": 0.02493305690586567,
+        "activation": 0.5893203020095825,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09882408386608255,
+        "margin_contribution": 0.12691153329519622,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.253630667924881,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 2,
+        "name": "Bird-image directional edge coherence \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": -0.25448063015937805,
+        "activation": 0.6003970503807068,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.06309395443619747,
+        "margin_contribution": 0.08476732627990646,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.04621316120028496,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 3,
+        "name": "Bird-image fine edge detail \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.09329408407211304,
+        "activation": 0.5980660319328308,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.091207683188963,
+        "margin_contribution": 0.13526725222388514,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.062451209872961044,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 4,
+        "name": "Bird-image edge-transition steepness \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.03607460856437683,
+        "activation": 0.5743531584739685,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.018408935850787733,
+        "margin_contribution": 0.0013188864354365393,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_steepness",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.19432471692562103,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 5,
+        "name": "Bird-image local edge abundance \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_density",
+        "grounding_correlation": -0.028876090422272682,
+        "activation": 0.5956004858016968,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08243173934364378,
+        "margin_contribution": -0.0039050699674074707,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_density",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.25498926639556885,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 6,
+        "name": "Bird-image directional edge coherence \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "edge_coherence",
+        "grounding_correlation": 0.09075848758220673,
+        "activation": 0.5973387360572815,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.04197762881875988,
+        "margin_contribution": 0.08832480526608233,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "edge_coherence",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.046329565346241,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 7,
+        "name": "Bird-image fine edge detail \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "fine_edge_detail",
+        "grounding_correlation": 0.17755833268165588,
+        "activation": 0.5809112191200256,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08406544822187278,
+        "margin_contribution": 0.046624389552123446,
+        "training_group": "boundary-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "fine_edge_detail",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.05952221527695656,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 8,
+        "name": "Bird-image local texture variability \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.07902152091264725,
+        "activation": 0.6190815567970276,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.016056126826742845,
+        "margin_contribution": -0.05674145025798438,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.18068824708461761,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 9,
+        "name": "Bird-image neighbouring-pixel contrast \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.39014744758605957,
+        "activation": 0.6001633405685425,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04980751428647068,
+        "margin_contribution": -0.08868307083298888,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.07380460947751999,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 10,
+        "name": "Bird-image local texture homogeneity \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": 0.1574399769306183,
+        "activation": 0.6124180555343628,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.007385241926230468,
+        "margin_contribution": 0.0994631120528755,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9730084538459778,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 11,
+        "name": "Bird-image local intensity entropy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.09215516597032547,
+        "activation": 0.5924996137619019,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.021673558661338355,
+        "margin_contribution": -0.02472414457643346,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.3280375003814697,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 12,
+        "name": "Bird-image local texture variability \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.02419085055589676,
+        "activation": 0.6016338467597961,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.02249391802372247,
+        "margin_contribution": -0.09217207175262754,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_variation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.17621764540672302,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 13,
+        "name": "Bird-image neighbouring-pixel contrast \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_contrast",
+        "grounding_correlation": 0.24721848964691162,
+        "activation": 0.5724122524261475,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.08238587279141996,
+        "margin_contribution": 0.0402647829187881,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_contrast",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.07433272153139114,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 14,
+        "name": "Bird-image local texture homogeneity \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": -0.11208466440439224,
+        "activation": 0.5935524702072144,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.047866067490743625,
+        "margin_contribution": -0.02533247611987921,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_homogeneity",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9728238582611084,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 15,
+        "name": "Bird-image local intensity entropy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_entropy",
+        "grounding_correlation": 0.4063098132610321,
+        "activation": 0.5939496159553528,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04395390949683975,
+        "margin_contribution": -0.03548381979655968,
+        "training_group": "texture-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "texture_entropy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.32961776852607727,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 16,
+        "name": "Bird-image relatively bright image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.044221844524145126,
+        "activation": 0.5992406010627747,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.02382500325546788,
+        "margin_contribution": 0.006092075625068749,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.30685746669769287,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 17,
+        "name": "Bird-image relatively dark image regions \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.20210343599319458,
+        "activation": 0.5750404000282288,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.020800898366545528,
+        "margin_contribution": -0.04369008302639621,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.15880489349365234,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 18,
+        "name": "Bird-image local intensity deviation \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": 0.34595340490341187,
+        "activation": 0.6044735312461853,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.02088939744473861,
+        "margin_contribution": -0.0645670446335771,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.06537444144487381,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 19,
+        "name": "Bird-image threshold-region occupancy \u2014 unverified guidance",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": -0.16537708044052124,
+        "activation": 0.6287336945533752,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09224413014214505,
+        "margin_contribution": 0.004638748493523082,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.4820125699043274,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 20,
+        "name": "Bird-image relatively bright image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "bright_region",
+        "grounding_correlation": 0.07894980162382126,
+        "activation": 0.5974923372268677,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09811361520986672,
+        "margin_contribution": 0.09523418937451744,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "bright_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.31225237250328064,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 21,
+        "name": "Bird-image relatively dark image regions \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": 0.26499253511428833,
+        "activation": 0.5741389989852905,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07166390661815214,
+        "margin_contribution": 0.12007109425750251,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "dark_region",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.17556525766849518,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 22,
+        "name": "Bird-image local intensity deviation \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": 0.23955576121807098,
+        "activation": 0.5723522901535034,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.030036929359075426,
+        "margin_contribution": -0.05367947691693509,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "local_intensity_deviation",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.06316816806793213,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 23,
+        "name": "Bird-image threshold-region occupancy \u2014 unverified guidance (replicate 2)",
+        "weak_grounding": true,
+        "descriptor": "region_occupancy",
+        "grounding_correlation": 0.1552480161190033,
+        "activation": 0.5920487642288208,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.07354822702945629,
+        "margin_contribution": -0.008294323658168956,
+        "training_group": "region-guided",
+        "guidance_status": "unverified",
+        "intended_descriptor": "region_occupancy",
+        "guidance_applied": true,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.46420857310295105,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 24,
+        "name": "Bird-image local texture homogeneity \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "texture_homogeneity",
+        "grounding_correlation": -0.1956663578748703,
+        "activation": 0.6072949767112732,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.042509399733530184,
+        "margin_contribution": 0.1055378170214194,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.9733313322067261,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 25,
+        "name": "Bird-image relatively dark image regions \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "dark_region",
+        "grounding_correlation": -0.10739897191524506,
+        "activation": 0.583702802658081,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.09743301495135626,
+        "margin_contribution": -0.022355717393075736,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.15426607429981232,
+          "relative_to_validation": "low",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 26,
+        "name": "Bird-image edge-transition steepness \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "edge_steepness",
+        "grounding_correlation": -0.12372297048568726,
+        "activation": 0.5904814600944519,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.09671693954792282,
+        "margin_contribution": 0.006184014376753311,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.1949549913406372,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 27,
+        "name": "Bird-image local intensity deviation \u2014 weak unguided association",
+        "weak_grounding": true,
+        "descriptor": "local_intensity_deviation",
+        "grounding_correlation": -0.3085688054561615,
+        "activation": 0.6077179312705994,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.023501674733036326,
+        "margin_contribution": -0.11167788881350393,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.06586180627346039,
+          "relative_to_validation": "typical",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 28,
+        "name": "Bird-image local texture variability \u2014 weak unguided association (replicate 2) (learned variant 1)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": 0.41507643461227417,
+        "activation": 0.5908092260360718,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.1001770931232926,
+        "margin_contribution": 0.1421664245512524,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.17373906075954437,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 29,
+        "name": "Bird-image local texture response \u2014 weak unguided association (replicate 2) (learned variant 1)",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.45560091733932495,
+        "activation": 0.6079425811767578,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.09207337088790268,
+        "margin_contribution": -0.13636854901272955,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.16065847873687744,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 30,
+        "name": "Bird-image local texture response \u2014 weak unguided association (replicate 2) (learned variant 2)",
+        "weak_grounding": true,
+        "descriptor": "texture",
+        "grounding_correlation": -0.22690747678279877,
+        "activation": 0.5975407361984253,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": 0.003351965551150471,
+        "margin_contribution": -0.08544624571749537,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.1607854962348938,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      },
+      {
+        "concept_index": 31,
+        "name": "Bird-image local texture variability \u2014 weak unguided association (replicate 2) (learned variant 2)",
+        "weak_grounding": true,
+        "descriptor": "texture_variation",
+        "grounding_correlation": -0.3250034749507904,
+        "activation": 0.6150067448616028,
+        "score_definition": "sigmoid of training-standardized pooled response",
+        "predicted_class_contribution": -0.04917628971267174,
+        "margin_contribution": -0.028757985914431572,
+        "training_group": "unguided (guidance absent)",
+        "guidance_status": "unguided_weak",
+        "intended_descriptor": null,
+        "guidance_applied": false,
+        "image_descriptor_evidence": {
+          "weighted_response": 0.18459929525852203,
+          "relative_to_validation": "high",
+          "scope": "Descriptor measured over model-responsive image locations, not an annotated lesion/part boundary."
+        }
+      }
+    ],
+    "scope": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated.",
+    "image_path": "data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0025_796057.jpg",
+    "true_class": "001.Black_footed_Albatross",
+    "test_index": 3
+  }
+]

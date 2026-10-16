@@ -1,0 +1,6 @@
+```json
+{
+  "explanation": "The model favors 125. Lincoln Sparrow over 184. Louisiana Waterthrush due to an unverified guidance pattern that increases the Bird-image edge-transition steepness and decreases the Bird-image neighbouring-pixel contrast.",
+  "limitations": "Some cited descriptor associations are unverified. These are model-derived descriptor associations, not established anatomical or clinical findings. Probability is uncalibrated."
+}
+```

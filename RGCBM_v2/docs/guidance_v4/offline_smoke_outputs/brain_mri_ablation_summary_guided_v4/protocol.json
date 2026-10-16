@@ -1,0 +1,50 @@
+{
+  "dataset": "brain_mri",
+  "base_config": {
+    "dataset": "brain_mri",
+    "seed": 42,
+    "concepts": 16,
+    "projection": 128,
+    "image_size": 240,
+    "batch_size": 2,
+    "workers": 0,
+    "head_epochs": 1,
+    "finetune_epochs": 1,
+    "finetune_blocks": 3,
+    "head_lr": 0.002,
+    "finetune_lr": 2e-05,
+    "finetune_head_lr": 0.001,
+    "concept_normalization": "running_standardize",
+    "guidance_mode": "individual_descriptors_v4",
+    "require_guidance_exposure": true,
+    "validation_fraction": 0.1,
+    "dropout": 0.1,
+    "edge": 0.18,
+    "texture": 0.1,
+    "morphology": 0.08,
+    "diversity": 0.02,
+    "disentangle": 0.01,
+    "activation_l1": 5e-05,
+    "stability": 0.02,
+    "classifier_l1": 5e-06,
+    "classification_only_epochs": 3,
+    "ramp_epochs": 5,
+    "checkpoint_every_batches": 1,
+    "checkpoint_every_epochs": 5,
+    "keep_epoch_checkpoints": 3,
+    "show_progress": true,
+    "patience": 8,
+    "mixed_precision": true,
+    "pretrained": true,
+    "max_train_batches": 2,
+    "max_validation_batches": 2
+  },
+  "variants": [
+    "no_finetune",
+    "K32"
+  ],
+  "seeds": [
+    42
+  ],
+  "warning": "Use at least three complete seeds for a paper. Test measurements compare preregistered variants; do not tune variants on these test scores."
+}

@@ -1,0 +1,4 @@
+{
+  "explanation": "The MRI-image fine edge detail provided strong guidance for the glioma classification, while the relatively dark image regions associated with the notumor class were less supportive of the prediction.",
+  "limitations": "Unverified guidance from MRI-image fine edge detail."
+}

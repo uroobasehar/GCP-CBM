@@ -1,0 +1,233 @@
+{
+  "scope": "Frozen-feature CPU learning diagnostic: full official training pool split 5394/600, single cached augmentation per training image; 10 head-only epochs; simplified guidance objective, no fine-tuning/stability/diversity; not complete RG-CBM benchmark; no test data.",
+  "records": [
+    {
+      "variant": "pooled_feature_baseline",
+      "concepts": 0,
+      "history": [
+        {
+          "epoch": 1,
+          "training_accuracy": 0.3340748980348535,
+          "training_objective": 3.4742086692169325,
+          "validation_accuracy": 0.575,
+          "validation_ce": 2.151466105779012
+        },
+        {
+          "epoch": 2,
+          "training_accuracy": 0.7159807193177605,
+          "training_objective": 1.5410671902445452,
+          "validation_accuracy": 0.6566666666666666,
+          "validation_ce": 1.5264208984375
+        },
+        {
+          "epoch": 3,
+          "training_accuracy": 0.8261030774935113,
+          "training_objective": 0.9826018937570234,
+          "validation_accuracy": 0.6883333333333334,
+          "validation_ce": 1.3003057193756105
+        },
+        {
+          "epoch": 4,
+          "training_accuracy": 0.8809788654060067,
+          "training_objective": 0.7066021924289368,
+          "validation_accuracy": 0.6883333333333334,
+          "validation_ce": 1.2050342845916748
+        },
+        {
+          "epoch": 5,
+          "training_accuracy": 0.9136077122728958,
+          "training_objective": 0.5428988744605238,
+          "validation_accuracy": 0.6866666666666666,
+          "validation_ce": 1.1339553451538087
+        },
+        {
+          "epoch": 6,
+          "training_accuracy": 0.9397478680014831,
+          "training_objective": 0.4261440478256998,
+          "validation_accuracy": 0.705,
+          "validation_ce": 1.0958959110577902
+        },
+        {
+          "epoch": 7,
+          "training_accuracy": 0.9593993325917687,
+          "training_objective": 0.3462859535707913,
+          "validation_accuracy": 0.705,
+          "validation_ce": 1.0540783762931825
+        },
+        {
+          "epoch": 8,
+          "training_accuracy": 0.9697812384130515,
+          "training_objective": 0.28014013131415355,
+          "validation_accuracy": 0.7083333333333334,
+          "validation_ce": 1.0463502804438274
+        },
+        {
+          "epoch": 9,
+          "training_accuracy": 0.9790507971820541,
+          "training_objective": 0.23244860053924352,
+          "validation_accuracy": 0.72,
+          "validation_ce": 1.0133744057019551
+        },
+        {
+          "epoch": 10,
+          "training_accuracy": 0.9842417500926955,
+          "training_objective": 0.19427720957059616,
+          "validation_accuracy": 0.72,
+          "validation_ce": 1.0109326847394307
+        }
+      ]
+    },
+    {
+      "variant": "guided16",
+      "concepts": 16,
+      "history": [
+        {
+          "epoch": 1,
+          "training_accuracy": 0.02799406748238784,
+          "training_objective": 5.215329864531656,
+          "validation_accuracy": 0.08,
+          "validation_ce": 5.114456062316894
+        },
+        {
+          "epoch": 2,
+          "training_accuracy": 0.09566184649610679,
+          "training_objective": 5.012934982842943,
+          "validation_accuracy": 0.12833333333333333,
+          "validation_ce": 4.979996999104817
+        },
+        {
+          "epoch": 3,
+          "training_accuracy": 0.13681868743047831,
+          "training_objective": 4.870993762180723,
+          "validation_accuracy": 0.16,
+          "validation_ce": 4.831819012959798
+        },
+        {
+          "epoch": 4,
+          "training_accuracy": 0.1668520578420467,
+          "training_objective": 4.742639542156385,
+          "validation_accuracy": 0.14166666666666666,
+          "validation_ce": 4.7327531178792315
+        },
+        {
+          "epoch": 5,
+          "training_accuracy": 0.18798665183537264,
+          "training_objective": 4.607058364371702,
+          "validation_accuracy": 0.12833333333333333,
+          "validation_ce": 4.674957771301269
+        },
+        {
+          "epoch": 6,
+          "training_accuracy": 0.1931776047460141,
+          "training_objective": 4.49559030596486,
+          "validation_accuracy": 0.22,
+          "validation_ce": 4.470697364807129
+        },
+        {
+          "epoch": 7,
+          "training_accuracy": 0.21319985168705968,
+          "training_objective": 4.367721742729722,
+          "validation_accuracy": 0.305,
+          "validation_ce": 4.300022226969401
+        },
+        {
+          "epoch": 8,
+          "training_accuracy": 0.23266592510196515,
+          "training_objective": 4.255073770665221,
+          "validation_accuracy": 0.23666666666666666,
+          "validation_ce": 4.245589853922526
+        },
+        {
+          "epoch": 9,
+          "training_accuracy": 0.2378568780126066,
+          "training_objective": 4.148323130156758,
+          "validation_accuracy": 0.31833333333333336,
+          "validation_ce": 4.084445432027181
+        },
+        {
+          "epoch": 10,
+          "training_accuracy": 0.26344086021505375,
+          "training_objective": 4.034992453518911,
+          "validation_accuracy": 0.35333333333333333,
+          "validation_ce": 3.9781089401245118
+        }
+      ]
+    },
+    {
+      "variant": "guided64",
+      "concepts": 64,
+      "history": [
+        {
+          "epoch": 1,
+          "training_accuracy": 0.06284760845383759,
+          "training_objective": 5.035030293915508,
+          "validation_accuracy": 0.12666666666666668,
+          "validation_ce": 4.68718002319336
+        },
+        {
+          "epoch": 2,
+          "training_accuracy": 0.1757508342602892,
+          "training_objective": 4.428644911200637,
+          "validation_accuracy": 0.20166666666666666,
+          "validation_ce": 4.22434679667155
+        },
+        {
+          "epoch": 3,
+          "training_accuracy": 0.26844642195031515,
+          "training_objective": 3.9570520518221235,
+          "validation_accuracy": 0.31666666666666665,
+          "validation_ce": 3.7964006423950196
+        },
+        {
+          "epoch": 4,
+          "training_accuracy": 0.34909158324063777,
+          "training_objective": 3.576539436092101,
+          "validation_accuracy": 0.32166666666666666,
+          "validation_ce": 3.5838868713378904
+        },
+        {
+          "epoch": 5,
+          "training_accuracy": 0.43548387096774194,
+          "training_objective": 3.249831072878387,
+          "validation_accuracy": 0.4216666666666667,
+          "validation_ce": 3.1973747189839683
+        },
+        {
+          "epoch": 6,
+          "training_accuracy": 0.47664071190211343,
+          "training_objective": 2.9624662714884993,
+          "validation_accuracy": 0.4766666666666667,
+          "validation_ce": 2.982841033935547
+        },
+        {
+          "epoch": 7,
+          "training_accuracy": 0.5328142380422692,
+          "training_objective": 2.713505216647308,
+          "validation_accuracy": 0.51,
+          "validation_ce": 2.7606360880533853
+        },
+        {
+          "epoch": 8,
+          "training_accuracy": 0.5648869113830182,
+          "training_objective": 2.5104619905070815,
+          "validation_accuracy": 0.5333333333333333,
+          "validation_ce": 2.5660841623942057
+        },
+        {
+          "epoch": 9,
+          "training_accuracy": 0.6047460140897293,
+          "training_objective": 2.304905454361929,
+          "validation_accuracy": 0.5233333333333333,
+          "validation_ce": 2.4626138814290366
+        },
+        {
+          "epoch": 10,
+          "training_accuracy": 0.639228772710419,
+          "training_objective": 2.134534942162315,
+          "validation_accuracy": 0.5083333333333333,
+          "validation_ce": 2.3488284492492677
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+case,image_path,test_index,true_class,predicted_class,figure,report,selection_policy
+0,data/cub/CUB_200_2011/images/001.Black_footed_Albatross/Black_Footed_Albatross_0046_18.jpg,0,001.Black_footed_Albatross,125.Lincoln_Sparrow,figures/case_00_explanation_panel.pdf,reports/case_000.md,evenly spaced indices in the official test listing; not selected for correct prediction
+1,data/cub/CUB_200_2011/images/102.Western_Wood_Pewee/Western_Wood_Pewee_0053_98186.jpg,2896,102.Western_Wood_Pewee,125.Lincoln_Sparrow,figures/case_01_explanation_panel.pdf,reports/case_001.md,evenly spaced indices in the official test listing; not selected for correct prediction
+2,data/cub/CUB_200_2011/images/200.Common_Yellowthroat/Common_Yellowthroat_0055_190967.jpg,5793,200.Common_Yellowthroat,125.Lincoln_Sparrow,figures/case_02_explanation_panel.pdf,reports/case_002.md,evenly spaced indices in the official test listing; not selected for correct prediction

@@ -130,7 +130,7 @@ class DriveStore:
             # A failed remote sync must never roll newer local progress backwards.
             return run
         remote = str(Path('results') / run_name)
-        for name in ['configuration.json', 'best.pt', 'head_best.pt', 'finetune_best.pt', 'history.json', 'training_status.json', 'last.pt']:
+        for name in ['configuration.json', 'best.pt', 'best_any.pt', 'head_best.pt', 'finetune_best.pt', 'history.json', 'training_status.json', 'last.pt']:
             self.download(name, run / name, remote)
         return run
 

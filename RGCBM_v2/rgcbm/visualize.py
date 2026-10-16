@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import torch
 from .core import priors
 from .data import ImageDataset, loader
+from .publication import label as semantic_label, publication_cases, grounding_figures, prototype_plates
 from .evaluate import evidence_packet
 
 
@@ -40,7 +41,8 @@ def visualize_run(model, root, manifest, run, grounding, examples=3, prototype_b
     error = [[max(0, r['mean'] - r['ci_low']) for r in grounding], [max(0, r['ci_high'] - r['mean']) for r in grounding]]
     ax.bar(np.arange(len(y)), y, yerr=error, color=['#b5bbc3' if r['weak_grounding'] else '#327da8' for r in grounding], capsize=2)
     ax.axhline(0, color='black', lw=.5)
-    ax.set(xlabel='Concept index (zero-based)', ylabel='Validation descriptor correlation', title='Grounding with image-bootstrap 95% intervals')
+    ax.set_xticks(np.arange(len(y)), [semantic_label(r,22) for r in grounding], rotation=90, fontsize=6)
+    ax.set(xlabel='Named concept', ylabel='Validation descriptor correlation', title='Grounding with image-bootstrap 95% intervals')
     fig.tight_layout(); fig.savefig(figures / 'grounding_uncertainty.png', dpi=180); plt.close(fig)
     test = ImageDataset(root, manifest, 'test', model.config)
     selected = np.linspace(0, len(test) - 1, min(examples, len(test)), dtype=int)
@@ -62,14 +64,14 @@ def visualize_run(model, root, manifest, run, grounding, examples=3, prototype_b
         for k, ax in enumerate(axes.flat):
             if k < len(grounding):
                 ax.imshow(rgb); ax.imshow(maps[k], cmap='inferno', alpha=.5, vmin=0, vmax=1)
-                ax.set_title(f'C{k + 1:02d}: {grounding[k]["descriptor"]}\n{grounding[k]["direction"]}, weak={grounding[k]["weak_grounding"]}', fontsize=9)
+                ax.set_title(semantic_label(grounding[k],29), fontsize=8)
             ax.axis('off')
         fig.tight_layout(); fig.savefig(figures / f'case_{case:02d}_concept_maps.png', dpi=160); plt.close(fig)
         packet = evidence_packet(model, output['concepts'][0].cpu().numpy(), output['logits'][0].cpu().numpy(), manifest['classes'], grounding)
         terms = np.array([r['margin_contribution'] for r in packet['concepts']])
         order = np.argsort(np.abs(terms))[-min(12, len(terms)):]
-        fig, ax = plt.subplots(figsize=(9, 5))
-        ax.barh([f'C{k + 1:02d}' for k in order], terms[order], color=['#327da8' if t > 0 else '#c95454' for t in terms[order]])
+        fig, ax = plt.subplots(figsize=(12, 8))
+        ax.barh([semantic_label(grounding[k],35) for k in order], terms[order], color=['#327da8' if t > 0 else '#c95454' for t in terms[order]])
         ax.axvline(0, color='black', lw=.7)
         ax.set(xlabel='Exact predicted-versus-runner-up logit contribution', title=f'{packet["prediction"]["class"]} vs {packet["prediction"]["runner_up"]}')
         fig.tight_layout(); fig.savefig(figures / f'case_{case:02d}_contributions.png', dpi=180); plt.close(fig)
@@ -86,16 +88,20 @@ def visualize_run(model, root, manifest, run, grounding, examples=3, prototype_b
                 y, x = np.unravel_index(grid.argmax(), grid.shape)
                 center_y, center_x = int((y + .5) * rgb.shape[0] / grid.shape[0]), int((x + .5) * rgb.shape[1] / grid.shape[1])
                 patch = rgb[max(0, center_y - 40):center_y + 40, max(0, center_x - 40):center_x + 40].copy()
-                candidate = (float(grid.max()), index, patch)
+                bounds = (max(0, center_x-40), max(0, center_y-40), min(rgb.shape[1], center_x+40), min(rgb.shape[0], center_y+40))
+                candidate = (float(grid.max()), index, patch, rgb.copy(), bounds, grid.copy(), int(labels[b]))
                 if len(best[k]) < 3: heapq.heappush(best[k], candidate)
                 elif candidate[0] > best[k][0][0]: heapq.heapreplace(best[k], candidate)
     fig, axes = plt.subplots(len(grounding), 3, figsize=(8, 1.6 * len(grounding)), squeeze=False)
     for k, candidates in enumerate(best):
         for j, ax in enumerate(axes[k]):
             if j < len(candidates):
-                value, index, patch = sorted(candidates, key=lambda v: v[0], reverse=True)[j]
-                ax.imshow(patch); ax.set_title(f'C{k + 1:02d}, response={value:.3f}', fontsize=8)
+                value, index, patch, *_ = sorted(candidates, key=lambda v: v[0], reverse=True)[j]
+                ax.imshow(patch); ax.set_title(semantic_label(grounding[k],30)+f'\nresponse={value:.3f}', fontsize=7)
             ax.axis('off')
     fig.suptitle('Training prototype patches; descriptor association requires separate grounding', fontsize=11)
     fig.tight_layout(); fig.savefig(figures / 'prototype_patches.png', dpi=150); plt.close(fig)
+    grounding_figures(run, grounding)
+    publication_cases(model, root, manifest, run, grounding, test, selected)
+    prototype_plates(run, grounding, best, train)
     return figures

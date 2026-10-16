@@ -1,0 +1,33 @@
+OFFLINE GUARD: IPv4/IPv6/packet sockets blocked by inherited kernel seccomp rules; Unix IPC allowed.
+Matplotlib created a temporary cache directory at /tmp/matplotlib-65j2umqg because the default path (/home/agent/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Fontconfig error: No writable cache directories
+Checkpoint saved: /tmp/rgcbm-v4-xai-final/results/pets_v4_xai/last.pt (batch 1)
+{"stage": "head", "epoch": 1, "train_loss": 3.924710273742676, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 3.833239793777466, "validation_n": 4, "auxiliary_scale": 0.2, "lr": 0.002, "classifier_l2_update": 0.04866186901926994, "train_accuracy": 0.0, "classification_loss": 3.909228801727295, "chance_accuracy": 0.02702702702702703, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.0038955374620854855, "learning_rates": {"head": 0.002}}
+Epoch snapshot saved: /tmp/rgcbm-v4-xai-final/results/pets_v4_xai/checkpoints/head_epoch_0001.pt
+Checkpoint saved: /tmp/rgcbm-v4-xai-final/results/pets_v4_xai/last.pt (batch 1)
+{"stage": "finetune", "epoch": 1, "train_loss": 3.8592190742492676, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 3.834562301635742, "validation_n": 4, "auxiliary_scale": 1.0, "lr": 0.001, "classifier_l2_update": 0.024330485612154007, "train_accuracy": 0.0, "classification_loss": 3.7880334854125977, "chance_accuracy": 0.02702702702702703, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.003937871195375919, "learning_rates": {"head": 0.001, "backbone": 2e-05}}
+Epoch snapshot saved: /tmp/rgcbm-v4-xai-final/results/pets_v4_xai/checkpoints/finetune_epoch_0001.pt
+/workspace/rgcbm-env/venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+{"stage": "head", "epoch": 1, "train_loss": 3.909594774246216, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 3.705512523651123, "validation_n": 2, "auxiliary_scale": 0.0, "lr": 0.002, "classifier_l2_update": 0.048661865293979645, "train_accuracy": 0.0, "classification_loss": 3.909228801727295, "chance_accuracy": 0.02702702702702703, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.002470306120812893, "learning_rates": {"head": 0.002}}
+Epoch snapshot saved: /tmp/rgcbm-v4-xai-final/results/warmup_only/checkpoints/head_epoch_0001.pt
+/workspace/RGCBM_MultiDataset/rgcbm/train.py:290: UserWarning: No guidance-exposed checkpoint exists (for example a warm-up-only smoke run). Returning best_any.pt; guidance is explicitly unverified.
+  warnings.warn('No guidance-exposed checkpoint exists (for example a warm-up-only smoke run). Returning best_any.pt; guidance is explicitly unverified.')
+{
+  "status": "passed",
+  "scope": "Linux CPU real-image software checks, not trained research performance",
+  "checks": [
+    "finite constant/random descriptor maps",
+    "12 distinct guidance targets",
+    "channel-swap regression detects individual-guidance error",
+    "guidance gradients finite",
+    "BH-FDR synthetic positive/inverse/conflict checks",
+    "failed guidance is not hidden by renaming",
+    "unexposed checkpoints flagged",
+    "trained model exposure survives reload",
+    "named PNG/PDF/SVG outputs",
+    "signed spatial mass exactly matches margin terms",
+    "LLM/template reports use the SAME visualized image",
+    "weak-grounding qualifiers preserved"
+  ]
+}

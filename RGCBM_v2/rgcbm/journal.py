@@ -32,11 +32,11 @@ def concept_cards(manifest, run, grounding):
     for row in grounding:
         k = row['concept_index']
         order = np.argsort(-W[:, k])[:3]
-        cards.append({'id': f'C{k+1:02d}', 'name': row['concept_name'], 'name_basis': 'validation image-descriptor correlation, not anatomy/part annotation', 'score_definition': score_definition, 'group': row['training_group'], 'validation_correlation': row['mean'], 'validation_image_bootstrap_95ci': [row['ci_low'], row['ci_high']], 'weak_grounding': row['weak_grounding'], 'frozen_descriptor_test_audit': test_by_id[k], 'classes_with_largest_classifier_weights': [{'class': manifest['classes'][int(j)], 'weight': float(W[j, k])} for j in order], 'weight_interpretation': 'Relative classifier use; class weights do not name the visual concept.', 'domain_scope': DOMAIN_SCOPE[manifest['dataset']], 'human_review': 'Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation.'})
+        cards.append({'id': k, 'name': row['concept_name'], 'name_basis': 'explicit guidance target plus measured validation association; no index-based rotation of semantic names', 'guidance_status':row.get('grounding_status','legacy'), 'intended_descriptor':row.get('intended_descriptor'), 'fdr_q':row.get('fdr_q'), 'score_definition': score_definition, 'group': row['training_group'], 'validation_correlation': row['mean'], 'validation_image_bootstrap_95ci': [row['ci_low'], row['ci_high']], 'weak_grounding': row['weak_grounding'], 'frozen_descriptor_test_audit': test_by_id[k], 'classes_with_largest_classifier_weights': [{'class': manifest['classes'][int(j)], 'weight': float(W[j, k])} for j in order], 'weight_interpretation': 'Relative classifier use; class weights do not name the visual concept.', 'domain_scope': DOMAIN_SCOPE[manifest['dataset']], 'human_review': 'Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation.'})
     atomic_json(run / 'concept_cards.json', cards)
     text = '# Concept evidence cards\n\n' + DOMAIN_SCOPE[manifest['dataset']] + '\n\n'
     for card in cards:
-        text += f"## {card['id']}: {card['name']}\n\nGroup: {card['group']}. Weak: {card['weak_grounding']}. Validation correlation: {card['validation_correlation']:.3f}; 95% image-bootstrap interval: {card['validation_image_bootstrap_95ci']}.\n\n{card['name_basis']}. {card['human_review']}\n\n"
+        text += f"## {card['name']}\n\nGroup: {card['group']}. Status: {card['guidance_status']}. Target: {card['intended_descriptor']}. Weak: {card['weak_grounding']}. Validation correlation: {card['validation_correlation']:.3f}; 95% image-bootstrap interval: {card['validation_image_bootstrap_95ci']}. BH-FDR q: {card['fdr_q']}.\n\n{card['name_basis']}. {card['human_review']}\n\n"
     (run / 'concept_cards.md').write_text(text, encoding='utf-8')
     return pd.DataFrame([{k:v for k,v in row.items() if k not in ['classes_with_largest_classifier_weights','frozen_descriptor_test_audit']} for row in cards])
 
@@ -63,6 +63,14 @@ def reliability_and_redundancy(run):
         np.save(run/'concept_redundancy.npy',matrix)
         fig,ax=plt.subplots(figsize=(7,6));im=ax.imshow(np.ma.masked_invalid(matrix),vmin=-1,vmax=1,cmap='coolwarm');fig.colorbar(im,ax=ax,label='Pearson correlation across test images')
         ax.set(xlabel='Concept index',ylabel='Concept index',title='Concept redundancy; gray/blank means insufficient variation')
+        dictionary=run/'grounding.json'
+        if dictionary.is_file():
+            from .publication import label
+            names=[label(r,25) for r in json.loads(dictionary.read_text())['concepts']]
+            fig.set_size_inches(max(10,len(names)*.40),max(9,len(names)*.40))
+            ax.set_xticks(range(len(names)),names,rotation=90,fontsize=5)
+            ax.set_yticks(range(len(names)),names,fontsize=5)
+            ax.set(xlabel='Named concept',ylabel='Named concept')
         fig.tight_layout();fig.savefig(figures/'concept_redundancy.png',dpi=180);plt.close(fig)
     return pd.DataFrame(bins)
 

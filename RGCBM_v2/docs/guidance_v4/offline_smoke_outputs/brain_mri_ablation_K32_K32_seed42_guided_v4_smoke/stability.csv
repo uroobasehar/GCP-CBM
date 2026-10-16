@@ -1,0 +1,5 @@
+path,mae,cosine
+data/brain_mri/Testing/glioma/Te-gl_1.jpg,0.0003268439322710037,0.9999998211860657
+data/brain_mri/Testing/glioma/Te-gl_10.jpg,0.00017680227756500244,0.9999999403953552
+data/brain_mri/Testing/glioma/Te-gl_100.jpg,0.0002583414316177368,0.9999998807907104
+data/brain_mri/Testing/glioma/Te-gl_101.jpg,0.00032101012766361237,0.9999997615814209

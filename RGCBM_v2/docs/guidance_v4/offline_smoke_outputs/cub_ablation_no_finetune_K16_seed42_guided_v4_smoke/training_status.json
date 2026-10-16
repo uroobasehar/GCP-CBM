@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "status": "complete",
+  "best_validation_accuracy": 0.0,
+  "device": "cpu",
+  "torch": "2.7.1+cpu",
+  "cuda_runtime": null,
+  "research_run": false,
+  "selected_model_guidance_updates": 0,
+  "best_any_validation_accuracy": 0.0,
+  "guidance_eligible": false
+}

@@ -26,7 +26,7 @@ for mode in ['Colab','Kaggle']:
     root=OUTPUT/mode.lower()
     root.mkdir(parents=True,exist_ok=True)
     notebook=nbformat.read(SOURCE/'notebooks'/f'RGCBM_{mode}.ipynb',as_version=4)
-    notebook.cells[1].source=notebook.cells[1].source.replace('BATCH_SIZE = 24','BATCH_SIZE = 2').replace('SMOKE_TEST = False','SMOKE_TEST = True')
+    notebook.cells[1].source=notebook.cells[1].source.replace('BATCH_SIZE = 24','BATCH_SIZE = 2').replace('SMOKE_TEST = False','SMOKE_TEST = True').replace("'cub': 64","'cub': 16").replace("LLM_BACKEND = 'local_qwen'","LLM_BACKEND = 'template'")
     notebook.cells[1].source+=f'''\nRUN_TAG += '_cloud_validation_{mode.lower()}'
 RUN_NAME = f'{{DATASET}}_K{{NUM_CONCEPTS}}_seed{{SEED}}_{{RUN_TAG}}_smoke'
 import sys
@@ -50,7 +50,7 @@ fixture=install_cloud_fixture({mode!r},{str(root)!r},{str(SOURCE)!r})
     error=None
     try:
         client.execute(cwd=str(root))
-        summary=root/'results'/f'dataset_suite_calibrated_v3_cloud_validation_{mode.lower()}_K16_seed42_smoke'
+        summary=root/'results'/f'dataset_suite_guided_v4_cloud_validation_{mode.lower()}_K16_seed42_smoke'
         queue=json.loads((summary/'queue_status.json').read_text())
         assert queue['complete'] and [r['dataset'] for r in queue['runs']]==['cub','pets','brain_mri']
         assert (summary/'dataset_accuracy.png').is_file()
@@ -63,7 +63,7 @@ fixture=install_cloud_fixture({mode!r},{str(root)!r},{str(SOURCE)!r})
         records.append(record)
         (OUTPUT/'cloud_notebook_validation.json').write_text(json.dumps(records,indent=2))
     if mode=='Colab':
-        run=OUTPUT/'colab-mounted-drive/results'/f'cub_K16_seed42_calibrated_v3_cloud_validation_colab_smoke'
+        run=OUTPUT/'colab-mounted-drive/results'/f'cub_K16_seed42_guided_v4_cloud_validation_colab_smoke'
         assert (run/'last.pt').is_file() and (run/'figures/learning_curves.png').is_file()
     print(mode,'notebook smoke completed',flush=True)
 print(json.dumps(records,indent=2),flush=True)

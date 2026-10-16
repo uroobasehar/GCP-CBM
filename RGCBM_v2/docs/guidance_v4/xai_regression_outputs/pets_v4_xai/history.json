@@ -1,0 +1,45 @@
+[
+  {
+    "stage": "head",
+    "epoch": 1,
+    "train_loss": 3.924710273742676,
+    "train_n": 2,
+    "validation_accuracy": 0.0,
+    "validation_loss": 3.833239793777466,
+    "validation_n": 4,
+    "auxiliary_scale": 0.2,
+    "lr": 0.002,
+    "classifier_l2_update": 0.04866186901926994,
+    "train_accuracy": 0.0,
+    "classification_loss": 3.909228801727295,
+    "chance_accuracy": 0.02702702702702703,
+    "validation_top5_accuracy": 0.0,
+    "validation_predicted_classes": 1,
+    "validation_concept_std_mean": 0.0038955374620854855,
+    "learning_rates": {
+      "head": 0.002
+    }
+  },
+  {
+    "stage": "finetune",
+    "epoch": 1,
+    "train_loss": 3.8592190742492676,
+    "train_n": 2,
+    "validation_accuracy": 0.0,
+    "validation_loss": 3.834562301635742,
+    "validation_n": 4,
+    "auxiliary_scale": 1.0,
+    "lr": 0.001,
+    "classifier_l2_update": 0.024330485612154007,
+    "train_accuracy": 0.0,
+    "classification_loss": 3.7880334854125977,
+    "chance_accuracy": 0.02702702702702703,
+    "validation_top5_accuracy": 0.0,
+    "validation_predicted_classes": 1,
+    "validation_concept_std_mean": 0.003937871195375919,
+    "learning_rates": {
+      "head": 0.001,
+      "backbone": 2e-05
+    }
+  }
+]

@@ -67,3 +67,15 @@ Repeat acceptance for `pets` and `brain_mri` with networking disconnected on the
 `audit_dependencies.py` works without a package index and writes `offline/installed_dependency_audit.json`;
 acceptance also writes `runtime/native_library_validation.json` and dataset-specific validation reports.
 Use the newly published cloud notebooks; previously saved Drive copies do not update themselves.
+
+## Guidance V4 application update
+
+The twelve descriptor maps, named publication figures and exposure-aware checkpoint selection use
+existing locked PyTorch, SciPy, NumPy, pandas and Matplotlib packages. No extra runtime package or
+network download is introduced. The same Windows Python 3.11 wheel/conda lock remains authoritative.
+Local Qwen explicitly disables optional TensorFlow/Flax discovery before importing Transformers,
+unless the caller already set those controls, to keep its PyTorch inference from initializing an
+additional framework merely because TensorFlow was installed for the requested compatibility stack.
+The local-only inference regression checks that TensorFlow was not imported by the verbalizer.
+Current notebooks, source and methodology are included in the rebuilt offline archive; dependency
+hashes, ZIP CRC and the immutable first four archive parts are checked during packaging.

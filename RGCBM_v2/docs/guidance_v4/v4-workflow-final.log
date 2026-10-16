@@ -1,0 +1,88 @@
+OFFLINE GUARD: IPv4/IPv6/packet sockets blocked by inherited kernel seccomp rules; Unix IPC allowed.
+Matplotlib created a temporary cache directory at /tmp/matplotlib-0ss0h6fp because the default path (/home/agent/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Fontconfig error: No writable cache directories
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/resume_reference/last.pt (batch 1)
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/resume_reference/last.pt (batch 2)
+{"stage": "head", "epoch": 1, "train_loss": 3.5464141368865967, "train_n": 4, "validation_accuracy": 0.0, "validation_loss": 3.709239959716797, "validation_n": 2, "auxiliary_scale": 0.0, "lr": 0.002, "classifier_l2_update": 0.08565200120210648, "train_accuracy": 0.0, "classification_loss": 3.546048164367676, "chance_accuracy": 0.02702702702702703, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.0023627160117030144, "learning_rates": {"head": 0.002}}
+Epoch snapshot saved: /tmp/rgcbm-v4-workflow-final/results/resume_reference/checkpoints/head_epoch_0001.pt
+/workspace/RGCBM_MultiDataset/rgcbm/train.py:290: UserWarning: No guidance-exposed checkpoint exists (for example a warm-up-only smoke run). Returning best_any.pt; guidance is explicitly unverified.
+  warnings.warn('No guidance-exposed checkpoint exists (for example a warm-up-only smoke run). Returning best_any.pt; guidance is explicitly unverified.')
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/resume_interrupted/last.pt (batch 1)
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/resume_interrupted/last.pt (batch 2)
+{"stage": "head", "epoch": 1, "train_loss": 3.5464141368865967, "train_n": 4, "validation_accuracy": 0.0, "validation_loss": 3.709239959716797, "validation_n": 2, "auxiliary_scale": 0.0, "lr": 0.002, "classifier_l2_update": 0.03836851194500923, "train_accuracy": 0.0, "classification_loss": 3.546048164367676, "chance_accuracy": 0.02702702702702703, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.0023627160117030144, "learning_rates": {"head": 0.002}}
+Epoch snapshot saved: /tmp/rgcbm-v4-workflow-final/results/resume_interrupted/checkpoints/head_epoch_0001.pt
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/snapshot_retention/last.pt (batch 1)
+{"stage": "head", "epoch": 1, "train_loss": 3.909594774246216, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 3.705512523651123, "validation_n": 2, "auxiliary_scale": 0.0, "lr": 0.002, "classifier_l2_update": 0.048661865293979645, "train_accuracy": 0.0, "classification_loss": 3.909228801727295, "chance_accuracy": 0.02702702702702703, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.002470306120812893, "learning_rates": {"head": 0.002}}
+Epoch snapshot saved: /tmp/rgcbm-v4-workflow-final/results/snapshot_retention/checkpoints/head_epoch_0001.pt
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/snapshot_retention/last.pt (batch 1)
+{"stage": "head", "epoch": 2, "train_loss": 3.2301366329193115, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 3.7106800079345703, "validation_n": 2, "auxiliary_scale": 0.0, "lr": 0.002, "classifier_l2_update": 0.044942162930965424, "train_accuracy": 0.0, "classification_loss": 3.2297706604003906, "chance_accuracy": 0.02702702702702703, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.0026073933113366365, "learning_rates": {"head": 0.002}}
+Epoch snapshot saved: /tmp/rgcbm-v4-workflow-final/results/snapshot_retention/checkpoints/head_epoch_0002.pt
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/snapshot_retention/last.pt (batch 1)
+{"stage": "finetune", "epoch": 1, "train_loss": 3.8432505130767822, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 3.7095019817352295, "validation_n": 2, "auxiliary_scale": 1.0, "lr": 0.001, "classifier_l2_update": 0.024330763146281242, "train_accuracy": 0.0, "classification_loss": 3.76961612701416, "chance_accuracy": 0.02702702702702703, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.0030013963114470243, "learning_rates": {"head": 0.001, "backbone": 2e-05}}
+Epoch snapshot saved: /tmp/rgcbm-v4-workflow-final/results/snapshot_retention/checkpoints/finetune_epoch_0001.pt
+
+Dataset 1/3: cub -> cub_K16_seed42_workflow_test_smoke
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/cub_K16_seed42_workflow_test_smoke/last.pt (batch 1)
+{"stage": "head", "epoch": 1, "train_loss": 5.688578128814697, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 5.231074333190918, "validation_n": 2, "auxiliary_scale": 0.0, "lr": 0.002, "classifier_l2_update": 0.11312920600175858, "train_accuracy": 0.0, "classification_loss": 5.686593055725098, "chance_accuracy": 0.005, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.001145150512456894, "learning_rates": {"head": 0.002}}
+Epoch snapshot saved: /tmp/rgcbm-v4-workflow-final/results/cub_K16_seed42_workflow_test_smoke/checkpoints/head_epoch_0001.pt
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/cub_K16_seed42_workflow_test_smoke/last.pt (batch 1)
+{"stage": "finetune", "epoch": 1, "train_loss": 5.7167205810546875, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 5.232285976409912, "validation_n": 2, "auxiliary_scale": 1.0, "lr": 0.001, "classifier_l2_update": 0.05656347796320915, "train_accuracy": 0.0, "classification_loss": 5.64640474319458, "chance_accuracy": 0.005, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.0012091968674212694, "learning_rates": {"head": 0.001, "backbone": 2e-05}}
+Epoch snapshot saved: /tmp/rgcbm-v4-workflow-final/results/cub_K16_seed42_workflow_test_smoke/checkpoints/finetune_epoch_0001.pt
+Grounding concepts on validation: cub
+Evaluating frozen model on test: cub
+/workspace/rgcbm-env/venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+Saving figures, evidence reports and journal audits: cub
+
+Dataset 2/3: pets -> pets_K16_seed42_workflow_test_smoke
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/pets_K16_seed42_workflow_test_smoke/last.pt (batch 1)
+{"stage": "head", "epoch": 1, "train_loss": 3.909594774246216, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 3.705512523651123, "validation_n": 2, "auxiliary_scale": 0.0, "lr": 0.002, "classifier_l2_update": 0.048661865293979645, "train_accuracy": 0.0, "classification_loss": 3.909228801727295, "chance_accuracy": 0.02702702702702703, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.002470306120812893, "learning_rates": {"head": 0.002}}
+Epoch snapshot saved: /tmp/rgcbm-v4-workflow-final/results/pets_K16_seed42_workflow_test_smoke/checkpoints/head_epoch_0001.pt
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/pets_K16_seed42_workflow_test_smoke/last.pt (batch 1)
+{"stage": "finetune", "epoch": 1, "train_loss": 3.873913288116455, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 3.706282138824463, "validation_n": 2, "auxiliary_scale": 1.0, "lr": 0.001, "classifier_l2_update": 0.02433042600750923, "train_accuracy": 0.0, "classification_loss": 3.8010165691375732, "chance_accuracy": 0.02702702702702703, "validation_top5_accuracy": 0.0, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.0023838363122195005, "learning_rates": {"head": 0.001, "backbone": 2e-05}}
+Epoch snapshot saved: /tmp/rgcbm-v4-workflow-final/results/pets_K16_seed42_workflow_test_smoke/checkpoints/finetune_epoch_0001.pt
+Grounding concepts on validation: pets
+Evaluating frozen model on test: pets
+/workspace/rgcbm-env/venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2480: UserWarning: y_pred contains classes not in y_true
+  warnings.warn("y_pred contains classes not in y_true")
+Saving figures, evidence reports and journal audits: pets
+
+Dataset 3/3: brain_mri -> brain_mri_K16_seed42_workflow_test_smoke
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/brain_mri_K16_seed42_workflow_test_smoke/last.pt (batch 1)
+{"stage": "head", "epoch": 1, "train_loss": 1.4031293392181396, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 1.2894121408462524, "validation_n": 2, "auxiliary_scale": 0.0, "lr": 0.002, "classifier_l2_update": 0.015999913215637207, "train_accuracy": 0.0, "classification_loss": 1.4030839204788208, "chance_accuracy": 0.25, "validation_top5_accuracy": null, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.0017382106743752956, "learning_rates": {"head": 0.002}}
+Epoch snapshot saved: /tmp/rgcbm-v4-workflow-final/results/brain_mri_K16_seed42_workflow_test_smoke/checkpoints/head_epoch_0001.pt
+Checkpoint saved: /tmp/rgcbm-v4-workflow-final/results/brain_mri_K16_seed42_workflow_test_smoke/last.pt (batch 1)
+{"stage": "finetune", "epoch": 1, "train_loss": 1.4348193407058716, "train_n": 2, "validation_accuracy": 0.0, "validation_loss": 1.2742433547973633, "validation_n": 2, "auxiliary_scale": 1.0, "lr": 0.001, "classifier_l2_update": 0.008000008761882782, "train_accuracy": 0.0, "classification_loss": 1.3528329133987427, "chance_accuracy": 0.25, "validation_top5_accuracy": null, "validation_predicted_classes": 1, "validation_concept_std_mean": 0.0018778841476887465, "learning_rates": {"head": 0.001, "backbone": 2e-05}}
+Epoch snapshot saved: /tmp/rgcbm-v4-workflow-final/results/brain_mri_K16_seed42_workflow_test_smoke/checkpoints/finetune_epoch_0001.pt
+Grounding concepts on validation: brain_mri
+Evaluating frozen model on test: brain_mri
+/workspace/rgcbm-env/venv/lib/python3.12/site-packages/sklearn/metrics/_classification.py:409: UserWarning: A single label was found in 'y_true' and 'y_pred'. For the confusion matrix to have the correct shape, use the 'labels' parameter to pass all known labels.
+  warnings.warn(
+Saving figures, evidence reports and journal audits: brain_mri
+
+Dataset 1/3: cub -> cub_K16_seed42_workflow_test_smoke
+Reusing completed evaluation and explanation outputs: /tmp/rgcbm-v4-workflow-final/results/cub_K16_seed42_workflow_test_smoke
+
+Dataset 2/3: pets -> pets_K16_seed42_workflow_test_smoke
+Reusing completed evaluation and explanation outputs: /tmp/rgcbm-v4-workflow-final/results/pets_K16_seed42_workflow_test_smoke
+
+Dataset 3/3: brain_mri -> brain_mri_K16_seed42_workflow_test_smoke
+Reusing completed evaluation and explanation outputs: /tmp/rgcbm-v4-workflow-final/results/brain_mri_K16_seed42_workflow_test_smoke
+{
+  "status": "passed",
+  "hardware": "Linux CPU; no Windows/CUDA or live cloud authentication",
+  "data": "real CUB, Pet and MRI images; tiny smoke subsets",
+  "checks": [
+    "calibrated bottleneck stays in [0,1]",
+    "exact linear logit reconstruction",
+    "evaluation uses fixed running statistics",
+    "legacy uncalibrated model construction",
+    "bitwise identical interrupted/resumed weights and BN buffers",
+    "independent head/backbone fine-tuning LRs",
+    "full epoch snapshots and retention",
+    "live history CSV/figure",
+    "three-dataset queue plus saved metrics/figures/reports",
+    "repeat queue reuses completed evidence"
+  ],
+  "research_accuracy": "not estimated by software smoke checks"
+}

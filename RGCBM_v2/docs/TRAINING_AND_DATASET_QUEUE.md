@@ -1,5 +1,11 @@
 # Training diagnosis and automatic dataset runs
 
+Current notebooks use **guided_v4**, CUB K=64 and Pet/MRI K=16. Individual descriptor targets,
+exposure-aware checkpoint selection and the full-pool frozen-feature capacity diagnostic are
+documented in [CONCEPT_GUIDANCE.md](CONCEPT_GUIDANCE.md). The small V3 diagnostic below is retained
+as historical optimization evidence, not the final V4 performance claim.
+
+
 The reported CUB validation accuracies, 0.83–1.5%, are low compared with a 0.5% uniform chance
 baseline for 200 classes. Chance cross entropy is log(200)≈5.298; the reported validation CE falls
 from 5.293 to 5.208. Parameters are updating and the loss is improving, but discrimination remains
@@ -25,7 +31,7 @@ not full CUB benchmark results or evidence of publication-ready accuracy.** Full
 multiple seeds and independent held-out comparisons remain necessary. Raw histories, plot and
 workflow validation reports are under `docs/training_v3/`.
 
-## Explicit new training profile
+## Training standardization retained from V3
 
 The `calibrated_v3` profile preserves EfficientNet-B1, 128-dimensional projection, 16 prototypes,
 three descriptor-guided groups, the unguided group and the sparse linear bottleneck. It changes:
@@ -56,7 +62,8 @@ Open the latest notebook, restart its kernel after switching code versions, and 
 ```python
 RUN_ALL_DATASETS = True
 DATASETS = ['cub', 'pets', 'brain_mri']
-RUN_TAG = 'calibrated_v3'
+RUN_TAG = 'guided_v4'
+CONCEPTS_BY_DATASET = {'cub': 64, 'pets': 16, 'brain_mri': 16}
 CHECKPOINT_EVERY_EPOCHS = 5
 KEEP_EPOCH_CHECKPOINTS = 3  # per stage; 0 keeps all periodic snapshots
 ```
@@ -73,14 +80,14 @@ Offline Jupyter uses the bundled local data and models. No extra dependency was 
 In a fresh Kaggle session the restore helper recovers training checkpoints first. Missing local
 evaluation/figure files are regenerated from the restored best model; completed training is reused.
 
-For K=16 and seed=42, results follow:
+For the new dataset-specific capacities and seed=42, results follow:
 
 ```text
 results/
-  cub_K16_seed42_calibrated_v3/
-  pets_K16_seed42_calibrated_v3/
-  brain_mri_K16_seed42_calibrated_v3/
-  dataset_suite_calibrated_v3_K16_seed42/
+  cub_K64_seed42_guided_v4/
+  pets_K16_seed42_guided_v4/
+  brain_mri_K16_seed42_guided_v4/
+  dataset_suite_guided_v4_K64_seed42/
     queue_status.json
     dataset_summary.csv
     dataset_accuracy.png

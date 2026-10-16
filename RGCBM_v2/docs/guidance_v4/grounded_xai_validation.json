@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "scope": "Linux CPU real-image software checks, not trained research performance",
+  "checks": [
+    "finite constant/random descriptor maps",
+    "12 distinct guidance targets",
+    "channel-swap regression detects individual-guidance error",
+    "guidance gradients finite",
+    "BH-FDR synthetic positive/inverse/conflict checks",
+    "failed guidance is not hidden by renaming",
+    "unexposed checkpoints flagged",
+    "trained model exposure survives reload",
+    "named PNG/PDF/SVG outputs",
+    "signed spatial mass exactly matches margin terms",
+    "LLM/template reports use the SAME visualized image",
+    "weak-grounding qualifiers preserved"
+  ]
+}

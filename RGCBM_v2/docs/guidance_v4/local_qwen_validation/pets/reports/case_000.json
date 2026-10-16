@@ -1,0 +1,28 @@
+{
+  "backend_requested": "local_qwen",
+  "backend_used": "template",
+  "fallback_reason": "ValueError: LLM inferred physical descriptor levels/changes from model contribution signs.",
+  "structured_checks": "passed",
+  "semantic_validation": "human review required; JSON checks do not guarantee hallucination-free prose",
+  "result": {
+    "predicted_class": "Sphynx",
+    "confidence": 0.06319754603200893,
+    "supporting_concept_indices": [
+      10,
+      5,
+      1
+    ],
+    "opposing_concept_indices": [
+      6,
+      8,
+      12
+    ],
+    "explanation": "The model predicted Sphynx with an uncalibrated probability of 0.063; the runner-up was miniature_pinscher. Supporting model patterns: Pet-image local intensity deviation \u2014 unverified guidance (margin contribution +0.2632); Pet-image neighbouring-pixel contrast \u2014 unverified guidance (margin contribution +0.2323); Pet-image local edge abundance \u2014 unverified guidance (margin contribution +0.2152). Opposing model patterns: Pet-image local texture homogeneity \u2014 unverified guidance (-0.1218); Pet-image relatively bright image regions \u2014 unverified guidance (-0.1142); Pet-image local edge abundance \u2014 weak unguided association (learned variant 1) (-0.1067). Image measurements: Pet-image local intensity deviation \u2014 unverified guidance: high descriptor response relative to validation; Pet-image neighbouring-pixel contrast \u2014 unverified guidance: typical descriptor response relative to validation; Pet-image local edge abundance \u2014 unverified guidance: typical descriptor response relative to validation. The classifier bias contributes -0.0043 to this logit margin. Some cited patterns have unverified grounding; their intended guidance must not be reported as established anatomy or a learned clinical finding.",
+    "limitations": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated."
+  },
+  "structured_fields_source": "deterministic classifier evidence; LLM supplies prose only",
+  "image_path": "data/pets/images/Abyssinian_201.jpg",
+  "true_class": "Abyssinian",
+  "evidence_source": "visual_example_evidence.json",
+  "figure_prefix": "case_00"
+}

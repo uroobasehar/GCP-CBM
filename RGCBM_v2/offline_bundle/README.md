@@ -24,8 +24,9 @@ The join script verifies every part and the assembled ZIP. A small Git LFS text 
 the content: if sizes do not match, fetch the actual objects before going offline. Keep all part
 names intact. Allow at least 60 GB free disk for cloning, assembly, extraction, environment and runs.
 
-The separate `../RGCBM_Code.zip` is a small code/documentation download; it intentionally has no
-datasets, Windows wheels or model weights. It is useful for reviewing or running the cloud notebooks.
+The separate `../RGCBM_Code.zip` contains code, notebooks, documentation and validation figures;
+it has no datasets, Windows wheels or model weights. It is also stored with Git LFS. Individual
+cloud notebooks can be downloaded directly from ../notebooks/ without the full validation archive.
 
 Before permanent disconnection, read [system prerequisites](../docs/OFFLINE_PREREQUISITES.md).
 The standalone NVIDIA driver remains a separately collected companion; this ZIP does not contain it.

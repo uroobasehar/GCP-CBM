@@ -1,0 +1,2279 @@
+{
+  "source_split": "validation",
+  "validation_n": 4,
+  "selection_note": "Guided concepts are checked against their intended target, never renamed to hide failed guidance. Unguided naming searches descriptors with BH-FDR correction. Minimum n=50, |mean r|>=.10, 95% image-bootstrap interval excluding zero and q<.05. Test never renames concepts.",
+  "concepts": [
+    {
+      "concept_index": 0,
+      "concept_name": "Pet-image edge-transition steepness \u2014 unverified guidance",
+      "training_group": "boundary-guided",
+      "descriptor": "edge_steepness",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "edge_steepness",
+      "strongest_observed_descriptor": "edge_density",
+      "grounding_strength": 0.09020546078681946,
+      "mean": -0.09020546078681946,
+      "ci_low": -0.2061178833246231,
+      "ci_high": 0.057213786989450455,
+      "valid_n": 4,
+      "fdr_q": 0.4908798271764898,
+      "validation_response_quartiles": [
+        0.12258530035614967,
+        0.13504104688763618,
+        0.15815434232354164
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.12748771905899048,
+          "ci_low": -0.2570511348545551,
+          "ci_high": 0.0024079713970424754,
+          "valid_n": 4,
+          "fdr_q": 0.40702603788884156
+        },
+        "texture": {
+          "mean": -0.21850605309009552,
+          "ci_low": -0.39562875032424927,
+          "ci_high": -0.054781023412942886,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "morphology": {
+          "mean": 0.027419505640864372,
+          "ci_low": -0.04511082544922829,
+          "ci_high": 0.11979825794696808,
+          "valid_n": 4,
+          "fdr_q": 0.6649097204370662
+        },
+        "intensity": {
+          "mean": 0.06944337487220764,
+          "ci_low": -0.0678294375538826,
+          "ci_high": 0.23511818759143355,
+          "valid_n": 4,
+          "fdr_q": 0.6171819792842235
+        },
+        "edge_steepness": {
+          "mean": -0.09020546078681946,
+          "ci_low": -0.2061178833246231,
+          "ci_high": 0.057213786989450455,
+          "valid_n": 4,
+          "fdr_q": 0.4908798271764898
+        },
+        "edge_density": {
+          "mean": -0.2508116364479065,
+          "ci_low": -0.4605617716908455,
+          "ci_high": -0.06284348648041486,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "edge_coherence": {
+          "mean": -0.07900625467300415,
+          "ci_low": -0.21715456247329712,
+          "ci_high": 0.09343143571168185,
+          "valid_n": 4,
+          "fdr_q": 0.5853279766784222
+        },
+        "fine_edge_detail": {
+          "mean": -0.13533487915992737,
+          "ci_low": -0.29867980927228927,
+          "ci_high": 0.011646469263360045,
+          "valid_n": 4,
+          "fdr_q": 0.39502927701090407
+        },
+        "texture_variation": {
+          "mean": -0.2107282131910324,
+          "ci_low": -0.38341712951660156,
+          "ci_high": -0.032913848757743835,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_contrast": {
+          "mean": -0.21709886193275452,
+          "ci_low": -0.40939666032791133,
+          "ci_high": -0.05928227789700021,
+          "valid_n": 4,
+          "fdr_q": 0.36411948947951495
+        },
+        "texture_homogeneity": {
+          "mean": 0.21989263594150543,
+          "ci_low": 0.07338717598468066,
+          "ci_high": 0.4047666251659395,
+          "valid_n": 4,
+          "fdr_q": 0.36411948947951495
+        },
+        "texture_entropy": {
+          "mean": -0.1765100061893463,
+          "ci_low": -0.35435625836253165,
+          "ci_high": -0.022027458995580673,
+          "valid_n": 4,
+          "fdr_q": 0.3672605292343968
+        },
+        "bright_region": {
+          "mean": 0.03832166641950607,
+          "ci_low": -0.030926387757062912,
+          "ci_high": 0.14686043560504913,
+          "valid_n": 4,
+          "fdr_q": 0.6400342768944443
+        },
+        "dark_region": {
+          "mean": -0.08135010302066803,
+          "ci_low": -0.20686332769691942,
+          "ci_high": 0.07545161247253418,
+          "valid_n": 4,
+          "fdr_q": 0.5910902477223395
+        },
+        "local_intensity_deviation": {
+          "mean": -0.11629815399646759,
+          "ci_low": -0.20083662867546082,
+          "ci_high": -0.005024445243179798,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "region_occupancy": {
+          "mean": -0.02982073463499546,
+          "ci_low": -0.11260866392403841,
+          "ci_high": 0.047458671033382416,
+          "valid_n": 4,
+          "fdr_q": 0.6940143644982852
+        }
+      }
+    },
+    {
+      "concept_index": 1,
+      "concept_name": "Pet-image local edge abundance \u2014 unverified guidance",
+      "training_group": "boundary-guided",
+      "descriptor": "edge_density",
+      "direction": "positive",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "edge_density",
+      "strongest_observed_descriptor": "texture_homogeneity",
+      "grounding_strength": 0.24101383984088898,
+      "mean": 0.24101383984088898,
+      "ci_low": 0.016292383894324303,
+      "ci_high": 0.47216248512268066,
+      "valid_n": 4,
+      "fdr_q": 0.3660444092866918,
+      "validation_response_quartiles": [
+        0.25201990082859993,
+        0.2624112516641617,
+        0.2781660705804825
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.19559645652770996,
+          "ci_low": -0.005143728107213974,
+          "ci_high": 0.40042972564697266,
+          "valid_n": 4,
+          "fdr_q": 0.3878599814589277
+        },
+        "texture": {
+          "mean": 0.25581735372543335,
+          "ci_low": 0.1232050359249115,
+          "ci_high": 0.3519686035811902,
+          "valid_n": 4,
+          "fdr_q": 0.320343417490247
+        },
+        "morphology": {
+          "mean": 0.20177194476127625,
+          "ci_low": 0.03730903938412666,
+          "ci_high": 0.35015669465065,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "intensity": {
+          "mean": 0.10784977674484253,
+          "ci_low": -0.14902595095336438,
+          "ci_high": 0.295358270406723,
+          "valid_n": 4,
+          "fdr_q": 0.6144553173334361
+        },
+        "edge_steepness": {
+          "mean": 0.11359293013811111,
+          "ci_low": -0.0875650679692626,
+          "ci_high": 0.40411490201950073,
+          "valid_n": 4,
+          "fdr_q": 0.5854767658610928
+        },
+        "edge_density": {
+          "mean": 0.24101383984088898,
+          "ci_low": 0.016292383894324303,
+          "ci_high": 0.47216248512268066,
+          "valid_n": 4,
+          "fdr_q": 0.3660444092866918
+        },
+        "edge_coherence": {
+          "mean": 0.18973925709724426,
+          "ci_low": 0.019163355231285095,
+          "ci_high": 0.45035963878035556,
+          "valid_n": 4,
+          "fdr_q": 0.3981484067684402
+        },
+        "fine_edge_detail": {
+          "mean": 0.14732813835144043,
+          "ci_low": -0.055636465549468994,
+          "ci_high": 0.3368564248085022,
+          "valid_n": 4,
+          "fdr_q": 0.40048605531476056
+        },
+        "texture_variation": {
+          "mean": 0.24891430139541626,
+          "ci_low": 0.12104710191488266,
+          "ci_high": 0.36601001024246216,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_contrast": {
+          "mean": 0.27305781841278076,
+          "ci_low": 0.17854902148246765,
+          "ci_high": 0.3650619089603424,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "texture_homogeneity": {
+          "mean": -0.2771184742450714,
+          "ci_low": -0.3821598291397095,
+          "ci_high": -0.19384373724460602,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "texture_entropy": {
+          "mean": 0.23454764485359192,
+          "ci_low": 0.07922708988189697,
+          "ci_high": 0.38986822962760925,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "bright_region": {
+          "mean": 0.18873828649520874,
+          "ci_low": -0.00972737087868154,
+          "ci_high": 0.42885148525238037,
+          "valid_n": 4,
+          "fdr_q": 0.3878599814589277
+        },
+        "dark_region": {
+          "mean": 0.10221095383167267,
+          "ci_low": -0.06400556117296219,
+          "ci_high": 0.2795104384422302,
+          "valid_n": 4,
+          "fdr_q": 0.5148809449028576
+        },
+        "local_intensity_deviation": {
+          "mean": 0.16374830901622772,
+          "ci_low": 0.09875364601612091,
+          "ci_high": 0.22885059826076032,
+          "valid_n": 4,
+          "fdr_q": 0.2771848879861241
+        },
+        "region_occupancy": {
+          "mean": 0.22926883399486542,
+          "ci_low": 0.07333430647850037,
+          "ci_high": 0.376408869028092,
+          "valid_n": 4,
+          "fdr_q": 0.3673629850968127
+        }
+      }
+    },
+    {
+      "concept_index": 2,
+      "concept_name": "Pet-image directional edge coherence \u2014 unverified guidance",
+      "training_group": "boundary-guided",
+      "descriptor": "edge_coherence",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "edge_coherence",
+      "strongest_observed_descriptor": "fine_edge_detail",
+      "grounding_strength": 0.035847779363393784,
+      "mean": -0.035847779363393784,
+      "ci_low": -0.15582950450479985,
+      "ci_high": 0.11410927791148424,
+      "valid_n": 4,
+      "fdr_q": 0.7556157399979727,
+      "validation_response_quartiles": [
+        0.02423939434811473,
+        0.032914803363382816,
+        0.05032714828848839
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.07855728268623352,
+          "ci_low": -0.21872273087501526,
+          "ci_high": 0.10846490431576968,
+          "valid_n": 4,
+          "fdr_q": 0.5657321605367815
+        },
+        "texture": {
+          "mean": -0.037801142781972885,
+          "ci_low": -0.18105719983577728,
+          "ci_high": 0.15986987948417664,
+          "valid_n": 4,
+          "fdr_q": 0.7787695067058326
+        },
+        "morphology": {
+          "mean": 0.022593187168240547,
+          "ci_low": -0.04176237806677818,
+          "ci_high": 0.09530171751976013,
+          "valid_n": 4,
+          "fdr_q": 0.6746168191143458
+        },
+        "intensity": {
+          "mean": 0.07584016770124435,
+          "ci_low": 0.0204877071082592,
+          "ci_high": 0.1391710691154004,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "edge_steepness": {
+          "mean": -0.061440467834472656,
+          "ci_low": -0.22973954677581787,
+          "ci_high": 0.11020864546298981,
+          "valid_n": 4,
+          "fdr_q": 0.6480144454367746
+        },
+        "edge_density": {
+          "mean": -0.01814458891749382,
+          "ci_low": -0.27371352910995483,
+          "ci_high": 0.23874845132231742,
+          "valid_n": 4,
+          "fdr_q": 0.9294127679295722
+        },
+        "edge_coherence": {
+          "mean": -0.035847779363393784,
+          "ci_low": -0.15582950450479985,
+          "ci_high": 0.11410927791148424,
+          "valid_n": 4,
+          "fdr_q": 0.7556157399979727
+        },
+        "fine_edge_detail": {
+          "mean": -0.1336701512336731,
+          "ci_low": -0.3609153628349304,
+          "ci_high": 0.04590331660583643,
+          "valid_n": 4,
+          "fdr_q": 0.5221209265941646
+        },
+        "texture_variation": {
+          "mean": -0.03145638108253479,
+          "ci_low": -0.1641666293144226,
+          "ci_high": 0.14632250368595123,
+          "valid_n": 4,
+          "fdr_q": 0.8127169707642072
+        },
+        "texture_contrast": {
+          "mean": -0.05173363536596298,
+          "ci_low": -0.18963880836963654,
+          "ci_high": 0.0628556904383006,
+          "valid_n": 4,
+          "fdr_q": 0.654296087152927
+        },
+        "texture_homogeneity": {
+          "mean": 0.049554962664842606,
+          "ci_low": -0.11309552192687988,
+          "ci_high": 0.20385409891605377,
+          "valid_n": 4,
+          "fdr_q": 0.6928898180020568
+        },
+        "texture_entropy": {
+          "mean": -0.043991416692733765,
+          "ci_low": -0.19321078062057495,
+          "ci_high": 0.14393401667475714,
+          "valid_n": 4,
+          "fdr_q": 0.7510251862377872
+        },
+        "bright_region": {
+          "mean": 0.03373308479785919,
+          "ci_low": -0.04344656318426132,
+          "ci_high": 0.09120863694697622,
+          "valid_n": 4,
+          "fdr_q": 0.5588366746052811
+        },
+        "dark_region": {
+          "mean": -0.03708462044596672,
+          "ci_low": -0.1584732823073864,
+          "ci_high": 0.08908149618655443,
+          "valid_n": 4,
+          "fdr_q": 0.7556157399979727
+        },
+        "local_intensity_deviation": {
+          "mean": 0.031640976667404175,
+          "ci_low": -0.14058513939380646,
+          "ci_high": 0.21088246777653696,
+          "valid_n": 4,
+          "fdr_q": 0.8081598403000104
+        },
+        "region_occupancy": {
+          "mean": -0.003066240344196558,
+          "ci_low": -0.14329245686531067,
+          "ci_high": 0.10095389187335968,
+          "valid_n": 4,
+          "fdr_q": 0.9718773638718949
+        }
+      }
+    },
+    {
+      "concept_index": 3,
+      "concept_name": "Pet-image fine edge detail \u2014 unverified guidance",
+      "training_group": "boundary-guided",
+      "descriptor": "fine_edge_detail",
+      "direction": "positive",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "fine_edge_detail",
+      "strongest_observed_descriptor": "region_occupancy",
+      "grounding_strength": 0.03989160805940628,
+      "mean": 0.03989160805940628,
+      "ci_low": -0.15781048126518724,
+      "ci_high": 0.2497694492340088,
+      "valid_n": 4,
+      "fdr_q": 0.8127169707642072,
+      "validation_response_quartiles": [
+        0.02172261383384466,
+        0.030934397131204605,
+        0.04431640449911356
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.125919908285141,
+          "ci_low": -0.05523645877838135,
+          "ci_high": 0.3427478075027466,
+          "valid_n": 4,
+          "fdr_q": 0.5234888295686084
+        },
+        "texture": {
+          "mean": 0.12107563763856888,
+          "ci_low": -0.06438783891499042,
+          "ci_high": 0.3468945533037187,
+          "valid_n": 4,
+          "fdr_q": 0.5588366746052811
+        },
+        "morphology": {
+          "mean": 0.18184073269367218,
+          "ci_low": -0.030741998925805092,
+          "ci_high": 0.3836551904678345,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "intensity": {
+          "mean": 0.15607646107673645,
+          "ci_low": 0.002707619220018387,
+          "ci_high": 0.35739386081695557,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "edge_steepness": {
+          "mean": 0.12566789984703064,
+          "ci_low": 0.009885787940584123,
+          "ci_high": 0.28672006726264954,
+          "valid_n": 4,
+          "fdr_q": 0.3855783499037793
+        },
+        "edge_density": {
+          "mean": 0.14375737309455872,
+          "ci_low": -0.10492218304425478,
+          "ci_high": 0.4033547639846802,
+          "valid_n": 4,
+          "fdr_q": 0.568401255578736
+        },
+        "edge_coherence": {
+          "mean": 0.15665613114833832,
+          "ci_low": -0.014614287484437218,
+          "ci_high": 0.3932804465293884,
+          "valid_n": 4,
+          "fdr_q": 0.4456232990884761
+        },
+        "fine_edge_detail": {
+          "mean": 0.03989160805940628,
+          "ci_low": -0.15781048126518724,
+          "ci_high": 0.2497694492340088,
+          "valid_n": 4,
+          "fdr_q": 0.8127169707642072
+        },
+        "texture_variation": {
+          "mean": 0.13324116170406342,
+          "ci_low": -0.0965692549943924,
+          "ci_high": 0.32897159457206726,
+          "valid_n": 4,
+          "fdr_q": 0.532723605925942
+        },
+        "texture_contrast": {
+          "mean": 0.06763207167387009,
+          "ci_low": -0.1000313987955451,
+          "ci_high": 0.26160165667533875,
+          "valid_n": 4,
+          "fdr_q": 0.6566322716571266
+        },
+        "texture_homogeneity": {
+          "mean": -0.07168281078338623,
+          "ci_low": -0.26679879426956177,
+          "ci_high": 0.10705612078309068,
+          "valid_n": 4,
+          "fdr_q": 0.6566322716571266
+        },
+        "texture_entropy": {
+          "mean": 0.11913725733757019,
+          "ci_low": -0.07160835918039081,
+          "ci_high": 0.3089140057563782,
+          "valid_n": 4,
+          "fdr_q": 0.532723605925942
+        },
+        "bright_region": {
+          "mean": 0.15946927666664124,
+          "ci_low": -0.07652619481086731,
+          "ci_high": 0.36453986167907715,
+          "valid_n": 4,
+          "fdr_q": 0.4204532666020734
+        },
+        "dark_region": {
+          "mean": 0.05446690693497658,
+          "ci_low": -0.07285011559724808,
+          "ci_high": 0.12610673904418945,
+          "valid_n": 4,
+          "fdr_q": 0.5799678180627003
+        },
+        "local_intensity_deviation": {
+          "mean": -0.023589540272951126,
+          "ci_low": -0.27238571643829346,
+          "ci_high": 0.164939284324646,
+          "valid_n": 4,
+          "fdr_q": 0.8764542865336356
+        },
+        "region_occupancy": {
+          "mean": 0.20563165843486786,
+          "ci_low": 0.03586070239543915,
+          "ci_high": 0.4185110628604889,
+          "valid_n": 4,
+          "fdr_q": 0.3659911487652984
+        }
+      }
+    },
+    {
+      "concept_index": 4,
+      "concept_name": "Pet-image local texture variability \u2014 unverified guidance",
+      "training_group": "texture-guided",
+      "descriptor": "texture_variation",
+      "direction": "positive",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "texture_variation",
+      "strongest_observed_descriptor": "texture_variation",
+      "grounding_strength": 0.29532164335250854,
+      "mean": 0.29532164335250854,
+      "ci_low": 0.03097693482413888,
+      "ci_high": 0.48701655864715576,
+      "valid_n": 4,
+      "fdr_q": 0.36411948947951495,
+      "validation_response_quartiles": [
+        0.11207169108092785,
+        0.1402590349316597,
+        0.19326606020331383
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.21675550937652588,
+          "ci_low": 0.006943316943943539,
+          "ci_high": 0.5416893362998962,
+          "valid_n": 4,
+          "fdr_q": 0.427985947157887
+        },
+        "texture": {
+          "mean": 0.2757849395275116,
+          "ci_low": 0.026291509810835126,
+          "ci_high": 0.5355355739593506,
+          "valid_n": 4,
+          "fdr_q": 0.36411948947951495
+        },
+        "morphology": {
+          "mean": 0.19824308156967163,
+          "ci_low": -0.07467926293611526,
+          "ci_high": 0.3771415054798126,
+          "valid_n": 4,
+          "fdr_q": 0.3878599814589277
+        },
+        "intensity": {
+          "mean": 0.036957450211048126,
+          "ci_low": -0.2577386796474457,
+          "ci_high": 0.22936394810676575,
+          "valid_n": 4,
+          "fdr_q": 0.8403171735448539
+        },
+        "edge_steepness": {
+          "mean": 0.16115131974220276,
+          "ci_low": -0.0028875991702079773,
+          "ci_high": 0.3251902163028717,
+          "valid_n": 4,
+          "fdr_q": 0.41693635059577216
+        },
+        "edge_density": {
+          "mean": 0.28897157311439514,
+          "ci_low": -0.04540702700614929,
+          "ci_high": 0.6496874392032624,
+          "valid_n": 4,
+          "fdr_q": 0.3878599814589277
+        },
+        "edge_coherence": {
+          "mean": 0.24967117607593536,
+          "ci_low": -0.030978985130786896,
+          "ci_high": 0.4704068899154663,
+          "valid_n": 4,
+          "fdr_q": 0.3878599814589277
+        },
+        "fine_edge_detail": {
+          "mean": 0.11805498600006104,
+          "ci_low": -0.14087790250778198,
+          "ci_high": 0.374750018119812,
+          "valid_n": 4,
+          "fdr_q": 0.5755206231478588
+        },
+        "texture_variation": {
+          "mean": 0.29532164335250854,
+          "ci_low": 0.03097693482413888,
+          "ci_high": 0.48701655864715576,
+          "valid_n": 4,
+          "fdr_q": 0.36411948947951495
+        },
+        "texture_contrast": {
+          "mean": 0.16684775054454803,
+          "ci_low": 0.008624836802482605,
+          "ci_high": 0.3484392762184143,
+          "valid_n": 4,
+          "fdr_q": 0.37311219396168827
+        },
+        "texture_homogeneity": {
+          "mean": -0.18692810833454132,
+          "ci_low": -0.35106320381164546,
+          "ci_high": 0.02403598092496395,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "texture_entropy": {
+          "mean": 0.2897462248802185,
+          "ci_low": 0.10101577378809456,
+          "ci_high": 0.5413671135902405,
+          "valid_n": 4,
+          "fdr_q": 0.36411948947951495
+        },
+        "bright_region": {
+          "mean": 0.16242876648902893,
+          "ci_low": -0.10007508844137192,
+          "ci_high": 0.34630293250083927,
+          "valid_n": 4,
+          "fdr_q": 0.48966106501989975
+        },
+        "dark_region": {
+          "mean": 0.18673177063465118,
+          "ci_low": 0.006644316017627716,
+          "ci_high": 0.36681926250457764,
+          "valid_n": 4,
+          "fdr_q": 0.3672605292343968
+        },
+        "local_intensity_deviation": {
+          "mean": 0.14555518329143524,
+          "ci_low": -0.019422493875026703,
+          "ci_high": 0.3269909620285034,
+          "valid_n": 4,
+          "fdr_q": 0.46715429624031896
+        },
+        "region_occupancy": {
+          "mean": 0.27794596552848816,
+          "ci_low": 0.09389971178025007,
+          "ci_high": 0.4809429347515106,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        }
+      }
+    },
+    {
+      "concept_index": 5,
+      "concept_name": "Pet-image neighbouring-pixel contrast \u2014 unverified guidance",
+      "training_group": "texture-guided",
+      "descriptor": "texture_contrast",
+      "direction": "positive",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "texture_contrast",
+      "strongest_observed_descriptor": "region_occupancy",
+      "grounding_strength": 0.2086155116558075,
+      "mean": 0.2086155116558075,
+      "ci_low": 0.11811785399913788,
+      "ci_high": 0.35839176177978516,
+      "valid_n": 4,
+      "fdr_q": 0.36338350978159073,
+      "validation_response_quartiles": [
+        0.03987063933163881,
+        0.04721652716398239,
+        0.07200947776436806
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.18753257393836975,
+          "ci_low": 0.054317258298397064,
+          "ci_high": 0.3794776156544686,
+          "valid_n": 4,
+          "fdr_q": 0.3660444092866918
+        },
+        "texture": {
+          "mean": 0.21982473134994507,
+          "ci_low": 0.11560142152011395,
+          "ci_high": 0.4152927309274674,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "morphology": {
+          "mean": 0.3392165005207062,
+          "ci_low": 0.2670138940215111,
+          "ci_high": 0.4318031668663025,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "intensity": {
+          "mean": 0.1413128525018692,
+          "ci_low": 0.0126210413640365,
+          "ci_high": 0.27000465989112854,
+          "valid_n": 4,
+          "fdr_q": 0.3672605292343968
+        },
+        "edge_steepness": {
+          "mean": 0.13606467843055725,
+          "ci_low": 0.014974299818277359,
+          "ci_high": 0.2833337187767029,
+          "valid_n": 4,
+          "fdr_q": 0.3659911487652984
+        },
+        "edge_density": {
+          "mean": 0.21631520986557007,
+          "ci_low": 0.05960816890001297,
+          "ci_high": 0.49948573112487793,
+          "valid_n": 4,
+          "fdr_q": 0.3878599814589277
+        },
+        "edge_coherence": {
+          "mean": 0.17229345440864563,
+          "ci_low": 0.05251893401145935,
+          "ci_high": 0.40226954221725464,
+          "valid_n": 4,
+          "fdr_q": 0.3878599814589277
+        },
+        "fine_edge_detail": {
+          "mean": 0.1435808539390564,
+          "ci_low": -0.038164954632520676,
+          "ci_high": 0.3507978916168213,
+          "valid_n": 4,
+          "fdr_q": 0.4204532666020734
+        },
+        "texture_variation": {
+          "mean": 0.2129727303981781,
+          "ci_low": 0.10341174900531769,
+          "ci_high": 0.40679411888122563,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_contrast": {
+          "mean": 0.2086155116558075,
+          "ci_low": 0.11811785399913788,
+          "ci_high": 0.35839176177978516,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_homogeneity": {
+          "mean": -0.2100377082824707,
+          "ci_low": -0.38601307272911073,
+          "ci_high": -0.11021623015403748,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_entropy": {
+          "mean": 0.23053434491157532,
+          "ci_low": 0.125479781255126,
+          "ci_high": 0.41205355525016785,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "bright_region": {
+          "mean": 0.2927130162715912,
+          "ci_low": 0.17169012129306793,
+          "ci_high": 0.38008537888526917,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "dark_region": {
+          "mean": 0.1665334403514862,
+          "ci_low": 0.03168535605072975,
+          "ci_high": 0.26361751556396484,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "local_intensity_deviation": {
+          "mean": 0.12342249602079391,
+          "ci_low": 0.02866491028107703,
+          "ci_high": 0.2649350166320801,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "region_occupancy": {
+          "mean": 0.3896072506904602,
+          "ci_low": 0.30507544577121737,
+          "ci_high": 0.4761958934366704,
+          "valid_n": 4,
+          "fdr_q": 0.23636497347454136
+        }
+      }
+    },
+    {
+      "concept_index": 6,
+      "concept_name": "Pet-image local texture homogeneity \u2014 unverified guidance",
+      "training_group": "texture-guided",
+      "descriptor": "texture_homogeneity",
+      "direction": "positive",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "texture_homogeneity",
+      "strongest_observed_descriptor": "edge_density",
+      "grounding_strength": 0.16635477542877197,
+      "mean": 0.16635477542877197,
+      "ci_low": 0.0684868970885873,
+      "ci_high": 0.27183812856674194,
+      "valid_n": 4,
+      "fdr_q": 0.36338350978159073,
+      "validation_response_quartiles": [
+        0.9706804156303406,
+        0.9837797582149506,
+        0.98870949447155
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.1725367307662964,
+          "ci_low": -0.27285775542259216,
+          "ci_high": -0.0013313181698322296,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture": {
+          "mean": -0.1785786747932434,
+          "ci_low": -0.29145726561546326,
+          "ci_high": -0.02464759936556208,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "morphology": {
+          "mean": -0.14812712371349335,
+          "ci_low": -0.2518814504146576,
+          "ci_high": -0.0890883356332779,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "intensity": {
+          "mean": -0.11880273371934891,
+          "ci_low": -0.25667157769203186,
+          "ci_high": 0.03182569146156311,
+          "valid_n": 4,
+          "fdr_q": 0.4204532666020734
+        },
+        "edge_steepness": {
+          "mean": -0.1786811649799347,
+          "ci_low": -0.28594446256756784,
+          "ci_high": -0.06494630128145218,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "edge_density": {
+          "mean": -0.2541513442993164,
+          "ci_low": -0.4485805928707123,
+          "ci_high": -0.07091958401724678,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "edge_coherence": {
+          "mean": -0.15110208094120026,
+          "ci_low": -0.2981240749359131,
+          "ci_high": 0.04990533702075493,
+          "valid_n": 4,
+          "fdr_q": 0.40048605531476056
+        },
+        "fine_edge_detail": {
+          "mean": -0.12469084560871124,
+          "ci_low": -0.24791383743286133,
+          "ci_high": 0.0008958764374256134,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "texture_variation": {
+          "mean": -0.17506401240825653,
+          "ci_low": -0.2956286370754242,
+          "ci_high": 0.015609856741502882,
+          "valid_n": 4,
+          "fdr_q": 0.3659911487652984
+        },
+        "texture_contrast": {
+          "mean": -0.1479579508304596,
+          "ci_low": -0.22546100616455078,
+          "ci_high": -0.05916864052414894,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_homogeneity": {
+          "mean": 0.16635477542877197,
+          "ci_low": 0.0684868970885873,
+          "ci_high": 0.27183812856674194,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_entropy": {
+          "mean": -0.1652492880821228,
+          "ci_low": -0.31413453817367554,
+          "ci_high": 0.01876496896147728,
+          "valid_n": 4,
+          "fdr_q": 0.3672605292343968
+        },
+        "bright_region": {
+          "mean": -0.1446608155965805,
+          "ci_low": -0.2197093665599823,
+          "ci_high": -0.07008174061775208,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "dark_region": {
+          "mean": -0.0685373842716217,
+          "ci_low": -0.20691323280334473,
+          "ci_high": 0.06983847171068192,
+          "valid_n": 4,
+          "fdr_q": 0.5755206231478588
+        },
+        "local_intensity_deviation": {
+          "mean": -0.10435745865106583,
+          "ci_low": -0.21168039739131927,
+          "ci_high": 0.05770687758922577,
+          "valid_n": 4,
+          "fdr_q": 0.43046695872619806
+        },
+        "region_occupancy": {
+          "mean": -0.16610150039196014,
+          "ci_low": -0.2316468060016632,
+          "ci_high": -0.08301734924316406,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        }
+      }
+    },
+    {
+      "concept_index": 7,
+      "concept_name": "Pet-image local intensity entropy \u2014 unverified guidance",
+      "training_group": "texture-guided",
+      "descriptor": "texture_entropy",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "texture_entropy",
+      "strongest_observed_descriptor": "edge_density",
+      "grounding_strength": 0.2895169258117676,
+      "mean": -0.2895169258117676,
+      "ci_low": -0.5019753113389015,
+      "ci_high": -0.0773523373529315,
+      "valid_n": 4,
+      "fdr_q": 0.36338350978159073,
+      "validation_response_quartiles": [
+        0.19469401985406876,
+        0.2361675500869751,
+        0.3028954267501831
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.23684512078762054,
+          "ci_low": -0.40394350960850717,
+          "ci_high": -0.057762421667575836,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture": {
+          "mean": -0.28753966093063354,
+          "ci_low": -0.5084941387176514,
+          "ci_high": -0.08609601408243174,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "morphology": {
+          "mean": -0.18309149146080017,
+          "ci_low": -0.2958661362528801,
+          "ci_high": -0.07678377628326416,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "intensity": {
+          "mean": -0.0900699645280838,
+          "ci_low": -0.25932934880256653,
+          "ci_high": 0.053471370413899606,
+          "valid_n": 4,
+          "fdr_q": 0.5234888295686084
+        },
+        "edge_steepness": {
+          "mean": -0.15377479791641235,
+          "ci_low": -0.27030518352985383,
+          "ci_high": -0.0025964574888347296,
+          "valid_n": 4,
+          "fdr_q": 0.3660444092866918
+        },
+        "edge_density": {
+          "mean": -0.30501049757003784,
+          "ci_low": -0.5833489298820496,
+          "ci_high": -0.025918898824602195,
+          "valid_n": 4,
+          "fdr_q": 0.3660444092866918
+        },
+        "edge_coherence": {
+          "mean": -0.16990245878696442,
+          "ci_low": -0.37896367982029916,
+          "ci_high": 0.0008679044549353421,
+          "valid_n": 4,
+          "fdr_q": 0.3981484067684402
+        },
+        "fine_edge_detail": {
+          "mean": -0.22311848402023315,
+          "ci_low": -0.3977442689239979,
+          "ci_high": -0.07315699756145477,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_variation": {
+          "mean": -0.28884589672088623,
+          "ci_low": -0.5341325402259827,
+          "ci_high": -0.07365329563617706,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_contrast": {
+          "mean": -0.26264652609825134,
+          "ci_low": -0.39181140065193176,
+          "ci_high": -0.1334816813468933,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_homogeneity": {
+          "mean": 0.27496615052223206,
+          "ci_low": 0.11991544179618359,
+          "ci_high": 0.4297557182610035,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_entropy": {
+          "mean": -0.2895169258117676,
+          "ci_low": -0.5019753113389015,
+          "ci_high": -0.0773523373529315,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "bright_region": {
+          "mean": -0.17110852897167206,
+          "ci_low": -0.28127990290522575,
+          "ci_high": -0.04229239001870155,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "dark_region": {
+          "mean": -0.07677809149026871,
+          "ci_low": -0.2212669849395752,
+          "ci_high": 0.06771078705787659,
+          "valid_n": 4,
+          "fdr_q": 0.5906716056553679
+        },
+        "local_intensity_deviation": {
+          "mean": -0.20297640562057495,
+          "ci_low": -0.4373089075088501,
+          "ci_high": -0.0324297733604908,
+          "valid_n": 4,
+          "fdr_q": 0.3672605292343968
+        },
+        "region_occupancy": {
+          "mean": -0.2083771526813507,
+          "ci_low": -0.3419681191444397,
+          "ci_high": -0.09206712245941162,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        }
+      }
+    },
+    {
+      "concept_index": 8,
+      "concept_name": "Pet-image relatively bright image regions \u2014 unverified guidance",
+      "training_group": "region-guided",
+      "descriptor": "bright_region",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "bright_region",
+      "strongest_observed_descriptor": "edge_density",
+      "grounding_strength": 0.20392902195453644,
+      "mean": -0.20392902195453644,
+      "ci_low": -0.395181268453598,
+      "ci_high": -0.018176527693867683,
+      "valid_n": 4,
+      "fdr_q": 0.3660444092866918,
+      "validation_response_quartiles": [
+        0.18162596598267555,
+        0.2661490812897682,
+        0.34948594123125076
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.2367810159921646,
+          "ci_low": -0.533769965171814,
+          "ci_high": 0.018841998558491575,
+          "valid_n": 4,
+          "fdr_q": 0.3878599814589277
+        },
+        "texture": {
+          "mean": -0.22054897248744965,
+          "ci_low": -0.3862318992614746,
+          "ci_high": -0.0587448924779892,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "morphology": {
+          "mean": -0.222010999917984,
+          "ci_low": -0.37625291422009466,
+          "ci_high": -0.04495601663365958,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "intensity": {
+          "mean": -0.12753403186798096,
+          "ci_low": -0.3047921657562256,
+          "ci_high": 0.03710328787565231,
+          "valid_n": 4,
+          "fdr_q": 0.4590161010733122
+        },
+        "edge_steepness": {
+          "mean": -0.20895498991012573,
+          "ci_low": -0.4574451446533203,
+          "ci_high": 0.002712998539209366,
+          "valid_n": 4,
+          "fdr_q": 0.39117132077005173
+        },
+        "edge_density": {
+          "mean": -0.32266998291015625,
+          "ci_low": -0.5415939092636108,
+          "ci_high": -0.13128583133220673,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "edge_coherence": {
+          "mean": -0.1665533483028412,
+          "ci_low": -0.5109604597091675,
+          "ci_high": 0.1142963035032155,
+          "valid_n": 4,
+          "fdr_q": 0.5589472801335647
+        },
+        "fine_edge_detail": {
+          "mean": -0.20828035473823547,
+          "ci_low": -0.38374994844198224,
+          "ci_high": 0.009916196390986542,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "texture_variation": {
+          "mean": -0.21882593631744385,
+          "ci_low": -0.39684611558914185,
+          "ci_high": -0.003722554072737694,
+          "valid_n": 4,
+          "fdr_q": 0.3660444092866918
+        },
+        "texture_contrast": {
+          "mean": -0.21161222457885742,
+          "ci_low": -0.3354248106479645,
+          "ci_high": -0.09116391837596893,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_homogeneity": {
+          "mean": 0.22879669070243835,
+          "ci_low": 0.10347342491149902,
+          "ci_high": 0.3541199266910553,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_entropy": {
+          "mean": -0.251409649848938,
+          "ci_low": -0.44752665683627124,
+          "ci_high": -0.06926445662975311,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "bright_region": {
+          "mean": -0.20392902195453644,
+          "ci_low": -0.395181268453598,
+          "ci_high": -0.018176527693867683,
+          "valid_n": 4,
+          "fdr_q": 0.3660444092866918
+        },
+        "dark_region": {
+          "mean": -0.14692825078964233,
+          "ci_low": -0.3635901212692261,
+          "ci_high": 0.06975654475390912,
+          "valid_n": 4,
+          "fdr_q": 0.4676599734468762
+        },
+        "local_intensity_deviation": {
+          "mean": -0.1461721658706665,
+          "ci_low": -0.27375638484954834,
+          "ci_high": -0.018587946891784668,
+          "valid_n": 4,
+          "fdr_q": 0.3878599814589277
+        },
+        "region_occupancy": {
+          "mean": -0.26349812746047974,
+          "ci_low": -0.41239151209592817,
+          "ci_high": -0.06754490733146667,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        }
+      }
+    },
+    {
+      "concept_index": 9,
+      "concept_name": "Pet-image relatively dark image regions \u2014 unverified guidance",
+      "training_group": "region-guided",
+      "descriptor": "dark_region",
+      "direction": "positive",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "dark_region",
+      "strongest_observed_descriptor": "edge_density",
+      "grounding_strength": 0.16194382309913635,
+      "mean": 0.16194382309913635,
+      "ci_low": -0.035347018390893936,
+      "ci_high": 0.41560059785842896,
+      "valid_n": 4,
+      "fdr_q": 0.41693635059577216,
+      "validation_response_quartiles": [
+        0.12534579448401928,
+        0.15956169366836548,
+        0.18115027993917465
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.25390300154685974,
+          "ci_low": 0.14771737158298492,
+          "ci_high": 0.42510433793067937,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture": {
+          "mean": 0.32051607966423035,
+          "ci_low": 0.26453543156385423,
+          "ci_high": 0.38000720739364624,
+          "valid_n": 4,
+          "fdr_q": 0.2032605328186436
+        },
+        "morphology": {
+          "mean": 0.29784876108169556,
+          "ci_low": 0.008112035691738129,
+          "ci_high": 0.5897641018033033,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "intensity": {
+          "mean": 0.15966883301734924,
+          "ci_low": -0.17299839630722996,
+          "ci_high": 0.5556276440620422,
+          "valid_n": 4,
+          "fdr_q": 0.6032810561120877
+        },
+        "edge_steepness": {
+          "mean": 0.21276281774044037,
+          "ci_low": 0.11474278569221497,
+          "ci_high": 0.35144853591918945,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "edge_density": {
+          "mean": 0.37538567185401917,
+          "ci_low": 0.26752506121993064,
+          "ci_high": 0.5291466116905212,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "edge_coherence": {
+          "mean": 0.18527810275554657,
+          "ci_low": -0.01739002764225006,
+          "ci_high": 0.3879462480545044,
+          "valid_n": 4,
+          "fdr_q": 0.41192558870660373
+        },
+        "fine_edge_detail": {
+          "mean": 0.2517405152320862,
+          "ci_low": 0.16944089494645595,
+          "ci_high": 0.3438006050884724,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "texture_variation": {
+          "mean": 0.3228531777858734,
+          "ci_low": 0.23497840762138367,
+          "ci_high": 0.4176415801048279,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "texture_contrast": {
+          "mean": 0.2790774703025818,
+          "ci_low": 0.23883744701743126,
+          "ci_high": 0.32747548818588257,
+          "valid_n": 4,
+          "fdr_q": 0.18004548467381817
+        },
+        "texture_homogeneity": {
+          "mean": -0.3006742000579834,
+          "ci_low": -0.33196642994880676,
+          "ci_high": -0.2787102326750755,
+          "valid_n": 4,
+          "fdr_q": 0.11150805872261692
+        },
+        "texture_entropy": {
+          "mean": 0.3288344442844391,
+          "ci_low": 0.2587326467037201,
+          "ci_high": 0.4078392565250397,
+          "valid_n": 4,
+          "fdr_q": 0.21466496497208237
+        },
+        "bright_region": {
+          "mean": 0.2735324501991272,
+          "ci_low": -0.07284659892320633,
+          "ci_high": 0.584004282951355,
+          "valid_n": 4,
+          "fdr_q": 0.3967003713751258
+        },
+        "dark_region": {
+          "mean": 0.16194382309913635,
+          "ci_low": -0.035347018390893936,
+          "ci_high": 0.41560059785842896,
+          "valid_n": 4,
+          "fdr_q": 0.41693635059577216
+        },
+        "local_intensity_deviation": {
+          "mean": 0.20190691947937012,
+          "ci_low": 0.053239692002534866,
+          "ci_high": 0.327297679334879,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "region_occupancy": {
+          "mean": 0.3497108817100525,
+          "ci_low": 0.11920367181301117,
+          "ci_high": 0.6499174728989603,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        }
+      }
+    },
+    {
+      "concept_index": 10,
+      "concept_name": "Pet-image local intensity deviation \u2014 unverified guidance",
+      "training_group": "region-guided",
+      "descriptor": "local_intensity_deviation",
+      "direction": "positive",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "local_intensity_deviation",
+      "strongest_observed_descriptor": "region_occupancy",
+      "grounding_strength": 0.09470115602016449,
+      "mean": 0.09470115602016449,
+      "ci_low": -0.06665977090597153,
+      "ci_high": 0.2356017827987671,
+      "valid_n": 4,
+      "fdr_q": 0.48286063084254166,
+      "validation_response_quartiles": [
+        0.04293307848274708,
+        0.04927947744727135,
+        0.0636565750464797
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.13073143362998962,
+          "ci_low": 0.019536453019827617,
+          "ci_high": 0.23143250718712813,
+          "valid_n": 4,
+          "fdr_q": 0.36411948947951495
+        },
+        "texture": {
+          "mean": 0.1904274821281433,
+          "ci_low": 0.006264273077249527,
+          "ci_high": 0.29682236909866333,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "morphology": {
+          "mean": 0.21042534708976746,
+          "ci_low": 0.05715219546109438,
+          "ci_high": 0.3279684782028198,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "intensity": {
+          "mean": 0.1177590861916542,
+          "ci_low": -0.11478744242340325,
+          "ci_high": 0.335920512676239,
+          "valid_n": 4,
+          "fdr_q": 0.5588366746052811
+        },
+        "edge_steepness": {
+          "mean": 0.06430613994598389,
+          "ci_low": -0.004034237936139107,
+          "ci_high": 0.10947149991989136,
+          "valid_n": 4,
+          "fdr_q": 0.3672605292343968
+        },
+        "edge_density": {
+          "mean": 0.20334522426128387,
+          "ci_low": 0.042063059285283096,
+          "ci_high": 0.37660705596208593,
+          "valid_n": 4,
+          "fdr_q": 0.3659911487652984
+        },
+        "edge_coherence": {
+          "mean": 0.1270463913679123,
+          "ci_low": -0.0005153194069862366,
+          "ci_high": 0.24605503678321838,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "fine_edge_detail": {
+          "mean": 0.15512990951538086,
+          "ci_low": 0.053709015250205994,
+          "ci_high": 0.2594192326068878,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_variation": {
+          "mean": 0.19872385263442993,
+          "ci_low": 0.015711797727271916,
+          "ci_high": 0.31355762481689453,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_contrast": {
+          "mean": 0.12890984117984772,
+          "ci_low": -0.022388462023809553,
+          "ci_high": 0.24327290058135986,
+          "valid_n": 4,
+          "fdr_q": 0.38698556377141274
+        },
+        "texture_homogeneity": {
+          "mean": -0.1384810507297516,
+          "ci_low": -0.2499029479920864,
+          "ci_high": 0.035827551130205394,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "texture_entropy": {
+          "mean": 0.18146638572216034,
+          "ci_low": -0.006174875446595252,
+          "ci_high": 0.33677977323532104,
+          "valid_n": 4,
+          "fdr_q": 0.3659911487652984
+        },
+        "bright_region": {
+          "mean": 0.1728876531124115,
+          "ci_low": -0.009273886680603027,
+          "ci_high": 0.3176068663597107,
+          "valid_n": 4,
+          "fdr_q": 0.3660444092866918
+        },
+        "dark_region": {
+          "mean": 0.14639297127723694,
+          "ci_low": 0.03023781250230968,
+          "ci_high": 0.2625481188297272,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "local_intensity_deviation": {
+          "mean": 0.09470115602016449,
+          "ci_low": -0.06665977090597153,
+          "ci_high": 0.2356017827987671,
+          "valid_n": 4,
+          "fdr_q": 0.48286063084254166
+        },
+        "region_occupancy": {
+          "mean": 0.28040117025375366,
+          "ci_low": 0.19417856633663177,
+          "ci_high": 0.36662381887435913,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        }
+      }
+    },
+    {
+      "concept_index": 11,
+      "concept_name": "Pet-image threshold-region occupancy \u2014 unverified guidance",
+      "training_group": "region-guided",
+      "descriptor": "region_occupancy",
+      "direction": "positive",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unverified",
+      "guidance_applied": true,
+      "guidance_configured": true,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": "region_occupancy",
+      "strongest_observed_descriptor": "edge_density",
+      "grounding_strength": 0.036061517894268036,
+      "mean": 0.036061517894268036,
+      "ci_low": -0.17302956730127333,
+      "ci_high": 0.23601019382476807,
+      "valid_n": 4,
+      "fdr_q": 0.839610592278347,
+      "validation_response_quartiles": [
+        0.3412352055311203,
+        0.4420373737812042,
+        0.5201932638883591
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": 0.17325371503829956,
+          "ci_low": 0.04991821572184563,
+          "ci_high": 0.34382152557373047,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture": {
+          "mean": 0.1973128318786621,
+          "ci_low": 0.12541167084127663,
+          "ci_high": 0.31153392866253854,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "morphology": {
+          "mean": -0.010967749170958996,
+          "ci_low": -0.23001135513186452,
+          "ci_high": 0.17916187457740324,
+          "valid_n": 4,
+          "fdr_q": 0.9458342948438978
+        },
+        "intensity": {
+          "mean": -0.07856126129627228,
+          "ci_low": -0.1655983731150627,
+          "ci_high": 0.04587363768368962,
+          "valid_n": 4,
+          "fdr_q": 0.469597853084295
+        },
+        "edge_steepness": {
+          "mean": 0.16485518217086792,
+          "ci_low": 0.010917918756604195,
+          "ci_high": 0.30247533321380615,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "edge_density": {
+          "mean": 0.2657022476196289,
+          "ci_low": 0.16563017666339874,
+          "ci_high": 0.38069533407688144,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "edge_coherence": {
+          "mean": 0.12675191462039948,
+          "ci_low": -0.06182263055816293,
+          "ci_high": 0.3114234209060669,
+          "valid_n": 4,
+          "fdr_q": 0.469597853084295
+        },
+        "fine_edge_detail": {
+          "mean": 0.1692538857460022,
+          "ci_low": 0.012090079486370087,
+          "ci_high": 0.40323877334594727,
+          "valid_n": 4,
+          "fdr_q": 0.3878599814589277
+        },
+        "texture_variation": {
+          "mean": 0.19848863780498505,
+          "ci_low": 0.12539893426001072,
+          "ci_high": 0.3222011923789978,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_contrast": {
+          "mean": 0.18097026646137238,
+          "ci_low": 0.08420176059007645,
+          "ci_high": 0.2777387499809265,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_homogeneity": {
+          "mean": -0.20204316079616547,
+          "ci_low": -0.2926097884774208,
+          "ci_high": -0.10070456024259318,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_entropy": {
+          "mean": 0.20788736641407013,
+          "ci_low": 0.144923597574234,
+          "ci_high": 0.2748424708843231,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "bright_region": {
+          "mean": -0.02630949392914772,
+          "ci_low": -0.23980754613876343,
+          "ci_high": 0.1546584963798523,
+          "valid_n": 4,
+          "fdr_q": 0.8676960370136659
+        },
+        "dark_region": {
+          "mean": 0.12987682223320007,
+          "ci_low": -0.004291776567697525,
+          "ci_high": 0.2640454173088074,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "local_intensity_deviation": {
+          "mean": 0.22125166654586792,
+          "ci_low": 0.13264048099517822,
+          "ci_high": 0.3665050268173218,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "region_occupancy": {
+          "mean": 0.036061517894268036,
+          "ci_low": -0.17302956730127333,
+          "ci_high": 0.23601019382476807,
+          "valid_n": 4,
+          "fdr_q": 0.839610592278347
+        }
+      }
+    },
+    {
+      "concept_index": 12,
+      "concept_name": "Pet-image threshold-region occupancy \u2014 weak unguided association (learned variant 1)",
+      "training_group": "unguided (guidance absent)",
+      "descriptor": "region_occupancy",
+      "direction": "positive",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unguided_weak",
+      "guidance_applied": false,
+      "guidance_configured": false,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": null,
+      "strongest_observed_descriptor": "region_occupancy",
+      "grounding_strength": 0.1391417682170868,
+      "mean": 0.1391417682170868,
+      "ci_low": 0.021098408848047256,
+      "ci_high": 0.26090672612190247,
+      "valid_n": 4,
+      "fdr_q": 0.3660444092866918,
+      "validation_response_quartiles": [
+        0.33690522611141205,
+        0.43539832532405853,
+        0.5209199637174606
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.056375667452812195,
+          "ci_low": -0.1841707080602646,
+          "ci_high": 0.07141938805580139,
+          "valid_n": 4,
+          "fdr_q": 0.6144553173334361
+        },
+        "texture": {
+          "mean": 0.03695952519774437,
+          "ci_low": -0.032613331079483034,
+          "ci_high": 0.13453349247574808,
+          "valid_n": 4,
+          "fdr_q": 0.6336835905804818
+        },
+        "morphology": {
+          "mean": 0.1170368641614914,
+          "ci_low": 0.04500545188784599,
+          "ci_high": 0.18789752759039408,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "intensity": {
+          "mean": 0.08443909883499146,
+          "ci_low": 0.01073973821476103,
+          "ci_high": 0.15379941165447236,
+          "valid_n": 4,
+          "fdr_q": 0.3660444092866918
+        },
+        "edge_steepness": {
+          "mean": -0.12156371772289276,
+          "ci_low": -0.24513198472559453,
+          "ci_high": 0.014201536774635315,
+          "valid_n": 4,
+          "fdr_q": 0.39007154503559516
+        },
+        "edge_density": {
+          "mean": -0.038093242794275284,
+          "ci_low": -0.1748964786529541,
+          "ci_high": 0.08110214173793802,
+          "valid_n": 4,
+          "fdr_q": 0.6940143644982852
+        },
+        "edge_coherence": {
+          "mean": -0.0411083921790123,
+          "ci_low": -0.15880903638899327,
+          "ci_high": 0.046890027821063995,
+          "valid_n": 4,
+          "fdr_q": 0.6464263050832397
+        },
+        "fine_edge_detail": {
+          "mean": -0.0022818949073553085,
+          "ci_low": -0.21988415755331517,
+          "ci_high": 0.1630343198776245,
+          "valid_n": 4,
+          "fdr_q": 0.9847177223536464
+        },
+        "texture_variation": {
+          "mean": 0.01742592267692089,
+          "ci_low": -0.06864993274211884,
+          "ci_high": 0.14171971678733827,
+          "valid_n": 4,
+          "fdr_q": 0.8316656104446658
+        },
+        "texture_contrast": {
+          "mean": 0.08063547313213348,
+          "ci_low": 0.009901105822063985,
+          "ci_high": 0.13500840961933136,
+          "valid_n": 4,
+          "fdr_q": 0.3659911487652984
+        },
+        "texture_homogeneity": {
+          "mean": -0.062443893402814865,
+          "ci_low": -0.11185084767639636,
+          "ci_high": -0.013610325753688812,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "texture_entropy": {
+          "mean": 0.025070074945688248,
+          "ci_low": -0.04188879579305649,
+          "ci_high": 0.13538823947310452,
+          "valid_n": 4,
+          "fdr_q": 0.7503608509218699
+        },
+        "bright_region": {
+          "mean": 0.102086141705513,
+          "ci_low": 0.04522715909406543,
+          "ci_high": 0.1387384533882141,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "dark_region": {
+          "mean": 0.05310292914509773,
+          "ci_low": -0.0611802339553833,
+          "ci_high": 0.23182699121534825,
+          "valid_n": 4,
+          "fdr_q": 0.6630455924079004
+        },
+        "local_intensity_deviation": {
+          "mean": -0.06076550483703613,
+          "ci_low": -0.16819413006305695,
+          "ci_high": 0.07032691687345505,
+          "valid_n": 4,
+          "fdr_q": 0.5431747782332739
+        },
+        "region_occupancy": {
+          "mean": 0.1391417682170868,
+          "ci_low": 0.021098408848047256,
+          "ci_high": 0.26090672612190247,
+          "valid_n": 4,
+          "fdr_q": 0.3660444092866918
+        }
+      }
+    },
+    {
+      "concept_index": 13,
+      "concept_name": "Pet-image local edge abundance \u2014 weak unguided association (learned variant 1)",
+      "training_group": "unguided (guidance absent)",
+      "descriptor": "edge_density",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unguided_weak",
+      "guidance_applied": false,
+      "guidance_configured": false,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": null,
+      "strongest_observed_descriptor": "edge_density",
+      "grounding_strength": 0.4265674352645874,
+      "mean": -0.4265674352645874,
+      "ci_low": -0.6264691352844238,
+      "ci_high": -0.22424176298081874,
+      "valid_n": 4,
+      "fdr_q": 0.320343417490247,
+      "validation_response_quartiles": [
+        0.19995969906449318,
+        0.2279186248779297,
+        0.25940627977252007
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.2944837212562561,
+          "ci_low": -0.5329914689064026,
+          "ci_high": -0.09261511266231537,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture": {
+          "mean": -0.3645564019680023,
+          "ci_low": -0.5093298554420471,
+          "ci_high": -0.2094403650611639,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "morphology": {
+          "mean": -0.29811161756515503,
+          "ci_low": -0.49080872535705566,
+          "ci_high": -0.13959343545138816,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "intensity": {
+          "mean": -0.1755698323249817,
+          "ci_low": -0.3582538962364197,
+          "ci_high": -0.0297570111230014,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "edge_steepness": {
+          "mean": -0.24867576360702515,
+          "ci_low": -0.4100764699280262,
+          "ci_high": -0.12985175848007202,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "edge_density": {
+          "mean": -0.4265674352645874,
+          "ci_low": -0.6264691352844238,
+          "ci_high": -0.22424176298081874,
+          "valid_n": 4,
+          "fdr_q": 0.320343417490247
+        },
+        "edge_coherence": {
+          "mean": -0.2630739212036133,
+          "ci_low": -0.5153064727783203,
+          "ci_high": -0.0245788786560297,
+          "valid_n": 4,
+          "fdr_q": 0.376681026964951
+        },
+        "fine_edge_detail": {
+          "mean": -0.29032963514328003,
+          "ci_low": -0.44721710681915283,
+          "ci_high": -0.05102973431348801,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_variation": {
+          "mean": -0.36550742387771606,
+          "ci_low": -0.5169931054115295,
+          "ci_high": -0.20389857776463025,
+          "valid_n": 4,
+          "fdr_q": 0.3101777313473967
+        },
+        "texture_contrast": {
+          "mean": -0.322576105594635,
+          "ci_low": -0.4021676488220692,
+          "ci_high": -0.21008765697479248,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "texture_homogeneity": {
+          "mean": 0.34383082389831543,
+          "ci_low": 0.21788150034844875,
+          "ci_high": 0.4383882597088814,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "texture_entropy": {
+          "mean": -0.3927516043186188,
+          "ci_low": -0.5431950688362122,
+          "ci_high": -0.22526153922080994,
+          "valid_n": 4,
+          "fdr_q": 0.2758021087110423
+        },
+        "bright_region": {
+          "mean": -0.2770092487335205,
+          "ci_low": -0.48985958099365234,
+          "ci_high": -0.10416527520865185,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "dark_region": {
+          "mean": -0.1277979016304016,
+          "ci_low": -0.22713933251798152,
+          "ci_high": -0.029022425413131714,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "local_intensity_deviation": {
+          "mean": -0.26175999641418457,
+          "ci_low": -0.411346435546875,
+          "ci_high": -0.10424355883151275,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "region_occupancy": {
+          "mean": -0.33491355180740356,
+          "ci_low": -0.4991278648376465,
+          "ci_high": -0.15833008289337158,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        }
+      }
+    },
+    {
+      "concept_index": 14,
+      "concept_name": "Pet-image local edge abundance \u2014 weak unguided association (learned variant 2)",
+      "training_group": "unguided (guidance absent)",
+      "descriptor": "edge_density",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unguided_weak",
+      "guidance_applied": false,
+      "guidance_configured": false,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": null,
+      "strongest_observed_descriptor": "edge_density",
+      "grounding_strength": 0.2126135528087616,
+      "mean": -0.2126135528087616,
+      "ci_low": -0.37027901485562326,
+      "ci_high": 0.055058836936950684,
+      "valid_n": 4,
+      "fdr_q": 0.38262635680378493,
+      "validation_response_quartiles": [
+        0.22203706949949265,
+        0.25073936581611633,
+        0.2805711254477501
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.1530696600675583,
+          "ci_low": -0.22897517681121826,
+          "ci_high": -0.08531685918569565,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture": {
+          "mean": -0.1177925318479538,
+          "ci_low": -0.2923984743654728,
+          "ci_high": 0.11734502166509651,
+          "valid_n": 4,
+          "fdr_q": 0.5589472801335647
+        },
+        "morphology": {
+          "mean": 0.11627360433340073,
+          "ci_low": 0.04642760800197721,
+          "ci_high": 0.1764633510261774,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "intensity": {
+          "mean": 0.12763044238090515,
+          "ci_low": 0.028092090040445328,
+          "ci_high": 0.275779128074646,
+          "valid_n": 4,
+          "fdr_q": 0.3660444092866918
+        },
+        "edge_steepness": {
+          "mean": -0.1709553301334381,
+          "ci_low": -0.2025923877954483,
+          "ci_high": -0.14706012606620789,
+          "valid_n": 4,
+          "fdr_q": 0.18004548467381817
+        },
+        "edge_density": {
+          "mean": -0.2126135528087616,
+          "ci_low": -0.37027901485562326,
+          "ci_high": 0.055058836936950684,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "edge_coherence": {
+          "mean": -0.044786788523197174,
+          "ci_low": -0.27791827917099,
+          "ci_high": 0.10242857784032822,
+          "valid_n": 4,
+          "fdr_q": 0.7629052204570091
+        },
+        "fine_edge_detail": {
+          "mean": -0.2027795910835266,
+          "ci_low": -0.3633082516491413,
+          "ci_high": -0.10598234832286835,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "texture_variation": {
+          "mean": -0.09945143014192581,
+          "ci_low": -0.2988044321537018,
+          "ci_high": 0.1335298519581559,
+          "valid_n": 4,
+          "fdr_q": 0.6144553173334361
+        },
+        "texture_contrast": {
+          "mean": -0.16415250301361084,
+          "ci_low": -0.2932248115539551,
+          "ci_high": 0.0016070716548711062,
+          "valid_n": 4,
+          "fdr_q": 0.3732774737363879
+        },
+        "texture_homogeneity": {
+          "mean": 0.17167088389396667,
+          "ci_low": -0.03130122879520057,
+          "ci_high": 0.31011055931448944,
+          "valid_n": 4,
+          "fdr_q": 0.38262635680378493
+        },
+        "texture_entropy": {
+          "mean": -0.1610027253627777,
+          "ci_low": -0.3907372057437897,
+          "ci_high": 0.10578018426895142,
+          "valid_n": 4,
+          "fdr_q": 0.5173290969998667
+        },
+        "bright_region": {
+          "mean": 0.13034449517726898,
+          "ci_low": 0.0393258101772517,
+          "ci_high": 0.22122880108654505,
+          "valid_n": 4,
+          "fdr_q": 0.36338350978159073
+        },
+        "dark_region": {
+          "mean": -0.10666555911302567,
+          "ci_low": -0.27440690994262695,
+          "ci_high": 0.029358817264437675,
+          "valid_n": 4,
+          "fdr_q": 0.5221209265941646
+        },
+        "local_intensity_deviation": {
+          "mean": -0.09006936848163605,
+          "ci_low": -0.2432004578411579,
+          "ci_high": 0.11764496564865112,
+          "valid_n": 4,
+          "fdr_q": 0.5657321605367815
+        },
+        "region_occupancy": {
+          "mean": 0.06633388996124268,
+          "ci_low": -0.01772230677306652,
+          "ci_high": 0.15039008855819702,
+          "valid_n": 4,
+          "fdr_q": 0.41192558870660373
+        }
+      }
+    },
+    {
+      "concept_index": 15,
+      "concept_name": "Pet-image threshold-region occupancy \u2014 weak unguided association (learned variant 2)",
+      "training_group": "unguided (guidance absent)",
+      "descriptor": "region_occupancy",
+      "direction": "inverse",
+      "weak_grounding": true,
+      "association_reliable": false,
+      "grounding_status": "unguided_weak",
+      "guidance_applied": false,
+      "guidance_configured": false,
+      "selected_model_guidance_updates": 1,
+      "guidance_mode": "individual_descriptors_v4",
+      "intended_descriptor": null,
+      "strongest_observed_descriptor": "region_occupancy",
+      "grounding_strength": 0.24121856689453125,
+      "mean": -0.24121856689453125,
+      "ci_low": -0.4888606920838356,
+      "ci_high": -0.09783503822982303,
+      "valid_n": 4,
+      "fdr_q": 0.3659911487652984,
+      "validation_response_quartiles": [
+        0.3173605613410473,
+        0.4233348071575165,
+        0.512019693851471
+      ],
+      "scope": "Image-level descriptor evidence; lesion/part localization is not established.",
+      "all_descriptor_statistics": {
+        "edge": {
+          "mean": -0.09150190651416779,
+          "ci_low": -0.2071230709552765,
+          "ci_high": 0.10180459916591644,
+          "valid_n": 4,
+          "fdr_q": 0.532723605925942
+        },
+        "texture": {
+          "mean": -0.037824586033821106,
+          "ci_low": -0.1664493978023529,
+          "ci_high": 0.17781731486320496,
+          "valid_n": 4,
+          "fdr_q": 0.80248214882354
+        },
+        "morphology": {
+          "mean": -0.17538043856620789,
+          "ci_low": -0.5235515236854553,
+          "ci_high": 0.10276247560977936,
+          "valid_n": 4,
+          "fdr_q": 0.527620756766494
+        },
+        "intensity": {
+          "mean": -0.04054460674524307,
+          "ci_low": -0.49589213728904724,
+          "ci_high": 0.29287514090538025,
+          "valid_n": 4,
+          "fdr_q": 0.8837830535249034
+        },
+        "edge_steepness": {
+          "mean": -0.04377970099449158,
+          "ci_low": -0.14169031381607056,
+          "ci_high": 0.12072055041790009,
+          "valid_n": 4,
+          "fdr_q": 0.6958950972516482
+        },
+        "edge_density": {
+          "mean": -0.05755656212568283,
+          "ci_low": -0.2260579764842987,
+          "ci_high": 0.20576261021196843,
+          "valid_n": 4,
+          "fdr_q": 0.7556157399979727
+        },
+        "edge_coherence": {
+          "mean": -0.011631026864051819,
+          "ci_low": -0.23891586288809774,
+          "ci_high": 0.20393696650862705,
+          "valid_n": 4,
+          "fdr_q": 0.9434752430281697
+        },
+        "fine_edge_detail": {
+          "mean": -0.10027998685836792,
+          "ci_low": -0.18870297074317932,
+          "ci_high": 0.03149011731147766,
+          "valid_n": 4,
+          "fdr_q": 0.3910654786982803
+        },
+        "texture_variation": {
+          "mean": -0.025282610207796097,
+          "ci_low": -0.1772051453590393,
+          "ci_high": 0.18955916166305542,
+          "valid_n": 4,
+          "fdr_q": 0.8676960370136659
+        },
+        "texture_contrast": {
+          "mean": -0.0814153403043747,
+          "ci_low": -0.2977678179740906,
+          "ci_high": 0.14927291870117188,
+          "valid_n": 4,
+          "fdr_q": 0.6322250199990271
+        },
+        "texture_homogeneity": {
+          "mean": 0.06967496871948242,
+          "ci_low": -0.10848042517900464,
+          "ci_high": 0.2457046363502741,
+          "valid_n": 4,
+          "fdr_q": 0.6566322716571266
+        },
+        "texture_entropy": {
+          "mean": -0.06566643714904785,
+          "ci_low": -0.2371522270143032,
+          "ci_high": 0.13013294339179993,
+          "valid_n": 4,
+          "fdr_q": 0.6866549095491112
+        },
+        "bright_region": {
+          "mean": -0.1410120129585266,
+          "ci_low": -0.4519327536225318,
+          "ci_high": 0.16428568959236145,
+          "valid_n": 4,
+          "fdr_q": 0.6193880211993648
+        },
+        "dark_region": {
+          "mean": -0.1414755880832672,
+          "ci_low": -0.36321669816970825,
+          "ci_high": 0.06521816551685333,
+          "valid_n": 4,
+          "fdr_q": 0.4595773384987814
+        },
+        "local_intensity_deviation": {
+          "mean": 0.046456847339868546,
+          "ci_low": -0.052283573895692825,
+          "ci_high": 0.17390714995563045,
+          "valid_n": 4,
+          "fdr_q": 0.6480144454367746
+        },
+        "region_occupancy": {
+          "mean": -0.24121856689453125,
+          "ci_low": -0.4888606920838356,
+          "ci_high": -0.09783503822982303,
+          "valid_n": 4,
+          "fdr_q": 0.3659911487652984
+        }
+      }
+    }
+  ]
+}

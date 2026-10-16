@@ -119,6 +119,10 @@ def fit(root, manifest, config=None, device=None, sync_callback=None, run_name=N
     if config_path.exists() and json.loads(config_path.read_text())['fingerprint'] != fingerprint:
         raise ValueError('Run identity differs. Use a new run_name; do not overwrite or resume an incompatible experiment.')
     atomic_json(config_path, {**identity, 'fingerprint': fingerprint})
+    from .semantics import guidance_contract, ANCHORS, LEGACY
+    atomic_json(run / 'guidance_contract.json', {'mode':cfg.guidance_mode,
+                'concepts':guidance_contract(cfg),'descriptor_names':{k:v[1] for k,v in {**LEGACY,**ANCHORS}.items()},
+                'scope':'Targets are image-derived descriptors. Successful guidance is measured after training, not assumed.'})
     seed_all(cfg.seed)
     model_class = BackboneClassifier if model_type == 'backbone' else RGCBM
     model = model_class(len(manifest['classes']), cfg, root / 'assets').to(device)
@@ -150,7 +154,9 @@ def fit(root, manifest, config=None, device=None, sync_callback=None, run_name=N
             head_path = run / 'head_best.pt'
             if not head_path.exists():
                 raise RuntimeError('Missing head-stage best checkpoint.')
-            model.load_state_dict(torch.load(head_path, map_location='cpu', weights_only=True)['model'])
+            head_checkpoint = torch.load(head_path, map_location='cpu', weights_only=True)
+            model.load_state_dict(head_checkpoint['model'])
+            state['guidance_updates'] = head_checkpoint.get('guidance_updates', 0)
         backbone = [p for p in model.backbone.parameters() if p.requires_grad]
         backbone_ids = {id(p) for p in backbone}
         head = [p for p in model.parameters() if p.requires_grad and id(p) not in backbone_ids]
@@ -207,6 +213,8 @@ def fit(root, manifest, config=None, device=None, sync_callback=None, run_name=N
                     raise FloatingPointError('Nonfinite training gradient.')
                 scaler.step(optimizer)
                 scaler.update()
+                if model_type == 'rgcbm' and scale > 0 and any(getattr(cfg,n)>0 for n in ['edge','texture','morphology']):
+                    state['guidance_updates'] = state.get('guidance_updates',0) + 1
                 state['epoch_loss_sum'] += loss.item() * len(y)
                 state['epoch_n'] += len(y)
                 state['epoch_correct'] = state.get('epoch_correct', 0) + (output['logits'].argmax(1) == y).sum().item()
@@ -239,7 +247,13 @@ def fit(root, manifest, config=None, device=None, sync_callback=None, run_name=N
             state['history'].append(record)
             print(json.dumps(record), flush=True)
             checkpoint = {'model': model.state_dict(), 'config': cfg.to_dict(), 'classes': manifest['classes'], 'fingerprint': fingerprint, 'validation_accuracy': measured['accuracy'], 'model_type': model_type}
-            if measured['accuracy'] > state['best_accuracy']:
+            checkpoint.update(guidance_updates=state.get('guidance_updates',0),selected_stage=stage,selected_epoch=epoch+1)
+            if measured['accuracy'] > state.get('best_any_accuracy',-1.):
+                state['best_any_accuracy'] = measured['accuracy']
+                atomic_torch(run / 'best_any.pt', checkpoint)
+            needs_guidance = cfg.require_guidance_exposure and model_type=='rgcbm' and any(getattr(cfg,n)>0 for n in ['edge','texture','morphology'])
+            eligible = not needs_guidance or checkpoint['guidance_updates']>0
+            if eligible and measured['accuracy'] > state['best_accuracy']:
                 state['best_accuracy'] = measured['accuracy']
                 atomic_torch(run / 'best.pt', checkpoint)
             if measured['accuracy'] > state['stage_best']:
@@ -272,10 +286,24 @@ def fit(root, manifest, config=None, device=None, sync_callback=None, run_name=N
         finished = torch.load(last, map_location='cpu', weights_only=False)
         finished['progress'] = state
         atomic_torch(last, finished)
+    if not (run / 'best.pt').exists():
+        warnings.warn('No guidance-exposed checkpoint exists (for example a warm-up-only smoke run). Returning best_any.pt; guidance is explicitly unverified.')
+        shutil.copyfile(run / 'best_any.pt',run / 'best.pt')
+        state['best_accuracy'] = state.get('best_any_accuracy',-1.)
+        if last.exists():
+            completed=torch.load(last,map_location='cpu',weights_only=False)
+            completed['progress']=state
+            atomic_torch(last,completed)
     best = torch.load(run / 'best.pt', map_location='cpu', weights_only=True)
     model.load_state_dict(best['model'])
+    model.guidance_updates = best.get('guidance_updates')
     model.eval()
     atomic_json(run / 'training_status.json', {'complete': True, 'status': 'complete', 'best_validation_accuracy': state['best_accuracy'], 'device': str(device), 'torch': torch.__version__, 'cuda_runtime': torch.version.cuda, 'research_run': cfg.max_train_batches is None and cfg.max_validation_batches is None})
+    status_path=run/'training_status.json'
+    saved_status=json.loads(status_path.read_text())
+    saved_status.update(selected_model_guidance_updates=best.get('guidance_updates'),best_any_validation_accuracy=state.get('best_any_accuracy'),
+                        guidance_eligible=bool(best.get('guidance_updates',0)) if cfg.require_guidance_exposure else None)
+    atomic_json(status_path,saved_status)
     _sync(sync_callback, run)
     return model, run, {'complete': True, 'progress': state}
 
@@ -287,5 +315,6 @@ def load_model(run, asset_dir, device=None):
     model_class = BackboneClassifier if checkpoint.get('model_type') == 'backbone' else RGCBM
     model = model_class(len(checkpoint['classes']), config, asset_dir).to(device)
     model.load_state_dict(checkpoint['model'])
+    model.guidance_updates = checkpoint.get('guidance_updates')
     model.eval()
     return model, checkpoint['classes']

@@ -1,0 +1,10 @@
+```json
+{
+  "predicted_class": "125.Lincoln_Sparrow",
+  "confidence": 0.010918461872091426,
+  "supporting_concept_indices": [0, 3],
+  "opposing_concept_indices": [5, 10],
+  "explanation": "The prediction is based on the concept of 'bird-image edge-transition steepness' (concept index 0) which has a positive margin contribution (+0.198), indicating it contributes positively towards the classification. The concept of 'bird-image fine edge detail' (concept index 3) also has a positive margin contribution (+0.081). These concepts suggest that the model is more likely to classify this as a Lincoln Sparrow due to its characteristic edges.",
+  "limitations": "The prediction is uncalibrated and should be interpreted with caution. The concepts used for prediction have limited grounding in verified clinical data."
+}
+```

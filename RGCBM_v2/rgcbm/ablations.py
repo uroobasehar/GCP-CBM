@@ -7,7 +7,7 @@ from .data import build_manifest, atomic_json
 from .train import fit
 from .evaluate import ground_concepts, evaluate
 
-VARIANTS = ['full', 'unguided', 'no_edge', 'no_texture', 'no_region', 'no_diversity', 'no_decorrelation', 'no_stability', 'no_sparsity', 'no_finetune', 'no_standardization', 'K32', 'K64']
+VARIANTS = ['full', 'unguided', 'no_edge', 'no_texture', 'no_region', 'no_diversity', 'no_decorrelation', 'no_stability', 'no_sparsity', 'no_finetune', 'no_standardization', 'legacy_group_guidance', 'K16', 'K32', 'K64']
 
 
 def variant_config(base, variant, seed=None):
@@ -20,7 +20,8 @@ def variant_config(base, variant, seed=None):
     if variant == 'no_sparsity': cfg.activation_l1 = cfg.classifier_l1 = 0.
     if variant == 'no_finetune': cfg.finetune_epochs = 0
     if variant == 'no_standardization': cfg.concept_normalization = 'none'
-    if variant in ['K32', 'K64']: cfg.concepts = int(variant[1:])
+    if variant == 'legacy_group_guidance': cfg.guidance_mode = 'group_mean'
+    if variant in ['K16', 'K32', 'K64']: cfg.concepts = int(variant[1:])
     return cfg
 
 
@@ -29,7 +30,7 @@ def run_ablation_suite(root, base_config, variants=None, seeds=(42,), device=Non
     root = Path(root)
     variants = VARIANTS if variants is None else list(variants)
     records = []
-    profile = 'calibrated_v3' if base_config.concept_normalization == 'running_standardize' else 'legacy'
+    profile = 'guided_v4' if base_config.guidance_mode == 'individual_descriptors_v4' else 'calibrated_v3' if base_config.concept_normalization == 'running_standardize' else 'legacy'
     summary = root / 'results' / f'{base_config.dataset}_ablation_summary_{profile}'
     summary.mkdir(parents=True, exist_ok=True)
     for seed in seeds:
@@ -48,7 +49,7 @@ def run_ablation_suite(root, base_config, variants=None, seeds=(42,), device=Non
             records.append(row)
             frame = pd.DataFrame(records)
             frame.to_csv(summary / 'ablation_runs.csv', index=False)
-            numeric = ['accuracy', 'macro_f1', 'balanced_accuracy', 'ece_15_bins', 'positive_margin_probability_drop_mean', 'random_probability_drop_mean', 'stability_mae', 'stability_cosine']
+            numeric = ['accuracy', 'macro_f1', 'balanced_accuracy', 'ece_15_bins', 'positive_margin_probability_drop_mean', 'random_probability_drop_mean', 'stability_mae', 'stability_cosine', 'intended_target_validation_r_mean','verified_guidance_fraction','reliable_association_fraction']
             frame.groupby('variant')[numeric].agg(['mean', 'std', 'count']).to_csv(summary / 'ablation_mean_std.csv')
             atomic_json(summary / 'protocol.json', {'dataset': cfg.dataset, 'base_config': base_config.to_dict(), 'variants': variants, 'seeds': list(seeds), 'warning': 'Use at least three complete seeds for a paper. Test measurements compare preregistered variants; do not tune variants on these test scores.'})
             if sync_callback:

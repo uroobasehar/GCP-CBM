@@ -1,0 +1,26 @@
+[
+  {
+    "notebook": "RGCBM_Offline.ipynb",
+    "status": "passed",
+    "embedded_files_match_current_source": 15,
+    "code_cells_compile": 18,
+    "full_training_default": true,
+    "sha256": "4b3ce11c4069c89329b166112d870c15f835cd98af7dc9b4d9fe859ddb3db633"
+  },
+  {
+    "notebook": "RGCBM_Colab.ipynb",
+    "status": "passed",
+    "embedded_files_match_current_source": 15,
+    "code_cells_compile": 20,
+    "full_training_default": true,
+    "sha256": "ddf5f22a4dfe6774c098ddcca148739208c98ff44f569229ba035522df8284d7"
+  },
+  {
+    "notebook": "RGCBM_Kaggle.ipynb",
+    "status": "passed",
+    "embedded_files_match_current_source": 15,
+    "code_cells_compile": 20,
+    "full_training_default": true,
+    "sha256": "a9a6179813695c445a2fd1a3a59270727b2677df1898443900a1ea433ac8216a"
+  }
+]

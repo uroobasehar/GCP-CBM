@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "cells": 35,
+  "executed_code_cells": 18,
+  "duration_seconds": 708.8354344600084,
+  "data": "real CUB, Pet and MRI images",
+  "runtime": "Linux CPU Python 3.12.14; not Windows or GPU validation",
+  "network": "external inherited seccomp denies Internet sockets; Unix IPC permits Jupyter",
+  "test_parameters": {
+    "smoke_only": true,
+    "batch_size": 2,
+    "concepts": 16,
+    "head_epochs": 1,
+    "finetune_epochs": 1,
+    "max_batches": 2,
+    "ablations_per_dataset": [
+      "no_finetune",
+      "K32"
+    ],
+    "seeds": [
+      42
+    ],
+    "LLM": "deterministic template; actual Qwen tested separately"
+  },
+  "error": null
+}

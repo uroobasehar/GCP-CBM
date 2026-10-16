@@ -1,0 +1,658 @@
+[
+  {
+    "id": 0,
+    "name": "MRI-image edge-transition steepness \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "edge_steepness",
+    "fdr_q": 0.5440379374736064,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": -0.10167926549911499,
+    "validation_image_bootstrap_95ci": [
+      -0.2483229827135801,
+      0.026341539341956648
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 0,
+      "frozen_validation_descriptor": "edge_steepness",
+      "mean": 0.0719468966126442,
+      "ci_low": -0.013517847284674644,
+      "ci_high": 0.2065263543277979,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "notumor",
+        "weight": 0.034933872520923615
+      },
+      {
+        "class": "meningioma",
+        "weight": 0.01260332204401493
+      },
+      {
+        "class": "glioma",
+        "weight": 0.0024360730312764645
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 1,
+    "name": "MRI-image local edge abundance \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "edge_density",
+    "fdr_q": 0.0785488315990993,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": 0.4195745885372162,
+    "validation_image_bootstrap_95ci": [
+      0.34346872568130493,
+      0.48368531465530396
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 1,
+      "frozen_validation_descriptor": "edge_density",
+      "mean": 0.25551819801330566,
+      "ci_low": 0.00023728981614112854,
+      "ci_high": 0.4559311866760254,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "pituitary",
+        "weight": 0.196967214345932
+      },
+      {
+        "class": "glioma",
+        "weight": 0.06499908864498138
+      },
+      {
+        "class": "meningioma",
+        "weight": -0.08636809885501862
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 2,
+    "name": "MRI-image directional edge coherence \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "edge_coherence",
+    "fdr_q": 0.6451526091466495,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": -0.03765764459967613,
+    "validation_image_bootstrap_95ci": [
+      -0.13796243108808995,
+      0.03683042526245117
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 2,
+      "frozen_validation_descriptor": "edge_coherence",
+      "mean": 0.057164110243320465,
+      "ci_low": -0.06992769986391068,
+      "ci_high": 0.16048601269721985,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "meningioma",
+        "weight": 0.23960861563682556
+      },
+      {
+        "class": "glioma",
+        "weight": 0.18574011325836182
+      },
+      {
+        "class": "pituitary",
+        "weight": 0.018658241257071495
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 3,
+    "name": "MRI-image fine edge detail \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "fine_edge_detail",
+    "fdr_q": 0.11213420331478119,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "boundary-guided",
+    "validation_correlation": 0.24023555219173431,
+    "validation_image_bootstrap_95ci": [
+      0.1561932560056448,
+      0.3203134536743164
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 3,
+      "frozen_validation_descriptor": "fine_edge_detail",
+      "mean": 0.2521354556083679,
+      "ci_low": 0.15811899304389954,
+      "ci_high": 0.3861634135246277,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "glioma",
+        "weight": 0.1982429474592209
+      },
+      {
+        "class": "meningioma",
+        "weight": 0.055034089833498
+      },
+      {
+        "class": "pituitary",
+        "weight": -0.1384202539920807
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 4,
+    "name": "MRI-image local texture variability \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_variation",
+    "fdr_q": 0.2105836605806963,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": -0.16800080239772797,
+    "validation_image_bootstrap_95ci": [
+      -0.264870285987854,
+      -0.04498568307608356
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 4,
+      "frozen_validation_descriptor": "texture_variation",
+      "mean": -0.24460530281066895,
+      "ci_low": -0.36683231592178345,
+      "ci_high": -0.10735682249069199,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "glioma",
+        "weight": 0.12335717678070068
+      },
+      {
+        "class": "meningioma",
+        "weight": -0.02984868921339512
+      },
+      {
+        "class": "pituitary",
+        "weight": -0.14173157513141632
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 5,
+    "name": "MRI-image neighbouring-pixel contrast \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_contrast",
+    "fdr_q": 0.8981261076750578,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": -0.007213320583105087,
+    "validation_image_bootstrap_95ci": [
+      -0.07841993868350983,
+      0.034968599677085876
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 5,
+      "frozen_validation_descriptor": "texture_contrast",
+      "mean": 0.02787483111023903,
+      "ci_low": -0.11593671888113022,
+      "ci_high": 0.1148928552865982,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "notumor",
+        "weight": 0.23266233503818512
+      },
+      {
+        "class": "glioma",
+        "weight": -0.20366574823856354
+      },
+      {
+        "class": "pituitary",
+        "weight": -0.23338259756565094
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 6,
+    "name": "MRI-image local texture homogeneity \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_homogeneity",
+    "fdr_q": 0.11213420331478119,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": 0.19992642104625702,
+    "validation_image_bootstrap_95ci": [
+      0.15467846393585205,
+      0.27211386114358904
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 6,
+      "frozen_validation_descriptor": "texture_homogeneity",
+      "mean": 0.1350279003381729,
+      "ci_low": 0.027761239558458328,
+      "ci_high": 0.2422945499420166,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "glioma",
+        "weight": 0.16989697515964508
+      },
+      {
+        "class": "pituitary",
+        "weight": 0.04100829362869263
+      },
+      {
+        "class": "notumor",
+        "weight": 0.015061640180647373
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 7,
+    "name": "MRI-image local intensity entropy \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "texture_entropy",
+    "fdr_q": 0.27528340888745856,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "texture-guided",
+    "validation_correlation": 0.11531096696853638,
+    "validation_image_bootstrap_95ci": [
+      -0.0008516889298334718,
+      0.17620755769312382
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 7,
+      "frozen_validation_descriptor": "texture_entropy",
+      "mean": 0.04406609386205673,
+      "ci_low": -0.12305836398154497,
+      "ci_high": 0.2630109764635564,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "pituitary",
+        "weight": 0.23196940124034882
+      },
+      {
+        "class": "notumor",
+        "weight": 0.11752690374851227
+      },
+      {
+        "class": "glioma",
+        "weight": -0.2171780914068222
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 8,
+    "name": "MRI-image relatively bright image regions \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "bright_region",
+    "fdr_q": 0.1280982541102989,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": 0.4640291631221771,
+    "validation_image_bootstrap_95ci": [
+      0.26586544439196585,
+      0.6616962775588038
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 8,
+      "frozen_validation_descriptor": "bright_region",
+      "mean": 0.27171972393989563,
+      "ci_low": -0.11468619555234907,
+      "ci_high": 0.6576536893844604,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "glioma",
+        "weight": 0.16539447009563446
+      },
+      {
+        "class": "pituitary",
+        "weight": -0.11244283616542816
+      },
+      {
+        "class": "notumor",
+        "weight": -0.17957082390785217
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 9,
+    "name": "MRI-image relatively dark image regions \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "dark_region",
+    "fdr_q": 0.1280982541102989,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": -0.4729691743850708,
+    "validation_image_bootstrap_95ci": [
+      -0.5456258058547974,
+      -0.3312082588672638
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 9,
+      "frozen_validation_descriptor": "dark_region",
+      "mean": -0.4954734444618225,
+      "ci_low": -0.5693373680114746,
+      "ci_high": -0.4216095209121704,
+      "valid_n": 2
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "glioma",
+        "weight": 0.09551535546779633
+      },
+      {
+        "class": "notumor",
+        "weight": 0.08928762376308441
+      },
+      {
+        "class": "meningioma",
+        "weight": 0.05382223427295685
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 10,
+    "name": "MRI-image local intensity deviation \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "local_intensity_deviation",
+    "fdr_q": 0.2259892357720269,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": 0.1367788314819336,
+    "validation_image_bootstrap_95ci": [
+      0.04621315002441406,
+      0.23241576552391052
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 10,
+      "frozen_validation_descriptor": "local_intensity_deviation",
+      "mean": 0.06159449741244316,
+      "ci_low": -0.04345283657312393,
+      "ci_high": 0.12839455902576447,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "pituitary",
+        "weight": 0.22090011835098267
+      },
+      {
+        "class": "meningioma",
+        "weight": 0.12991446256637573
+      },
+      {
+        "class": "notumor",
+        "weight": 0.05760354548692703
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 11,
+    "name": "MRI-image threshold-region occupancy \u2014 unverified guidance",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unverified",
+    "intended_descriptor": "region_occupancy",
+    "fdr_q": 0.6631809946452601,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "region-guided",
+    "validation_correlation": -0.17274606227874756,
+    "validation_image_bootstrap_95ci": [
+      -0.688687264919281,
+      0.2196117341518402
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 11,
+      "frozen_validation_descriptor": "region_occupancy",
+      "mean": -0.1396845281124115,
+      "ci_low": -0.6423482120037078,
+      "ci_high": 0.3260108530521393,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "meningioma",
+        "weight": -0.09287041425704956
+      },
+      {
+        "class": "pituitary",
+        "weight": -0.11939115077257156
+      },
+      {
+        "class": "glioma",
+        "weight": -0.17719581723213196
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 12,
+    "name": "MRI-image neighbouring-pixel contrast \u2014 weak unguided association",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.17339370990621633,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": 0.23426389694213867,
+    "validation_image_bootstrap_95ci": [
+      0.09611608106642963,
+      0.34267449378967285
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 12,
+      "frozen_validation_descriptor": "texture_contrast",
+      "mean": 0.2785888612270355,
+      "ci_low": 0.20881494879722595,
+      "ci_high": 0.34842423647642135,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "meningioma",
+        "weight": 0.2122824788093567
+      },
+      {
+        "class": "pituitary",
+        "weight": 0.1445026695728302
+      },
+      {
+        "class": "notumor",
+        "weight": 0.11822998523712158
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 13,
+    "name": "MRI-image relatively dark image regions \u2014 weak unguided association",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.2721539562895098,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": 0.3079517185688019,
+    "validation_image_bootstrap_95ci": [
+      0.18136020004749298,
+      0.5606638193130493
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 13,
+      "frozen_validation_descriptor": "dark_region",
+      "mean": 0.07795415818691254,
+      "ci_low": -0.13751477003097534,
+      "ci_high": 0.2934230864048004,
+      "valid_n": 2
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "notumor",
+        "weight": 0.2414376437664032
+      },
+      {
+        "class": "pituitary",
+        "weight": 0.15315677225589752
+      },
+      {
+        "class": "meningioma",
+        "weight": -0.15319474041461945
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 14,
+    "name": "MRI-image relatively bright image regions \u2014 weak unguided association (learned variant 1)",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.11213420331478119,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": 0.4403317868709564,
+    "validation_image_bootstrap_95ci": [
+      0.3438885770738125,
+      0.5548871159553528
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 14,
+      "frozen_validation_descriptor": "bright_region",
+      "mean": 0.11753210425376892,
+      "ci_low": -0.00545625556260347,
+      "ci_high": 0.19541479647159576,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "notumor",
+        "weight": 0.16971762478351593
+      },
+      {
+        "class": "pituitary",
+        "weight": 0.10092224925756454
+      },
+      {
+        "class": "meningioma",
+        "weight": -0.1184539720416069
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  },
+  {
+    "id": 15,
+    "name": "MRI-image relatively bright image regions \u2014 weak unguided association (learned variant 2)",
+    "name_basis": "explicit guidance target plus measured validation association; no index-based rotation of semantic names",
+    "guidance_status": "unguided_weak",
+    "intended_descriptor": null,
+    "fdr_q": 0.1280982541102989,
+    "score_definition": "Sigmoid of a pooled response standardized using training-only running statistics; 0.5 denotes the estimated training mean. This is not class-probability calibration.",
+    "group": "unguided (guidance absent)",
+    "validation_correlation": -0.38858503103256226,
+    "validation_image_bootstrap_95ci": [
+      -0.545365571975708,
+      -0.25662705302238464
+    ],
+    "weak_grounding": true,
+    "frozen_descriptor_test_audit": {
+      "concept_index": 15,
+      "frozen_validation_descriptor": "bright_region",
+      "mean": -0.09523362666368484,
+      "ci_low": -0.2895483464002609,
+      "ci_high": 0.11431372910737991,
+      "valid_n": 4
+    },
+    "classes_with_largest_classifier_weights": [
+      {
+        "class": "notumor",
+        "weight": 0.18270915746688843
+      },
+      {
+        "class": "glioma",
+        "weight": 0.058676574379205704
+      },
+      {
+        "class": "meningioma",
+        "weight": -0.13718613982200623
+      }
+    ],
+    "weight_interpretation": "Relative classifier use; class weights do not name the visual concept.",
+    "domain_scope": "MRI image-label classification. Sequence/acquisition and patient independence are unverified. Brightness is not contrast enhancement; region priors are not tumor masks. Model class labels are not clinical diagnoses.",
+    "human_review": "Inspect multiple training prototype patches and held-out overlays. Confirm consistency, foreground support, and lack of background shortcuts; do not infer medical or part semantics from correlation."
+  }
+]

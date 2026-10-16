@@ -1,0 +1,45 @@
+[
+  {
+    "stage": "head",
+    "epoch": 1,
+    "train_loss": 5.3945252895355225,
+    "train_n": 4,
+    "validation_accuracy": 0.0,
+    "validation_loss": 5.43903660774231,
+    "validation_n": 4,
+    "auxiliary_scale": 0.0,
+    "lr": 0.002,
+    "classifier_l2_update": 0.21333341300487518,
+    "train_accuracy": 0.0,
+    "classification_loss": 5.392540216445923,
+    "chance_accuracy": 0.005,
+    "validation_top5_accuracy": 0.0,
+    "validation_predicted_classes": 1,
+    "validation_concept_std_mean": 0.0017209135694429278,
+    "learning_rates": {
+      "head": 0.002
+    }
+  },
+  {
+    "stage": "finetune",
+    "epoch": 1,
+    "train_loss": 5.338898658752441,
+    "train_n": 4,
+    "validation_accuracy": 0.0,
+    "validation_loss": 5.431467294692993,
+    "validation_n": 4,
+    "auxiliary_scale": 1.0,
+    "lr": 0.001,
+    "classifier_l2_update": 0.10641137510538101,
+    "train_accuracy": 0.0,
+    "classification_loss": 5.266283750534058,
+    "chance_accuracy": 0.005,
+    "validation_top5_accuracy": 0.0,
+    "validation_predicted_classes": 1,
+    "validation_concept_std_mean": 0.0020549350883811712,
+    "learning_rates": {
+      "head": 0.001,
+      "backbone": 2e-05
+    }
+  }
+]

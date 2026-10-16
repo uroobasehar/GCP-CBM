@@ -1,0 +1,5 @@
+path,true,predicted,confidence
+data/brain_mri/Testing/glioma/Te-gl_1.jpg,0,0,0.2822883129119873
+data/brain_mri/Testing/glioma/Te-gl_10.jpg,0,0,0.2819983661174774
+data/brain_mri/Testing/glioma/Te-gl_100.jpg,0,0,0.2811472415924072
+data/brain_mri/Testing/glioma/Te-gl_101.jpg,0,2,0.28349584341049194

@@ -22,6 +22,8 @@ class Config:
     finetune_lr: float = 8e-6
     finetune_head_lr: float | None = None  # None preserves the original shared LR.
     concept_normalization: str = 'none'  # Legacy checkpoint-compatible default.
+    guidance_mode: str = 'group_mean'  # Legacy checkpoints retain their actual objective.
+    require_guidance_exposure: bool = False
     validation_fraction: float = 0.1
     dropout: float = 0.10
     edge: float = 0.18
@@ -55,6 +57,8 @@ class Config:
             raise ValueError('Invalid loader/split configuration.')
         if self.concept_normalization not in ['none', 'running_standardize']:
             raise ValueError('Unknown concept normalization.')
+        if self.guidance_mode not in ['group_mean', 'individual_descriptors_v4']:
+            raise ValueError('Unknown concept guidance mode.')
         if min(self.head_lr, self.finetune_lr) <= 0 or (self.finetune_head_lr is not None and self.finetune_head_lr <= 0):
             raise ValueError('Learning rates must be positive.')
         if self.checkpoint_every_batches < 1 or self.checkpoint_every_epochs < 1 or self.keep_epoch_checkpoints < 0:
@@ -64,14 +68,17 @@ class Config:
         return asdict(self)
 
 
-def training_config(profile='calibrated_v3', **overrides):
-    if profile == 'calibrated_v3':
+def training_config(profile='guided_v4', **overrides):
+    if profile in ['calibrated_v3', 'guided_v4']:
         values = dict(head_epochs=8, finetune_epochs=30, head_lr=2e-3, finetune_lr=2e-5,
                       finetune_head_lr=1e-3, concept_normalization='running_standardize')
+        if profile == 'guided_v4':
+            values.update(guidance_mode='individual_descriptors_v4',require_guidance_exposure=True)
+            values['concepts'] = 64 if overrides.get('dataset','cub')=='cub' else 16
     elif profile == 'legacy':
         values = {}
     else:
-        raise ValueError('Use calibrated_v3 or legacy.')
+        raise ValueError('Use guided_v4, calibrated_v3 or legacy.')
     values.update(overrides)
     return Config(**values)
 
@@ -195,12 +202,22 @@ def loss_terms(model, images, targets, output, class_weights, scale):
     """Same loss families as original RG-CBM; consistent inference-mode stability views."""
     cfg = model.config
     maps, c = output['maps'].float(), output['concepts'].float()
-    descriptor = priors(images)
+    if cfg.guidance_mode == 'individual_descriptors_v4':
+        from .semantics import descriptor_bank, guidance_contract
+        descriptor = descriptor_bank(images)
+        contract = guidance_contract(cfg)
+    else:
+        descriptor = priors(images)
     group = cfg.concepts // 4
     losses = {'classification': F.cross_entropy(output['logits'].float(), targets, weight=class_weights)}
     for i, name in enumerate(['edge', 'texture', 'morphology']):
-        target_map = F.interpolate(descriptor[name], size=maps.shape[-2:], mode='bilinear', align_corners=False)
-        losses[name] = F.mse_loss(maps[:, i * group:(i + 1) * group].mean(1, keepdim=True), target_map)
+        if cfg.guidance_mode == 'individual_descriptors_v4':
+            target_map = torch.cat([descriptor[r['target_descriptor']] for r in contract[i*group:(i+1)*group]], dim=1)
+            target_map = F.interpolate(target_map, size=maps.shape[-2:], mode='bilinear', align_corners=False)
+            losses[name] = F.mse_loss(maps[:, i*group:(i+1)*group], target_map)
+        else:
+            target_map = F.interpolate(descriptor[name], size=maps.shape[-2:], mode='bilinear', align_corners=False)
+            losses[name] = F.mse_loss(maps[:, i * group:(i + 1) * group].mean(1, keepdim=True), target_map)
     p = F.normalize(model.prototypes.float(), dim=1)
     off_diag = 1 - torch.eye(cfg.concepts, device=p.device)
     losses['diversity'] = ((p @ p.T) * off_diag).square().mean()

@@ -3,11 +3,14 @@
 This revision preserves the original concept bottleneck while preparing **CUB-200-2011 (200 classes)**,
 **Oxford-IIIT Pet (37 breeds)** and the original **MRI dataset (4 classes)**. Windows-native NVIDIA
 Blackwell support uses **PyTorch 2.7.1 + CUDA 12.8**, with EfficientNet-B1, 128-dimensional projection,
-16 concept prototypes, descriptor losses and a sparse linear classifier. The original TensorFlow
+64 CUB / 16 Pet-MRI concept prototypes, descriptor losses and a sparse linear classifier. The original TensorFlow
 notebook is preserved in the repository; old TensorFlow weights and reported paper metrics are
 not interchangeable with this implementation.
 
-The current `calibrated_v3` notebook profile adds training-only running standardization of pooled
+The current `guided_v4` notebook profile adds individual measurable descriptor targets, exposure-aware
+checkpoint selection and named visual evidence. It retains the `calibrated_v3` training improvements:
+training-only running standardization of pooled concept scores and separate learning rates.
+See [the concept-guidance contract and figure guide](docs/CONCEPT_GUIDANCE.md). The earlier V3 profile added training-only running standardization of pooled
 concept scores (followed by sigmoid), an 8-epoch head stage and up to 30 fine-tuning epochs with
 independent head/backbone learning rates. This is an explicit methodology revision; class
 probabilities remain uncalibrated. See [training diagnosis and automatic runs](docs/TRAINING_AND_DATASET_QUEUE.md).
@@ -40,7 +43,7 @@ additional dedicated VRAM.
 4. Run `offline\launch_jupyter.cmd` and open `notebooks/RGCBM_Offline.ipynb` with the
    **RG-CBM Anaconda offline GPU (Python 3.11)** kernel. Set the dataset/run parameters and execute cells.
    Archives are extracted locally once; training/reports do not require Internet. The default
-   template is immediate; choose `LLM_BACKEND='local_qwen'` to use the bundled local LLM.
+   `LLM_BACKEND='local_qwen'` uses the bundled LLM; choose `'template'` for faster deterministic reports.
 
 Your driver version was not supplied and Windows/GPU execution cannot be tested from this CPU Linux
 workspace. `offline/gpu_check.py --require-gpu` performs the mandatory driver/kernel/model check on
@@ -57,19 +60,19 @@ See [Python compatibility and fresh Python 3.13 validation](docs/PYTHON_COMPATIB
 `notebooks/RGCBM_Kaggle.ipynb` uses Google Drive API uploads/downloads and a securely provided OAuth
 token, because Kaggle cannot mount Drive using Colab's API. Both embed the complete shared Python
 implementation and can obtain the datasets online. See [cloud storage instructions](docs/CLOUD_STORAGE.md).
-Change the dataset selector to repeat the same workflow on each benchmark; train separate models.
+Run All processes each benchmark automatically with independent models; edit DATASETS to choose a subset.
 
 All three notebooks default to `RUN_ALL_DATASETS=True` with `DATASETS=['cub','pets','brain_mri']`.
 Run All previews the first dataset in detailed cells, then automatically trains/evaluates the full
 queue with independent models and saved explanations. Dataset summary CSV/status/chart are stored
 alongside the runs and synced to configured Drive storage. Restarting the same configuration resumes
-training and reuses completed evidence. `RUN_TAG='calibrated_v3'` preserves the older run folders.
+training and reuses completed evidence. `RUN_TAG='guided_v4'` preserves the older run folders.
 
 Each notebook contains an **Ablation study** code block. Set `RUN_ABLATIONS=True` to execute full,
-unguided, individual guidance/regularizer removals, no-fine-tuning and K=32/64 variants with isolated
+unguided, individual guidance/regularizer removals, no-fine-tuning, legacy group guidance and K=16/32/64 variants with isolated
 checkpoints. The new `no_standardization` variant isolates the score-standardization change with
 the same learning rates and schedule. In all-dataset mode the sweep repeats on each dataset.
-Per-run and mean/std CSVs are saved under `results/<dataset>_ablation_summary_calibrated_v3` and synced
+Per-run and mean/std CSVs are saved under `results/<dataset>_ablation_summary_guided_v4` and synced
 to configured Drive storage. Defaults leave the expensive sweep disabled. `ABLATION_SEEDS` and
 `ABLATION_VARIANTS` are editable; smoke outputs must not be reported as scientific findings.
 
@@ -99,8 +102,10 @@ arbitrary untrusted pickle checkpoints. `best.pt` is selected on validation only
 Outputs include history, predictions, class metrics/confusion matrices, calibration, concept arrays,
 frozen descriptor grounding and uncertainty, model-dependence/stability/localization audits, exact
 evidence JSON, report provenance, and figures: learning curves, confusion matrices, priors, signed
-contributions, concept maps and prototype patches. Local Qwen reports validate prediction/indices/
-signs and record fallback status; prose still requires human review.
+contributions, concept maps and prototype patches. The classifier supplies prediction/indices/signs deterministically; local Qwen supplies only prose.
+Descriptor-name/weak-evidence gates record explicit fallback; prose still requires human review.
+New named prototype plates and case heatmaps include 300 dpi PNG/PDF/SVG, raw spatial evidence,
+source image coordinates and guidance-target comparisons. See docs/CONCEPT_GUIDANCE.md.
 
 Additional journal-facing notebook blocks produce domain-scoped concept evidence cards, reliability
 diagrams, redundancy matrices, editable latent interventions, matched deletion curves with paired
@@ -122,7 +127,7 @@ The current Colab and Kaggle notebooks passed all 20 code cells locally, includi
 CUB/Pet/MRI queue, on Python 3.13 and NumPy 2.1.3. The offline notebook passed all 18 code cells,
 including the three-dataset queue and two selected ablations on each dataset. Pip calls and cloud
 mount/OAuth/Drive endpoints were substituted; actual training, checkpointing, figures and journal
-blocks executed. See `docs/training_v3/` for the current evidence. Drive API contract tests cover cold restore,
+blocks executed. See `docs/guidance_v4/` for current evidence and `docs/training_v3/` for the previous protocol. Drive API contract tests cover cold restore,
 newer-local-checkpoint preservation and complete LLM assets. See `docs/cloud_notebook_validation.json`.
 Live platform GPUs and authenticated Drive sessions still require target-platform validation.
 

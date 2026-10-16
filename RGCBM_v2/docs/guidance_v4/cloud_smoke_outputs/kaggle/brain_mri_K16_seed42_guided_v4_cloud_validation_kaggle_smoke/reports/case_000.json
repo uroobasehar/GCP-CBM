@@ -1,0 +1,28 @@
+{
+  "backend_requested": "template",
+  "backend_used": "template",
+  "fallback_reason": null,
+  "structured_checks": "passed",
+  "semantic_validation": "human review required; JSON checks do not guarantee hallucination-free prose",
+  "result": {
+    "predicted_class": "glioma",
+    "confidence": 0.2830455231348863,
+    "supporting_concept_indices": [
+      3,
+      8,
+      4
+    ],
+    "opposing_concept_indices": [
+      13,
+      5,
+      14
+    ],
+    "explanation": "The model predicted glioma with an uncalibrated probability of 0.283; the runner-up was notumor. Supporting model patterns: MRI-image fine edge detail \u2014 unverified guidance (margin contribution +0.2269); MRI-image relatively bright image regions \u2014 unverified guidance (margin contribution +0.2107); MRI-image local texture variability \u2014 unverified guidance (margin contribution +0.1596). Opposing model patterns: MRI-image relatively dark image regions \u2014 weak unguided association (-0.2776); MRI-image neighbouring-pixel contrast \u2014 unverified guidance (-0.2484); MRI-image relatively bright image regions \u2014 weak unguided association (learned variant 1) (-0.1995). Image measurements: MRI-image fine edge detail \u2014 unverified guidance: typical descriptor response relative to validation; MRI-image relatively bright image regions \u2014 unverified guidance: low descriptor response relative to validation; MRI-image local texture variability \u2014 unverified guidance: high descriptor response relative to validation. The classifier bias contributes +0.1140 to this logit margin. Some cited patterns have unverified grounding; their intended guidance must not be reported as established anatomy or a learned clinical finding.",
+    "limitations": "Model-derived image-descriptor associations. No clinical, anatomical, species-part or causal image claim is established by correlation. Probability is uncalibrated unless calibration is separately evaluated."
+  },
+  "structured_fields_source": "deterministic classifier evidence; LLM supplies prose only",
+  "image_path": "data/brain_mri/Testing/glioma/Te-gl_1.jpg",
+  "true_class": "glioma",
+  "evidence_source": "visual_example_evidence.json",
+  "figure_prefix": "case_00"
+}

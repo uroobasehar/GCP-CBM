@@ -1,0 +1,10 @@
+```json
+{
+  "predicted_class": "glioma",
+  "confidence": 0.283,
+  "supporting_concept_indices": [3, 8],
+  "opposing_concept_indices": [13, 5, 14],
+  "explanation": "The MRI images show relatively bright image regions (concept index 3) which correlates positively with glioma diagnosis (positive margin contribution). Conversely, relatively dark image regions (concept index 13) correlate negatively with glioma diagnosis.",
+  "limitations": "The prediction is based on unverified guidance targets and may not reflect actual clinical significance."
+}
+```

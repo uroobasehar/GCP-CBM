@@ -1,0 +1,1 @@
+{"status": "passed", "checks": "All 15 advertised variants construct valid configs for all three datasets; legacy guidance keeps capacity and changes targets; per-dataset defaults correct."}

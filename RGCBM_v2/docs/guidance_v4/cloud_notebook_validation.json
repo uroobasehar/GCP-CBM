@@ -1,0 +1,36 @@
+[
+  {
+    "platform_notebook": "Colab",
+    "status": "passed",
+    "cells": 38,
+    "executed_code_cells": 20,
+    "duration_seconds": 632.5437983919983,
+    "data": "real CUB, Pet and MRI images; automatic sequential queue enabled",
+    "runtime": "local Linux CPU, Python 3.13.5, NumPy 2.1.3",
+    "substitutions": [
+      "pip calls simulated after installed requirement checks",
+      "Colab mount simulated"
+    ],
+    "executed": "embedded source preparation, data/assets, both training stages, epoch snapshots, evaluation, reports, journal code and automatic three-dataset queue with platform storage logic",
+    "ablation_sweep": "disabled in this cloud smoke check; separately validated in offline notebook",
+    "live_cloud_authentication": "not tested; requires actual Google/Kaggle session",
+    "error": null
+  },
+  {
+    "platform_notebook": "Kaggle",
+    "status": "passed",
+    "cells": 38,
+    "executed_code_cells": 20,
+    "duration_seconds": 159.2494513999991,
+    "data": "real CUB, Pet and MRI images; automatic sequential queue enabled",
+    "runtime": "local Linux CPU, Python 3.13.5, NumPy 2.1.3",
+    "substitutions": [
+      "pip calls simulated after installed requirement checks",
+      "Google OAuth/Drive API simulated"
+    ],
+    "executed": "embedded source preparation, data/assets, both training stages, epoch snapshots, evaluation, reports, journal code and automatic three-dataset queue with platform storage logic",
+    "ablation_sweep": "disabled in this cloud smoke check; separately validated in offline notebook",
+    "live_cloud_authentication": "not tested; requires actual Google/Kaggle session",
+    "error": null
+  }
+]
